@@ -12,6 +12,3 @@ https://vantoniobta.github.io/vantonio/
 
     + `php artisan migrate:rollback`
 
-
-
-
