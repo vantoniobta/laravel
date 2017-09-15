@@ -1,5 +1,6 @@
 # laravel
 laravel 5.5 
+
 user: valentin antonio bautista
 https://vantoniobta.github.io/vantonio/
 
@@ -11,4 +12,6 @@ https://vantoniobta.github.io/vantonio/
 *drop table user comand artisan *
 
     + `php artisan migrate:rollback`
+
+
 
