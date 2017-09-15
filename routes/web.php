@@ -14,3 +14,27 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/foo', function(){
+	return redirect('redirect');
+});
+
+Route::get('/showRedirect', function(){
+	return '<h1>Hi redirect route here</h1>';
+})->name('redirect');
+
+Route::view('/test', 'test');
+
+
+Route::get('user/{id}', function($id){
+	return '<h1>User'.$id."</h1>";
+});
+
+
+Route::get('user/{name?}', function ($name = null) {
+    return $name;
+});
+
+Route::get('user/{name?}', function ($name = 'vantonio') {
+    return $name;
+});
