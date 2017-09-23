@@ -37,6 +37,19 @@ Route::get('/greeting', function () {
 });
 
 
+Route::get('/vacantes', function(){
+	return view('vacantes');
+});
+
+Route::get('/postularse', function(){
+	return view('postularse');
+});
+
+Route::get('/home', function(){
+	return view('home');
+});
+
+
 // Route::get('/foo', function(){
 // 	return redirect('redirect');
 // });
@@ -60,3 +73,4 @@ Route::get('/greeting', function () {
 // Route::get('user/{name?}', function ($name = 'vantonio') {
 //     return $name;
 // });
+
