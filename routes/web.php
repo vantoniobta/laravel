@@ -37,6 +37,8 @@ Route::get('/greeting', function () {
 });
 
 
+//new tabs for menu 
+
 Route::get('/vacantes', function(){
 	return view('vacantes');
 });
@@ -46,7 +48,10 @@ Route::get('/postularse', function(){
 });
 
 Route::get('/home', function(){
-	return view('home');
+	// $name = 'Se parte de equipo multimedios';
+	// return view('home', compact('name'));
+	$data = ['javascript', 'html5', 'php'];
+	return view('home', ['records'=>$data]);
 });
 
 
