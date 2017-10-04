@@ -12,7 +12,9 @@
             <nav class="navbar navbar-default">
               <div class="container-fluid">
                 <div class="navbar-header">
-                  <a class="navbar-brand" href="#">WebSiteName</a>
+                  <a class="navbar-brand" href="#">Logo Recursos</a>
+
+
                 </div>
                 <ul class="nav navbar-nav">
                   <li class="active"><a href="{{ URL::to('home') }}">Home</a></li>
@@ -20,13 +22,12 @@
                   <li><a href="{{ URL::to('postularse') }}">Postularse</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a href="{{ URL::to('login') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="{{ URL::to('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               </ul>
               </div>
             </nav>
         @show
-
         <div class="container">
             @yield('content')
         </div>

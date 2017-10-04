@@ -7,8 +7,6 @@
 @section('content')
 <h1>Hola! esto es laravel 5.5.</h1>
 
-
-
 	@if (count($records) === 1)
 	    Tengo un registro!
 	@elseif (count($records) > 1)
