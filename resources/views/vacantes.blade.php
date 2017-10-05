@@ -5,11 +5,21 @@
 
 
 @section('content')
-<h1>Vacantes</h1>
-   <pre>
-   	Basic Navbar Example
-A navigation bar is a navigation header that is placed at the top of the page.
-   </pre>
+<h1>countries</h1>
+   
+ 
+
+
+
+   @forelse ($countries as $country)
+	    <li>{{ $country->countryName }}</li>
+	@empty
+	    <p>No users</p>
+	@endforelse
+
+   
+ 
+
 @endsection
 
 

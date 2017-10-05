@@ -40,7 +40,8 @@ Route::get('/greeting', function () {
 //new tabs for menu 
 
 Route::get('/vacantes', function(){
-	return view('vacantes');
+    $countries = App\Country::all();
+	return view('vacantes', compact('countries'));
 });
 
 Route::get('/postularse', function(){
@@ -50,8 +51,8 @@ Route::get('/postularse', function(){
 Route::get('/home', function(){
 	// $name = 'Se parte de equipo multimedios';
 	// return view('home', compact('name'));
-	$data = ['javascript', 'html5', 'php'];
-	return view('home', ['records'=>$data]);
+	//$data = ['javascript', 'html5', 'php'];
+	return view('home', ['i'=>1]);
 });
 
 
