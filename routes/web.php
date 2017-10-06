@@ -40,8 +40,8 @@ Route::get('/greeting', function () {
 //new tabs for menu 
 
 Route::get('/vacantes', function(){
-    $countries = App\Country::all();
-	return view('vacantes', compact('countries'));
+    $works = App\Work::all();
+	return view('vacantes', compact('works'));
 });
 
 Route::get('/postularse', function(){
