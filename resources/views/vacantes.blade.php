@@ -12,13 +12,15 @@
 
 
 	@forelse ($works as $work)
-	<div style="background-color: #E0FFFF" class="col-md-6 col-md-offset-2">
+
+	<div style="background-color: #E0FFFF" class="col-md-4 ">
 	    <h4>PUESTO</h4>
-	    <h4><a>{{ $work->puesto }}</a></h4>
+	    <h4><a href="">{{ $work->puesto }}</a></h4>
 	</div>
 	
-	<div style="background-color: #E0FFFF" class="col-md-6 col-md-offset-2">
-	    <li>HABILIDADES:{{ $work->habilidades }}</li>
+	<div style="background-color: #E0FFFF" class="col-md-8">
+	    <h4>REQUISITOS:</h4>
+	    <li>{{ $work->habilidades }}</li>
 	    <hr>
 	 </div>
 	@empty

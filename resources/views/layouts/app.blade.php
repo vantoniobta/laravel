@@ -22,7 +22,7 @@
                   <li><a href="{{ URL::to('postularse') }}">Postularse</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ URL::to('register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="{{ URL::to('users/register') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a href="{{ URL::to('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
               </ul>
               </div>

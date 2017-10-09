@@ -11,7 +11,9 @@
 |
 */
 use App\Http\Middleware\CheckAge;
-use Illuminate\Support\Facades\View;	
+use Illuminate\Support\Facades\View;
+
+Route::post('/user/save', 'UserController@save');
 
 
 Route::get('/', function () {
@@ -49,42 +51,15 @@ Route::get('/postularse', function(){
 });
 
 Route::get('/home', function(){
-	// $name = 'Se parte de equipo multimedios';
-	// return view('home', compact('name'));
-	//$data = ['javascript', 'html5', 'php'];
+
 	return view('home', ['i'=>1]);
 });
-
 
 
 Route::get('/login', function(){
 	return view('login');
 });
 
-Route::get('/register', function(){
-	return view('register');
+Route::get('/users/register', function(){
+	return view('users/register');
 });
-// Route::get('/foo', function(){
-// 	return redirect('redirect');
-// });
-
-// Route::get('/showRedirect', function(){
-// 	return '<h1>Hi redirect route here</h1>';
-// })->name('redirect');
-
-// Route::view('/test', 'test');
-
-
-// Route::get('user/{id}', function($id){
-// 	return '<h1>User'.$id."</h1>";
-// });
-
-
-// Route::get('user/{name?}', function ($name = null) {
-//     return $name;
-// });
-
-// Route::get('user/{name?}', function ($name = 'vantonio') {
-//     return $name;
-// });
-
