@@ -16,8 +16,6 @@ use Illuminate\Support\Facades\View;
 
 Route::get('profile', 'UserController@profile');
 
-
-
 Route::get('/', function () {
     return view('welcome');
 });

@@ -12,7 +12,6 @@ class UserController extends Controller {
     	
     }
 
-
     //save form example
     public function save(Request $request) {
     	$data = ['name'     => $request ->name,
