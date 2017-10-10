@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\View;
 
 
 Route::get('profile', 'UserController@profile');
+Route::post('profile', 'UserController@update_avatar');
 
 Route::get('/', function () {
     return view('welcome');

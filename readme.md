@@ -7,11 +7,16 @@ https://vantoniobta.github.io/vantonio/
 # laravel.com 5.5
 create table users comand artisan
 
-    + `php artisan migrate`
+  - php artisan migrate
 
 drop table user comand artisan
 
-    + `php artisan migrate:rollback`
+   - php artisan migrate:rollback
+
+Imagen
+
+'Image' => Intervention\Image\Facades\Image::class
+
 
 
 
