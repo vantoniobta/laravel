@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 use DB;
 
 class UserController extends Controller {
@@ -18,6 +19,10 @@ class UserController extends Controller {
     	DB::table('users')  -> insert($data);
     	dump($request->all());   
     	//return($request->all());
+    }
+    //add profile imagen function
+    public function profile() {
+        return view('profile', array('user' => Auth::user()));
     }
     
 }

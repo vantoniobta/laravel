@@ -13,7 +13,9 @@
 use App\Http\Middleware\CheckAge;
 use Illuminate\Support\Facades\View;
 
-Route::post('/user/save', 'UserController@save');
+
+Route::get('profile', 'UserController@profile');
+
 
 
 Route::get('/', function () {

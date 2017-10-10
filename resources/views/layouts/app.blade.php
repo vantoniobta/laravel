@@ -48,7 +48,6 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                          <li><a href="{{ url('/vacantes') }}">Vacantes</a></li>
-                          <li><a href="{{ url('/vacantes') }}">Quienes somos?</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -64,12 +63,8 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
+                                 <li><a href="{{ url('/profile') }}">Profile</a>
+                                  <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
