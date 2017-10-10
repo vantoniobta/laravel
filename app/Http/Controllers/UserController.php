@@ -12,6 +12,8 @@ class UserController extends Controller {
     	
     }
 
+
+    //save form example
     public function save(Request $request) {
     	$data = ['name'     => $request ->name,
     	         'email'    => $request ->email,
@@ -20,6 +22,7 @@ class UserController extends Controller {
     	dump($request->all());   
     	//return($request->all());
     }
+
     //add profile imagen function
     public function profile() {
         return view('profile', array('user' => Auth::user()));
