@@ -63,3 +63,7 @@ Route::get('/login', function(){
 Route::get('/users/register', function(){
 	return view('users/register');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -5,7 +5,7 @@
 
 
 @section('content')
-<h1>Últimas ofertas de trabajo</h1>
+<h1 align="center">Últimas ofertas de trabajo</h1>
    
  
 

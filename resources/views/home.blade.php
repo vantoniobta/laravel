@@ -1,22 +1,23 @@
 @extends('layouts.app')
 
-@section('title', 'Page Child')
-
-
-
 @section('content')
-<h1>Hola! esto es laravel 5.5.</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
 
-</pre>
-		
+                <div class="panel-body">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
 
-		 
-	<hr>
-
-	@unless (Auth::check()) 
-     No has iniciado sesión.
-    @endunless
-
-
-
+                    You are logged in!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection

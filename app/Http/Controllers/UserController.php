@@ -16,7 +16,7 @@ class UserController extends Controller {
     	         'email'    => $request ->email,
     	         'password' => $request ->password];
     	DB::table('users')  -> insert($data);
-    	//dump($request->all());   
+    	dump($request->all());   
     	//return($request->all());
     }
     
