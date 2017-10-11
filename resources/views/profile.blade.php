@@ -3,19 +3,51 @@
 @section('content')
 <!-- profile form data imagen edit -->
 <div class="container">
+  <form enctype="multipart/form-data" action="profile" method="POST">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-               <img src="uploads/avatars/{{$user->avatar}}" style="width: 150px; height: 150px; float: left; border-radius: 50%; margin-right: 25px;">
-                <h2>Hola! {{ $user->name }} </h2>
-
-                <form enctype="multipart/form-data" action="profile" method="POST">
-                <label>Update profile Image</label>
-                <input type="file" name="avatar">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="submit" class="pull-right btn btn-sm btn-primary">
-                </form>
-
+       <h2 class="title-form text-fade-in">Información Básica</h2><hr>
+        <div class="col-md-6">
+		   <label>Nombre</label>
+		       <input type="text" name="name" value="{{ $user->name }}" class="form-control"><br>
+		       <label>Apellidos</label>
+	        <input type="text" name="lastname" value="" class="form-control"><br>
+        </div>
+        <div class="col-md-6">
+          <label>Nivel de Inglés</label>
+	          <select class="form-control" id="sel1">
+				   <option>--</option>
+				   <option>Nivel Básico</option>
+				   <option>Nivel Intermedio</option>
+				   <option>Nivel Avanzado</option>
+			    </select><br>
+              <label>Teléfono de Contacto</label>
+           <input type="text" name="telefono" value="" class="form-control"><br>
         </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="title-form text-fade-in">Imagen Perfil</h2><hr>
+         <a href="uploads/avatars/{{$user->avatar}}" style="color: red" download>{{$user->avatar}}</a><br>
+           <label>Update profile Image</label><br>
+            <input type="file" name="avatar" value="">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+       </div>
+       <div class="col-md-6">
+         <h2 class="title-form text-fade-in">subir CV</h2><hr>
+          <a href="uploads/cv/{{$user->cv}}"  style="color: red" download>{{$user->cv}}</a><br>
+         <label>Los tipos de archivos permitidos son pdf,doc,docx</label><br>
+          <input type="file" name="cv">
+           <input type="submit" class="pull-right btn btn-sm btn-primary">
+        </div>
+     </div>
+
+
+
+
+
+
+
+   </form>
 </div>
 @endsection
