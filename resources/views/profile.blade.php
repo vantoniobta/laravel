@@ -7,7 +7,7 @@
     <div class="row">
        <h2 class="title-form text-fade-in">Información Básica</h2><hr>
         <div class="col-md-6">
-		   <label>Nombre</label>
+		      <label>Nombre</label>
 		       <input type="text" name="name" value="{{ $user->name }}" class="form-control"><br>
 		       <label>Apellidos</label>
 	        <input type="text" name="lastname" value="" class="form-control"><br>

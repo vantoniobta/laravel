@@ -17,6 +17,24 @@ use Illuminate\Support\Facades\View;
 Route::get('profile', 'UserController@profile');
 Route::post('profile', 'UserController@update_avatar');
 
+
+//facebook
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+
+
+
+
+//info works
+Route::get('vacantes/info/{id}', 'WorkController@info');
+
+// Route::get('vacantes/info/{id}', function () {
+//     return view('vacantes/info');
+// });
+
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
