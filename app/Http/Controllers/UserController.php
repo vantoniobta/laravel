@@ -29,28 +29,43 @@ class UserController extends Controller {
     }
 
      public function update_avatar(Request $request, $id) {
+         if($request->hasFile('avatar')){
+                 $name     = $request ->name;
+                 $lastname = $request ->lastname;
+                 $phone    = $request ->phone;
+                 $avatar   = $request->file('avatar');
+                 $cv       = $request->file('cv');
+                 $ingles   = $request ->ingles;
 
-        $data = ['id'       => $request ->id,
-                 'name'     => $request ->name,
-                 'lastname' => $request ->lastname,
-                 'phone'    => $request ->phone,
-                 'ingles'   => $request ->ingles];
-                 dump($data);
+                $filename = time(). '.' . $avatar->getClientOriginalExtension();
+                Image::make($avatar)->resize(300,300)->save(public_path('/uploads/avatars/' . $filename));
 
+                    DB::table('users')
+                         ->where('id', $id)
+                         ->update(['name'     => $name,
+                                  'lastname' => $lastname,
+                                  'phone'    => $phone,
+                                  'avatar'   => $filename,
+                                  'cv'       => $cv,
+                                  'ingles'   => $ingles]);
+                }else{
+                      $name     = $request ->name;
+                     $lastname = $request ->lastname;
+                     $phone    = $request ->phone;
+                     $avatar   = $request->file('avatar');
+                     $cv       = $request->file('cv');
+                     $ingles   = $request ->ingles;
 
-        //imagen change profile 
-        // if($request->hasFile('avatar')){
-        //     $avatar = $request->file('avatar');
-        //     $filename = time(). '.' . $avatar->getClientOriginalExtension();
-        //     Image::make($avatar)->resize(300,300)->save(public_path('/uploads/avatars/' . $filename));
+                         DB::table('users')
+                             ->where('id', $id)
+                             ->update(['name'     => $name,
+                                      'lastname' => $lastname,
+                                      'phone'    => $phone,
+                                      'cv'       => $cv,
+                                      'ingles'   => $ingles]);
+                }
 
-        //     $user = Auth::user();
-        //     $user->avatar = $filename;
-        //     $user->save();
-
-        // }
-
-        return view('profile', array('user' => Auth::user()));
+        return view('/home', array('user' => Auth::user()));
      
      }
 

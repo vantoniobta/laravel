@@ -10,12 +10,12 @@
 		      <label>Nombre</label>
 		       <input type="text" name="name" value="{{ $user->name }}" class="form-control"><br>
 		       <label>Apellidos</label>
-	        <input type="text" name="lastname" value="" class="form-control"><br>
+	        <input type="text" name="lastname" value="{{ $user->lastname }}" class="form-control"><br>
         </div>
         <div class="col-md-6">
           <label>Nivel de Inglés</label>
 	          <select class="form-control" name="ingles" id="sel1">
-				   <option>--</option>
+				   <option value="">---</option>
 				   <option value="Nivel Básico">Nivel Básico</option>
 				   <option value="Nivel Intermedio">Nivel Intermedio</option>
 				   <option value="Nivel Intermedio">Nivel Avanzado</option>
