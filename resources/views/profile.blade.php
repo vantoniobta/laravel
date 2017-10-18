@@ -3,7 +3,7 @@
 @section('content')
 <!-- profile form data imagen edit -->
 <div class="container">
-  <form enctype="multipart/form-data" action="profile" method="POST">
+  <form enctype="multipart/form-data" action="profile/{{$user->id}}" method="POST">
     <div class="row">
        <h2 class="title-form text-fade-in">Información Básica</h2><hr>
         <div class="col-md-6">
@@ -14,14 +14,14 @@
         </div>
         <div class="col-md-6">
           <label>Nivel de Inglés</label>
-	          <select class="form-control" id="sel1">
+	          <select class="form-control" name="ingles" id="sel1">
 				   <option>--</option>
-				   <option>Nivel Básico</option>
-				   <option>Nivel Intermedio</option>
-				   <option>Nivel Avanzado</option>
+				   <option value="Nivel Básico">Nivel Básico</option>
+				   <option value="Nivel Intermedio">Nivel Intermedio</option>
+				   <option value="Nivel Intermedio">Nivel Avanzado</option>
 			    </select><br>
               <label>Teléfono de Contacto</label>
-           <input type="text" name="telefono" value="" class="form-control"><br>
+           <input type="text" name="phone" value="{{ $user->phone }}" class="form-control"><br>
         </div>
     </div>
 

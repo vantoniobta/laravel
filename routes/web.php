@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\View;
 
 
 Route::get('profile', 'UserController@profile');
-Route::post('profile', 'UserController@update_avatar');
+Route::post('profile/{id}', 'UserController@update_avatar');
 
 
 //facebook

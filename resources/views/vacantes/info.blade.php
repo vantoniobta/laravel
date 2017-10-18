@@ -2,8 +2,6 @@
 
 @section('title', 'Page Child')
 
-
-
 @section('content')
 <div class="container">
     <div class="row">
@@ -14,7 +12,6 @@
                 <h2 style="color: white">{{ $work->puesto}}</h2>
                 </div>
                 <div class="panel-body">
-                        
                         <div class="col-md-6">
                            <h3>Sueldo:</h3>
                            <h4>{{ $work->sueldo}}</h4>
@@ -33,7 +30,12 @@
                          <div class="col-md-6">
                            <h3>Prestaciones: </h3>
                            <h4>{{ $work->prestaciones}}</h4>
+                        </div><br>
+
+                        <div class="col-md-8">
+                           <button type="button" class="btn btn-default">Postularse</button>
                         </div>
+
 
                 </div>
             </div>

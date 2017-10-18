@@ -28,20 +28,32 @@ class UserController extends Controller {
         return view('profile', array('user' => Auth::user()));
     }
 
-     public function update_avatar(Request $request) {
-        //imagen change profile 
-        if($request->hasFile('avatar')){
-            $avatar = $request->file('avatar');
-            $filename = time(). '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar)->resize(300,300)->save(public_path('/uploads/avatars/' . $filename));
+     public function update_avatar(Request $request, $id) {
 
-            $user = Auth::user();
-            $user->avatar = $filename;
-            $user->save();
-        }
+        $data = ['id'       => $request ->id,
+                 'name'     => $request ->name,
+                 'lastname' => $request ->lastname,
+                 'phone'    => $request ->phone,
+                 'ingles'   => $request ->ingles];
+                 dump($data);
+
+
+        //imagen change profile 
+        // if($request->hasFile('avatar')){
+        //     $avatar = $request->file('avatar');
+        //     $filename = time(). '.' . $avatar->getClientOriginalExtension();
+        //     Image::make($avatar)->resize(300,300)->save(public_path('/uploads/avatars/' . $filename));
+
+        //     $user = Auth::user();
+        //     $user->avatar = $filename;
+        //     $user->save();
+
+        // }
 
         return view('profile', array('user' => Auth::user()));
      
      }
+
+
     
 }
