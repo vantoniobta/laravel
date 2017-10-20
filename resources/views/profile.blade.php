@@ -18,7 +18,7 @@
 				   <option value="">---</option>
 				   <option value="Nivel Básico">Nivel Básico</option>
 				   <option value="Nivel Intermedio">Nivel Intermedio</option>
-				   <option value="Nivel Intermedio">Nivel Avanzado</option>
+				   <option value="Nivel Avanzado">Nivel Avanzado</option>
 			    </select><br>
               <label>Teléfono de Contacto</label>
            <input type="text" name="phone" value="{{ $user->phone }}" class="form-control"><br>
@@ -27,16 +27,18 @@
 
     <div class="row">
       <div class="col-md-6">
-        <h2 class="title-form text-fade-in">Imagen Perfil</h2><hr>
-         <a href="uploads/avatars/{{$user->avatar}}" style="color: red" download>{{$user->avatar}}</a><br>
+        <h2 class="title-form text-fade-in">Imagen Perfil</h2>
+        <img src="uploads/avatars/{{$user->avatar}}" class="img-thumbnail" alt="Cinque Terre" width="20%" height="20%"><br>
+      <!--    <a href="uploads/avatars/{{$user->avatar}}" style="color: red" download>{{$user->avatar}}</a><br> -->
            <label>Update profile Image</label><br>
             <input type="file" name="avatar" value="">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
        </div>
        <div class="col-md-6">
-         <h2 class="title-form text-fade-in">subir CV</h2><hr>
-          <a href="uploads/cv/{{$user->cv}}"  style="color: red" download>{{$user->cv}}</a><br>
-         <label>Los tipos de archivos permitidos son pdf,doc,docx</label><br>
+          <h2 class="title-form text-fade-in">subir CV</h2>
+          <img src="uploads/avatars/pdf.png" class="img-thumbnail" alt="Cinque Terre" width="20%" height="20%"><br>
+          <a href="uploads/cv/{{$user->cv}}"  style="color: red" download>Descargar tu CV</a><br>
+          <label>Los tipos de archivos permitidos son pdf,doc,docx</label><br>
           <input type="file" name="cv">
            <input type="submit" class="pull-right btn btn-sm btn-primary">
         </div>

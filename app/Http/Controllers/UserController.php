@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
+use Storage;
 use Auth;
 use Image;
 use DB;
@@ -13,7 +13,6 @@ class UserController extends Controller {
     	
     }
 
-    //save form example
     public function save(Request $request) {
     	$data = ['name'     => $request ->name,
     	         'email'    => $request ->email,
@@ -23,7 +22,7 @@ class UserController extends Controller {
     	//return($request->all());
     }
 
-    //add profile imagen function
+
     public function profile() {
         return view('profile', array('user' => Auth::user()));
     }
@@ -34,11 +33,11 @@ class UserController extends Controller {
                  $lastname = $request ->lastname;
                  $phone    = $request ->phone;
                  $avatar   = $request->file('avatar');
-                 $cv       = $request->file('cv');
+                 $pdfName  = $request->file('cv')->getClientOriginalName();
                  $ingles   = $request ->ingles;
 
                 $filename = time(). '.' . $avatar->getClientOriginalExtension();
-                Image::make($avatar)->resize(300,300)->save(public_path('/uploads/avatars/' . $filename));
+                Image::make($avatar)->resize(300,300)->save(public_path('uploads/avatars/' . $filename));
 
                     DB::table('users')
                          ->where('id', $id)
@@ -46,23 +45,38 @@ class UserController extends Controller {
                                   'lastname' => $lastname,
                                   'phone'    => $phone,
                                   'avatar'   => $filename,
-                                  'cv'       => $cv,
+                                  'cv'       => $pdfName,
                                   'ingles'   => $ingles]);
+                                $request->file('cv')->move(
+                                          base_path() . '/public/uploads/cv/', $pdfName);
                 }else{
-                      $name     = $request ->name;
+
+
+                     $name     = $request ->name;
                      $lastname = $request ->lastname;
                      $phone    = $request ->phone;
                      $avatar   = $request->file('avatar');
-                     $cv       = $request->file('cv');
                      $ingles   = $request ->ingles;
-
-                         DB::table('users')
+                     $pdfName  = $request->file('cv')->getClientOriginalName();
+                    
+                    DB::table('users')
                              ->where('id', $id)
                              ->update(['name'     => $name,
                                       'lastname' => $lastname,
                                       'phone'    => $phone,
-                                      'cv'       => $cv,
+                                      'cv'       => $pdfName,
                                       'ingles'   => $ingles]);
+
+                                $request->file('cv')->move(
+                                          base_path() . '/public/uploads/cv/', $pdfName);
+
+
+
+
+
+
+                 //Storage::put('uploads/cv/', $cv->getClientOriginalName());
+                 // dump($cv);
                 }
 
         return view('/home', array('user' => Auth::user()));
