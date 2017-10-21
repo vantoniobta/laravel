@@ -51,7 +51,7 @@ class UserController extends Controller {
                                           base_path() . '/public/uploads/cv/', $pdfName);
                 }else{
 
-
+                    if ($request->hasFile('cv')) {
                      $name     = $request ->name;
                      $lastname = $request ->lastname;
                      $phone    = $request ->phone;
@@ -69,6 +69,40 @@ class UserController extends Controller {
 
                                 $request->file('cv')->move(
                                           base_path() . '/public/uploads/cv/', $pdfName);
+
+
+                    }else{
+                             $name     = $request ->name;
+                             $lastname = $request ->lastname;
+                             $phone    = $request ->phone;
+                             $avatar   = $request->file('avatar');
+                             $ingles   = $request ->ingles;
+                            
+                            DB::table('users')
+                                     ->where('id', $id)
+                                     ->update(['name'     => $name,
+                                              'lastname' => $lastname,
+                                              'phone'    => $phone,
+                                              'ingles'   => $ingles]);
+                    }
+
+                    //  $name     = $request ->name;
+                    //  $lastname = $request ->lastname;
+                    //  $phone    = $request ->phone;
+                    //  $avatar   = $request->file('avatar');
+                    //  $ingles   = $request ->ingles;
+                    //  $pdfName  = $request->file('cv')->getClientOriginalName();
+                    
+                    // DB::table('users')
+                    //          ->where('id', $id)
+                    //          ->update(['name'     => $name,
+                    //                   'lastname' => $lastname,
+                    //                   'phone'    => $phone,
+                    //                   'cv'       => $pdfName,
+                    //                   'ingles'   => $ingles]);
+
+                    //             $request->file('cv')->move(
+                    //                       base_path() . '/public/uploads/cv/', $pdfName);
 
 
 
