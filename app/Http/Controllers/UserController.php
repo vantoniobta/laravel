@@ -85,30 +85,6 @@ class UserController extends Controller {
                                               'phone'    => $phone,
                                               'ingles'   => $ingles]);
                     }
-
-                    //  $name     = $request ->name;
-                    //  $lastname = $request ->lastname;
-                    //  $phone    = $request ->phone;
-                    //  $avatar   = $request->file('avatar');
-                    //  $ingles   = $request ->ingles;
-                    //  $pdfName  = $request->file('cv')->getClientOriginalName();
-                    
-                    // DB::table('users')
-                    //          ->where('id', $id)
-                    //          ->update(['name'     => $name,
-                    //                   'lastname' => $lastname,
-                    //                   'phone'    => $phone,
-                    //                   'cv'       => $pdfName,
-                    //                   'ingles'   => $ingles]);
-
-                    //             $request->file('cv')->move(
-                    //                       base_path() . '/public/uploads/cv/', $pdfName);
-
-
-
-
-
-
                  //Storage::put('uploads/cv/', $cv->getClientOriginalName());
                  // dump($cv);
                 }
