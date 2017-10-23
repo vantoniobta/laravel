@@ -29,65 +29,82 @@ class UserController extends Controller {
 
      public function update_avatar(Request $request, $id) {
          if($request->hasFile('avatar')){
-                 $name     = $request ->name;
-                 $lastname = $request ->lastname;
-                 $phone    = $request ->phone;
-                 $avatar   = $request->file('avatar');
-                 $pdfName  = $request->file('cv')->getClientOriginalName();
-                 $ingles   = $request ->ingles;
+                if ($request->hasFile('cv')) {
+                  # code...
+                   $name     = $request ->name;
+                   $lastname = $request ->lastname;
+                   $phone    = $request ->phone;
+                   $avatar   = $request->file('avatar');
+                   $pdfName  = $request->file('cv')->getClientOriginalName();
+                   $ingles   = $request ->ingles;
 
-                $filename = time(). '.' . $avatar->getClientOriginalExtension();
-                Image::make($avatar)->resize(300,300)->save(public_path('uploads/avatars/' . $filename));
+                  $filename = time(). '.' . $avatar->getClientOriginalExtension();
+                  Image::make($avatar)->resize(300,300)->save(public_path('uploads/avatars/' . $filename));
 
-                    DB::table('users')
-                         ->where('id', $id)
-                         ->update(['name'     => $name,
-                                  'lastname' => $lastname,
-                                  'phone'    => $phone,
-                                  'avatar'   => $filename,
-                                  'cv'       => $pdfName,
-                                  'ingles'   => $ingles]);
-                                $request->file('cv')->move(
-                                          base_path() . '/public/uploads/cv/', $pdfName);
-                }else{
+                      DB::table('users')
+                           ->where('id', $id)
+                           ->update(['name'     => $name,
+                                    'lastname' => $lastname,
+                                    'phone'    => $phone,
+                                    'avatar'   => $filename,
+                                    'cv'       => $pdfName,
+                                    'ingles'   => $ingles]);
+                                    $request->file('cv')->move(
+                                            base_path() . '/public/uploads/cv/', $pdfName);
+                                    }else{
+                                          $name     = $request ->name;
+                                           $lastname = $request ->lastname;
+                                           $phone    = $request ->phone;
+                                           $avatar   = $request->file('avatar');
+                                           $ingles   = $request ->ingles;
 
-                    if ($request->hasFile('cv')) {
-                     $name     = $request ->name;
-                     $lastname = $request ->lastname;
-                     $phone    = $request ->phone;
-                     $avatar   = $request->file('avatar');
-                     $ingles   = $request ->ingles;
-                     $pdfName  = $request->file('cv')->getClientOriginalName();
-                    
-                    DB::table('users')
-                             ->where('id', $id)
-                             ->update(['name'     => $name,
-                                      'lastname' => $lastname,
-                                      'phone'    => $phone,
-                                      'cv'       => $pdfName,
-                                      'ingles'   => $ingles]);
+                                          $filename = time(). '.' . $avatar->getClientOriginalExtension();
+                                          Image::make($avatar)->resize(300,300)->save(public_path('uploads/avatars/' . $filename));
 
-                                $request->file('cv')->move(
-                                          base_path() . '/public/uploads/cv/', $pdfName);
+                                              DB::table('users')
+                                                   ->where('id', $id)
+                                                   ->update(['name'     => $name,
+                                                            'lastname' => $lastname,
+                                                            'phone'    => $phone,
+                                                            'avatar'   => $filename,
+                                                            'ingles'   => $ingles]);
+                                         }
+                                              }else{
 
+                                                      if ($request->hasFile('cv')) {
+                                                       $name     = $request ->name;
+                                                       $lastname = $request ->lastname;
+                                                       $phone    = $request ->phone;
+                                                       $avatar   = $request->file('avatar');
+                                                       $ingles   = $request ->ingles;
+                                                       $pdfName  = $request->file('cv')->getClientOriginalName();
+                                                      
+                                                      DB::table('users')
+                                                               ->where('id', $id)
+                                                               ->update(['name'     => $name,
+                                                                        'lastname' => $lastname,
+                                                                        'phone'    => $phone,
+                                                                        'cv'       => $pdfName,
+                                                                        'ingles'   => $ingles]);
 
-                    }else{
-                             $name     = $request ->name;
-                             $lastname = $request ->lastname;
-                             $phone    = $request ->phone;
-                             $avatar   = $request->file('avatar');
-                             $ingles   = $request ->ingles;
-                            
-                            DB::table('users')
-                                     ->where('id', $id)
-                                     ->update(['name'     => $name,
-                                              'lastname' => $lastname,
-                                              'phone'    => $phone,
-                                              'ingles'   => $ingles]);
-                    }
-                 //Storage::put('uploads/cv/', $cv->getClientOriginalName());
-                 // dump($cv);
-                }
+                                                                  $request->file('cv')->move(
+                                                                            base_path() . '/public/uploads/cv/', $pdfName);
+                                                                      }else{
+                                                                               $name     = $request ->name;
+                                                                               $lastname = $request ->lastname;
+                                                                               $phone    = $request ->phone;
+                                                                               $avatar   = $request->file('avatar');
+                                                                               $ingles   = $request ->ingles;
+                                                                              
+                                                                              DB::table('users')
+                                                                                       ->where('id', $id)
+                                                                                       ->update(['name'     => $name,
+                                                                                                'lastname' => $lastname,
+                                                                                                'phone'    => $phone,
+                                                                                                'ingles'   => $ingles]);
+                                                                      }
+
+                                              }
 
         return view('/home', array('user' => Auth::user()));
      
