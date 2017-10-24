@@ -49,29 +49,36 @@ class UserController extends Controller {
                                     'avatar'   => $filename,
                                     'cv'       => $pdfName,
                                     'ingles'   => $ingles]);
-                                    $request->file('cv')->move(
-                                            base_path() . '/public/uploads/cv/', $pdfName);
-                                    }else{
-                                          $name     = $request ->name;
-                                           $lastname = $request ->lastname;
-                                           $phone    = $request ->phone;
-                                           $avatar   = $request->file('avatar');
-                                           $ingles   = $request ->ingles;
 
-                                          $filename = time(). '.' . $avatar->getClientOriginalExtension();
-                                          Image::make($avatar)->resize(300,300)->save(public_path('uploads/avatars/' . $filename));
+                                    if (!file_exists('uploads/cv/'.$id.'/')) {
+                                              mkdir('uploads/cv/'.$id, 0777, true);
+                                           $request->file('cv')->move(
+                                               base_path() . '/public/uploads/cv/'.$id.'/', $pdfName);
+                                          }else{
+                                              $request->file('cv')->move(
+                                               base_path() . '/public/uploads/cv/'.$id.'/', $pdfName);
+                                          }
+                                      }else{
+                                             $name     = $request ->name;
+                                             $lastname = $request ->lastname;
+                                             $phone    = $request ->phone;
+                                             $avatar   = $request->file('avatar');
+                                             $ingles   = $request ->ingles;
 
-                                              DB::table('users')
-                                                   ->where('id', $id)
-                                                   ->update(['name'     => $name,
-                                                            'lastname' => $lastname,
-                                                            'phone'    => $phone,
-                                                            'avatar'   => $filename,
-                                                            'ingles'   => $ingles]);
-                                         }
+                                            $filename = time(). '.' . $avatar->getClientOriginalExtension();
+                                            Image::make($avatar)->resize(300,300)->save(public_path('uploads/avatars/' . $filename));
+
+                                                DB::table('users')
+                                                     ->where('id', $id)
+                                                     ->update(['name'     => $name,
+                                                              'lastname' => $lastname,
+                                                              'phone'    => $phone,
+                                                              'avatar'   => $filename,
+                                                              'ingles'   => $ingles]);
+                                           }
                                               }else{
 
-                                                      if ($request->hasFile('cv')) {
+                                                    if ($request->hasFile('cv')) {
                                                        $name     = $request ->name;
                                                        $lastname = $request ->lastname;
                                                        $phone    = $request ->phone;
@@ -87,8 +94,15 @@ class UserController extends Controller {
                                                                         'cv'       => $pdfName,
                                                                         'ingles'   => $ingles]);
 
-                                                                  $request->file('cv')->move(
-                                                                            base_path() . '/public/uploads/cv/', $pdfName);
+                                                                 if (!file_exists('uploads/cv/'.$id.'/')) {
+                                                                          mkdir('uploads/cv/'.$id, 0777, true);
+                                                                          $request->file('cv')->move(
+                                                                              base_path() . '/public/uploads/cv/'.$id.'/', $pdfName);
+                                                                          }else{
+                                                                              $request->file('cv')->move(
+                                                                              base_path() . '/public/uploads/cv/'.$id.'/', $pdfName);
+                                                                          }
+
                                                                       }else{
                                                                                $name     = $request ->name;
                                                                                $lastname = $request ->lastname;
@@ -106,8 +120,7 @@ class UserController extends Controller {
 
                                               }
 
-        return view('/home', array('user' => Auth::user()));
-     
+                          return view('/home', array('user' => Auth::user()));
      }
 
 

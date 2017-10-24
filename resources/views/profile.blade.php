@@ -37,7 +37,7 @@
        <div class="col-md-6">
           <h2 class="title-form text-fade-in">subir CV</h2>
           <img src="uploads/avatars/pdf.png" class="img-thumbnail" alt="Cinque Terre" width="20%" height="20%"><br>
-          <a href="uploads/cv/{{$user->cv}}"  style="color: red" download>Descargar tu CV</a><br>
+          <a href="uploads/cv/{{$user->id}}/{{$user->cv}}"  style="color: red" download>Descargar tu CV</a><br>
           <label>Los tipos de archivos permitidos son pdf,doc,docx</label><br>
           <input type="file" name="cv">
            <input type="submit" class="pull-right btn btn-sm btn-primary">

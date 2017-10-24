@@ -11,32 +11,39 @@
                 <p style="color: white">Puesto:</p>  
                 <h2 style="color: white">{{ $work->puesto}}</h2>
                 </div>
+
                 <div class="panel-body">
-                        <div class="col-md-6">
-                           <h3>Sueldo:</h3>
-                           <h4>{{ $work->sueldo}}</h4>
+                    <div class="col-md-6">
+                         <h3>Sueldo:</h3>
+                         <h4>{{ $work->sueldo}}</h4>
+                    </div>
+                    <div class="col-md-6">
+                       <h3>Lugar:</h3>
+                      <h4>{{ $work->lugar}}</h4>
+                    </div>
+
+                    <div class="col-md-6">
+                       <h3>Requerimientos: </h3>
+                        <h4>{{ $work->habilidades}}</h4>
+                    </div>
+
+                    <div class="col-md-6">
+                       <h3>Prestaciones: </h3>
+                       <h4>{{ $work->prestaciones}}</h4>
+                    </div><br>
+                    @if (Auth::check())
+                    <div class="col-md-8">
+                        <button type="button" class="btn btn-default">Postularse</button>
+                    </div>
+                     <p>id_usuario->{{ Auth::user()->id }}</p>
+                     <p>id_trabajo->{{ $work->id}}</p>
+                    @else
+                    <div class="col-md-12">
+                        <div class="alert alert-danger" role="alert">
+                          <strong>Oh!</strong> <a href="../../login" class="alert-link"> Inciar session</a>  por favor para Postularte.
                         </div>
-
-                        <div class="col-md-6">
-                           <h3>Lugar:</h3>
-                           <h4>{{ $work->lugar}}</h4>
-                        </div>
-
-                        <div class="col-md-6">
-                           <h3>Requerimientos: </h3>
-                           <h4>{{ $work->habilidades}}</h4>
-                        </div>
-
-                         <div class="col-md-6">
-                           <h3>Prestaciones: </h3>
-                           <h4>{{ $work->prestaciones}}</h4>
-                        </div><br>
-
-                        <div class="col-md-8">
-                           <button type="button" class="btn btn-default">Postularse</button>
-                        </div>
-
-
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>
