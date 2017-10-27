@@ -13,31 +13,27 @@
 use App\Http\Middleware\CheckAge;
 use Illuminate\Support\Facades\View;
 
-
 Route::get('profile', 'UserController@profile');
 Route::post('profile/{id}', 'UserController@update_avatar');
 
-
-//facebook
-Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
-Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
 
 
 
 
 //info works
 Route::get('vacantes/info/{id}', 'WorkController@info');
+Route::post('vacantes/save', 'WorkController@save');
 
-// Route::get('vacantes/info/{id}', function () {
-//     return view('vacantes/info');
+// Route::get('vacantes/save', function(){
+// 	return view('vacantes/save');
 // });
-
-
 
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+
 
 Route::get('/home', function(){
 	return '<h1>Your age is less then 100 or equal 100</h1>';
@@ -63,10 +59,6 @@ Route::get('/greeting', function () {
 Route::get('/vacantes', function(){
     $works = App\Work::all();
 	return view('vacantes', compact('works'));
-});
-
-Route::get('/postularse', function(){
-	return view('postularse');
 });
 
 Route::get('/home', function(){

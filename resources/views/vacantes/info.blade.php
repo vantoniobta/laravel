@@ -15,7 +15,7 @@
                 <div class="panel-body">
                     <div class="col-md-6">
                          <h3>Sueldo:</h3>
-                         <h4>{{ $work->sueldo}}</h4>
+                         <h4>${{ $work->sueldo}}</h4>
                     </div>
                     <div class="col-md-6">
                        <h3>Lugar:</h3>
@@ -32,11 +32,14 @@
                        <h4>{{ $work->prestaciones}}</h4>
                     </div><br>
                     @if (Auth::check())
-                    <div class="col-md-8">
-                        <button type="button" class="btn btn-default">Postularse</button>
-                    </div>
-                     <p>id_usuario->{{ Auth::user()->id }}</p>
-                     <p>id_trabajo->{{ $work->id}}</p>
+                   <form action="{{ URL::to('vacantes/save') }}" method="POST">
+                      {{ csrf_field() }}
+                      <input type="text" name="userId" value="{{ Auth::user()->id }}" style="visibility:hidden;">
+                      <input type="text" name="workId" value="{{ $work->id}}" style="visibility:hidden;">
+                      <div class="col-md-8">
+                           <input type="submit" value="Postularte" class="pull-right btn btn-sm btn-primary">
+                      </div>
+                    </form>
                     @else
                     <div class="col-md-12">
                         <div class="alert alert-danger" role="alert">
@@ -49,5 +52,6 @@
         </div>
     </div>
 </div>
+
 @endsection
 

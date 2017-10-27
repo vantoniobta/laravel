@@ -63,9 +63,9 @@
                                     <img src="uploads/avatars/{{Auth::user()->avatar}}" style="width: 32px; height: 32px; position: absolute; top: 10px; left: 10px; border-radius: 50%">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-
                                 <ul class="dropdown-menu" role="menu">
-                                 <li><a href="{{ url('/profile') }}">Profile</a>
+                                 <li><a href="{{ url('/profile') }}">Mi perfil</a>
+                                 <li><a href="#">Postulaciones</a>
                                   <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
