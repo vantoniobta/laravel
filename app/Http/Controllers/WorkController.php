@@ -22,11 +22,50 @@ class WorkController extends Controller
     }
 
 	 public function save(Request $request) {
+          $userId = $request->userId;
+          $workId = $request->workId;
 
-             $data = ['userId' => $request->userId,
-                      'workId'=>$request->workId];
-                      DB::table('postulates')->insert($data);
-              dump($data);
+           // $user = DB::table('postulates')
+           //      ->where('userId', '=' , $userId)
+           //      ->get();
+        
+
+                // $users = DB::table('postulates')->where([
+                //     ['userId', '=', $userId],
+                //     ['workId', '=', $workId],
+                // ])->get();
+
+              $users = DB::table('postulates')->where([
+                  ['userId', '=', $userId],
+                  ['workId', '=', $workId],
+              ])->get();
+              $test=count($users);
+
+              if ($test == '0') {
+                echo "ok";
+              }else{
+                dump($test); 
+                return view('home');
+              }
+
+                    
+                
+                  
+
+               
+
+
+
+
+
+            
+
+
+              //$data = ['userId' => $request->userId,
+              //      'workId'=>$request->workId];
+              //DB::table('postulates')->insert($data);
+              //dump($data);
+              
 	    }
 
 }
