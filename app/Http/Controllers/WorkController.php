@@ -39,17 +39,19 @@ class WorkController extends Controller
                   ['userId', '=', $userId],
                   ['workId', '=', $workId],
               ])->get();
-              $test=count($users);
 
-              if ($test == '0') {
-                echo "ok";
-              }else{
-                dump($test); 
-                return view('home');
-              }
+              $test=count($users);
+                   if ($test == '0') {
+                     $data = ['userId' => $request->userId,
+                              'workId'=>$request->workId];
+                              DB::table('postulates')->insert($data);
+                         return view('vacantes/save');
+                       }else{
+                        return view('home');
+                   }
+
 
                     
-                
                   
 
                

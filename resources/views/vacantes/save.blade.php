@@ -6,7 +6,15 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-        <h1>Valentin Antonio Bautista</h1>
+         @if (Auth::check())
+            <h1>Hola {{ Auth::user()->name }}</h1>
+            @else
+              <div class="col-md-12">
+                  <div class="alert alert-danger" role="alert">
+                      <strong>Oh!</strong> <a href="../../login" class="alert-link"> Error!!</a>el Usuario no existe
+                  </div>
+              </div>
+            @endif
         </div>
     </div>
 </div>

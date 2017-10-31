@@ -24,6 +24,11 @@ Route::post('profile/{id}', 'UserController@update_avatar');
 Route::get('vacantes/info/{id}', 'WorkController@info');
 Route::post('vacantes/save', 'WorkController@save');
 
+Route::get('vacantes/save', function () {
+    return view('vacantes/save');
+});
+
+
 // Route::get('vacantes/save', function(){
 // 	return view('vacantes/save');
 // });
