@@ -5,9 +5,18 @@
 @section('content')
 <div class="container">
     <div class="row">
+
+
         <div class="col-md-12">
          @if (Auth::check())
-            <h1>Hola {{ Auth::user()->name }}</h1>
+         <div class="panel panel-default">
+            <div class="panel-heading">Hola {{ Auth::user()->name }}</div>
+               <div class="panel-body">
+                <h1>{{ $key}}</h1>
+                
+               </div>
+            </div>
+            </div>
             @else
               <div class="col-md-12">
                   <div class="alert alert-danger" role="alert">

@@ -40,7 +40,7 @@
           <a href="uploads/cv/{{$user->id}}/{{$user->cv}}"  style="color: red" download>Descargar tu CV</a><br>
           <label>Los tipos de archivos permitidos son pdf,doc,docx</label><br>
           <input type="file" name="cv">
-           <input type="submit" class="pull-right btn btn-sm btn-primary">
+           <input type="submit" class="pull-right btn btn-sm btn-primary" value="Guardar Datos">
         </div>
      </div>
 

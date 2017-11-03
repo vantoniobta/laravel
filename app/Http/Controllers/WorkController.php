@@ -25,42 +25,27 @@ class WorkController extends Controller
           $userId = $request->userId;
           $workId = $request->workId;
 
-           // $user = DB::table('postulates')
-           //      ->where('userId', '=' , $userId)
-           //      ->get();
-        
+          $work = DB::table('works')->where('id',$workId)->first();
+          //dump($work->puesto);
+          //$name = DB::table('users')->where('id', $workId)->pluck('puesto');
+         //dump($name);
 
-                // $users = DB::table('postulates')->where([
-                //     ['userId', '=', $userId],
-                //     ['workId', '=', $workId],
-                // ])->get();
-
-              $users = DB::table('postulates')->where([
+          $users = DB::table('postulates')->where([
                   ['userId', '=', $userId],
                   ['workId', '=', $workId],
-              ])->get();
-
-              $test=count($users);
+                  ])->get();
+          
+                  $test=count($users);
                    if ($test == '0') {
-                     $data = ['userId' => $request->userId,
+                       $data = ['userId' => $request->userId,
                               'workId'=>$request->workId];
                               DB::table('postulates')->insert($data);
-                         return view('vacantes/save');
+                         $key = 'Te postulaste para '.$work->puesto.' exitosamente!';
+                         return view('vacantes/save',compact('key'));
                        }else{
-                        return view('home');
-                   }
-
-
-                    
-                  
-
-               
-
-
-
-
-
-            
+                        $key = " Usted ya se encuentra postulado en esta vacante";
+                      return view('vacantes/save', compact('key'));
+                   }          
 
 
               //$data = ['userId' => $request->userId,

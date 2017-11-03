@@ -32,12 +32,13 @@
                        <h4>{{ $work->prestaciones}}</h4>
                     </div><br>
                     @if (Auth::check())
-                   <form action="{{ URL::to('vacantes/save') }}" method="POST">
+                   <form action="{{ URL::to('vacantes/insert') }}" method="POST">
                       {{ csrf_field() }}
                       <input type="text" name="userId" value="{{ Auth::user()->id }}" style="visibility:hidden;">
                       <input type="text" name="workId" value="{{ $work->id}}" style="visibility:hidden;">
-                      <div class="col-md-8">
-                           <input type="submit" value="Postularte" class="pull-right btn btn-sm btn-primary">
+                      <div class="col-md-2 pull-right">
+                           <input type="submit" value="Postularte" class="pull-right btn btn-primary">
+
                       </div>
                     </form>
                     @else

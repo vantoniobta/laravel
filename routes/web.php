@@ -17,17 +17,14 @@ Route::get('profile', 'UserController@profile');
 Route::post('profile/{id}', 'UserController@update_avatar');
 
 
-
-
-
 //info works
 Route::get('vacantes/info/{id}', 'WorkController@info');
-Route::post('vacantes/save', 'WorkController@save');
+Route::post('vacantes/insert', 'WorkController@save');
+
 
 Route::get('vacantes/save', function () {
     return view('vacantes/save');
 });
-
 
 // Route::get('vacantes/save', function(){
 // 	return view('vacantes/save');
