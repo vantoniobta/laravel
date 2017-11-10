@@ -4,29 +4,38 @@
 
 @section('content')
 
-<div class="mk-info md-padding container" style="background-color: #AFEEEE; top: 0;left: 0;width: 100%;height: 100%;">
- <div class="md-padding col-sm-4">
- a
+
+
+<div class="container" style="
+    background-image: url('../public/img/header1.jpg');
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+ ">
+
+  <div class="col-md-12 text-center" style="top: 30%">
+    <h1 style="color:#ff7f50; font-family: 'Passion One', cursive; size: " align="center"><b>EMPLEOS MULTIMEDIOS DIGITAL</b></h1>
+    <p style="color: #fff" align="center">Encuentra cientos de ofertas de trabajo de tecnología</p>
+
+
   </div>
-
-   <div class="md-padding col-sm-4">
-   a
-  </div>
-
-     <div class="md-padding col-sm-4">
-     a
-  </div>
-
-</div>
-
-<div class="container" style="background-color: #ededed;top: 0;left: 0;width: 100%;height: 100%; ">
-  <div class="col-md-6">
-   <div id="my-popup" class="mfp-hide white-popup"></div>  <!-- DIV VANTONIO popup -->
-    <h1 class="title_va" style="color:#000"><b>NUESTRA ESTRATEGIA DIGITAL</b></h1>
-    </div>
  </div>
 
-<div class="container" style="background-color: #1c6e80;">
+
+ <div class="container">
+  <div class="col-md-6"> 
+    <h1 class="title_va" style="color:#000;" align="center">Busca Ingenieros Tecnológico/IT ambicioso </h1>
+    <p style="color: #fff" align="center">Encuentra cientos de ofertas de trabajo de tecnología</p>
+  </div>
+   <div class="col-md-6"> 
+    <h1 class="title_va" style="color:#000;" align="center">Busca Ingenieros Tecnológico/IT ambicioso </h1>
+    <p style="color: #fff" align="center">Encuentra cientos de ofertas de trabajo de tecnología</p>
+  </div>
+ </div>
+
+<div class="container" style="background-color: #1c6e80; ">
    <div class="row">
      <div class="col-md-12">
      <h1 style="font-family: 'Anton', sans-serif; color: #fff" align="center">ÚLTIMAS OFERTAS DE TRABAJO</h1>
@@ -61,7 +70,7 @@
 
 
 
-<div style="background-color: #1c6e80"><br>
+<div style="background-color: #444444"><br>
  <footer>
   <div class="container">
     <div class="row">
@@ -101,7 +110,7 @@
 </footer>
 <!--footer start from here-->
 
-<div class="copyright" style="background-color:#165665">
+<div class="copyright" style="background-color:#2d2d2d">
   <div class="container">
     <div class="col-md-6">
       <p style="color: #ffffff">© 2017 - All Rights Grupo Multimedios</p>

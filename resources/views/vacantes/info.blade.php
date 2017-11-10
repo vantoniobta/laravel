@@ -48,6 +48,9 @@
                         </div>
                     </div>
                     @endif
+
+                    <!-- Redes Sociales -->
+
                 </div>
             </div>
         </div>
@@ -55,7 +58,7 @@
 </div>
 
 
-<div style="background-color: #1c6e80"><br>
+<div style="background-color: #444444"><br>
  <footer>
   <div class="container">
     <div class="row">
@@ -95,7 +98,7 @@
 </footer>
 <!--footer start from here-->
 
-<div class="copyright" style="background-color:#165665">
+<div class="copyright" style="background-color:#2d2d2d">
   <div class="container">
     <div class="col-md-6">
       <p style="color: #ffffff">© 2017 - All Rights Grupo Multimedios</p>

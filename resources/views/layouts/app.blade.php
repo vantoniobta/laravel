@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <!-- menu responsivo -->
@@ -25,11 +26,9 @@
       line-height: 64px;
     }*/
 </style>
-<body style="background-color: white" style="float:left;
-    padding-right: 0px;
-    padding-left: 0px;">
+<body>
     <div id="app" >
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0;">
             <div class="container">
                 <div class="navbar-header">
                     <!-- Collapsed Hamburger -->
@@ -42,7 +41,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        MultimediosRH
+                        LogoRH
                     </a>
                 </div>
 
@@ -66,7 +65,7 @@
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                  <li><a href="{{ url('/profile') }}">Mi perfil</a>
-                                 <li><a href="#">Postulaciones</a>
+                                 <li><a href="home">Postulaciones</a>
                                   <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -80,7 +79,6 @@
                 </div>
             </div>
         </nav>
-
         @yield('content')
     </div>
 
