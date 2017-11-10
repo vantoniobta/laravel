@@ -14,14 +14,63 @@
     background-size: cover;
     background-position: center;
  ">
+<!--   <div class="row">
+  <div class="col-xs-6 col-sm-4" style="top: 30%"> -->
+  <div class="row"><br><br>
+     <div class="col-lg-8 col-centered " style="float: none;
+margin: 0 auto;" >
+    
+    <div class="transbox" style=" margin: 0px;
+        background-color: #1c6e80;
+        border: 1px solid #1c6e80;
+        opacity: 0.7;
+        filter: alpha(opacity=60); /* For IE8 and earlier */">
+          <h1 style="color:#ffffff; font-family: 'Passion One', cursive; size: " align="center"><b>RECLUTAMIENTO MULTIMEDIOS DIGITAL</b></h1>
+           <p style="color: #fff" align="center">Encuentra ofertas de trabajo de tecnología</p>
 
-  <div class="col-md-12 text-center" style="top: 30%">
-    <h1 style="color:#ff7f50; font-family: 'Passion One', cursive; size: " align="center"><b>EMPLEOS MULTIMEDIOS DIGITAL</b></h1>
-    <p style="color: #fff" align="center">Encuentra cientos de ofertas de trabajo de tecnología</p>
+         <blockquote style=" padding: 10px 5px;
+          border-left: 1px solid #fff;
+          display:inline-block;
+          color: #666;
+          " ><a href="#" style="color: #ffffff">Monterrey</i></a></blockquote>
+
+         <blockquote style=" padding: 10px 5px;
+          border-left: 1px solid #fff;
+          display:inline-block;
+          color: #666;"><a href="#" style="color: #ffffff">CDMX</i></a></blockquote>
+
+         <blockquote style=" padding: 10px 5px;
+          border-left: 1px solid #fff;
+          display:inline-block;
+          color: #666;"><a href="#" style="color: #ffffff">Torreón</i></a></blockquote>
+
+          <blockquote style=" padding: 10px 5px;
+          border-left: 1px solid #fff;
+          display:inline-block;
+          color: #666;"><a href="#" style="color: #ffffff">Tampico</i></a></blockquote>
+
+          <blockquote style=" padding: 10px 5px;
+          border-left: 1px solid #fff;
+          display:inline-block;
+          color: #666;"><a href="#" style="color: #ffffff">Saltillo</i></a></blockquote>
 
 
+    </div>
+
+<!--     <h1 style="color:#ff7f50; font-family: 'Passion One', cursive; size: " align="center"><b>EMPLEOS MULTIMEDIOS DIGITAL</b></h1>
+    <p style="color: #fff" align="center">Encuentra cientos de ofertas de trabajo de tecnología</p> -->
   </div>
+  </div>
+
+
+
+
  </div>
+
+
+
+
+
 
 
  <div class="container">
