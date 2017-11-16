@@ -26,9 +26,6 @@ Route::get('vacantes/save', function () {
     return view('vacantes/save');
 });
 
-// Route::get('vacantes/save', function(){
-// 	return view('vacantes/save');
-// });
 
 
 Route::get('/', function () {
@@ -36,24 +33,6 @@ Route::get('/', function () {
 });
 
 
-
-Route::get('/home', function(){
-	return '<h1>Your age is less then 100 or equal 100</h1>';
-});
-
-
-Route::get('/user/age/{age}', function(){
-	return 'Your have permmision';
-})->middleware(CheckAge::class);
-
-Route::get('/greeting', function () {
-	if (View::exists('greeting')) {
-		$name = 'valentin';
-       return view('greeting', compact('name'));
-   }else{
-   	return '<h1>no view created</h1>';
-   }
-});
 
 
 //new tabs for menu 
@@ -63,10 +42,6 @@ Route::get('/vacantes', function(){
 	return view('vacantes', compact('works'));
 });
 
-Route::get('/home', function(){
-
-	return view('home', ['i'=>1]);
-});
 
 
 Route::get('/login', function(){
@@ -80,4 +55,13 @@ Route::get('/users/register', function(){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin', 'AdminController@index');
+
+
+
+//dashboard ->admin
+Route::prefix('admin')->group(function(){
+	   Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+	   Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+	   Route::get('/', 'AdminController@index')->name('admin.dashboard');
+});
+
