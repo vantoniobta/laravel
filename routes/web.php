@@ -43,6 +43,11 @@ Route::get('/vacantes', function(){
 });
 
 
+Route::get('admin/jobs_new', function(){
+	return view('admin/jobs_new');
+});
+
+
 
 Route::get('/login', function(){
 	return view('login');
@@ -56,12 +61,15 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
+// 	   Route::get('admin/jobs_new', function(){
+// 	return view('admin/jobs_new');
+// });
 
 //dashboard ->admin
 Route::prefix('admin')->group(function(){
 	   Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 	   Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 	   Route::get('/', 'AdminController@index')->name('admin.dashboard');
+	   Route::view('/jobs_new', 'admin/jobs_new')->name('admin.dashboard');
 });
 
