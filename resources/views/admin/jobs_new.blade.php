@@ -7,7 +7,8 @@
     <div class="row">
         <div class="col-md-10">
              
-              <form id="contact-form" class="form-horizontal" action="" method="post">
+              <form id="contact-form" class="form-horizontal" action="{{ URL::to('admin/jobs_save') }}" method="POST">
+                   {{ csrf_field() }}
               <fieldset>
                 <legend class="text-center">Nueva Vacante</legend>
                 <div id="success-container" class="text-center" style="display:none;">
@@ -58,7 +59,7 @@
                    <div class="form-group">
                     <label class="col-md-3 control-label" for="message">Sueldo</label>
                     <div class="col-md-9">
-                       <input id="Sueldo" name="Sueldo" type="Sueldo" placeholder="Sueldo" class="form-control" required="">
+                       <input id="Sueldo" name="sueldo" type="text" placeholder="Sueldo" class="form-control" required="">
                     </div>
                   </div>
 

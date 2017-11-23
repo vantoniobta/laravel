@@ -9,27 +9,27 @@
             <div class="panel panel-default">
                 <div class="panel-heading" style="background-color: #1c6e80">
                 <p style="color: white">PUESTO:</p>  
-                <h2 style="color: white">{{ $work->puesto}}</h2>
+                <h2 style="color: white">{{ $work->title}}</h2>
                 </div>
 
                 <div class="panel-body">
                     <div class="col-md-6">
                          <h3>Sueldo:</h3>
-                         <h4>${{ $work->sueldo}}</h4>
+                         <h4>${{ $work->salary}}</h4>
                     </div>
                     <div class="col-md-6">
                        <h3>Lugar:</h3>
-                      <h4>{{ $work->lugar}}</h4>
+                      <h4>{{ $work->address}}</h4>
                     </div>
 
                     <div class="col-md-6">
                        <h3>Requerimientos: </h3>
-                        <h4>{{ $work->habilidades}}</h4>
+                        <h4>{{ $work->abilities}}</h4>
                     </div>
 
                     <div class="col-md-6">
                        <h3>Prestaciones: </h3>
-                       <h4>{{ $work->prestaciones}}</h4>
+                       <h4>{{ $work->benefits}}</h4>
                     </div><br>
                     @if (Auth::check())
                    <form action="{{ URL::to('vacantes/insert') }}" method="POST">

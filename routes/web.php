@@ -38,7 +38,7 @@ Route::get('/', function () {
 //new tabs for menu 
 
 Route::get('/vacantes', function(){
-    $works = App\Work::all();
+    $works = App\Job::all();
 	return view('vacantes', compact('works'));
 });
 
@@ -70,6 +70,10 @@ Route::prefix('admin')->group(function(){
 	   Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 	   Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 	   Route::get('/', 'AdminController@index')->name('admin.dashboard');
-	   Route::view('/jobs_new', 'admin/jobs_new')->name('admin.dashboard');
 });
+
+Route::get('admin/jobs_new', 'AdminController@redirect_jobs')->name('admin.dashboard');
+Route::post('admin/jobs_save', 'AdminController@save')->name('admin.dashboard');
+
+
 

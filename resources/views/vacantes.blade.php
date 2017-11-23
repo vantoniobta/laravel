@@ -100,12 +100,12 @@ margin: 0 auto;" >
 	                      	@forelse ($works as $work)
 						<div class="col-md-4 ">
 						    <h4 style="font-family: 'Anton', sans-serif;">PUESTO</h4>
-						    <h4><a href="{{ URL::to('vacantes/info', $work->id)}}">{{ $work->puesto }}</a></h4>
+						    <h4><a href="{{ URL::to('vacantes/info', $work->id)}}">{{ $work->title }}</a></h4>
 						</div>
 							
 						<div class="col-md-8">
 							    <h4 style="font-family: 'Anton', sans-serif;">REQUISITOS:</h4>
-							    <li style="color: #1c6e80">{{ $work->habilidades }}</li>
+							    <li style="color: #1c6e80">{{ $work->abilities }}</li>
 							    <hr>
 						 </div>
 							@empty

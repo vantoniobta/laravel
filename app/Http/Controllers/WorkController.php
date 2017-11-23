@@ -16,7 +16,7 @@ class WorkController extends Controller
     }
 
     public function info($id){
-    	$work = DB::table('works')->where('id',$id)->first();
+    	$work = DB::table('jobs')->where('id',$id)->first();
     	//dump($work);
     	return view('vacantes/info', ['work' => $work])->with('id', $id);
     }
