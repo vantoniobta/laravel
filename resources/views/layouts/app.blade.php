@@ -17,6 +17,20 @@
 </head>
 <!-- menu responsivo -->
 <style type="text/css">
+ul.socials {
+ margin-top: 10px;
+ float: right;
+}
+
+ul.socials li {
+ display: inline-block;
+}
+
+ul.socials li span {
+ font-size: 13px;
+ margin-right: 10px;
+}
+
    /* .navbar-toggle {
        margin: 23px 0; 
     }

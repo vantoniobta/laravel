@@ -25,7 +25,7 @@ class WorkController extends Controller
           $userId = $request->userId;
           $workId = $request->workId;
 
-          $work = DB::table('works')->where('id',$workId)->first();
+          $work = DB::table('jobs')->where('id',$workId)->first();
           //dump($work->puesto);
           //$name = DB::table('users')->where('id', $workId)->pluck('puesto');
          //dump($name);
@@ -40,7 +40,7 @@ class WorkController extends Controller
                        $data = ['userId' => $request->userId,
                               'workId'=>$request->workId];
                               DB::table('postulates')->insert($data);
-                         $key = 'Te postulaste para '.$work->puesto.' exitosamente!';
+                         $key = 'Te postulaste para '.$work->title.' exitosamente!';
                          return view('vacantes/save',compact('key'));
                        }else{
                         $key = " Usted ya se encuentra postulado en esta vacante";

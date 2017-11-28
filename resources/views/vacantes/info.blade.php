@@ -50,6 +50,21 @@
                     @endif
 
                     <!-- Redes Sociales -->
+                      <div class="social_container">
+                             <ul class="socials">
+                                <li class="facebook">
+                                   <a href="//www.facebook.com/sharer/sharer.php?u=http://www.multimedios.com/" target="_blank"><img alt="facebook" src="https://www.solodev.com/assets/social-share/facebook.jpg"></a>
+                                </li>
+                                <li class="twitter">
+                                   <a href="//twitter.com/intent/tweet?text={{ $work->title}}+-{{ $work->address}}&url=http://www.multimedios.com/" target="_blank"><img alt="twitter" src="https://www.solodev.com/assets/social-share/twitter.jpg"></a>
+                                </li>
+                                <li class="linkedin">
+                                   <a href="//www.linkedin.com/cws/share?url=http://www.multimedios.com/" target="_blank"><img alt="linkedin" src="https://www.solodev.com/assets/social-share/linkedin.jpg"></a>
+                                </li>
+                             </ul>
+                      </div>
+
+
 
                 </div>
             </div>
@@ -86,11 +101,11 @@
       </div>
       <div class="col-md-3 col-sm-6 paddingtop-bottom">
         <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-          <div class="fb-xfbml-parse-ignore">
+        <!--   <div class="fb-xfbml-parse-ignore">
             <blockquote cite="https://www.facebook.com/facebook"><a href="https://twitter.com/multimediostv"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></blockquote>
             <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/multimediostv/"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a></blockquote>
              <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.instagram.com/multimediostv/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></blockquote>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
