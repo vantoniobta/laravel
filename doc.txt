@@ -11,3 +11,11 @@ https://vantoniobta.github.io/vantonio/
 *drop table user comand artisan *
 
     + `php artisan migrate:rollback`
+
+ instalación
+
+ .............................................
+ composer require yajra/laravel-datatables-oracle
+ url->https://datatables.yajrabox.com/starter
+  .............................................
+

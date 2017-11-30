@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-
+use App\Job;
 class AdminController extends Controller
 {
     /**
@@ -24,7 +24,8 @@ class AdminController extends Controller
      */
     public function index()
     { 
-        return view('admin');
+        $jobs = DB::table('jobs')->paginate(10);
+        return view('admin')->with('jobs', $jobs);
     }
 
     public function redirect_jobs() {
@@ -33,8 +34,6 @@ class AdminController extends Controller
 
 
      public function save(Request $request) {
-
-
         $data = ['title' => $request->puesto,
                     'address'=>$request->lugar,
                     'time'=>$request->tiempo,
@@ -43,7 +42,8 @@ class AdminController extends Controller
                     'salary'=>$request->sueldo];
 
                     DB::table('jobs')->insert($data);
-                    return view('admin');
+                     $jobs = DB::table('jobs')->paginate(10);
+                    return redirect('admin')->with('jobs', $jobs);
 
         }
 }
