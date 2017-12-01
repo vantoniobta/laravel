@@ -28,7 +28,7 @@
                               <tr>
                                 <td>{!! $job->created_at !!}</td>
                                 <td>{!! $job->title !!}</td>
-                                  <td>{!! $job->address !!}</td>
+                                <td>{!! $job->address !!}</td>
                                 <td>{!! $job->time !!}</td>
                                 <td>{!! $job->salary !!}</td>
                                 <td><a href="#" class="btn btn-default btn-sm">Edit</a></td>

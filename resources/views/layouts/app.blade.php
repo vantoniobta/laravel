@@ -19,7 +19,7 @@
 <style type="text/css">
 ul.socials {
  margin-top: 10px;
- float: right;
+ float: left;
 }
 
 ul.socials li {

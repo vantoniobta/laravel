@@ -50,7 +50,7 @@
                     @endif
 
                     <!-- Redes Sociales -->
-                      <div class="social_container">
+                <!--       <div class="social_container">
                              <ul class="socials">
                                 <li class="facebook">
                                    <a href="//www.facebook.com/sharer/sharer.php?u=http://www.multimedios.com/" target="_blank"><img alt="facebook" src="https://www.solodev.com/assets/social-share/facebook.jpg"></a>
@@ -62,7 +62,7 @@
                                    <a href="//www.linkedin.com/cws/share?url=http://www.multimedios.com/" target="_blank"><img alt="linkedin" src="https://www.solodev.com/assets/social-share/linkedin.jpg"></a>
                                 </li>
                              </ul>
-                      </div>
+                      </div> -->
 
 
 

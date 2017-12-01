@@ -31,18 +31,17 @@ class AdminController extends Controller
     public function redirect_jobs() {
         return view('admin/jobs_new');
     }
-
-
      public function save(Request $request) {
-        $data = ['title' => $request->puesto,
-                    'address'=>$request->lugar,
-                    'time'=>$request->tiempo,
-                    'abilities'=>$request->habilidades,
-                    'benefits'=>$request->prestaciones,
-                    'salary'=>$request->sueldo];
-
-                    DB::table('jobs')->insert($data);
-                     $jobs = DB::table('jobs')->paginate(10);
+                    $job = New Job;
+                    $job ->title = $request->puesto;
+                    $job ->address = $request->lugar;
+                    $job ->time = $request->tiempo;
+                    $job ->abilities = $request->habilidades;
+                    $job ->benefits = $request->prestaciones;
+                    $job ->salary = $request->sueldo;
+                    $job->save();
+                   // DB::table('jobs')->insert($data);
+                    $jobs = DB::table('jobs')->paginate(10);
                     return redirect('admin')->with('jobs', $jobs);
 
         }

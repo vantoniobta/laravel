@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Work;
+use App\Postulate;
 use Auth;
 use Image;
 use DB;
@@ -25,26 +26,34 @@ class WorkController extends Controller
           $userId = $request->userId;
           $workId = $request->workId;
 
-          $work = DB::table('jobs')->where('id',$workId)->first();
-          //dump($work->puesto);
-          //$name = DB::table('users')->where('id', $workId)->pluck('puesto');
-         //dump($name);
-
-          $users = DB::table('postulates')->where([
-                  ['userId', '=', $userId],
-                  ['workId', '=', $workId],
-                  ])->get();
-          
-                  $test=count($users);
+          $work   = DB::table('jobs')->where('id',$workId)->first();
+          $users  = DB::table('postulates')->where([
+                                          ['userId', '=', $userId],
+                                          ['workId', '=', $workId],
+                                          ])->get();
+                        
+                   $test=count($users);
                    if ($test == '0') {
-                       $data = ['userId' => $request->userId,
-                              'workId'=>$request->workId];
-                              DB::table('postulates')->insert($data);
-                         $key = 'Te postulaste para '.$work->title.' exitosamente!';
-                         return view('vacantes/save',compact('key'));
+
+                       $postulate = New Postulate;
+                       $postulate ->userId = $request->userId;
+                       $postulate ->workId = $request->workId;
+                       $postulate ->save();
+
+                       // $data = ['userId' => $request->userId,
+                       //          'workId' => $request->workId];
+
+
+                      //DB::table('postulates')->insert($data);
+                      $key = 'Te postulaste para '.$work->title.' exitosamente!';
+                      return view('vacantes/save',compact('key'));
+
                        }else{
+
                         $key = " Usted ya se encuentra postulado en esta vacante";
                       return view('vacantes/save', compact('key'));
+
+
                    }          
 
 
