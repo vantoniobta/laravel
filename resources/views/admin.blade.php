@@ -10,9 +10,16 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    You are logged in as <strong>ADMIN</strong>
-                    <a href="{{ url('admin/jobs_new') }}" class="pull-right btn btn-sm btn-primary">Nuevo Vacante</a>
+                    You are logged in as <strong>ADMIN</strong><br>
+                    <a href="{{ url('admin/jobs_new') }}" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>&nbspNew</a>
+                 <br><hr>
+                    <div class="col-md-12">
+
+                      <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Type your search keyword.." onkeyup="search_all()">
+                    </div>
+
                     <br><br><br>
+
                 <div class="table-responsive">    
                       <table class="table" id="table_wrapper">
                         <thead>
@@ -23,6 +30,7 @@
                             <th>Tiempo</th>
                             <th>Salario</th>
                             <th></th>
+                            <th>Postulados</th>
                           </tr>
                           @foreach ($jobs as $job)
                               <tr>
@@ -31,8 +39,9 @@
                                 <td>{!! $job->address !!}</td>
                                 <td>{!! $job->time !!}</td>
                                 <td>{!! $job->salary !!}</td>
-                                <td><a href="#" class="btn btn-default btn-sm">Edit</a></td>
-                                 <td><a href="#" class="btn btn-default btn-sm">Delete</a></td>
+                                
+                                 <td><a href="#" class="btn btn-default btn-sm">Edit</a></td>
+                                 <td><a href="#" class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp1</a></td>
                             </tr>
                           @endforeach
                         </thead>
@@ -45,5 +54,23 @@
         </div>
     </div>
 </div>
-
+<script>
+function search_all() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("search_v");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table_wrapper");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
 @endsection
