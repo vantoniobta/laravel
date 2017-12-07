@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use App\Job;
+use App\Work;
+use App\Postulate;
+use Auth;
+
 class AdminController extends Controller
 {
     /**
@@ -24,7 +28,7 @@ class AdminController extends Controller
      */
     public function index()
     { 
-        $jobs = DB::table('jobs')->paginate(10);
+        $jobs  = DB::table('jobs')->paginate(10);
         return view('admin')->with('jobs', $jobs);
     }
 
@@ -33,16 +37,58 @@ class AdminController extends Controller
     }
      public function save(Request $request) {
                     $job = New Job;
-                    $job ->title = $request->puesto;
-                    $job ->address = $request->lugar;
-                    $job ->time = $request->tiempo;
+                    $job ->title     = $request->puesto;
+                    $job ->address   = $request->lugar;
+                    $job ->time      = $request->tiempo;
                     $job ->abilities = $request->habilidades;
-                    $job ->benefits = $request->prestaciones;
-                    $job ->salary = $request->sueldo;
-                    $job->save();
-                   // DB::table('jobs')->insert($data);
+                    $job ->benefits  = $request->prestaciones;
+                    $job ->salary    = $request->sueldo;
+                    $job ->save();
                     $jobs = DB::table('jobs')->paginate(10);
-                    return redirect('admin')->with('jobs', $jobs);
+                    return redirect('admin') ->with('jobs', $jobs);
+    }
 
-        }
+    public function postulates_get($id) {
+        $job   = DB::table('jobs')->where('id',$id)->get();
+
+        //.........................................
+
+      
+
+
+            // $a = DB::table('users')
+            // ->join('postulates', 'users.id', '=', 'postulates.userId')
+            //  ->where('postulates.workId', '=', '3');
+
+
+
+             // $a=DB::table('users')
+             //    ->join('postulates', function ($join) {
+             //        $join->on('users.id', '=', 'postulates.userId')
+             //             ->where('postulates.workId', '>', '$id');
+             //    })
+             //    ->get();
+
+                $a=DB::table('postulates')
+                ->join('users', function ($join) {
+                    $join->on('postulates.userId', '=', 'users.id')
+                         ->where('postulates.workId', '>', '$id');
+                })
+                ->get();
+
+            dump($a);
+
+
+
+
+        //.........................................
+
+
+
+       
+
+
+
+        return view('admin/postulates',compact('job'));
+    }
 }

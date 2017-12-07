@@ -41,7 +41,7 @@
                                 <td>{!! $job->salary !!}</td>
                                 
                                  <td><a href="#" class="btn btn-default btn-sm">Edit</a></td>
-                                 <td><a href="#" class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp1</a></td>
+                                 <td><a href="{{  URL::to('admin/postulates',$job->id )}}" class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp1</a></td>
                             </tr>
                           @endforeach
                         </thead>
