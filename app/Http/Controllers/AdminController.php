@@ -49,18 +49,15 @@ class AdminController extends Controller
     }
 
     public function postulates_get($id) {
-        $job   = DB::table('jobs')->where('id',$id)->get();
+        
+        dump($id);
+        $job   = DB::table('postulates')->where('workId',$id)->get();
+         dump($job);
 
         //.........................................
-
-      
-
-
             // $a = DB::table('users')
             // ->join('postulates', 'users.id', '=', 'postulates.userId')
             //  ->where('postulates.workId', '=', '3');
-
-
 
              // $a=DB::table('users')
              //    ->join('postulates', function ($join) {
@@ -69,26 +66,8 @@ class AdminController extends Controller
              //    })
              //    ->get();
 
-                $a=DB::table('postulates')
-                ->join('users', function ($join) {
-                    $join->on('postulates.userId', '=', 'users.id')
-                         ->where('postulates.workId', '>', '$id');
-                })
-                ->get();
-
-            dump($a);
-
-
-
-
+               
         //.........................................
-
-
-
-       
-
-
-
-        return view('admin/postulates',compact('job'));
+        //return view('admin/postulates',compact('job'));
     }
 }
