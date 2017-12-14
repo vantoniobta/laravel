@@ -28,7 +28,7 @@ class AdminController extends Controller
      */
     public function index()
     { 
-        $jobs  = DB::table('jobs')->paginate(10);
+        $jobs  = DB::table('jobs')->orderBy('created_at', 'desc')->paginate(10);
         return view('admin')->with('jobs', $jobs);
     }
 
@@ -49,31 +49,16 @@ class AdminController extends Controller
     }
 
     public function postulates_get($id) {
-        //get postulates users view
-        $abc=DB::table('users')
-        ->join('postulates', function ($join) use ($id){
-            $join->on('users.id', '=', 'postulates.userId')
-                 ->where('postulates.workId', '=',$id);
+       $jobs = DB::table('jobs')->where('id',$id)->first();
+       $data = DB::table('users')
+                ->join('postulates', function ($join) use ($id){
+                    $join->on('users.id', '=', 'postulates.userId')
+                         ->where('postulates.workId', '=',$id);
 
-        })
-        ->get();
-        dump($abc);
-       
-
-        //.........................................
-            // $a = DB::table('users')
-            // ->join('postulates', 'users.id', '=', 'postulates.userId')
-            //  ->where('postulates.workId', '=', '3');
-
-             // $a=DB::table('users')
-             //    ->join('postulates', function ($join) {
-             //        $join->on('users.id', '=', 'postulates.userId')
-             //             ->where('postulates.workId', '>', '$id');
-             //    })
-             //    ->get();
-
-               
-        //.........................................
-        return view('admin/postulates')->with('abc', $abc);
+                })
+                ->get();               
+                  return view('admin/postulates')
+                  ->with('data', $data)
+                  ->with('jobs', $jobs);
     }
 }

@@ -44,8 +44,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}" style="color: #ffffff">
-                        DASHBOARD
+                    <a class="navbar-brand" href="{{ url('/admin') }}" style="color: #ffffff">
+                        ADMINISTRADOR
                     </a>
                 </div>
 
