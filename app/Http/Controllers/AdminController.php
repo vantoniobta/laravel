@@ -74,6 +74,6 @@ class AdminController extends Controller
 
                
         //.........................................
-        //return view('admin/postulates',compact('job'));
+        return view('admin/postulates')->with('abc', $abc);
     }
 }
