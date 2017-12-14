@@ -49,10 +49,16 @@ class AdminController extends Controller
     }
 
     public function postulates_get($id) {
-        
-        dump($id);
-        $job   = DB::table('postulates')->where('workId',$id)->get();
-         dump($job);
+        //get postulates users view
+        $abc=DB::table('users')
+        ->join('postulates', function ($join) use ($id){
+            $join->on('users.id', '=', 'postulates.userId')
+                 ->where('postulates.workId', '=',$id);
+
+        })
+        ->get();
+        dump($abc);
+       
 
         //.........................................
             // $a = DB::table('users')
