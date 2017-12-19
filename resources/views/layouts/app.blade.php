@@ -12,7 +12,9 @@
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Candal|Concert+One|Francois+One|Fredoka+One|Lilita+One|Passion+One|Patua+One" rel="stylesheet">
+
+    
+ 
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
