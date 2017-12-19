@@ -12,24 +12,22 @@
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Candal|Concert+One|Francois+One|Fredoka+One|Lilita+One|Passion+One|Patua+One" rel="stylesheet">
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <!-- menu responsivo -->
 <style type="text/css">
-ul.socials {
- margin-top: 10px;
- float: left;
-}
 
-ul.socials li {
- display: inline-block;
-}
 
-ul.socials li span {
- font-size: 13px;
- margin-right: 10px;
-}
+
+
+
+    nav ul li:hover {
+      background: #a0c41c;
+    }
+
+
 
    /* .navbar-toggle {
        margin: 23px 0; 
@@ -42,7 +40,7 @@ ul.socials li span {
 </style>
 <body>
     <div id="app" >
-        <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0;">
+        <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #413f3f;border-color: #413f3f;">
             <div class="container">
                 <div class="navbar-header">
                     <!-- Collapsed Hamburger -->
@@ -61,16 +59,25 @@ ul.socials li span {
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
+
                     <ul class="nav navbar-nav">
-                          <li><a href="{{ url('/vacantes') }}">Vacantes</a></li>
+                    <form class="navbar-form navbar-right">
+          <input type="text" class="form-control" placeholder="Search...">
+        </form>
+                          <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a></li>
                     </ul>
+
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a href="{{ route('login') }}" style="color: #fff">Login&nbsp;&nbsp;<i class="fa fa-sign-in fa-1x" aria-hidden="true"></i></a></li>
+                            <li><a href="{{ route('register') }}" style="color: #fff">Register&nbsp;&nbsp;<i class="fa fa-user-plus fa-1x" aria-hidden="true"></i></a></li>
+                            <li><a href=""><i class="fa fa-facebook-official fa-1x" aria-hidden="true" style="color: #fff"></i></a></li>
+                            <li><a href=""><i class="fa fa-twitter fa-1x" aria-hidden="true" style="color: #fff"></i></a></li>
+                            <li><a href=""><i class="fa fa-instagram fa-1x" aria-hidden="true" style="color: #fff"></i></a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative;padding-left: 50px;">

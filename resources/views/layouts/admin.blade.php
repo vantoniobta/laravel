@@ -52,8 +52,8 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                          <li><a href="{{ url('/admin') }}" style="color: #fff">Home</a></li>
-                          <li><a href="{{ url('/admin') }}" style="color: #fff">#2</a></li>
+                          <li><a href="{{ url('/admin') }}" style="color: #fff">Vacantes</a></li>
+                          <li><a href="{{ url('/admin') }}" style="color: #fff">Users</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

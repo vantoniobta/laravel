@@ -17,15 +17,14 @@
 <!--   <div class="row">
   <div class="col-xs-6 col-sm-4" style="top: 30%"> -->
   <div class="row"><br><br>
-     <div class="col-lg-8 col-centered " style="float: none;
-margin: 0 auto;" >
+     <div class="col-lg-8 col-centered " style="float: none; margin: 0 auto;" >
     
     <div class="transbox" style=" margin: 0px;
         background-color: #1c6e80;
         border: 1px solid #1c6e80;
         opacity: 0.7;
         filter: alpha(opacity=60); /* For IE8 and earlier */">
-          <h1 style="color:#ffffff; font-family: 'Passion One', cursive; size: " align="center"><b>RECLUTAMIENTO MULTIMEDIOS DIGITAL</b></h1>
+          <h1 style="color:#ffffff; font-family: 'Candal', sans-serif;" align="center"><b>RECLUTAMIENTO MULTIMEDIOS</b></h1>
            <p style="color: #fff" align="center">Encuentra ofertas de trabajo de tecnología</p>
 
          <blockquote style=" padding: 10px 5px;
@@ -55,6 +54,8 @@ margin: 0 auto;" >
           color: #666;"><a href="#" style="color: #ffffff">Saltillo</i></a></blockquote>
 
 
+
+
     </div>
 
 <!--     <h1 style="color:#ff7f50; font-family: 'Passion One', cursive; size: " align="center"><b>EMPLEOS MULTIMEDIOS DIGITAL</b></h1>
@@ -75,12 +76,12 @@ margin: 0 auto;" >
 
  <div class="container">
   <div class="col-md-6"> 
-    <h1 class="title_va" style="color:#000;" align="center">Busca Ingenieros Tecnológico/IT ambicioso </h1>
-    <p style="color: #fff" align="center">Encuentra cientos de ofertas de trabajo de tecnología</p>
+    <h1 class="title_va" style="color:#000;" align="center">Multimedios Radio</h1>
+    <p style="color: #000" align="center">Encuentra cientos de ofertas de trabajo de tecnología</p>
   </div>
    <div class="col-md-6"> 
-    <h1 class="title_va" style="color:#000;" align="center">Busca Ingenieros Tecnológico/IT ambicioso </h1>
-    <p style="color: #fff" align="center">Encuentra cientos de ofertas de trabajo de tecnología</p>
+    <h1 class="title_va" style="color:#000;" align="center">Multimedios Televisión</h1>
+    <p style="color: #000" align="center">Encuentra cientos de ofertas de trabajo de tecnología</p>
   </div>
  </div>
 
