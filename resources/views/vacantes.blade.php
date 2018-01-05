@@ -85,7 +85,7 @@
   </div>
  </div>
 
-<div class="container" style="background-color: #1c6e80; ">
+<div class="container" style="background-color: #265d7e; ">
    <div class="row">
      <div class="col-md-12">
      <h1 style="font-family: 'Anton', sans-serif; color: #fff" align="center">ÚLTIMAS OFERTAS DE TRABAJO</h1>

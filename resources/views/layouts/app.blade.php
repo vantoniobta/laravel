@@ -10,23 +10,49 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+    <!-- google dfp -->
+        <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+        <script>
+          var googletag = googletag || {};
+          googletag.cmd = googletag.cmd || [];
+        </script>
+
+        <script>
+          googletag.cmd.push(function() {
+            googletag.defineSlot('/7246/Laguna_Test/La_Laguna/Articulo/Leaderboard_footer', [[728, 90], [300, 50], [320, 50], [970, 90], [970, 250]], 'div-gpt-ad-1515110014492-0').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+          });
+        </script>
+
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-
-    
- 
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <!-- menu responsivo -->
 <style type="text/css">
 
+.share-social {
+  
+}
+.share-social ul {
+    
+}
+
+.share-social ul li {
+display: inline;
+list-style-type: none;
+padding-right: 20px;
+}
+
+
 
 
 
 
     nav ul li:hover {
-      background: #a0c41c;
+      background: #d06e1b;
     }
 
 
@@ -41,8 +67,8 @@
     }*/
 </style>
 <body>
-    <div id="app" >
-        <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #413f3f;border-color: #413f3f;">
+    <div id="app" style="background-color: #FAFAFA">
+        <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #24363e;border-color: #413f3f;">
             <div class="container">
                 <div class="navbar-header">
                     <!-- Collapsed Hamburger -->
@@ -82,7 +108,7 @@
                             <li><a href=""><i class="fa fa-instagram fa-1x" aria-hidden="true" style="color: #fff"></i></a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative;padding-left: 50px;">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative;padding-left: 50px;color: #ffffff">
                                     <img src="uploads/avatars/{{Auth::user()->avatar}}" style="width: 32px; height: 32px; position: absolute; top: 10px; left: 10px; border-radius: 50%">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
@@ -106,7 +132,6 @@
     </div>
 
     <!-- Scripts -->
-
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
