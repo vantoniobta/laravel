@@ -32,31 +32,14 @@
 </head>
 <!-- menu responsivo -->
 <style type="text/css">
-
-.share-social {
-  
-}
-.share-social ul {
+    .share-social {}
+    .share-social ul {}
+    .share-social ul li {display: inline;list-style-type: none;padding-right: 20px;}
     
-}
 
-.share-social ul li {
-display: inline;
-list-style-type: none;
-padding-right: 20px;
-}
+    nav ul li:hover {background-color: #2E8B57;}
 
-
-
-
-
-
-    nav ul li:hover {
-      background: #d06e1b;
-    }
-
-
-
+    
    /* .navbar-toggle {
        margin: 23px 0; 
     }
@@ -68,15 +51,15 @@ padding-right: 20px;
 </style>
 <body>
     <div id="app" style="background-color: #FAFAFA">
-        <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #24363e;border-color: #413f3f;">
+        <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #24363e;border-color: #24363e;">
             <div class="container">
                 <div class="navbar-header">
                     <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" style="background-color: #2E8B57;">
                         <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                        <span class="icon-bar" style="background-color: #FFFFFF;"></span>
+                        <span class="icon-bar" style="background-color: #FFFFFF;"></span>
+                        <span class="icon-bar" style="background-color: #FFFFFF;"></span>
                     </button>
 
                     <!-- Branding Image -->
@@ -89,9 +72,9 @@ padding-right: 20px;
                     <!-- Left Side Of Navbar -->
 
                     <ul class="nav navbar-nav">
-                    <form class="navbar-form navbar-right">
-          <input type="text" class="form-control" placeholder="Search...">
-        </form>
+                    <!-- <form class="navbar-form navbar-right" style="">
+                      <input type="text" class="form-control" placeholder="Search..." style="border:none">
+                    </form> -->
                           <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a></li>
                     </ul>
 

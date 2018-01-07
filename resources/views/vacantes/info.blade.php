@@ -7,20 +7,17 @@
 <div class="container">
     <div class="row">
 
-
-    <div class="row">
-     <div class="col-lg-4 col-lg-offset-2 text-center">
-           <!-- /7246/Laguna_Test/La_Laguna/Articulo/Leaderboard_footer -->
-        <div id='div-gpt-ad-1515110014492-0'>
-        <script>
-        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1515110014492-0'); });
-        </script>
-        </div>
-     </div>
-  </div>
-
-
-        
+         <!-- google ads -->
+         <div class="row">
+            <div class="col-lg-4 col-lg-offset-2 text-center">
+                   <!-- /7246/Laguna_Test/La_Laguna/Articulo/Leaderboard_footer -->
+                <div id='div-gpt-ad-1515110014492-0'>
+                <script>
+                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1515110014492-0'); });
+                </script>
+                </div>
+             </div>
+          </div>
 
 
         <div class="col-md-14">
