@@ -32,6 +32,13 @@ class AdminController extends Controller
         return view('admin')->with('jobs', $jobs);
     }
 
+
+    public function redirect_jobs_edit($id) {
+         $jobs = DB::table('jobs')->where('id',$id)->first();
+        return view('admin/jobs_edit',['jobs' => $jobs]);
+    }
+
+
     public function redirect_jobs() {
         return view('admin/jobs_new');
     }

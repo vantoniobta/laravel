@@ -69,6 +69,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::prefix('admin')->group(function(){
 	   Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 	   Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+
+
+	   Route::get('/jobs_edit/{id}', 'AdminController@redirect_jobs_edit')->name('admin.dashboard');
+
 	   
 	   Route::get('/jobs_new', 'AdminController@redirect_jobs')->name('admin.dashboard');
 	   Route::get('/postulates/{id}', 'AdminController@postulates_get')->name('admin.dashboard');

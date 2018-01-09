@@ -29,8 +29,8 @@
                             <th style="color: #FFF; background-color: #666666">LUGAR</th>
                             <th style="color: #FFF; background-color: #666666">TIEMPO</th>
                             <th style="color: #FFF; background-color: #666666">SALARIO</th>
-                            <th style="color: #FFF; background-color: #666666"></th>
                             <th style="color: #FFF; background-color: #666666">POSTULADOS</th>
+                            <th style="color: #FFF; background-color: #666666"></th>
                           </tr>
                           @foreach ($jobs as $job)
                               <tr>
@@ -39,9 +39,8 @@
                                 <td>{!! $job->address !!}</td>
                                 <td>{!! $job->time !!}</td>
                                 <td>{!! $job->salary !!}</td>
-                                
-                                 <td><a href="#" class="btn btn-default btn-sm">Edit</a></td>
-                                 <td><a href="{{  URL::to('admin/postulates',$job->id )}}" class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp1</a></td>
+                                <td><a href="{{  URL::to('admin/postulates',$job->id )}}" class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i>&nbsp1</a></td>
+                                 <td><a href="{{ URL::to('admin/jobs_edit',$job->id) }}" class="btn btn-default btn-sm">Edit</a></td>
                             </tr>
                           @endforeach
                         </thead>
