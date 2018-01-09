@@ -9,22 +9,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- google dfp -->
-        <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
-        <script>
-          var googletag = googletag || {};
-          googletag.cmd = googletag.cmd || [];
-        </script>
-
-        <script>
-          googletag.cmd.push(function() {
-            googletag.defineSlot('/7246/Laguna_Test/La_Laguna/Articulo/Leaderboard_footer', [[728, 90], [300, 50], [320, 50], [970, 90], [970, 250]], 'div-gpt-ad-1515110014492-0').addService(googletag.pubads());
-            googletag.pubads().enableSingleRequest();
-            googletag.enableServices();
-          });
-        </script>
-
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
@@ -86,9 +70,9 @@
                         @guest
                             <li><a href="{{ route('login') }}" style="color: #fff">Login&nbsp;&nbsp;<i class="fa fa-sign-in fa-1x" aria-hidden="true"></i></a></li>
                             <li><a href="{{ route('register') }}" style="color: #fff">Register&nbsp;&nbsp;<i class="fa fa-user-plus fa-1x" aria-hidden="true"></i></a></li>
-                            <li><a href=""><i class="fa fa-facebook-official fa-1x" aria-hidden="true" style="color: #fff"></i></a></li>
-                            <li><a href=""><i class="fa fa-twitter fa-1x" aria-hidden="true" style="color: #fff"></i></a></li>
-                            <li><a href=""><i class="fa fa-instagram fa-1x" aria-hidden="true" style="color: #fff"></i></a></li>
+                            <li><a href="https://www.facebook.com/multimediostv"><i class="fa fa-facebook-official fa-1x" aria-hidden="true" style="color: #fff"></i></a></li>
+                            <li><a href="https://twitter.com/multimediostv"><i class="fa fa-twitter fa-1x" aria-hidden="true" style="color: #fff"></i></a></li>
+                            <li><a href="https://www.instagram.com/multimediostv/"><i class="fa fa-instagram fa-1x" aria-hidden="true" style="color: #fff"></i></a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative;padding-left: 50px;color: #ffffff">
@@ -97,7 +81,7 @@
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                  <li><a href="{{ url('/profile') }}">Mi perfil</a>
-                                 <li><a href="home">Postulaciones</a>
+                                 <!-- <li><a href="home">Postulaciones</a> -->
                                   <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

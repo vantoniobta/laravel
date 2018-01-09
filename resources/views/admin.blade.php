@@ -10,8 +10,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    You are logged in as <strong>ADMIN</strong><br>
-                    <a href="{{ url('admin/jobs_new') }}" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>&nbspNew</a>
+                    <!-- You are logged in as <strong>ADMIN</strong><br> -->
+                    <a href="{{ url('admin/jobs_new') }}" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i>&nbspNueva Vacante</a>
                  <br><hr>
                     <div class="col-md-12">
 
@@ -21,16 +21,16 @@
                     <br><br><br>
 
                 <div class="table-responsive">    
-                      <table class="table" id="table_wrapper">
+                      <table class="table" id="table_general">
                         <thead>
                           <tr>
-                            <th>Fecha</th>
-                            <th>Puesto</th>
-                            <th>Lugar</th>
-                            <th>Tiempo</th>
-                            <th>Salario</th>
-                            <th></th>
-                            <th>Postulados</th>
+                            <th style="color: #FFF; background-color: #666666">FECHA</th>
+                            <th style="color: #FFF; background-color: #666666">PUESTO</th>
+                            <th style="color: #FFF; background-color: #666666">LUGAR</th>
+                            <th style="color: #FFF; background-color: #666666">TIEMPO</th>
+                            <th style="color: #FFF; background-color: #666666">SALARIO</th>
+                            <th style="color: #FFF; background-color: #666666"></th>
+                            <th style="color: #FFF; background-color: #666666">POSTULADOS</th>
                           </tr>
                           @foreach ($jobs as $job)
                               <tr>
@@ -59,7 +59,7 @@ function search_all() {
   var input, filter, table, tr, td, i;
   input = document.getElementById("search_v");
   filter = input.value.toUpperCase();
-  table = document.getElementById("table_wrapper");
+  table = document.getElementById("table_general");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[1];

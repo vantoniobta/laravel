@@ -7,7 +7,7 @@
 <div class="container" style="background-color: #265d7e;">
    <div class="row">
      <div class="col-md-12">
-     <h1 style="font-family: 'Anton', sans-serif; color: #fff" align="center">INFORMACIÓN PERSONAL</h1>
+     <h2 style="font-family: 'Anton', sans-serif; color: #fff" align="center">INFORMACIÓN PERSONAL</h2>
      </div>
    </div>
  </div>
@@ -56,6 +56,33 @@
      </div>
    </form>
 </div><br>
+
+
+<!-- <div class="container" style="background-color: #265d7e;">
+   <div class="row">
+     <div class="col-md-12">
+     <h4 style="font-family: 'Anton', sans-serif; color: #fff" align="center">POSTULACIONES</h4>
+     </div>
+   </div>
+ </div>
+
+ <div class="container" style=" margin:top;
+    border: 1px solid #D3D3D3;">
+     <div class="row"><br>
+      <div class="col-md-6">
+          <div class="table-responsive">    
+              <table class="table" id="table_wrapper">
+                  <thead>
+                     <tr>
+                     <th style="background-color: #D3D3D3;">Fecha</th>
+                     <th style="background-color: #D3D3D3;">Nombre</th>
+                     </tr>
+                  </thead>
+               </table>
+           </div>
+      </div>
+     </div>
+  </div><br> -->
 
 
 

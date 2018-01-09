@@ -20,16 +20,26 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <!-- menu responsivo -->
-<style type="text/css">
-   /* .navbar-toggle {
-       margin: 23px 0; 
-    }
-
-    .navbar-nav, .navbar-nav li, .navbar-nav li a {
-      height: 64px;
-      line-height: 64px;
-    }*/
-</style>
+    <style>
+        #table_general {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        #table_general td, #table_general th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        #table_general tr:nth-child(even){background-color: #f2f2f2;}
+        #table_general tr:hover {background-color: #ddd;}
+        #table_general th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
 <body style="background-color: #ffffff">
     <div id="app" >
         <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #337ab7">

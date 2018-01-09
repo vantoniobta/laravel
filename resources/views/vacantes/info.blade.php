@@ -3,28 +3,14 @@
 @section('title', 'Page Child')
 
 @section('content')
-
+<br>
 <div class="container">
     <div class="row">
-
-         <!-- google ads -->
-         <div class="row">
-            <div class="col-lg-4 col-lg-offset-2 text-center">
-                   <!-- /7246/Laguna_Test/La_Laguna/Articulo/Leaderboard_footer -->
-                <div id='div-gpt-ad-1515110014492-0'>
-                <script>
-                googletag.cmd.push(function() { googletag.display('div-gpt-ad-1515110014492-0'); });
-                </script>
-                </div>
-             </div>
-          </div>
-
-
-        <div class="col-md-14">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading" style="background-color: #265d7e">
                 <p style="color: white">PUESTO:</p>  
-                <h2 style="color: white">{{ $work->title}}</h2>
+                <h3 style="color: white">{{ $work->title}}</h3>
                 </div>
 
                 <div class="panel-body">

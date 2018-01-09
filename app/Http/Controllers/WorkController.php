@@ -50,7 +50,7 @@ class WorkController extends Controller
 
                        }else{
 
-                        $key = " Usted ya se encuentra postulado en esta vacante";
+                        $key = "Ya te encuentra postulado en la vacante";
                       return view('vacantes/save', compact('key'));
 
 
