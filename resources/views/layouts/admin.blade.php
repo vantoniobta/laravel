@@ -42,7 +42,7 @@
     </style>
 <body style="background-color: #ffffff">
     <div id="app" >
-        <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #337ab7">
+        <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #696969">
             <div class="container">
                 <div class="navbar-header">
                     <!-- Collapsed Hamburger -->
@@ -55,7 +55,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/admin') }}" style="color: #ffffff">
-                        ADMINISTRADOR
+                        <i class="fa fa-dashcube fa-lg fa-rotate-270" aria-hidden="true"></i>
                     </a>
                 </div>
 

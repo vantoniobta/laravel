@@ -72,6 +72,7 @@ Route::prefix('admin')->group(function(){
 
 
 	   Route::get('/jobs_edit/{id}', 'AdminController@redirect_jobs_edit')->name('admin.dashboard');
+	   Route::post('/jobs_save_edit/{id}', 'AdminController@save_edit')->name('admin.dashboard');
 
 	   
 	   Route::get('/jobs_new', 'AdminController@redirect_jobs')->name('admin.dashboard');

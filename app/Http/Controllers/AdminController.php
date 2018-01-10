@@ -28,7 +28,25 @@ class AdminController extends Controller
      */
     public function index()
     { 
-        $jobs  = DB::table('jobs')->orderBy('created_at', 'desc')->paginate(10);
+
+
+
+        // $postulates  = DB::table('postulates')
+        //              ->select(DB::raw('count(*) as user_count'))
+        //              ->where('workId', '=', 2)
+        //              ->get();
+
+                 
+
+        $total = DB::table('jobs')
+                 ->join('postulates','jobs.id', '=','postulates.workId')
+                 ->select('jobs.*','postulates.*')
+                 ->get();
+
+                     dump($total);
+
+
+        $jobs       = DB::table('jobs')->orderBy('created_at', 'desc')->paginate(10);
         return view('admin')->with('jobs', $jobs);
     }
 
@@ -53,6 +71,26 @@ class AdminController extends Controller
                     $job ->save();
                     $jobs = DB::table('jobs')->paginate(10);
                     return redirect('admin') ->with('jobs', $jobs);
+    }
+
+    public function save_edit(Request $request,$id) {
+            $title       = $request ->puesto;
+            $address     = $request ->lugar;
+            $time        = $request ->tiempo;
+            $abilities   = $request ->habilidades;
+            $benefits    = $request ->prestaciones;
+            $salary      = $request ->sueldo;
+                           DB::table('jobs')
+                                   ->where('id', $id)
+                                   ->update(['title'      => $title,
+                                            'address'     => $address,
+                                             'time'       => $time,
+                                             'abilities'  => $abilities,
+                                             'benefits'   => $benefits,
+                                             'salary'     => $salary]);
+                                     $jobs = DB::table('jobs')->paginate(10);
+                    return redirect('admin') ->with('jobs', $jobs);
+
     }
 
     public function postulates_get($id) {

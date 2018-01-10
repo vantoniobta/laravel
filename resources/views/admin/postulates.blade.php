@@ -32,8 +32,35 @@
                         </thead>
                       </table>
                </div>
+         </div>
+    </div>
+</div>
+
+
+<div style="background-color: #444444"><br>
+ <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 footerleft ">
+        <div class="logofooter" style="color:#fff;"><b>NOSOTROS</b></div>
+        <p style="color:#fff;">Somos una empresa lider en cada uno de los negocios, estamos comprometidos con la mejora continua para satisfacer a nuestros clientes.</p>
+        <p style="color:#fff;"><i class="fa fa-map-marker"></i >Calle Paricutín 312, Roma, 64700 Monterrey, N.L.</p>
+        <p style="color:#fff;"><i class="fa fa-phone"></i> Phone (México) : +52 (81) 8880 4400</p>
+        <p style="color:#fff;"><i class="fa fa-envelope"></i> E-mail : info@multimedios.com</p>
+        
       </div>
     </div>
+  </div>
+</footer>
+<!--footer start from here-->
+
+<div class="copyright" style="background-color:#2d2d2d">
+  <div class="container">
+    <div class="col-md-6">
+      <p style="color: #ffffff">© 2017 - All Rights Grupo Multimedios</p>
+    </div>
+  </div>
+</div>
 </div>
 
 @endsection

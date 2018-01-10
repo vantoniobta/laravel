@@ -47,8 +47,8 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        LogoRH
+                    <a class="navbar-brand" href="{{ url('/') }}" style="color: #ffffff">
+                         <i class="fa fa-dashcube fa-lg fa-rotate-270" aria-hidden="true"></i>
                     </a>
                 </div>
 
@@ -70,9 +70,9 @@
                         @guest
                             <li><a href="{{ route('login') }}" style="color: #fff">Login&nbsp;&nbsp;<i class="fa fa-sign-in fa-1x" aria-hidden="true"></i></a></li>
                             <li><a href="{{ route('register') }}" style="color: #fff">Register&nbsp;&nbsp;<i class="fa fa-user-plus fa-1x" aria-hidden="true"></i></a></li>
-                            <li><a href="https://www.facebook.com/multimediostv"><i class="fa fa-facebook-official fa-1x" aria-hidden="true" style="color: #fff"></i></a></li>
-                            <li><a href="https://twitter.com/multimediostv"><i class="fa fa-twitter fa-1x" aria-hidden="true" style="color: #fff"></i></a></li>
-                            <li><a href="https://www.instagram.com/multimediostv/"><i class="fa fa-instagram fa-1x" aria-hidden="true" style="color: #fff"></i></a></li>
+                            <li><a href="https://www.facebook.com/multimediostv"><i class="fa fa-facebook-official fa-lg" aria-hidden="true" style="color: #fff"></i></a></li>
+                            <li><a href="https://twitter.com/multimediostv"><i class="fa fa-twitter fa-lg" aria-hidden="true" style="color: #fff"></i></a></li>
+                            <li><a href="https://www.instagram.com/multimediostv/"><i class="fa fa-instagram fa-lg" aria-hidden="true" style="color: #fff"></i></a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative;padding-left: 50px;color: #ffffff">
