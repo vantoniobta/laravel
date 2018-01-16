@@ -10,6 +10,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
 
         <!-- Styles -->
         
@@ -21,6 +22,10 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+            }
+
+            body{
+                background: url(background-photo.jpg) center center cover no-repeat fixed;
             }
 
             .full-height {
@@ -66,35 +71,34 @@
             }
         </style>
     </head>
-    <body>
+    <body style="background-image: url(https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/891.jpg); background-position: center center;background-repeat: no-repeat;background-attachment: fixed;  background-size: cover;">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/vacantes') }}">Vacantes</a>
-                        <a href="{{ url('/home') }}">Postularse</a>
+                        <a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a>
+                        <a href="{{ url('/home') }}" style="color: #fff">Postularse</a>
                     @else
-                        <a href="{{ url('/vacantes') }}">Vacantes</a>
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
+                        <a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a>
+                        <a href="{{ route('login') }}" style="color: #fff">Login</a>
+                        <a href="{{ route('register') }}" style="color: #fff">Register</a>
                     @endauth
                 </div>
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
+             <div class="col-md-6"> 
+                   <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png">
+                  <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #fff">Bolsa de Trabajo</p>
+             </div>
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="#" style="color: #fff">Televisión</a>
+                    <a href="#" style="color: #fff">Redes Sociales</a>
+                    <a href="#" style="color: #fff">Recursos Humanos</a>
+                    <a href="#" style="color: #fff">Radio</a>
+                    <a href="#" style="color: #fff">Practicas profesionales</a>
                 </div>
             </div>
         </div>
-        
     </body>
 </html>

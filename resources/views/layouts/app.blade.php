@@ -34,7 +34,7 @@
     }*/
 </style>
 <body>
-    <div id="app" style="background-color: #FAFAFA">
+    <div id="app" style="background-color: #f4f4f4:">
         <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #24363e;border-color: #24363e;">
             <div class="container">
                 <div class="navbar-header">
@@ -69,7 +69,7 @@
                         <!-- Authentication Links -->
                         @guest
                             <li><a href="{{ route('login') }}" style="color: #fff">Login&nbsp;&nbsp;<i class="fa fa-sign-in fa-1x" aria-hidden="true"></i></a></li>
-                            <li><a href="{{ route('register') }}" style="color: #fff">Register&nbsp;&nbsp;<i class="fa fa-user-plus fa-1x" aria-hidden="true"></i></a></li>
+                            <li><a href="{{ route('register') }}" style="color: #fff">Registro&nbsp;&nbsp;<i class="fa fa-user-plus fa-1x" aria-hidden="true"></i></a></li>
                             <li><a href="https://www.facebook.com/multimediostv"><i class="fa fa-facebook-official fa-lg" aria-hidden="true" style="color: #fff"></i></a></li>
                             <li><a href="https://twitter.com/multimediostv"><i class="fa fa-twitter fa-lg" aria-hidden="true" style="color: #fff"></i></a></li>
                             <li><a href="https://www.instagram.com/multimediostv/"><i class="fa fa-instagram fa-lg" aria-hidden="true" style="color: #fff"></i></a></li>

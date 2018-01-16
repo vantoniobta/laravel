@@ -28,9 +28,6 @@ class AdminController extends Controller
      */
     public function index()
     { 
-
-
-
         // $postulates  = DB::table('postulates')
         //              ->select(DB::raw('count(*) as user_count'))
         //              ->where('workId', '=', 2)
@@ -43,7 +40,8 @@ class AdminController extends Controller
                  ->select('jobs.*','postulates.*')
                  ->get();
 
-                     dump($total);
+        
+
 
 
         $jobs       = DB::table('jobs')->orderBy('created_at', 'desc')->paginate(10);
