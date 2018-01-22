@@ -19,9 +19,12 @@
     .share-social {}
     .share-social ul {}
     .share-social ul li {display: inline;list-style-type: none;padding-right: 20px;}
+
+
+
     
 
-    nav ul li:hover {background-color: #2E8B57;}
+    
 
     
    /* .navbar-toggle {
@@ -33,7 +36,7 @@
       line-height: 64px;
     }*/
 </style>
-<body>
+<body style="background-color: #ffffff">
     <div id="app" style="background-color: #f4f4f4:">
         <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #24363e;border-color: #24363e;">
             <div class="container">
