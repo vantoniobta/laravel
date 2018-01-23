@@ -25,6 +25,10 @@ Route::post('vacantes/insert', 'WorkController@save');
 Route::get('vacantes/save', function () {
     return view('vacantes/save');
 });
+Route::get('vacantes/error', function () {
+    return view('vacantes/error');
+});
+
 
 
 

@@ -3,6 +3,7 @@
 @section('title', 'Page Child')
 
 @section('content')
+
 <div class="container"><br>
     <div class="row" style=" margin:top;border: 1px solid #D3D3D3;">
      <div class="panel-heading" style="background-color: #444;color: #F0E68C"><h4 align="center"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;NUEVA VACANTE</h4></div><br>
@@ -21,7 +22,14 @@
                   <div class="form-group">
                     <label class="col-md-3 control-label">Puesto</label>
                     <div class="col-md-9">
-                      <input id="puesto" name="puesto" type="text" placeholder="Puesto Principal" class="form-control" required="">
+                      <input id="puesto" name="puesto" type="text" placeholder="Puesto Principal" class="form-control" onkeyup="miFuncion()" autocomplete="off" onpaste="return false" required="">
+                    </div>
+                  </div>
+
+                   <div class="form-group">
+                    <label class="col-md-3 control-label">URL</label>
+                    <div class="col-md-9">
+                      <input id="url" name="url" type="text" placeholder="Puesto Principal" class="form-control" disabled="true">
                     </div>
                   </div>
 

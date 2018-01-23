@@ -40,10 +40,6 @@ class AdminController extends Controller
                  ->select('jobs.*','postulates.*')
                  ->get();
 
-        
-
-
-
         $jobs       = DB::table('jobs')->orderBy('created_at', 'desc')->paginate(10);
         return view('admin')->with('jobs', $jobs);
     }
@@ -61,6 +57,7 @@ class AdminController extends Controller
      public function save(Request $request) {
                     $job = New Job;
                     $job ->title     = $request->puesto;
+                    $job ->url       = $request->url;
                     $job ->address   = $request->lugar;
                     $job ->time      = $request->tiempo;
                     $job ->abilities = $request->habilidades;

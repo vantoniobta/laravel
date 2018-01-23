@@ -97,5 +97,13 @@
     <!-- Scripts -->
 
     <script src="{{ asset('js/app.js') }}"></script>
+    <script type="text/javascript">
+        function miFuncion() {
+          var v1 = document.getElementById("puesto").value;
+          var v2 = v1.replace(/ /g, "-");
+             document.getElementById("url").value = v2;
+        }
+    </script>
+    </script>
 </body>
 </html>

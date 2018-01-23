@@ -52,7 +52,6 @@
 
 
 
-                    <!--shared -->
                     <div class="col-md-12">
                      <h3 style="font-family: 'Anton', sans-serif; color: #c96a1b">COMPARTIR VACANTE</h3>
                     <div class="share-social">

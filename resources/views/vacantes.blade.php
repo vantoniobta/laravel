@@ -167,15 +167,15 @@
 						<div class="col-md-4 ">
 						    <!-- <h4 style="font-family: 'Open Sans', sans-serif; #0086be">PUESTO</h4> -->
                 <h4 data-fontsize="10" data-lineheight="23"><span style="color: #1c6e80;">PUESTO</span></h4>
-						    <p style=" font-size: 18px"><a href="{{ URL::to('vacantes/info', $work->id)}}" style="color:black">{{ $work->title }}</a></p>
-                
+						    <p style=" font-size: 18px;"><a href="{{ URL::to('vacantes/info', $work->url)}}" style="color:#696969">{{ $work->title }}</a></p>
+
 						</div>
 							
 						<div class="col-md-8">
 							   <!--  <h4 style="font-family: 'Anton', sans-serif;color: #0086be">REQUISITOS:</h4> -->
                   <h4 data-fontsize="10" data-lineheight="23"><span style="color: #1c6e80;">REQUISITOS</span></h4>
                   <ul style="list-style:none;" >
-                    <li style="color: black" ><p style=" font-size: 18px">{{ $work->abilities }}</p></li>
+                    <li style="color: #696969" ><p style=" font-size: 18px">{{ $work->abilities }}</p></li>
                   </ul>
 
 							    <hr>

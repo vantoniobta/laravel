@@ -17,9 +17,14 @@ class WorkController extends Controller
     }
 
     public function info($id){
-    	$work = DB::table('jobs')->where('id',$id)->first();
-    	//dump($work);
-    	return view('vacantes/info', ['work' => $work])->with('id', $id);
+    	$work = DB::table('jobs')->where('url',$id)->first();
+      if ($work == null) {
+        //echo  '<h1>NOTHING :( </h1>';;
+        return view('vacantes/error');
+      }else{
+        return view('vacantes/info', ['work' => $work])->with('id', $id);
+      }
+    	//return view('vacantes/info', ['work' => $work])->with('id', $id);
     }
 
 	 public function save(Request $request) {
