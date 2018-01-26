@@ -29,7 +29,7 @@
                    <div class="form-group">
                     <label class="col-md-3 control-label">URL</label>
                     <div class="col-md-9">
-                      <input id="url" name="url" type="text" placeholder="Puesto Principal" class="form-control" disabled="true">
+                      <input id="url" name="url" type="text" placeholder="Puesto Principal" class="form-control">
                     </div>
                   </div>
 

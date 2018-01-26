@@ -12,22 +12,19 @@
     width: 100%;
     margin: auto;
     background-size: cover;
-    background-position: center;
- ">
-<!--   <div class="row">
-  <div class="col-xs-6 col-sm-4" style="top: 30%"> -->
+    background-position: center;">
   <div class="row"><br><br>
      <div class="col-lg-8 col-centered " style="float: none; margin: 0 auto;" >
 
           
           <div class="transbox" style=" margin: 0px;
-              background-color: #1c6e80;
-              border: 1px solid #1c6e80;
-              opacity: 0.7;
+              background-color: #4682B4;
+              border: 1px solid #4682B4;
+              opacity: 0.6
               filter: alpha(opacity=60); /* For IE8 and earlier */">
 
         
-          <h1 style="color:#ffffff; font-family: 'Candal', sans-serif;" align="center"><b>RECLUTAMIENTO MULTIMEDIOS</b></h1>
+          <h1 style="color:#fff; Montserrat, Helvetica, Arial, sans-serif;" align="center"><b>RECLUTAMIENTO MULTIMEDIOS</b></h1>
            <p style="color: #fff" align="center">Encuentra ofertas de trabajo de tecnología</p>
          
                                     
@@ -36,32 +33,32 @@
           border-left: 1px solid #fff;
           display:inline-block;
           color: #666;
-          " ><a href="#" style="color: #ffffff">Monterrey</i></a></blockquote>
+          " ><a href="#" style="color: #fff">Monterrey</i></a></blockquote>
 
          <blockquote style=" padding: 10px 5px;
           border-left: 1px solid #fff;
           display:inline-block;
-          color: #666;"><a href="#" style="color: #ffffff">CDMX</i></a></blockquote>
+          color: #666;"><a href="#" style="color: #fff">CDMX</i></a></blockquote>
 
          <blockquote style=" padding: 10px 5px;
           border-left: 1px solid #fff;
           display:inline-block;
-          color: #666;"><a href="#" style="color: #ffffff">Torreón</i></a></blockquote>
+          color: #666;"><a href="#" style="color: #fff">Torreón</i></a></blockquote>
 
           <blockquote style=" padding: 10px 5px;
           border-left: 1px solid #fff;
           display:inline-block;
-          color: #666;"><a href="#" style="color: #ffffff">Tampico</i></a></blockquote>
+          color: #666;"><a href="#" style="color: #fff">Tampico</i></a></blockquote>
 
           <blockquote style=" padding: 10px 5px;
           border-left: 1px solid #fff;
           display:inline-block;
-          color: #666;"><a href="#" style="color: #ffffff">Saltillo</i></a></blockquote>
+          color: #666;"><a href="#" style="color: #fff">Saltillo</i></a></blockquote>
 
           <blockquote style=" padding: 10px 5px;
           border-left: 1px solid #fff;
           display:inline-block;
-          color: #666;"><a href="#" style="color: #ffffff">León</i></a></blockquote>
+          color: #666;"><a href="#" style="color: #fff">León</i></a></blockquote>
 
 
 
@@ -153,7 +150,7 @@
 <div class="container" style="background-color: #f1c108; ">
    <div class="row">
      <div class="col-md-12">
-     <h1 style="font-family: 'Anton', sans-serif; color: #000" align="center">ÚLTIMAS OFERTAS DE TRABAJO</h1>
+     <h1 style="Montserrat, Helvetica, Arial, sans-serif; color: #000" align="center">ÚLTIMAS OFERTAS DE TRABAJO</h1>
      </div>
    </div>
  </div>
@@ -161,28 +158,36 @@
 <div class="container">
     <div class="row">
 	        <div class="col-md-12">
-	             <!--  <h1 align="center" style="font-family: 'Anton', sans-serif; color: #1c6e80">ÚLTIMAS OFERTAS DE TRABAJO</h1><br> -->
+
 	                <div class="panel-body" >
-	                      	@forelse ($works as $work)
-						<div class="col-md-4 ">
-						    <!-- <h4 style="font-family: 'Open Sans', sans-serif; #0086be">PUESTO</h4> -->
-                <h4 data-fontsize="10" data-lineheight="23"><span style="color: #1c6e80;">PUESTO</span></h4>
-						    <p style=" font-size: 18px;"><a href="{{ URL::to('vacantes/info', $work->url)}}" style="color:#696969">{{ $work->title }}</a></p>
+	               @forelse ($works as $work)
 
-						</div>
+
+      						<div class="col-md-4 ">
+                      <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">PUESTO</span></h6>
+      						    <p style=" font-size: 18px;"><a href="{{ URL::to('vacantes/info', $work->url)}}" style="color:#000">{{ $work->title }}</a></p>
+      						</div>
+
+                   
 							
-						<div class="col-md-8">
-							   <!--  <h4 style="font-family: 'Anton', sans-serif;color: #0086be">REQUISITOS:</h4> -->
-                  <h4 data-fontsize="10" data-lineheight="23"><span style="color: #1c6e80;">REQUISITOS</span></h4>
-                  <ul style="list-style:none;" >
-                    <li style="color: #696969" ><p style=" font-size: 18px">{{ $work->abilities }}</p></li>
-                  </ul>
+    						  <div class="col-md-6">
+                      <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">REQUISITOS</span></h6>
+                      <ul style="list-style:none;" >
+                        <li style="color: #000" ><p style=" font-size: 18px">{{ $work->abilities }}</p></li>
+                      </ul>
+    							    
+    						 </div>
 
-							    <hr>
-						 </div>
-							@empty
-							    <p>No users</p>
-							@endforelse
+                  <div class="col-md-2 ">
+                      <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">fecha</span></h6>
+                      <p style=" font-size: 18px;color:#000;">{{ $work->created_at->format('Y-m-d') }}</p>
+                      <hr>
+                  </div>
+
+
+    							@empty
+    							    <p>No users</p>
+    							@endforelse
 	               </div>
 	        </div>
     </div>
