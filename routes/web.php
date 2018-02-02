@@ -42,7 +42,7 @@ Route::get('/', function () {
 //new tabs for menu 
 
 Route::get('/vacantes', function(){
-    $works = App\Job::orderBy('created_at', 'desc')->paginate(5);
+    $works = App\Job::where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(5);
 	return view('vacantes', compact('works'));
 });
 

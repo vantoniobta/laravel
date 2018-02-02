@@ -26,7 +26,7 @@
                     </div>
                   </div>
 
-                   <div class="form-group">
+                   <div class="form-group" style="display:none;">
                     <label class="col-md-3 control-label">URL</label>
                     <div class="col-md-9">
                       <input id="url" name="url" type="text" placeholder="Puesto Principal" class="form-control">
@@ -70,7 +70,16 @@
                     </div>
                   </div>
 
-                  <!-- Form actions -->
+                   <div class="form-group">
+                    <label class="col-md-3 control-label" for="message" style="color: red">Status</label>
+                    <div class="col-md-9">
+                      <select class="form-control" id="status" name="status">
+                         <option value="Activo">Activo</option>
+                         <option value="Inactivo">Inactivo</option>
+                      </select>
+                    </div>
+                  </div>
+                  
                   <div class="form-group">
                     <div class="col-md-12 text-right" id="spin-area">
                       <button type="submit" class="btn btn-primary btn-lg">Enviar</button>

@@ -100,19 +100,9 @@
         
       </div>
       <div class="col-md-3 col-sm-6 paddingtop-bottom">
-        <h6 class="heading7" style="color:#fff;"><b>MULTIMEDIOS</b></h6>
-        <div class="post">
-          <p style="color:#fff;">http://www.multimedios.com<span></span></p>
-          <p style="color:#fff;">http://laguna.multimedios.com<span></span></p>
-        </div>
       </div>
       <div class="col-md-3 col-sm-6 paddingtop-bottom">
         <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-          <div class="fb-xfbml-parse-ignore">
-            <blockquote cite="https://www.facebook.com/facebook"><a href="https://twitter.com/multimediostv"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a></blockquote>
-            <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/multimediostv/"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></a></blockquote>
-             <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.instagram.com/multimediostv/"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></blockquote>
-          </div>
         </div>
       </div>
     </div>

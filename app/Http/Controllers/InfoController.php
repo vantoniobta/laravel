@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Storage;
+use Auth;
+use Image;
+use DB;
 use Auth;
 
-use Illuminate\Http\Request;
 
 class InfoController extends Controller
 {

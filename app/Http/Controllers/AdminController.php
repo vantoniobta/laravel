@@ -63,6 +63,7 @@ class AdminController extends Controller
                     $job ->abilities = $request->habilidades;
                     $job ->benefits  = $request->prestaciones;
                     $job ->salary    = $request->sueldo;
+                    $job ->status    = $request->status;
                     $job ->save();
                     $jobs = DB::table('jobs')->paginate(10);
                     return redirect('admin') ->with('jobs', $jobs);
@@ -75,6 +76,7 @@ class AdminController extends Controller
             $abilities   = $request ->habilidades;
             $benefits    = $request ->prestaciones;
             $salary      = $request ->sueldo;
+            $status      = $request ->status;
                            DB::table('jobs')
                                    ->where('id', $id)
                                    ->update(['title'      => $title,
@@ -82,7 +84,8 @@ class AdminController extends Controller
                                              'time'       => $time,
                                              'abilities'  => $abilities,
                                              'benefits'   => $benefits,
-                                             'salary'     => $salary]);
+                                             'salary'     => $salary,
+                                             'status'     => $status]);
                                      $jobs = DB::table('jobs')->paginate(10);
                     return redirect('admin') ->with('jobs', $jobs);
 

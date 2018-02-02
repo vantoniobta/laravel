@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Work;
 use App\Postulate;
+use Storage;
 use Auth;
 use Image;
 use DB;
@@ -30,7 +30,6 @@ class WorkController extends Controller
 	 public function save(Request $request) {
           $userId = $request->userId;
           $workId = $request->workId;
-
           $work   = DB::table('jobs')->where('id',$workId)->first();
           $users  = DB::table('postulates')->where([
                                           ['userId', '=', $userId],

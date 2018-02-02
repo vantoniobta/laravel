@@ -165,7 +165,7 @@
 
       						<div class="col-md-4 ">
                       <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">PUESTO</span></h6>
-      						    <p style=" font-size: 18px;"><a href="{{ URL::to('vacantes/info', $work->url)}}" style="color:#000">{{ $work->title }}</a></p>
+      						    <p style=" font-size: 18px;"><a href="{{ URL::to('vacantes/info', $work->url)}}" style="color:#008B8B">{{ $work->title }}</a></p>
       						</div>
 
                    
@@ -186,7 +186,7 @@
 
 
     							@empty
-    							    <p>No users</p>
+    							    <p>No existen Vacantes</p>
     							@endforelse
 	               </div>
 	        </div>
@@ -195,7 +195,7 @@
 
 <div class="container">
     <div class="row">
-      <div class="col-md-12 text-center">
+      <div class="col-md-12 text-center" id="test">
         {{ $works->links()}}
       </div>
     </div>

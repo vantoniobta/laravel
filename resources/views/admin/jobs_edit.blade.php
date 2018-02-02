@@ -61,6 +61,25 @@
                     </div>
                   </div>
 
+                  <div class="form-group">
+                    <label class="col-md-3 control-label" for="message" style="color: red">Status</label>
+                      <div class="col-md-9">
+
+                          @if ($jobs->status == 'Inactivo')
+                            <select class="form-control" id="status" name="status">
+                              <option value="{{ $jobs->status}}">{{ $jobs->status}}</option>
+                              <option value="Activo">Activo</option>
+                            </select>
+                            @else
+                            <select class="form-control" id="status" name="status">
+                              <option value="{{ $jobs->status}}">{{ $jobs->status}}</option>
+                              <option value="Inactivo">Inactivo</option>
+                            </select>
+                          @endif
+
+                      </div>
+                  </div>  
+
                   <!-- Form actions -->
                   <div class="form-group">
                     <div class="col-md-12 text-right" id="spin-area">

@@ -11,13 +11,13 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:600" rel="stylesheet">
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <!-- menu responsivo -->
 <style type="text/css">
-      nav.navbar {
+        nav.navbar {
             margin: 0; 
             padding: 5px; 
             list-style-type: none; 
@@ -29,49 +29,47 @@
             padding:0;
         }
         nav div > ul > li > a { 
-
           font-size: 16px;
           line-height: 32px;
           padding: 0 16px;
           color: #fff
         }
-        .navbar-brand {
-            padding: 0px;
+        .navbar-brand { padding: 0px;}
+        .navbar-brand>img { padding: 7px 10px; }
+        nav ul li:hover { background-color: #00CED1;}
 
-        }
-        .navbar-brand>img {
-            padding: 7px 10px;
-
-        }
-        
-        nav ul li:hover {
-            background-color: #00CED1;
-        }
-
-        .dropdown-toggle:active, .open .dropdown-toggle {
-            background:#00CED1 !important; 
-            color:#000 !important;
-        }
-       .dropdown-menu {
+        .dropdown-toggle:active, .open .dropdown-toggle { background:#00CED1 !important; color:#000 !important;}
+        .dropdown-menu {
          background-color: #FFFFFF;
          color: #red;
         }
-        .dropdown-menu > li > a {
-        color: #000
-        }
+        .dropdown-menu > li > a {color: #000}
         .dropdown-menu > li > a:hover,
         .dropdown-menu > li > a:focus {
          text-decoration: none;
          color: #000 !important;
         }
-
-
-
-
-
-
-
-
+        .share-btn {
+            display: inline-block;
+            color: #ffffff;
+            border: none;
+            padding: 0.5em;
+            width: 4em;
+            box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+            outline: none;
+            text-align: center;
+        }
+        .share-btn:hover {color: #eeeeee;}
+        .share-btn:active {
+          position: relative;
+          top: 2px;
+          box-shadow: none;
+          color: #e2e2e2;
+          outline: none;
+        }
+        .share-btn.twitter     { background: #55acee; }
+        .share-btn.facebook    { background: #3B5998; }
+        .share-btn.linkedin    { background: #4875B4; }
 </style>
 <body style="background-color: #ffffff">
     <div id="app" style="background-color: #f4f4f4:">
@@ -111,9 +109,6 @@
                             <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a></li>
                             <li><a href="{{ route('register') }}" style="color: #fff">Registro&nbsp;&nbsp;<i class="fa fa-user-plus fa-1x" aria-hidden="true"></i></a></li>
                             <li><a href="{{ route('login') }}" style="color: #fff">Login&nbsp;&nbsp;<i class="fa fa-sign-in fa-1x" aria-hidden="true"></i></a></li>
-<!--                             <li><a href="https://www.facebook.com/multimediostv"><i class="fa fa-facebook-official fa-lg" aria-hidden="true" style="color: #000"></i></a></li>
-                            <li><a href="https://twitter.com/multimediostv"><i class="fa fa-twitter fa-lg" aria-hidden="true" style="color: #000"></i></a></li>
-                            <li><a href="https://www.instagram.com/multimediostv/"><i class="fa fa-instagram fa-lg" aria-hidden="true" style="color: #000"></i></a></li> -->
                         @else
                         <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a></li>
                             <li class="dropdown">
