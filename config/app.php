@@ -163,9 +163,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Laravel\Socialite\SocialiteServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
-        Jorenvh\Share\Providers\ShareServiceProvider::class,
+        SetKyar\CustomShares\CustomSharesProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -231,7 +231,6 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
-         'Share' => Jorenvh\Share\ShareFacade::class,
 
     ],
 

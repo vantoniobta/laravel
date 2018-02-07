@@ -60,7 +60,7 @@
 
                 <div class="col-md-8">
                   <h3 style="color: #000">Compartir Vacante</h3>
-                    <a href="http://twitter.com/share?url=http://localhost/laravel/public/vacantes/info/Practicas-Profesionales-Noticias&text=HMTL%20Share%20Buttons&via=MultimediosRH" target="_blank" class="share-btn twitter">
+                    <a href="ab" target="_blank" class="share-btn twitter">
                         <i class="fa fa-twitter"></i>
                     </a>
                     <a href="http://www.facebook.com/sharer/sharer.php?u=https://github.com/gschier/html-share-buttons" target="_blank" class="share-btn facebook">

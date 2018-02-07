@@ -17,11 +17,38 @@ Route::get('profile', 'UserController@profile');
 Route::post('profile/{id}', 'UserController@update_avatar');
 
 
+
 //info works
-Route::get('vacantes/info/{id}', 'WorkController@info');
-Route::post('vacantes/insert', 'WorkController@save');
+//Route::get('vacantes/info/{id}', 'WorkController@info');
 
 
+// Route::get('info/{id}', [
+//     'as'   => 'vacantes/info/{id}',
+//     'uses' => 'WorkController@info'
+// ]);
+
+
+Route::prefix('vacantes')->group(function(){
+	Route::get('/info/{id}', 'WorkController@info');
+	Route::post('/insert', 'WorkController@save');
+});
+
+
+
+
+
+
+//facebook
+Route::get('/redirect', 'SocialAuthController@redirect');
+Route::get('/callback', 'SocialAuthController@callback');
+
+
+
+
+
+
+
+// Route::post('vacantes/insert', 'WorkController@save');
 Route::get('vacantes/save', function () {
     return view('vacantes/save');
 });
@@ -35,7 +62,6 @@ Route::get('vacantes/error', function () {
 Route::get('/', function () {
     return view('welcome');
 });
-
 
 
 

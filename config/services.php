@@ -14,10 +14,11 @@ return [
     |
     */
 
+
     'facebook' => [
-    'client_id' => '138221723479195',
-    'client_secret' => 'a019f71f2729d41c6195b525c9d0a453',
-    'redirect' => 'http://localhost/laravel/public/login/facebook/callback',
+            'client_id' => '393395931119998',
+            'client_secret' => 'f58686fb12ce36ce6c6c49fd84bcc7c8',
+            'redirect' => 'http://localhost:8000/callback',
     ],
 
     'mailgun' => [

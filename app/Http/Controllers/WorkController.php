@@ -22,7 +22,7 @@ class WorkController extends Controller
         //echo  '<h1>NOTHING :( </h1>';;
         return view('vacantes/error');
       }else{
-        return view('vacantes/info', ['work' => $work])->with('id', $id);
+        return view('vacantes/info',array('user' => Auth::user()), ['work' => $work])->with('id', $id);
       }
     	//return view('vacantes/info', ['work' => $work])->with('id', $id);
     }

@@ -7,7 +7,7 @@
 
 
 <div class="container" style="
-    background-image: url('../public/img/header1.jpg');
+    background-image: url('http://127.0.0.1:8000/img/header1.jpg');
     height: 500px;
     width: 100%;
     margin: auto;
@@ -175,7 +175,6 @@
                       <ul style="list-style:none;" >
                         <li style="color: #000" ><p style=" font-size: 18px">{{ $work->abilities }}</p></li>
                       </ul>
-    							    
     						 </div>
 
                   <div class="col-md-2 ">
