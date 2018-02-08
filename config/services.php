@@ -18,7 +18,13 @@ return [
     'facebook' => [
             'client_id' => '393395931119998',
             'client_secret' => 'f58686fb12ce36ce6c6c49fd84bcc7c8',
-            'redirect' => 'http://localhost:8000/callback',
+           'redirect' => 'http://localhost:8000/callback/facebook',
+    ],
+
+    'twitter' => [
+        'client_id' => 'aRsyEAvrwZhUgm1M9suRoqI0r',
+        'client_secret' => 'oEr7R4w7s0FTjJGtzUMotoMJcMFNz2UeIiBoMbP25DLNfyxdtY',
+        'redirect' => 'http://localhost:8000/callback/twitter',
     ],
 
     'mailgun' => [

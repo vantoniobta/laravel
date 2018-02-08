@@ -1,0 +1,45 @@
+/*menu*/
+nav.navbar {
+            margin: 0; 
+            padding: 5px; 
+            list-style-type: none; 
+            text-align: center; 
+            background-color: #24363e; 
+            border:0px solid #24363e;
+            padding: .5em 2px;
+            margin:0;
+            padding:0;
+            }
+nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color: #fff}
+.navbar-brand { padding: 0px;}
+.navbar-brand>img { padding: 7px 10px; }
+ nav ul li:hover { background-color: #00CED1;}
+.dropdown-toggle:active, .open .dropdown-toggle { background:#00CED1 !important; color:#000 !important;}
+.dropdown-menu {background-color: #FFFFFF;color: #red;}
+.dropdown-menu > li > a {color: #000}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {text-decoration: none;color: #000 !important;}
+.share-btn {
+        display: inline-block;
+        color: #ffffff;
+        border: none;
+        padding: 0.5em;
+        width: 4em;
+        box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+        outline: none;
+        text-align: center;
+    }
+
+
+/*button shared*/
+.share-btn:hover {color: #eeeeee;}
+.share-btn:active {
+        position: relative;
+        top: 2px;
+        box-shadow: none;
+        color: #e2e2e2;
+        outline: none;
+        }
+.share-btn.twitter     { background: #55acee; }
+.share-btn.facebook    { background: #3B5998; }
+.share-btn.linkedin    { background: #4875B4; }
