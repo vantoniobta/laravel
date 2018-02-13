@@ -7,7 +7,7 @@
 
 
 <div class="container" style="
-    background-image: url('http://127.0.0.1:8000/img/header1.jpg');
+    background-image: url('https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/header_123.jpg');
     height: 500px;
     width: 100%;
     margin: auto;
@@ -15,50 +15,13 @@
     background-position: center;">
   <div class="row"><br><br>
      <div class="col-lg-8 col-centered " style="float: none; margin: 0 auto;" >
+          <div class="transbox" >
+          <h1 style="color:#ff7f50;font-family: 'Open Sans', sans-serif; font-size: 3.1em;font-weight: 900;text-align: center;" align="center"><b>ÚNETE al Grupo Multimedios</b></h1>
+           <p style="color: #fff" align="center">Buscamos gente con mucho talento</p>
 
-          
-          <div class="transbox" style=" margin: 0px;
-              background-color: #4682B4;
-              border: 1px solid #4682B4;
-              opacity: 0.6
-              filter: alpha(opacity=60); /* For IE8 and earlier */">
-
-        
-          <h1 style="color:#fff; Montserrat, Helvetica, Arial, sans-serif;" align="center"><b>RECLUTAMIENTO MULTIMEDIOS</b></h1>
-           <p style="color: #fff" align="center">Encuentra ofertas de trabajo de tecnología</p>
+           <a class="semi-transparent-button is-blue" href="/register">Registrarse</a>
          
-                                    
-
-         <blockquote style=" padding: 10px 5px;
-          border-left: 1px solid #fff;
-          display:inline-block;
-          color: #666;
-          " ><a href="#" style="color: #fff">Monterrey</i></a></blockquote>
-
-         <blockquote style=" padding: 10px 5px;
-          border-left: 1px solid #fff;
-          display:inline-block;
-          color: #666;"><a href="#" style="color: #fff">CDMX</i></a></blockquote>
-
-         <blockquote style=" padding: 10px 5px;
-          border-left: 1px solid #fff;
-          display:inline-block;
-          color: #666;"><a href="#" style="color: #fff">Torreón</i></a></blockquote>
-
-          <blockquote style=" padding: 10px 5px;
-          border-left: 1px solid #fff;
-          display:inline-block;
-          color: #666;"><a href="#" style="color: #fff">Tampico</i></a></blockquote>
-
-          <blockquote style=" padding: 10px 5px;
-          border-left: 1px solid #fff;
-          display:inline-block;
-          color: #666;"><a href="#" style="color: #fff">Saltillo</i></a></blockquote>
-
-          <blockquote style=" padding: 10px 5px;
-          border-left: 1px solid #fff;
-          display:inline-block;
-          color: #666;"><a href="#" style="color: #fff">León</i></a></blockquote>
+                                  
 
 
 

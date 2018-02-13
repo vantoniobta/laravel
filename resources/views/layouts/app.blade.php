@@ -9,15 +9,99 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="icon" href="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/32x32.png" />
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:600" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-
-
-    <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700'>
+    <link href='https://fonts.googleapis.com/css?family=Croissant+One' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/nav.css') }}" rel="stylesheet">
+
+    <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
+
+
+    <style type="text/css">
+        .social-button {
+            background-position: 25px 0px;
+            box-sizing: border-box;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            text-align: left;
+            text-decoration: none;
+            text-transform: uppercase;
+            vertical-align: middle;
+            width: 100%;
+            border-radius: 3px;
+            margin: 10px auto;
+            outline: rgb(255, 255, 255) none 0px;
+            padding-left: 20%;
+            transition: all 0.2s cubic-bezier(0.72, 0.01, 0.56, 1) 0s;
+              -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+
+        #facebook-connect {
+            border: 1px solid rgb(60, 90, 154);
+            background: rgb(60, 90, 154) url('https://eswarasai.com/projects/social-login/img/facebook-white.svg') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+
+        }
+
+        #facebook-connect:hover {
+              border-color: rgb(60, 90, 154);
+              background: rgb(60, 90, 154) url('https://eswarasai.com/projects/social-login/img/facebook-white.svg') no-repeat scroll 5px 0px / 30px 50px padding-box border-box;
+              -webkit-transition: all .8s ease-out;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease-out;
+        }
+
+        #facebook-connect:hover span {
+              color: #FFF;
+              -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+
+
+        #twitter-connect {
+            background: rgb(85, 172, 238) url('https://eswarasai.com/projects/social-login/img/twitter-white.png') no-repeat scroll 5px 1px / 45px 45px padding-box border-box;
+            border: 1px solid rgb(85, 172, 238);
+        }
+
+        #twitter-connect:hover {
+              border-color: rgb(85, 172, 238);
+
+              -webkit-transition: all .8s ease-out;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease-out;
+        }
+
+        #twitter-connect:hover span {
+              color: #FFF;
+              -webkit-transition: all .3s ease;
+            -moz-transition: all .3s ease;
+            -ms-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+        }
+    </style>
+
+
+
 </head>
 <!-- menu responsivo -->
 <body style="background-color: #ffffff">
