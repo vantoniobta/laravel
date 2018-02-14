@@ -18,9 +18,13 @@
     <link href='https://fonts.googleapis.com/css?family=Croissant+One' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<!--     <link href="{{ asset('css/main.css') }}" rel="stylesheet"> -->
     <link href="{{ asset('css/nav.css') }}" rel="stylesheet">
 
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
+
+
+
 
 
     <style type="text/css">
@@ -105,6 +109,11 @@
 </head>
 <!-- menu responsivo -->
 <body style="background-color: #ffffff">
+<!--  <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-section section-left" style="background-image: url(../img/footer_lodyas.png);"></div>
+            <div class="loader-section section-right" style="background-image: url(../img/footer_lodyas.png);"></div>
+    </div> -->
     <div id="app" style="background-color: #f4f4f4:">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -126,22 +135,13 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
 
-               <!--      <ul class="nav navbar-nav">
-                    <form class="navbar-form navbar-right" style="">
-                      <input type="text" class="form-control" placeholder="Search..." style="border:none">
-                    </form>
-                        
-                    </ul>
- -->
-
-
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
                             <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a></li>
                             <li><a href="{{ route('register') }}" style="color: #fff">Registro&nbsp;&nbsp;<i class="fa fa-user-plus fa-1x" aria-hidden="true"></i></a></li>
-                            <li><a href="{{ route('login') }}" style="color: #fff">Login&nbsp;&nbsp;<i class="fa fa-sign-in fa-1x" aria-hidden="true"></i></a></li>
+                            <li><a href="{{ route('login') }}" style="color: #fff">Login&nbsp;&nbsp;<i class="fas fa-sign-in-alt fa-1x" aria-hidden="true"></i></a></li>
                         @else
                         <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a></li>
                             <li class="dropdown">
@@ -150,7 +150,7 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                 <li><a href="#">Inicio</a>
+                                 <li><a href="/home">Inicio</a>
                                  <li><a href="{{ url('/profile') }}">Mi perfil</a>
                                  <!-- <li><a href="home">Postulaciones</a> -->
                                   <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
@@ -171,5 +171,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+     <script src="{{ asset('js/loader.js') }}"></script>
+     </div>
 </body>
 </html>
