@@ -22,6 +22,7 @@
     <link href="{{ asset('css/nav.css') }}" rel="stylesheet">
 
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 

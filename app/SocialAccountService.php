@@ -44,44 +44,70 @@
 namespace App;
 
 use Laravel\Socialite\Contracts\Provider;
+use Illuminate\Support\Facades\Redirect;
+
 
 class SocialAccountService {
     
-    public function createOrGetUser(Provider $provider)
-    {
+    public function createOrGetUser(Provider $provider) {
 
-        $providerUser = $provider->user();
-        $providerName = class_basename($provider); 
+        $providerUser = $provider->user();  //datos de usuario
+        $providerName = class_basename($provider); //de que red social proviene 
+        $account      = SocialAccount::whereProvider($providerName)
+                                      ->whereProviderUserId($providerUser->getId())
+                                      ->first();
 
-        $account = SocialAccount::whereProvider($providerName)
-            ->whereProviderUserId($providerUser->getId())
-            ->first();
+              if($account == null){
+                 return false;
+                 }else{
+                      if ($account) {
+                            return $account->user;
+                        } else {
+                            $account = new SocialAccount([
+                                'provider_user_id' => $providerUser->getId(),
+                                'provider' => $providerName
+                            ]);
+                            $user = User::whereEmail($providerUser->getEmail())->first();
 
-        if ($account) {
-            return $account->user;
-        } else {
+                            if (!$user) {
 
-            $account = new SocialAccount([
-                'provider_user_id' => $providerUser->getId(),
-                'provider' => $providerName
-            ]);
+                                $user = User::create([
+                                    'email' => $providerUser->getEmail(),
+                                    'name' => $providerUser->getName(),
+                                ]);
+                            }
+                            $account->user()->associate($user);
+                            $account->save();
+                            return $user;
+                        }
+                  }
 
-            $user = User::whereEmail($providerUser->getEmail())->first();
 
-            if (!$user) {
+              //-------------------------------
 
-                $user = User::create([
-                    'email' => $providerUser->getEmail(),
-                    'name' => $providerUser->getName(),
-                ]);
-            }
+            // if ($account) {
+            //     return $account->user;
+            // } else {
+            //     $account = new SocialAccount([
+            //         'provider_user_id' => $providerUser->getId(),
+            //         'provider' => $providerName
+            //     ]);
+            //     $user = User::whereEmail($providerUser->getEmail())->first();
 
-            $account->user()->associate($user);
-            $account->save();
+            //     if (!$user) {
 
-            return $user;
+            //         $user = User::create([
+            //             'email' => $providerUser->getEmail(),
+            //             'name' => $providerUser->getName(),
+            //         ]);
+            //     }
 
-        }
+            //     $account->user()->associate($user);
+            //     $account->save();
+
+            //     return $user;
+
+            // }
 
     }
 }

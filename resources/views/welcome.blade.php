@@ -12,6 +12,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
+            <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         
@@ -72,6 +73,11 @@
             }
         </style>
     </head>
+<!--          <div id="loader-wrapper">
+            <div id="loader"></div>
+            <div class="loader-section section-left" style="background-image: url(../img/footer_lodyas.png);"></div>
+            <div class="loader-section section-right" style="background-image: url(../img/footer_lodyas.png);"></div>
+    </div> -->
     <body style="background-image: url(https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/891.jpg); background-position: center center;background-repeat: no-repeat;background-attachment: fixed;  background-size: cover;">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
@@ -101,5 +107,6 @@
                 </div>
             </div>
         </div>
+                 <script src="{{ asset('js/loader.js') }}"></script>
     </body>
 </html>
