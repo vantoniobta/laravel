@@ -5,7 +5,7 @@
 @section('content')
 <div class="container"><br>
     <div class="row" style=" margin:top;border: 1px solid #D3D3D3;">
-        <div class="panel-heading" style="background-color: #444444;color: #fff"><h4 align="center"><i class="fa fa-check" aria-hidden="true"></i>{{ $jobs->title}}</h4></div><br>
+        <div class="panel-heading" style="background-color: #17baef;color: #000"><h4 align="center"><i class="fa fa-check" aria-hidden="true"></i>{{ $jobs->title}}</h4></div><br>
         <div class="col-md-10" >
               <form id="contact-form" class="form-horizontal" action="{{ url('admin/jobs_save_edit',$jobs->id) }}" method="POST">
                    {{ csrf_field() }}
@@ -91,7 +91,7 @@
               </form>
         </div>
     </div>
-</div>
+</div><br>
 
 
 <div style="background-color: #444444"><br>

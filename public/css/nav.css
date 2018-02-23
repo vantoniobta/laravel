@@ -273,8 +273,73 @@ nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color
 }
 
 
+/* ----button profile------ */
+
+.btn_send {
+  background-color: #f1c108; /* Green */
+  border: none;
+  color: #000;
+  padding: 20px;
+  
+}
+
+.btn_send_profile {
+  background-color: #f1c108; /* Green */
+  border: none;
+  color: #000;
+  padding: 20px;
+  
+}
+
+input[type='file']{
+    padding: 20 30;
+    color: red;
+    background-color: yellow;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20;
+    border-radius: 5px;
+}
 
 
+
+.file {
+  position: relative;
+  text-align: left;
+}
+.file label {
+  background: #ecd995;
+  padding: 5px 20px;
+  color: #000;
+  font-weight: bold;
+  font-size: .9em;
+  transition: all .4s;
+}
+.file input {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: 0;
+  opacity: 0.01;
+  cursor: pointer;
+}
+.file input:hover + label,
+.file input:focus + label {
+  background: #34495E;
+  color: #39D2B4;
+}
+
+
+.row-centered {
+  text-align: center;
+  display: table-row;
+}
+// Apply this to the cols within the row
+.col-centered {
+  display: table-cell;
+  float: none;
+  vertical-align: top;
+}
 
 
 

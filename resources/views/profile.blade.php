@@ -1,21 +1,28 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- profile form data imagen edit -->
-
 <br>
-<div class="container" style="background-color: #265d7e;">
+<form enctype="multipart/form-data" action="profile/{{$user->id}}" method="POST">
+<div class="container" style="background-color: #17baef;">
    <div class="row">
-     <div class="col-md-12">
-     <h2 style="font-family: 'Anton', sans-serif; color: #fff" align="center">INFORMACIÓN PERSONAL</h2>
+     <div class="col-md-12"><br>
+      <img src="uploads/avatars/{{$user->avatar}}" class="img-circle center-block" alt="Cinque Terre" width="10%">
+      <h3 style="font-family: 'Anton', sans-serif; color: #fff" align="center">@_{{ $user->name }}</h3>
+      <p align="center" style="color: #fff">{{ $user->email }}</p>
      </div>
+   </div>
+   <div>
+      <p class="file">
+         <input type="file" name="avatar" value=""  class="input-file">
+         <input type="hidden"  name="_token" value="{{ csrf_token() }}">
+         <label for="file">Cambiar tu imagen</label>
+        </p>
    </div>
  </div>
 
 
-<div class="container" style=" margin:top;
-    border: 1px solid #D3D3D3;">
-  <form enctype="multipart/form-data" action="profile/{{$user->id}}" method="POST">
+
+<div class="container" style=" margin:top;border: 1px solid #D3D3D3;">
     <div class="row"><br>
         <div class="col-md-6">
 		      <label style="color: #000">Nombre</label>
@@ -37,52 +44,26 @@
     </div>
 
     <div class="row">
-      <div class="col-md-6">
-        <h2 class="title-form text-fade-in" style="color: #000">Imagen Perfil</h2>
-        <img src="uploads/avatars/{{$user->avatar}}" class="img-thumbnail" alt="Cinque Terre" width="20%" height="20%"><br>
-      <!--    <a href="uploads/avatars/{{$user->avatar}}" style="color: red" download>{{$user->avatar}}</a><br> -->
-           <label style="color: #000">Update profile Image</label><br>
-            <input type="file" name="avatar" value="">
-            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-       </div>
        <div class="col-md-6">
-          <h2 class="title-form text-fade-in" style="color: #000">subir CV</h2>
-          <img src="uploads/avatars/pdf.png" class="img-thumbnail" alt="Cinque Terre" width="20%" height="20%"><br>
-          <a href="uploads/cv/{{$user->id}}/{{$user->cv}}"  style="color: #000" download>Descargar tu CV</a><br>
-          <label>Los tipos de archivos permitidos son pdf,doc,docx</label><br>
-          <input type="file" name="cv">
-           <input type="submit" class="pull-right btn btn-sm btn-primary" value="Guardar Datos"><br><br>
+           <p class="file">
+            <input type="file" name="cv">
+            <label for="file">Actualizar tu CV</label>
+           </p>
+            @if ({{$user->cv}} =='vacio.pdf')
+             <a href="uploads/cv/{{$user->id}}/{{$user->cv}}">Por favor adjuntar</a>
+              @else
+            @endif
+           <a href="uploads/cv/{{$user->id}}/{{$user->cv}}">{{$user->cv}}</a>
         </div>
+         <hr>
+        <div class="container">
+             <input type="submit" class="btn_send_profile btn-lg center-block" value="Guardar Datos">
+        </div><br>
      </div>
-   </form>
-</div><br>
+  </div>
+</form>
 
 
-<!-- <div class="container" style="background-color: #265d7e;">
-   <div class="row">
-     <div class="col-md-12">
-     <h4 style="font-family: 'Anton', sans-serif; color: #fff" align="center">POSTULACIONES</h4>
-     </div>
-   </div>
- </div>
-
- <div class="container" style=" margin:top;
-    border: 1px solid #D3D3D3;">
-     <div class="row"><br>
-      <div class="col-md-6">
-          <div class="table-responsive">    
-              <table class="table" id="table_wrapper">
-                  <thead>
-                     <tr>
-                     <th style="background-color: #D3D3D3;">Fecha</th>
-                     <th style="background-color: #D3D3D3;">Nombre</th>
-                     </tr>
-                  </thead>
-               </table>
-           </div>
-      </div>
-     </div>
-  </div><br> -->
 
 
 

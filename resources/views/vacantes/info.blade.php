@@ -44,7 +44,7 @@
                       <input type="text" name="userId" value="{{ Auth::user()->id }}" style="visibility:hidden;">
                       <input type="text" name="workId" value="{{ $work->id}}" style="visibility:hidden;">
                       <div class="col-md-12">
-                      <input type="submit" value="APLICAR A LA VACANTE" class=" btn btn-primary" style="background-color: #DAA520;border-color:#DAA520 " >
+                      <input type="submit" value="APLICAR A LA VACANTE" class="btn_send" style="border-color:#DAA520 " >
                     </div>
                  </form>
                 </div>
@@ -62,17 +62,15 @@
 
 
 
-                  <a href="https://twitter.com/intent/tweet" target="_blank" class="share-btn twitter"  data-size = "large"
-                    data-text = "compartir texto personalizado"
-                    data-url = "https://dev.twitter.com/web/tweet-button"
-                    data-hashtags = "ejemplo, demo"
-                    data-via = "twitterdev"
-                    relacionado con los datos = "twitterapi, twitter"><i class="fa fa-twitter"></i></a>
+                  <a href="https://twitter.com/intent/tweet?url={{ urlencode(Request::fullUrl()) }}" target="_blank" class="share-btn twitter"  data-size = "large"
+                    ><i class="fa fa-twitter"></i></a>
 
 
 
-                  <a href="#" target="_blank" class="share-btn facebook"><i class="fab fa-facebook-square"></i></a>
-                  <a href="" target="_blank" class="share-btn linkedin"><i class="fa fa-linkedin"></i></a>
+                  <a href="https://www.facebook.com/sharer/sharer.php?" target="_blank" class="share-btn facebook"><i class="fab fa-facebook-square"></i></a>
+                  <a href="https://www.facebook.com/sharer/sharer.php?" target="_blank" class="share-btn linkedin"><i class="fa fa-linkedin"></i></a>
+
+
             </div>
     </div>
 <br>

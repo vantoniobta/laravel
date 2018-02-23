@@ -24,6 +24,8 @@
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    
+
 
 
 
@@ -37,7 +39,7 @@
             display: inline-block;
             height: 50px;
             line-height: 50px;
-            text-align: left;
+            text-align: center;
             text-decoration: none;
             text-transform: uppercase;
             vertical-align: middle;
@@ -45,7 +47,6 @@
             border-radius: 3px;
             margin: 10px auto;
             outline: rgb(255, 255, 255) none 0px;
-            padding-left: 20%;
             transition: all 0.2s cubic-bezier(0.72, 0.01, 0.56, 1) 0s;
               -webkit-transition: all .3s ease;
             -moz-transition: all .3s ease;
