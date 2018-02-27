@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: #17baef; color: #fff">Dashboard - {{ Auth::user()->name }}</div>
+                <div class="panel-heading" style="background-color: #17baef; color: #fff"><b>Dashboard - {{ Auth::user()->name }}</b></div>
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -18,9 +18,15 @@
 
 
                      @if ($jobs == '0')
-                       <p style="color: red"><b>Aun no haz adjuntado tu CV</b></p>
+                       <h6 style="color: red"><b>Aun no te haz postulado en ninguna vacantes</h6>
                         @else
-                        <p>{{ $jobs->title }}</p>
+
+
+                        <div class="col-md-6">
+                          <h5>{{ $jobs->title }}</h5>
+                        </div>
+
+
                     @endif
 
 
