@@ -14,9 +14,17 @@
                         </div>
                     @endif
                     <strong>Tu ultima postulación</strong><br>
-                    <ul>
-                      <li> {{ $jobs }}</li>
-                    </ul>
+                   
+
+
+                     @if ($jobs == '0')
+                       <p style="color: red"><b>Aun no haz adjuntado tu CV</b></p>
+                        @else
+                        <p>{{ $jobs->title }}</p>
+                    @endif
+
+
+
                 </div>
             </div>
         </div>

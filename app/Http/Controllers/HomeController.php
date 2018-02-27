@@ -30,22 +30,11 @@ class HomeController extends Controller
             if ($postulates == null) {
                 # code...
                 $code = '0';
-                return view('home',['jobs' => $code]);
+                  return view('home',['jobs' => $code]);
                 }
                 else{
-                    $jobs = DB::table('jobs')->where('id',$postulates->workId)->first();
-                    return view('home',['jobs' => $jobs]);
+                    $code = DB::table('jobs')->where('id',$postulates->workId)->first();
+                       return view('home',['jobs' => $code]);
                 }
-
-
-        // echo $postulates;
-        // $jobs = DB::table('jobs')->where('id',$postulates->workId)->first();
-
-        //return view('home',['jobs' => $jobs]);
-
-        //return view('home');
-
-
-
     }
 }
