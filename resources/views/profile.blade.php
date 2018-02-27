@@ -49,11 +49,12 @@
             <input type="file" name="cv">
             <label for="file">Actualizar tu CV</label>
            </p>
-            @if ({{$user->cv}} =='vacio.pdf')
-             <a href="uploads/cv/{{$user->id}}/{{$user->cv}}">Por favor adjuntar</a>
+            @if ($user->cv =='vacio.pdf')
+             <p style="color: red"><b>Aun no haz adjuntado tu CV</b></p>
               @else
+              <a href="uploads/cv/{{$user->id}}/{{$user->cv}}">{{$user->cv}}</a>
             @endif
-           <a href="uploads/cv/{{$user->id}}/{{$user->cv}}">{{$user->cv}}</a>
+           
         </div>
          <hr>
         <div class="container">

@@ -13,9 +13,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <strong>Tus ultimas postulaciones</strong><br>
+                    <strong>Tu ultima postulación</strong><br>
                     <ul>
-                      <li>example</li>
+                      <li> {{ $jobs }}</li>
                     </ul>
                 </div>
             </div>

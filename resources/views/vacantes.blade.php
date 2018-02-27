@@ -32,7 +32,7 @@
       <div class="fusion-column content-box-column content-box-column content-box-column-1 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover  content-box-column-first-in-row">
         <center><div class="col content-wrapper-background link-area-link-icon link-type-text content-icon-wrapper-yes icon-hover-animation-none"  data-animationoffset="100%">
           <div class="heading heading-with-icon icon-left">
-            <a class="heading-link" href="#" target="_self"><div class="image"><img src="http://icons.iconarchive.com/icons/designbolts/free-multimedia/1024/iMac-icon.png" width="100" height="100" alt="Lupa_Icon"></div></a>
+            <a class="heading-link" href="#" target="_self"><div class="image"><img src="http://localhost:8000/img/iMacicon.png" width="100" height="100" alt="Lupa_Icon"></div></a>
           </div>
            <div class="fusion-clearfix"></div>
              <div class="content-container" style="color:#333333;">
@@ -45,7 +45,7 @@
       <div class="fusion-column content-box-column content-box-column content-box-column-2 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover ">
         <center><div class="col content-wrapper-background link-area-link-icon link-type-text content-icon-wrapper-yes icon-hover-animation-none"  data-animationoffset="100%">
           <div class="heading heading-with-icon icon-left">
-            <a class="heading-link" href="#" target="_self"><div class="image"><img src="https://www.promodo.com/wp-content/uploads/2015/03/mic-148576_1280.png" width="100" height="100" alt="Meeting_Icon"></div></a>
+            <a class="heading-link" href="#" target="_self"><div class="image"><img src="http://localhost:8000/img/voz.png" width="100" height="100" alt="Meeting_Icon"></div></a>
           </div>
            <div class="fusion-clearfix"></div>
             <div class="content-container" style="color:#333333;">
@@ -59,7 +59,7 @@
       <div class="fusion-column content-box-column content-box-column content-box-column-3 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover ">
         <center><div class="col content-wrapper-background link-area-link-icon link-type-text content-icon-wrapper-yes icon-hover-animation-none" data-animationoffset="100%">
           <div class="heading heading-with-icon icon-left"><a class="heading-link" href="#" target="_self">
-            <div class="image"><img src="https://cdn2.iconfinder.com/data/icons/bubble-seo-internet-marketing-2-2/360/Social_Media_Marketing-512.png" width="100" height="100" alt="Servicios_mercado_icon"></div></a>
+            <div class="image"><img src="http://localhost:8000/img/Social_Media_Marketing-512.png" width="100" height="100" alt="Servicios_mercado_icon"></div></a>
           </div>
           <div class="fusion-clearfix"></div>
             <div class="content-container" style="color:#333333;">
