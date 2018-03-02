@@ -18,18 +18,14 @@
     <link href='https://fonts.googleapis.com/css?family=Croissant+One' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-<!--     <link href="{{ asset('css/main.css') }}" rel="stylesheet"> -->
     <link href="{{ asset('css/nav.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    
 
-
-
-
-
+    <link href="//fonts.googleapis.com/css?family=Poppins&subset=latin" rel="stylesheet" type="text/css">
     <style type="text/css">
         .social-button {
             background-position: 25px 0px;
@@ -111,11 +107,8 @@
 </head>
 <!-- menu responsivo -->
 <body style="background-color: #ffffff">
-<!--  <div id="loader-wrapper">
-            <div id="loader"></div>
-            <div class="loader-section section-left" style="background-image: url(../img/footer_lodyas.png);"></div>
-            <div class="loader-section section-right" style="background-image: url(../img/footer_lodyas.png);"></div>
-    </div> -->
+
+
     <div id="app" style="background-color: #f4f4f4:">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
@@ -146,16 +139,28 @@
                             <li><a href="{{ route('login') }}" style="color: #fff">Login&nbsp;&nbsp;<i class="fas fa-sign-in-alt fa-1x" aria-hidden="true"></i></a></li>
                         @else
                         <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a></li>
+                         <li class="dropdown">
+                             <a href="#" class="dropdown-toggle" style="color: #fff" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                <i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light" style="background-color: red">3</span>
+                             </a>
+
+                             <ul class="dropdown-menu" style="background-color: #657277;border-color: #657277">
+                                 <li style="color: #fff">
+                                     Nothing
+                                 </li>
+                             </ul>
+
+                          </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative;padding-left: 50px;color: #fff">
                                     <img src="http://localhost/laravel/public/uploads/avatars/{{Auth::user()->avatar}}" style="width: 32px; height: 32px; position: absolute; top: 10px; left: 10px; border-radius: 50%">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-                                <ul class="dropdown-menu" role="menu">
-                                 <li><a href="/home">Inicio</a>
-                                 <li><a href="{{ url('/profile') }}">Mi perfil</a>
+                                <ul class="dropdown-menu" role="menu" style="background-color: #24363e; ">
+                                 <li><a href="/home" style="color: #fff">Inicio</a>
+                                 <li><a href="{{ url('/profile') }}" style="color: #fff">Mi perfil</a>
                                  <!-- <li><a href="home">Postulaciones</a> -->
-                                  <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                  <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color: #fff">Logout</a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}

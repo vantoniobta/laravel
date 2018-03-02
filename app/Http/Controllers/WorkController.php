@@ -8,6 +8,7 @@ use Storage;
 use Auth;
 use Image;
 use DB;
+use Alert;
 
 class WorkController extends Controller
 {
@@ -49,14 +50,15 @@ class WorkController extends Controller
 
 
                       //DB::table('postulates')->insert($data);
-                      $key = 'Te postulaste para '.$work->title.' exitosamente!';
-                      return view('vacantes/save',compact('key'));
-
-                       }else{
-
-                        $key = "Ya te encuentra postulado en la vacante";
-                      return view('vacantes/save', compact('key'));
-
+                      $key = 'Te postulaste para -'.$work->title.' -exitosamente!';
+                         Alert::success($key)->persistent("Close");
+                           //return view('vacantes/save',compact('key'));
+                              return back();
+                          }else{
+                              $key = "Ya te encuentra postulado en la vacante";
+                              Alert::success($key)->persistent("Close");
+                                //return view('vacantes/save', compact('key'));
+                              return back();
 
                    }          
 

@@ -13,34 +13,34 @@
                     <!-- You are logged in as <strong>ADMIN</strong><br> -->
                     <a href="{{ url('admin/jobs_new') }}" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i>&nbsp;Nueva Vacante</a>
                  <br><hr>
+                                 <h2 align="center">Lista de Vacantes Multimedios Televisión</h2>
                     <div class="col-md-12">
 
-                      <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Type your search keyword.." onkeyup="search_all()">
+                      <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar.." onkeyup="search_all()">
                     </div>
 
                     <br><br><br>
-
                 <div class="table-responsive">    
                       <table class="table" id="table_general">
                         <thead>
                           <tr>
-                            <th style="color: #FFF; background-color: #666666">FECHA</th>
-                            <th style="color: #FFF; background-color: #666666">PUESTO</th>
-                            <th style="color: #FFF; background-color: #666666">LUGAR</th>
-                            <th style="color: #FFF; background-color: #666666">TIEMPO</th>
-                            <th style="color: #FFF; background-color: #666666">SALARIO</th>
-                            <th style="color: #FFF; background-color: #666666">ACTIVOS</th>
-                            <th style="color: #FFF; background-color: #666666"></th>
+                            <th style="color: #000; background-color: #fff">FECHA</th>
+                            <th style="color: #000; background-color: #fff">PUESTO</th>
+                            <th style="color: #000; background-color: #fff">LUGAR</th>
+                            <th style="color: #000; background-color: #fff">TIEMPO</th>
+                            <th style="color: #000; background-color: #fff">SALARIO</th>
+                            <th style="color: #000; background-color: #fff">###</th>
+                            <th style="color: #000; background-color: #fff">###</th>
                           </tr>
                           @foreach ($jobs as $job)
                               <tr>
-                                <td>{!! $job->created_at !!}</td>
+                                <td>{{ date('F d, Y', strtotime($job->created_at)) }}</td>
                                 <td>{!! $job->title !!}</td>
                                 <td>{!! $job->address !!}</td>
                                 <td>{!! $job->time !!}</td>
                                 <td>{!! $job->salary !!}</td>
-                                <td><a href="{{  URL::to('admin/postulates',$job->id )}}" class="btn btn-info btn-sm"><i class="fa fa-check-square-o fa-lg" aria-hidden="true"></i>&nbsp1</a></td>
-                                 <td><a href="{{ URL::to('admin/jobs_edit',$job->id) }}" class="btn btn-default btn-sm">Edit</a></td>
+                                <td><a href="{{ URL::to('admin/jobs_edit',$job->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
+                                <td><a href="{{  URL::to('admin/postulates',$job->id )}}" class="btn btn-success btn-sm"><i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light">3</span></a></td>
                             </tr>
                           @endforeach
                         </thead>
@@ -75,7 +75,7 @@ function search_all() {
 
 
 
-<div style="background-color: #444444"><br>
+<div style="background-color: #214c66"><br>
  <footer>
   <div class="container">
     <div class="row">

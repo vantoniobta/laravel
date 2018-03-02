@@ -30,7 +30,7 @@ Route::post('profile/{id}', 'UserController@update_avatar');
 
 Route::prefix('vacantes')->group(function(){
 	Route::get('/info/{id}', 'WorkController@info');
-	Route::post('/insert', 'WorkController@save');
+	Route::post('/send', 'WorkController@save');
 });
 
 

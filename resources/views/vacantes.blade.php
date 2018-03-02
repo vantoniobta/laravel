@@ -133,7 +133,11 @@
 
                   <div class="col-md-2 ">
                       <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">fecha</span></h6>
-                      <p style=" font-size: 18px;color:#000;">{{ $work->created_at->format('Y-m-d') }}</p>
+                      <p style=" font-size: 18px;color:#000;">{{ date('F d, Y', strtotime($work->created_at)) }}</p>
+
+
+
+
                       <hr>
                   </div>
 

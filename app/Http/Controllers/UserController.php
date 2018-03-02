@@ -69,12 +69,12 @@ class UserController extends Controller {
                                             Image::make($avatar)->resize(300,300)->save(public_path('uploads/avatars/' . $filename));
 
                                                 DB::table('users')
-                                                     ->where('id', $id)
-                                                     ->update(['name'     => $name,
-                                                              'lastname' => $lastname,
-                                                              'phone'    => $phone,
-                                                              'avatar'   => $filename,
-                                                              'ingles'   => $ingles]);
+                                                              ->where('id', $id)
+                                                              ->update(['name'     => $name,
+                                                                       'lastname' => $lastname,
+                                                                       'phone'    => $phone,
+                                                                       'avatar'   => $filename,
+                                                                       'ingles'   => $ingles]);
                                            }
                                               }else{
 
@@ -119,10 +119,18 @@ class UserController extends Controller {
                                                                       }
 
                                               }
+                                               $user_init = Auth::user()->id;
+                                                          $postulates = DB::table('postulates')->where('userId',$user_init)->first();
+                                                              if ($postulates == null) {
+                                                                  # code...
+                                                                  $code = '0';
+                                                                    return view('/home', array('user' => Auth::user()),['jobs' => $code]);
+                                                                  }
+                                                                  else{
+                                                                      $code = DB::table('jobs')->where('id',$postulates->workId)->first();
+                                                                        return view('/home', array('user' => Auth::user()),['jobs' => $code]);
+                                                                  }
 
-                          return view('/home', array('user' => Auth::user()));
+                          
      }
-
-
-    
 }

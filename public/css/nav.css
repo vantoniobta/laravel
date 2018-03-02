@@ -9,6 +9,7 @@ nav.navbar {
             padding: .5em 2px;
             margin:0;
             padding:0;
+             font-family: 'Poppins', sans-serif;
             }
 nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color: #fff}
 .navbar-brand { padding: 0px;}

@@ -3,6 +3,10 @@
 @section('title', 'Page Child')
 
 @section('content')
+
+@include('sweet::alert')
+
+
 <br>
 <div class="container">
     <div class="row">
@@ -11,7 +15,8 @@
          <div class="panel panel-default">
             <div class="panel-heading" style="background-color: #17baef"><h4 style="color: #fff; text-align: center;"><b>Hola {{ Auth::user()->name }} !</b></h4></div>
                <div class="panel-body">
-                <h3 align="center">{{ $key}}</h3>
+                <!-- <h3 align="center">{{ $key}}</h3> -->
+                <h2 align="center"><b>Redireccionando...</b></h2>
                <!--  <img src="http://icongal.com/gallery/image/6134/sad_face.png" class="img-responsive center-block" alt="Responsive image" width="10%"> -->
                </div>
             </div>

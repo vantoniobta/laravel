@@ -12,7 +12,9 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
-            <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/normalize.css') }}" rel="stylesheet">
+
 
         <!-- Styles -->
         
@@ -73,12 +75,16 @@
             }
         </style>
     </head>
-<!--          <div id="loader-wrapper">
-            <div id="loader"></div>
-            <div class="loader-section section-left" style="background-image: url(../img/footer_lodyas.png);"></div>
-            <div class="loader-section section-right" style="background-image: url(../img/footer_lodyas.png);"></div>
-    </div> -->
     <body style="background-image: url(https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/891.jpg); background-position: center center;background-repeat: no-repeat;background-attachment: fixed;  background-size: cover;">
+
+  
+<!--             <div id="loader-wrapper">
+                <div id="loader"></div>
+
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+            </div> -->
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -107,6 +113,18 @@
                 </div>
             </div>
         </div>
-                 <script src="{{ asset('js/loader.js') }}"></script>
+                         <script src="{{ asset('js/loader.js') }}"></script>
+                        <script src="{{ asset('js/main.js') }}"></script>
+                        <script src="{{ asset('js/vendor/modernizr-2.6.2.min.js') }}"></script>
     </body>
+    <script type="text/javascript">
+        $(document).ready(function() {
+    
+    setTimeout(function(){
+        $('body').addClass('loaded');
+        $('h1').css('color','#222222');
+    }, 3000);
+    
+});
+    </script>
 </html>

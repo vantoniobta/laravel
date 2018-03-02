@@ -4,6 +4,10 @@
 
 @section('content')
 
+@include('sweet::alert')
+
+
+
       <div class="container" style=" background-image: url('https://www.socialtools.me/img/n/bg/crossedlines1-1.png');background-size: cover;">
          <div class="row">
             <div class="col-md-12">
@@ -39,7 +43,7 @@
 
            @if (Auth::check())
                <div class="col-md-8">
-                  <form action="{{ URL::to('vacantes/insert') }}" method="POST">
+                  <form action="{{ URL::to('vacantes/send') }}" method="POST">
                       {{ csrf_field() }}
                       <input type="text" name="userId" value="{{ Auth::user()->id }}" style="visibility:hidden;">
                       <input type="text" name="workId" value="{{ $work->id}}" style="visibility:hidden;">

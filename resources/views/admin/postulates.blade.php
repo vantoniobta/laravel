@@ -7,12 +7,13 @@
 
 <div class="container">
   <div class="row">
-     <div class="col-lg-8 col-centered " style="float: none; margin: 0 auto;" >
-          <div class="transbox" >
-          <h1 style="color:#000;font-family: 'Open Sans', sans-serif; font-size: 3.1em;font-weight: 900;text-align: center;" align="center"><b>{{ $jobs->title }}</b></h1>
-           <p style="color: #000" align="center">Usuarios Postulados</p>
+      <div class="col-md-2 ">
+       <h1 align="center"><a href="/admin"><i class="fa fa-chevron-circle-left  fa-2x" aria-hidden="true"></i></a></h1>
     </div>
-  </div>
+     <div class="col-md-8">
+        <h1 style="color:#000;font-family: 'Open Sans', sans-serif; font-size: 3.1em;font-weight: 900;text-align: center;" align="center"><b>{{ $jobs->title }}</b></h1>
+        <p style="color: #000" align="center">Usuarios Postulados</p>
+    </div>
   </div>
  </div>
 
@@ -23,7 +24,7 @@
         <div class="col-md-12">
            <!--  <h3>Usuarios Postulados: Vacante <b>{{ $jobs->title }} </b></h3> -->
                     <div class="table-responsive">    
-                      <table class="table" id="table_wrapper">
+                      <table class="table" id="table_general">
                         <thead>
                           <tr>
                           <th style="background-color: #17baef;color: #fff; text-align: center;">Fecha</th>
@@ -32,16 +33,18 @@
                             <th style="background-color: #17baef;color: #fff; text-align: center;">Telefono</th>
                             <th style="background-color: #17baef;color: #fff; text-align: center;">Email</th>
                             <th style="background-color: #17baef;color: #fff; text-align: center;">Curriculum</th>
+                            <th style="background-color: #17baef;color: #fff; text-align: center;">Notificación</th>
                           </tr>
                             @foreach ($data as $u)
                               <tr>
-                              <td style="text-align: center;">{!! $u->created_at !!}</td>
+                              <td style="text-align: center;">{{ date('F d, Y', strtotime($u->created_at)) }}</td>
                                 <td style="text-align: center;">{!! $u->name !!}</td>
                                 <td style="text-align: center;">{!! $u->lastname !!}</td>
                                 <td style="text-align: center;">{!! $u->phone !!}</td>
                                 <td style="text-align: center;">{!! $u->email !!}</td>
 
                                 <td><a href="../../uploads/cv/{{$u->userId}}/{{$u->cv}}" download>{!! $u->cv !!}</a></td>
+                                <td><a class="badge badge-success">Enviar Notificacacion</a></td>
                             </tr>
                           @endforeach
                         </thead>
@@ -52,7 +55,28 @@
 </div>
 
 
-<div style="background-color: #444444"><br>
+<script>
+function search_all() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("search_v");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table_general");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+
+<div style="background-color: #214c66"><br>
  <footer>
   <div class="container">
     <div class="row">
@@ -77,6 +101,8 @@
   </div>
 </div>
 </div>
+
+
 
 @endsection
 
