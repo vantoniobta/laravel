@@ -105,11 +105,11 @@
                   <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #fff">Bolsa de Trabajo</p>
              </div>
                 <div class="links">
-                    <a href="#" style="color: #fff">Televisión</a>
-                    <a href="#" style="color: #fff">Redes Sociales</a>
-                    <a href="#" style="color: #fff">Recursos Humanos</a>
-                    <a href="#" style="color: #fff">Radio</a>
-                    <a href="#" style="color: #fff">Practicas profesionales</a>
+                    <a href="#" style="color: #fff">Monterrey</a>
+                    <a href="#" style="color: #fff">CDMX</a>
+                    <a href="#" style="color: #fff">Torreón</a>
+                    <a href="#" style="color: #fff">Saltillo</a>
+                    <a href="#" style="color: #fff">León</a>
                 </div>
             </div>
         </div>

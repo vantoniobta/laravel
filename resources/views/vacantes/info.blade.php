@@ -17,27 +17,28 @@
 
              <div class="col-md-2">
                 <h5><b>Sueldo</b></h5>
-                <p>${{ $work->salary}}</p>
+                <p style="font-size: 15px; font-family: 'Anonymous Pro', sans-serif;"><i class="fas fa-money-bill-alt"></i>&nbsp;{{ $work->salary}}</p>
              </div>
 
              <div class="col-md-4">
                <h5><b>Lugar</b></h5>
-               <p>{{ $work->address}}</p>
+               <p style="font-size: 15px; font-family: 'Anonymous Pro', sans-serif;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address}}</p>
              </div>
             
              <div class="col-md-6">
                <h5><b>Requerimientos</b></h5>
-               <p>{{ $work->abilities}}</p>
+               <p style="font-size: 15px; font-family: 'Anonymous Pro', sans-serif;"><i class="fas fa-file-alt"></i>&nbsp;{{ $work->abilities}}</p>
              </div>
              
              <div class="col-md-6">
                 <h5><b>Prestaciones</b></h5>
-                <p>{{ $work->benefits}}</b></p>
+                <p style="font-size: 15px; font-family: 'Anonymous Pro', sans-serif;"><i class="fas fa-file-alt"></i>&nbsp;{{ $work->benefits}}</b></p>
              </div>
              
              <div class="col-md-4">
                 <h5><b>Fecha Publicada</b></h5>
-                <p>{{ $work->created_at }}</p>
+                <p style="font-size: 15px; font-family: 'Anonymous Pro', sans-serif;"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
+
              </div>
 
 

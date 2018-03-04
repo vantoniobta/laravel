@@ -104,4 +104,11 @@ class AdminController extends Controller
                   ->with('data', $data)
                   ->with('jobs', $jobs);
     }
+
+
+    public function notifications() {
+        
+    }
+
+
 }

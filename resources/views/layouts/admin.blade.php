@@ -40,7 +40,7 @@
             color: white;
         }
     </style>
-<body style="background-color: #ffffff">
+<body style="background-color: #fff">
     <div id="app" >
         <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #214c66">
             <div class="container">

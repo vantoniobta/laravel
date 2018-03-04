@@ -13,10 +13,10 @@
                     <!-- You are logged in as <strong>ADMIN</strong><br> -->
                     <a href="{{ url('admin/jobs_new') }}" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i>&nbsp;Nueva Vacante</a>
                  <br><hr>
-                                 <h2 align="center">Lista de Vacantes Multimedios Televisión</h2>
+                                 <h2 align="center" style="color: #214c66">Lista de Vacantes Multimedios Televisión</h2>
                     <div class="col-md-12">
 
-                      <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar.." onkeyup="search_all()">
+                      <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar Vacante " onkeyup="search_all()">
                     </div>
 
                     <br><br><br>
@@ -24,13 +24,13 @@
                       <table class="table" id="table_general">
                         <thead>
                           <tr>
-                            <th style="color: #000; background-color: #fff">FECHA</th>
-                            <th style="color: #000; background-color: #fff">PUESTO</th>
-                            <th style="color: #000; background-color: #fff">LUGAR</th>
-                            <th style="color: #000; background-color: #fff">TIEMPO</th>
-                            <th style="color: #000; background-color: #fff">SALARIO</th>
-                            <th style="color: #000; background-color: #fff">###</th>
-                            <th style="color: #000; background-color: #fff">###</th>
+                            <th style="color: #fff; background-color: #17baef">FECHA</th>
+                            <th style="color: #fff; background-color: #17baef">PUESTO</th>
+                            <th style="color: #fff; background-color: #17baef">LUGAR</th>
+                            <th style="color: #fff; background-color: #17baef">TIEMPO</th>
+                            <th style="color: #fff; background-color: #17baef">SALARIO</th>
+                            <th style="color: #fff; background-color: #17baef">###</th>
+                            <th style="color: #fff; background-color: #17baef">###</th>
                           </tr>
                           @foreach ($jobs as $job)
                               <tr>

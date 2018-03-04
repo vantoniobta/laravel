@@ -7,8 +7,8 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-2 ">
-       <h1 align="center"><a href="/admin"><i class="fa fa-chevron-circle-left  fa-2x" aria-hidden="true"></i></a></h1>
+      <div class="col-md-2 "><br><br>
+       <h5><a href="/admin"><i class="fa fa-chevron-circle-left  fa-4x" aria-hidden="true"></i></a></h5>
     </div>
      <div class="col-md-8">
         <h1 style="color:#000;font-family: 'Open Sans', sans-serif; font-size: 3.1em;font-weight: 900;text-align: center;" align="center"><b>{{ $jobs->title }}</b></h1>
@@ -44,7 +44,13 @@
                                 <td style="text-align: center;">{!! $u->email !!}</td>
 
                                 <td><a href="../../uploads/cv/{{$u->userId}}/{{$u->cv}}" download>{!! $u->cv !!}</a></td>
-                                <td><a class="badge badge-success">Enviar Notificacacion</a></td>
+                                <td>
+                                    <form method="post" action="/postulates/notifications">
+                                          <input type="text" name="job_num" value="{{ $u->email}}" style="display:none;">
+                                          <input type="submit" class="btn-primary" value="Enviar Notificación">
+                                  </form>
+                                </td>
+                                <!-- <td><a class="badge badge-success">Enviar Notificacacion</a></td> -->
                             </tr>
                           @endforeach
                         </thead>

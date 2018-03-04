@@ -19,13 +19,16 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/nav.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-
+    
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-
     <link href="//fonts.googleapis.com/css?family=Poppins&subset=latin" rel="stylesheet" type="text/css">
+    
+
+    <link href="//fonts.googleapis.com/css?family=Anonymous Pro&subset=latin" rel="stylesheet" type="text/css">
+
+
     <style type="text/css">
         .social-button {
             background-position: 25px 0px;
@@ -134,11 +137,11 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a></li>
-                            <li><a href="{{ route('register') }}" style="color: #fff">Registro&nbsp;&nbsp;<i class="fa fa-user-plus fa-1x" aria-hidden="true"></i></a></li>
-                            <li><a href="{{ route('login') }}" style="color: #fff">Login&nbsp;&nbsp;<i class="fas fa-sign-in-alt fa-1x" aria-hidden="true"></i></a></li>
+                            <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes&nbsp;<i class="fas fa-list-ul" style="color: #98FB98"></i></a></li>
+                            <li><a href="{{ route('register') }}" style="color: #fff">Registro&nbsp;<i class="fa fa-user-plus" style="color: #98FB98" aria-hidden="true"></i></a></li>
+                            <li><a href="{{ route('login') }}" style="color: #fff">Login&nbsp;<i class="fas fa-sign-in-alt" style="color: #98FB98"></i></a></li>
                         @else
-                        <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a></li>
+                        <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes&nbsp;<i class="fas fa-list-ul" style="color: #c0eb75"></i></a></li>
                          <li class="dropdown">
                              <a href="#" class="dropdown-toggle" style="color: #fff" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                 <i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light" style="background-color: red">3</span>
@@ -156,11 +159,11 @@
                                     <img src="http://localhost/laravel/public/uploads/avatars/{{Auth::user()->avatar}}" style="width: 32px; height: 32px; position: absolute; top: 10px; left: 10px; border-radius: 50%">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-                                <ul class="dropdown-menu" role="menu" style="background-color: #24363e; ">
-                                 <li><a href="/home" style="color: #fff">Inicio</a>
-                                 <li><a href="{{ url('/profile') }}" style="color: #fff">Mi perfil</a>
+                                <ul class="dropdown-menu" role="menu" style="background-color: #24363e;">
+                                 <li><a href="/home" style="color: #fff"><i class="fas fa-home" style="color: #c0eb75"></i>&nbsp;Inicio</a>
+                                 <li><a href="{{ url('/profile') }}" style="color: #fff"><i class="fas fa-user-circle" style="color: #c0eb75"></i>&nbsp;Mi perfil</a>
                                  <!-- <li><a href="home">Postulaciones</a> -->
-                                  <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color: #fff">Logout</a>
+                                  <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color: #fff"><i class="fas fa-sign-out-alt" style="color: #c0eb75"></i>&nbsp;Logout</a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
