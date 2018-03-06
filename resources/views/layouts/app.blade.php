@@ -144,13 +144,20 @@
                         <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes&nbsp;<i class="fas fa-list-ul" style="color: #c0eb75"></i></a></li>
                          <li class="dropdown">
                              <a href="#" class="dropdown-toggle" style="color: #fff" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                                <i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light" style="background-color: red">3</span>
+                                <i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light" style="background-color: red">
+                                3
+                                </span>
                              </a>
 
                              <ul class="dropdown-menu" style="background-color: #657277;border-color: #657277">
-                                 <li style="color: #fff">
-                                     Nothing
+                                @foreach(auth()->user()->unreadNotifications as $note)
+                                 <li>
+                                 <a href="">
+                                     {!! $note->data['data'] !!}
+                                     <?php $note->markAsRead() ?>
+                                 </a>
                                  </li>
+                                 @endforeach
                              </ul>
 
                           </li>

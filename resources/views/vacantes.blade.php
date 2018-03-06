@@ -16,16 +16,15 @@
   <div class="row"><br><br><br>
      <div class="col-lg-8 col-centered " style="float: none; margin: 0 auto;" >
           <div class="transbox" >
-          <h1 style="color:#ff7f50;font-family: 'Open Sans', sans-serif; font-size: 3.1em;font-weight: 900;text-align: center;" align="center"><b>ÚNETE al Grupo Multimedios</b></h1>
-           <p style="color: #fff" align="center">Buscamos gente con mucho talento</p>
-           <a class="semi-transparent-button is-blue" href="/register">Registrarse</a>
-    </div>
+                <h1 style="color:#ff7f50;font-family: 'Open Sans', sans-serif; font-size: 3.1em;font-weight: 900;text-align: center;" align="center"><b>ÚNETE al Grupo Multimedios</b></h1>
+                 <p style="color: #fff" align="center">Buscamos gente con mucho talento</p>
+                 <a class="semi-transparent-button is-blue" href="/register">Registrarse</a>
+                 <br>
+          </div>
+      </div>
+   </div>
 
-<!--     <h1 style="color:#ff7f50; font-family: 'Passion One', cursive; size: " align="center"><b>EMPLEOS MULTIMEDIOS DIGITAL</b></h1>
-    <p style="color: #fff" align="center">Encuentra cientos de ofertas de trabajo de tecnología</p> -->
-  </div>
-  </div>
- </div><br>
+ </div>
 
  <div class="container">;
    <div class="fusion-content-boxes content-boxes columns row fusion-columns-4 fusion-columns-total-4 fusion-content-boxes-1 content-boxes-icon-on-top content-left home-servicios" data-animationoffset="100%" style="margin-top:0px;margin-bottom:60px; ">
@@ -158,6 +157,8 @@
     </div>
 </div>
 <br>
+
+
 
 
     <footer class="footer-distributed">

@@ -93,6 +93,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+
+Route::resource('post', 'PostController');
+
 // 	   Route::get('admin/jobs_new', function(){
 // 	return view('admin/jobs_new');
 // });
@@ -117,6 +121,5 @@ Route::prefix('admin')->group(function(){
 
 //Route::get('admin/jobs_new', 'AdminController@redirect_jobs')->name('admin.dashboard');
 //Route::post('admin/jobs_save', 'AdminController@save')->name('admin.dashboard');
-
 
 
