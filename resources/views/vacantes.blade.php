@@ -68,7 +68,7 @@
         </div></center>
       </div>
 
-      <div class="fusion-column content-box-column content-box-column content-box-column-4 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover  content-box-column-last content-box-column-last-in-row" style="background-color:#fff ">
+      <div class="fusion-column content-box-column content-box-column content-box-column-4 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover  content-box-column-last content-box-column-last-in-row" >
         <center><div class="col content-wrapper-background link-area-link-icon link-type-text content-icon-wrapper-yes icon-hover-animation-none"  data-animationoffset="100%">
           <div class="heading heading-with-icon icon-left"><a class="heading-link" href="#" target="_self"><div class="image"><img src="http://myooou.com/wp-content/uploads/2015/12/design-build-icon-lg.png" width="100" height="" alt="servicios_outplacement_icon"></div></a>
           </div>
@@ -103,51 +103,39 @@
 <div class="container" style="background-color: #f1c108; ">
    <div class="row">
      <div class="col-md-12">
-     <h1 style="Montserrat, Helvetica, Arial, sans-serif; color: #000" align="center">ÚLTIMAS OFERTAS DE TRABAJO</h1>
+     <h1 id="title_vacantes" align="center">ÚLTIMAS OFERTAS DE TRABAJO</h1>
      </div>
    </div>
  </div>
+   @forelse ($works as $work)
+          <div class="container" id="div_vacantes">
+              <div class="row">
+          	        <div class="col-md-12">
+          	                <div class="panel-body" >
+                						<div class="col-md-4" style="">
+                                <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">PUESTO</span></h6>
+                						    <p style=" font-size: 18px;"><a href="{{ URL::to('vacantes/info', $work->url)}}" style="color:#008B8B"><i class="fas fa-check-circle"></i>&nbsp;{{ $work->title }}</a></p>
+                						</div>
+          							
+              						   <div class="col-md-6">
+                                <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">REQUISITOS</span></h6>
+                                <ul style="list-style:none;" >
+                                <li style="color: #000" ><p style=" font-size: 16px">{{ $work->abilities }}</p></li>
+                                </ul>
+              						   </div>
 
-<div class="container">
-    <div class="row">
-	        <div class="col-md-12">
+                            <div class="col-md-2 ">
+                               <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">fecha</span></h6>
+                               <p style=" font-size: 18px;color:#000;">{{ date('F d, Y', strtotime($work->created_at)) }}</p>
+                            </div>
+          	               </div>
+          	        </div>
+              </div>
+          </div>
+          @empty
+         <p>No existen Vacantes</p>
+@endforelse
 
-	                <div class="panel-body" >
-	               @forelse ($works as $work)
-
-
-      						<div class="col-md-4 ">
-                      <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">PUESTO</span></h6>
-      						    <p style=" font-size: 18px;"><a href="{{ URL::to('vacantes/info', $work->url)}}" style="color:#008B8B">{{ $work->title }}</a></p>
-      						</div>
-
-                   
-							
-    						  <div class="col-md-6">
-                      <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">REQUISITOS</span></h6>
-                      <ul style="list-style:none;" >
-                        <li style="color: #000" ><p style=" font-size: 18px">{{ $work->abilities }}</p></li>
-                      </ul>
-    						 </div>
-
-                  <div class="col-md-2 ">
-                      <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">fecha</span></h6>
-                      <p style=" font-size: 18px;color:#000;">{{ date('F d, Y', strtotime($work->created_at)) }}</p>
-
-
-
-
-                      <hr>
-                  </div>
-
-
-    							@empty
-    							    <p>No existen Vacantes</p>
-    							@endforelse
-	               </div>
-	        </div>
-    </div>
-</div>
 
 <div class="container">
     <div class="row">
@@ -156,12 +144,11 @@
       </div>
     </div>
 </div>
-<br>
 
 
 
 
-    <footer class="footer-distributed">
+    <footer class="footer-distributed" >
       <div class="footer-left">
         <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png" class="img-responsive">
 

@@ -11,44 +11,40 @@
                         </div>
                     @endif
                     <h2 align="center" style="color: #214c66"><img src="http://localhost:8000/img/toolbar_logo.png"></h2>
-                    <a href="{{ url('admin/jobs_new') }}" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i>&nbsp;Nueva Vacante</a>
                         <br><hr>
                     <div class="col-md-12">
 
-                      <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar Vacante " onkeyup="search_all()">
+                      <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar Usuario " onkeyup="search_all()">
                     </div>
 
                     <br><br><br>
                 <div class="table-responsive">
-                 <h1 id="title_table1"><i class="fas fa-users"></i>&nbsp;Lista de vacantes</h1>  
+                 <h1 id="title_table1"><i class="fas fa-users"></i>&nbsp;Lista de Usuarios</h1>  
                       <table class="table" id="table_general" >
                         <thead>
                           <tr>
-                            <th style="color: #fff; background-color: #009189;">FECHA</th>
-                            <th style="color: #fff; background-color: #009189">PUESTO</th>
-                            <th style="color: #fff; background-color: #009189">LUGAR</th>
-                            <th style="color: #fff; background-color: #009189">TIEMPO</th>
-                            <th style="color: #fff; background-color: #009189">SALARIO</th>
-                            <th style="color: #fff; background-color: #009189">###</th>
-                            <th style="color: #fff; background-color: #009189">###</th>
+                            <th style="color: #fff; background-color: #009189;">Nombre</th>
+                            <th style="color: #fff; background-color: #009189">Apellidos</th>
+                            <th style="color: #fff; background-color: #009189">Celular</th>
+                            <th style="color: #fff; background-color: #009189">Email</th>
+                            <th style="color: #fff; background-color: #009189">Fechar Registro</th>
+                            <th style="color: #fff; background-color: #009189">Ultima Actualización</th>
                           </tr>
-                          @foreach ($jobs as $job)
+                          @foreach ($users as $user)
                               <tr>
-                                <td style="font-family: 'Anonymous Pro', sans-serif;">{{ date('F d, Y', strtotime($job->created_at)) }}</td>
-                                <td style="font-family: 'Anonymous Pro', sans-serif;color: #009189"><b>{!! $job->title !!}</b></td>
-                                <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->address !!}</td>
-                                <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->time !!}</td>
-                                <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->salary !!}</td>
-                                <td><a href="{{ URL::to('admin/jobs_edit',$job->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
-                                <td><a href="{{  URL::to('admin/postulates',$job->id )}}" class="btn btn-success btn-sm"><i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light">3</span></a></td>
+                               
+                                <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $user->name !!}</td>
+                                 <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $user->lastname !!}</td>
+                                 <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $user->phone !!}</td>
+                                 <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $user->email !!}</td>
+                                  <td style="font-family: 'Anonymous Pro', sans-serif;">{{ date('F d, Y', strtotime($user->created_at)) }}</td>
+                                 <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $user->updated_at !!}</td>
                             </tr>
                           @endforeach
                         </thead>
                       </table>
 
-                      <div class="text-center">
-                          {!! $jobs->links() !!}
-                      </div>
+                      
                </div>
         </div>
     </div>

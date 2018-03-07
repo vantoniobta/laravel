@@ -82,7 +82,7 @@ function search_all() {
 </script>
 
 
-<div style="background-color: #214c66"><br>
+<div style="background-color: #444444"><br>
  <footer>
   <div class="container">
     <div class="row">

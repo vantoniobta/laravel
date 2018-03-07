@@ -27,6 +27,9 @@
     
 
     <link href="//fonts.googleapis.com/css?family=Anonymous Pro&subset=latin" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Armata&subset=latin" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Anton&subset=latin" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Archivo&subset=latin" rel="stylesheet" type="text/css">
 
 
     <style type="text/css">
@@ -109,11 +112,11 @@
 
 </head>
 <!-- menu responsivo -->
-<body style="background-color: #ffffff">
+<body style="background-color: #fafafa">
 
 
     <div id="app" style="background-color: #f4f4f4:">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-static-top" style="box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);transition: all 0.3s cubic-bezier(.25,.8,.25,1);">
             <div class="container">
                 <div class="navbar-header">
                     <!-- Collapsed Hamburger -->
@@ -149,7 +152,7 @@
                                 </span>
                              </a>
 
-                             <ul class="dropdown-menu" style="background-color: #657277;border-color: #657277">
+                             <ul class="dropdown-menu" style="background-color: #98FB98;border-color: #98FB98">
                                 @foreach(auth()->user()->unreadNotifications as $note)
                                  <li>
                                  <a href="">

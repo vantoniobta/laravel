@@ -112,6 +112,7 @@ Route::prefix('admin')->group(function(){
 
 	   
 	   Route::get('/jobs_new', 'AdminController@redirect_jobs')->name('admin.dashboard');
+	   Route::get('/users', 'AdminController@all_users')->name('admin.dashboard');
 	   Route::get('/postulates/{id}', 'AdminController@postulates_get')->name('admin.dashboard');
 	   Route::get('/postulates/notifications', 'AdminController@notifications')->name('admin.dashboard');
        Route::post('/jobs_save', 'AdminController@save')->name('admin.dashboard');

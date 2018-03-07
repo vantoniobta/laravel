@@ -4,35 +4,39 @@
 <br>
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: #17baef; color: #fff"><b>Dashboard - {{ Auth::user()->name }}</b></div>
+        <div class="col-md-8" >
+            <div class="panel panel-default" id="div_home">
+                <div class="panel-heading" style="background-color: #17baef; color: #fff"><h4><b>Hola! <i class="far fa-smile"></i> - {{ Auth::user()->name }}</b></h4></div>
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
                     @endif
-                    <strong>Tu ultima postulación</strong><br>
-                   
-
-
+                    <h6 id="title_vacantes" align="center">Tu ultima postulación</h6>
                      @if ($jobs == '0')
-                       <h6 style="color: red"><b>Aun no te haz postulado en ninguna vacantes</h6>
+                       <h6 style="color: red" id="title_vacantes"><b>Aun no te haz postulado en ninguna vacantes</h6>
+                       
                         @else
-
-
-                        <div class="col-md-6">
-                          <h5>{{ $jobs->title }}</h5>
-                        </div>
-
-
+                        
+                          <h3 id="title_vacantes" align="center">{{ $jobs->title }}</h3>
+                        
                     @endif
-
-
-
                 </div>
             </div>
+        </div>
+        <div class="col-md-4">
+           <div class="panel panel-default" id="div_home">
+              <div class="panel-heading" style="background-color: #008b8b; color: #fff">
+              Vacantes Nuevos!</div>
+              <div class="panel-body">
+              <ul>
+                <li><a href="">Desarrollador web</a></li>
+                <li><a href="">Capturista de datos</a></li>
+              </ul>
+              </div>
+              
+           </div>
         </div>
     </div>
 </div>

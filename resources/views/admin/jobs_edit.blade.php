@@ -5,7 +5,7 @@
 @section('content')
 <div class="container"><br>
     <div class="row" style=" margin:top;border: 1px solid #D3D3D3;">
-        <div class="panel-heading" style="background-color: #17baef;color: #fff"><h4 align="center"><i class="fa fa-check" aria-hidden="true"></i>{{ $jobs->title}}</h4></div><br>
+        <div class="panel-heading" style="background-color: #009189;color: #fff"><h4 align="center"><i class="fa fa-check" aria-hidden="true"></i>{{ $jobs->title}}</h4></div><br>
         <div class="col-md-10" >
               <form id="contact-form" class="form-horizontal" action="{{ url('admin/jobs_save_edit',$jobs->id) }}" method="POST">
                    {{ csrf_field() }}
@@ -18,7 +18,7 @@
 
                   <!-- Name input-->
                   <div class="form-group">
-                    <label class="col-md-3 control-label">Puesto</label>
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Puesto</label>
                     <div class="col-md-9">
                       <input id="puesto" name="puesto" type="text" value="{{ $jobs->title}}" class="form-control" required="">
                     </div>
@@ -26,7 +26,7 @@
 
                   <!-- Email input-->
                   <div class="form-group">
-                    <label class="col-md-3 control-label" >Lugar</label>
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Lugar</label>
                     <div class="col-md-9">
                       <input id="Lugar" name="lugar" type="text" value="{{ $jobs->address}}" class="form-control" required="">
                     </div>
@@ -34,28 +34,28 @@
 
                   <!-- Message body -->
                   <div class="form-group">
-                    <label class="col-md-3 control-label">Tiempo</label>
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Tiempo</label>
                     <div class="col-md-9">
                        <input id="tiempo" name="tiempo" type="text" value="{{ $jobs->time}}" class="form-control" required="">
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="col-md-3 control-label" >Habilidades</label>
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Habilidades</label>
                     <div class="col-md-9">
                       <textarea class="form-control" id="habilidades" name="habilidades" rows="5" required="">{{ $jobs->abilities}}</textarea>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="col-md-3 control-label" for="message">Prestaciones</label>
+                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Prestaciones</label>
                     <div class="col-md-9">
                       <textarea class="form-control" id="prestaciones" name="prestaciones" rows="5" required="">{{ $jobs->benefits}}</textarea>
                     </div>
                   </div>
 
                    <div class="form-group">
-                    <label class="col-md-3 control-label" for="message">Sueldo</label>
+                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Sueldo</label>
                     <div class="col-md-9">
                        <input id="Sueldo" name="sueldo" type="text" value="{{ $jobs->salary}}" class="form-control" required="">
                     </div>
@@ -83,7 +83,7 @@
                   <!-- Form actions -->
                   <div class="form-group">
                     <div class="col-md-12 text-right" id="spin-area">
-                      <button type="submit" class="btn btn-primary btn-lg">Guardar Cambios</button>
+                      <button type="submit" class="btn btn-primary btn-lg" style="background-color: #009189"><i class="fas fa-check-circle"></i>&nbsp;Guardar</button>
                     </div>
                   </div>
                 </div>

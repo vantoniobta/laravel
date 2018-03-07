@@ -11,16 +11,83 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
      <!-- Bootstrap CSS -->
-     <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-     <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+    <link href="//fonts.googleapis.com/css?family=Anonymous Pro&subset=latin" rel="stylesheet" type="text/css">
+
+
+
+
+    
+
+
 </head>
 <!-- menu responsivo -->
     <style>
+
+
+
+    nav.navbar {
+            margin: 0; 
+            padding: 5px; 
+            list-style-type: none; 
+            text-align: center; 
+            background-color: #24363e; 
+            border:0px solid #24363e;
+            padding: .5em 2px;
+            margin:0;
+            padding:0;
+            font-family: 'Poppins', sans-serif; 
+            }
+
+
+
+
+/*@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 16.5px;
+    padding-bottom: 16.5px;
+    line-height: 17px;
+  }
+}*/
+
+
+nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color: #fff}
+.navbar-brand { padding: 0px;}
+.navbar-brand>img { padding: 7px 10px; }
+ nav ul li:hover { background-color: #00CED1;}
+.dropdown-toggle:active, .open .dropdown-toggle { background:#00CED1 !important; color:#000 !important;}
+.dropdown-menu {background-color: #FFFFFF;color: #red;}
+.dropdown-menu > li > a {color: #000}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {text-decoration: none;color: #000 !important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         #table_general {
             font-family: Arial, Helvetica, sans-serif;
             border-collapse: collapse;
@@ -39,6 +106,19 @@
             background-color: #4CAF50;
             color: white;
         }
+
+        #title_table1 {
+            font-family: 'Lato', sans-serif;
+            font-weight: bold;
+            color: #009189;
+        }
+
+
+
+
+
+
+
     </style>
 <body style="background-color: #fff">
     <div id="app" >
@@ -55,7 +135,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/admin') }}" style="color: #ffffff">
-                        <i class="fa fa-dashcube fa-lg fa-rotate-270" aria-hidden="true"></i>
+                        <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png" width="160px">
                     </a>
                 </div>
 
@@ -63,7 +143,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                           <li><a href="{{ url('/admin') }}" style="color: #fff">Vacantes</a></li>
-                          <li><a href="{{ url('/admin') }}" style="color: #fff">Users</a></li>
+                          <li><a href="{{ url('/admin/users') }}" style="color: #fff">Users</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

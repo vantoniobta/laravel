@@ -106,6 +106,13 @@ class AdminController extends Controller
     }
 
 
+
+       public function all_users(){
+          $users = DB::table('users')->paginate(10);
+          return view('admin/users')->with('users', $users);
+       }
+
+
     public function notifications() {
         
     }
