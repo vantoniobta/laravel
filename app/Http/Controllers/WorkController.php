@@ -50,12 +50,12 @@ class WorkController extends Controller
 
 
                       //DB::table('postulates')->insert($data);
-                      $key = 'Te postulaste para -'.$work->title.' -exitosamente!';
+                      $key = 'Te postulaste para-'.$work->title.'-Revisaremos tu CV!';
                          Alert::success($key)->persistent("Close");
                            //return view('vacantes/save',compact('key'));
                               return back();
                           }else{
-                              $key = "Ya te encuentra postulado en la vacante";
+                              $key = 'Ya te encuentras postulado en la vacante';
                               Alert::success($key)->persistent("Close");
                                 //return view('vacantes/save', compact('key'));
                               return back();

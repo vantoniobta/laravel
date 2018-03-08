@@ -33,7 +33,6 @@
                             <th style="background-color: #17baef;color: #fff; text-align: center;">Telefono</th>
                             <th style="background-color: #17baef;color: #fff; text-align: center;">Email</th>
                             <th style="background-color: #17baef;color: #fff; text-align: center;">Curriculum</th>
-                            <th style="background-color: #17baef;color: #fff; text-align: center;">Notificación</th>
                           </tr>
                             @foreach ($data as $u)
                               <tr>
@@ -44,12 +43,6 @@
                                 <td style="text-align: center;">{!! $u->email !!}</td>
 
                                 <td><a href="../../uploads/cv/{{$u->userId}}/{{$u->cv}}" download>{!! $u->cv !!}</a></td>
-                                <td>
-                                    <form method="post" action="/postulates/notifications">
-                                          <input type="text" name="job_num" value="{{ $u->email}}" style="display:none;">
-                                          <input type="submit" class="btn-primary" value="Enviar Notificación">
-                                  </form>
-                                </td>
                                 <!-- <td><a class="badge badge-success">Enviar Notificacacion</a></td> -->
                             </tr>
                           @endforeach

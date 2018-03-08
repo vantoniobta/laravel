@@ -36,7 +36,23 @@ nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color
 
 
 
+/*
+div vacantes principal
+*/
+#vacantes_div1{
+   background-image: url('https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/header_123.jpg');
+    height: 500px;
+    width: 100%;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+}
 
+
+
+/*
+input text search
+*/
 
 
 

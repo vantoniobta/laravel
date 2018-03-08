@@ -6,24 +6,28 @@
 
 
 
-<div class="container" style="
-    background-image: url('https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/header_123.jpg');
-    height: 500px;
-    width: 100%;
-    margin: auto;
-    background-size: cover;
-    background-position: center;">
+<div class="container" id="vacantes_div1">
   <div class="row"><br><br><br>
-     <div class="col-lg-8 col-centered " style="float: none; margin: 0 auto;" >
+     <div class="col-lg-8 col-centered" style="float: none; margin: 0 auto;" >
           <div class="transbox" >
                 <h1 style="color:#ff7f50;font-family: 'Open Sans', sans-serif; font-size: 3.1em;font-weight: 900;text-align: center;" align="center"><b>ÚNETE al Grupo Multimedios</b></h1>
                  <p style="color: #fff" align="center">Buscamos gente con mucho talento</p>
                  <a class="semi-transparent-button is-blue" href="/register">Registrarse</a>
                  <br>
           </div>
-      </div>
+           <div class="col-lg-6 col-centered" style="float: none; margin: 0 auto;" >
+              <h2 align="center">Palabras claves</h2>
+                <div class="input-group col-md-12">
+                      <input type="text" class="form-control input-lg" placeholder="Buscar" style="color: #fff;background-color:transparent; "/>
+                      <span class="input-group-btn">
+                          <button class="btn btn-info btn-lg" type="button" style=";background-color:#f1c108; border-color: #f1c108">
+                              <i class="fas fa-search"></i>
+                          </button>
+                      </span>
+                  </div><br><br><br>
+           </div>
+       </div>
    </div>
-
  </div>
 
  <div class="container">;
@@ -136,14 +140,6 @@
          <p>No existen Vacantes</p>
 @endforelse
 
-
-<div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center" id="test">
-        {{ $works->links()}}
-      </div>
-    </div>
-</div>
 
 
 
