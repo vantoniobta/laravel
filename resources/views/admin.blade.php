@@ -2,15 +2,31 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-12"><br>
-<!--             <div class="panel-heading">ADMIN Dashboard</div> -->
-                    @if (session('status'))
+    <div class="row"><br>
+      <!--   <div class="col-md-12">
+        </div>
+ -->
+
+<div class="col-md-12">
+        <main>
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1">Activos</label>
+              
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2">Dribbble</label>
+              
+            <input id="tab3" type="radio" name="tabs">
+            <label for="tab3">Dropbox</label>
+              
+            <input id="tab4" type="radio" name="tabs">
+            <label for="tab4">Drupal</label>
+              
+            <section id="content1">
+                @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h2 align="center" style="color: #214c66"><img src="http://localhost:8000/img/toolbar_logo.png"></h2>
                     <a href="{{ url('admin/jobs_new') }}" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i>&nbsp;Nueva Vacante</a>
                         <br><hr>
                     <div class="col-md-12">
@@ -50,7 +66,58 @@
                           {!! $jobs->links() !!}
                       </div>
                </div>
-        </div>
+            </section>
+              
+            <section id="content2">
+              <p>
+                Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
+              </p>
+              <p>
+                Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+              </p>
+            </section>
+              
+            <section id="content3">
+              <p>
+                Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+              </p>
+              <p>
+                Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+              </p>
+            </section>
+              
+            <section id="content4">
+              <p>
+                Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
+              </p>
+              <p>
+                Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
+              </p>
+            </section>
+    
+</main>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 </div>
 <script>

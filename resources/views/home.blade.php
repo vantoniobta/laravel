@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-8" >
             <div class="panel panel-default" id="div_home">
-                <div class="panel-heading" style="background-color: #008b8b; color: #fff"><h4><b>Hola! {{ Auth::user()->name }}</b></h4></div>
+                <div class="panel-heading" style="background-color: #008b8b; color: #fff"><h4><b>Admin - {{ Auth::user()->name }}</b></h4></div>
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
