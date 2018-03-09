@@ -6,6 +6,8 @@ use Storage;
 use Auth;
 use Image;
 use DB;
+use Socialite;
+use Alert;
 
 class UserController extends Controller {
 
@@ -124,11 +126,12 @@ class UserController extends Controller {
                                                               if ($postulates == null) {
                                                                   # code...
                                                                   $code = '0';
-                                                                    return view('/home', array('user' => Auth::user()),['jobs' => $code]);
+                                                                      Alert::success('Datos actualizados!')->persistent("Close");
+                                                                      return back();
                                                                   }
                                                                   else{
-                                                                      $code = DB::table('jobs')->where('id',$postulates->workId)->first();
-                                                                        return view('/home', array('user' => Auth::user()),['jobs' => $code]);
+                                                                        Alert::success('Datos actualizados!')->persistent("Close");
+                                                                        return back();   
                                                                   }
 
                           

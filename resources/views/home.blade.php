@@ -6,21 +6,18 @@
     <div class="row">
         <div class="col-md-8" >
             <div class="panel panel-default" id="div_home">
-                <div class="panel-heading" style="background-color: #17baef; color: #fff"><h4><b>Hola! <i class="far fa-smile"></i> - {{ Auth::user()->name }}</b></h4></div>
+                <div class="panel-heading" style="background-color: #008b8b; color: #fff"><h4><b>Hola! {{ Auth::user()->name }}</b></h4></div>
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h6 id="title_vacantes" align="center">Tu ultima postulación</h6>
+                    <h6 id="title_vacantes">Tu ultima postulación</h6>
                      @if ($jobs == '0')
                        <h6 style="color: red" id="title_vacantes"><b>Aun no te haz postulado en ninguna vacantes</h6>
-                       
                         @else
-                        
-                          <h3 id="title_vacantes" align="center">{{ $jobs->title }}</h3>
-                        
+                          <h3 id="title_vacantes" >{{ $jobs->title }}</h3>
                     @endif
                 </div>
             </div>
@@ -28,12 +25,16 @@
         <div class="col-md-4">
            <div class="panel panel-default" id="div_home">
               <div class="panel-heading" style="background-color: #008b8b; color: #fff">
-              Vacantes Nuevos!</div>
+              <i class="fas fa-th-list"></i>&nbsp;Vacantes Nuevos!</div>
               <div class="panel-body">
-              <ul>
-                <li><a href="">Desarrollador web</a></li>
-                <li><a href="">Capturista de datos</a></li>
-              </ul>
+                 @forelse ($all_jobs as $all_job)
+                    <ul>
+                      <li><a href="http://localhost:8000/vacantes/info/{{ $all_job->url }}">{{ $all_job->title }}</a></li>
+                  </ul>
+                    @empty
+                         <p>No existen Vacantes Nuevos</p>
+                @endforelse
+                  
               </div>
               
            </div>

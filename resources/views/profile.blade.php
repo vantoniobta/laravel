@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+
+@include('sweet::alert')
 <br>
 <form enctype="multipart/form-data" action="profile/{{$user->id}}" method="POST">
 <div class="container" id="profile_data1">

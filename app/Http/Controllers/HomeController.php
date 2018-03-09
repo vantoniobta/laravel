@@ -23,18 +23,18 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $user_init = Auth::user()->id;
-        $postulates = DB::table('postulates')->where('userId',$user_init)->first();
+    public function index() {
+        $user_init  = Auth::user()->id;
+        $all_jobs   = DB::table('jobs')->orderBy('created_at', 'desc')->limit(3)->get();
+        $postulates = DB::table('postulates')->where('userId',$user_init)->orderBy('created_at', 'desc')->first();
             if ($postulates == null) {
                 # code...
                 $code = '0';
-                  return view('home',['jobs' => $code]);
+                  return view('home',['jobs' => $code], compact('all_jobs'));
                 }
                 else{
                     $code = DB::table('jobs')->where('id',$postulates->workId)->first();
-                       return view('home',['jobs' => $code]);
+                       return view('home',['jobs' => $code],compact('all_jobs'));
                 }
     }
 }
