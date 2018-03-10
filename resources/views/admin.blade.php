@@ -13,13 +13,13 @@
             <label for="tab1">Activos</label>
               
             <input id="tab2" type="radio" name="tabs">
-            <label for="tab2">Dribbble</label>
+            <label for="tab2">Inactivos</label>
               
             <input id="tab3" type="radio" name="tabs">
-            <label for="tab3">Dropbox</label>
+            <label for="tab3">Tab3</label>
               
             <input id="tab4" type="radio" name="tabs">
-            <label for="tab4">Drupal</label>
+            <label for="tab4">Tab4</label>
               
             <section id="content1">
                 @if (session('status'))
@@ -35,63 +35,73 @@
                     </div>
 
                     <br><br><br>
-                <div class="table-responsive">
-                 <h1 id="title_table1"><i class="fas fa-users"></i>&nbsp;Lista de vacantes</h1>  
-                      <table class="table" id="table_general" >
-                        <thead>
-                          <tr>
-                            <th style="color: #fff; background-color: #009189;">FECHA</th>
-                            <th style="color: #fff; background-color: #009189">PUESTO</th>
-                            <th style="color: #fff; background-color: #009189">LUGAR</th>
-                            <th style="color: #fff; background-color: #009189">TIEMPO</th>
-                            <th style="color: #fff; background-color: #009189">SALARIO</th>
-                            <th style="color: #fff; background-color: #009189">###</th>
-                            <th style="color: #fff; background-color: #009189">###</th>
-                          </tr>
-                          @foreach ($jobs as $job)
+                    <div class="table-responsive">
+                     <h1 id="title_table1"><i class="fas fa-users"></i>&nbsp;Vacantes Activos</h1>  
+                          <table class="table" id="table_general" >
+                            <thead>
                               <tr>
-                                <td style="font-family: 'Anonymous Pro', sans-serif;">{{ date('F d, Y', strtotime($job->created_at)) }}</td>
-                                <td style="font-family: 'Anonymous Pro', sans-serif;color: #009189"><b>{!! $job->title !!}</b></td>
-                                <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->address !!}</td>
-                                <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->time !!}</td>
-                                <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->salary !!}</td>
-                                <td><a href="{{ URL::to('admin/jobs_edit',$job->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
-                                <td><a href="{{  URL::to('admin/postulates',$job->id )}}" class="btn btn-success btn-sm"><i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light">3</span></a></td>
-                            </tr>
-                          @endforeach
-                        </thead>
-                      </table>
+                                <th style="color: #fff; background-color: #009189;">FECHA</th>
+                                <th style="color: #fff; background-color: #009189">PUESTO</th>
+                                <th style="color: #fff; background-color: #009189">LUGAR</th>
+                                <th style="color: #fff; background-color: #009189">TIEMPO</th>
+                                <th style="color: #fff; background-color: #009189">SALARIO</th>
+                                <th style="color: #fff; background-color: #009189">###</th>
+                                <th style="color: #fff; background-color: #009189">###</th>
+                              </tr>
+                              @foreach ($jobs as $job)
+                                  <tr>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{{ date('F d, Y', strtotime($job->created_at)) }}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;color: #009189"><b>{!! $job->title !!}</b></td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->address !!}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->time !!}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->salary !!}</td>
+                                    <td><a href="{{ URL::to('admin/jobs_edit',$job->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
+                                    <td><a href="{{  URL::to('admin/postulates',$job->id )}}" class="btn btn-success btn-sm"><i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light">3</span></a></td>
+                                </tr>
+                              @endforeach
+                            </thead>
+                          </table>
 
-                      <div class="text-center">
-                          {!! $jobs->links() !!}
-                      </div>
-               </div>
+                          <div class="text-center">
+                              {!! $jobs->links() !!}
+                          </div>
+                   </div>
             </section>
               
             <section id="content2">
-              <p>
-                Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
-              </p>
-              <p>
-                Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
-              </p>
+                    <div class="col-md-12">
+
+                      <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar Vacante " onkeyup="search_all()">
+                    </div>
+
+                    <br><br><br>
+                    <div class="table-responsive">
+                     <h1 id="title_table1"><i class="fas fa-times"></i>&nbsp;Vacantes Inactivos</h1>  
+                          <table class="table" id="table_general" >
+                            <thead>
+                              <tr>
+                                <th style="color: #fff; background-color: #009189;">FECHA</th>
+                                <th style="color: #fff; background-color: #009189">PUESTO</th>
+                                <th style="color: #fff; background-color: #009189">LUGAR</th>
+                                <th style="color: #fff; background-color: #009189">TIEMPO</th>
+                                <th style="color: #fff; background-color: #009189">SALARIO</th>
+                                <th style="color: #fff; background-color: #009189">###</th>
+                                <th style="color: #fff; background-color: #009189">###</th>
+                              </tr>
+                            </thead>
+                          </table>
+                   </div>
             </section>
               
             <section id="content3">
               <p>
                 Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
               </p>
-              <p>
-                Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
-              </p>
             </section>
               
             <section id="content4">
               <p>
                 Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
-              </p>
-              <p>
-                Jerky jowl pork chop tongue, kielbasa shank venison. Capicola shank pig ribeye leberkas filet mignon brisket beef kevin tenderloin porchetta. Capicola fatback venison shank kielbasa, drumstick ribeye landjaeger beef kevin tail meatball pastrami prosciutto pancetta. Tail kevin spare ribs ground round ham ham hock brisket shoulder. Corned beef tri-tip leberkas flank sausage ham hock filet mignon beef ribs pancetta turkey.
               </p>
             </section>
     
