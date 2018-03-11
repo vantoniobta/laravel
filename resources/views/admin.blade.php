@@ -76,18 +76,29 @@
 
                     <br><br><br>
                     <div class="table-responsive">
-                     <h1 id="title_table1"><i class="fas fa-times"></i>&nbsp;Vacantes Inactivos</h1>  
+                     <h1 id="title_table1" style="color: #CD5C5C"><i class="fas fa-times" style="color: #CD5C5C"></i>&nbsp;Vacantes Inactivos</h1>  
                           <table class="table" id="table_general" >
                             <thead>
                               <tr>
-                                <th style="color: #fff; background-color: #009189;">FECHA</th>
-                                <th style="color: #fff; background-color: #009189">PUESTO</th>
-                                <th style="color: #fff; background-color: #009189">LUGAR</th>
-                                <th style="color: #fff; background-color: #009189">TIEMPO</th>
-                                <th style="color: #fff; background-color: #009189">SALARIO</th>
-                                <th style="color: #fff; background-color: #009189">###</th>
-                                <th style="color: #fff; background-color: #009189">###</th>
+                                <th style="color: #fff; background-color: #CD5C5C;">FECHA</th>
+                                <th style="color: #fff; background-color: #CD5C5C">PUESTO</th>
+                                <th style="color: #fff; background-color: #CD5C5C">LUGAR</th>
+                                <th style="color: #fff; background-color: #CD5C5C">TIEMPO</th>
+                                <th style="color: #fff; background-color: #CD5C5C">SALARIO</th>
+                                <th style="color: #fff; background-color: #CD5C5C">###</th>
+                                <th style="color: #fff; background-color: #CD5C5C">###</th>
                               </tr>
+                               @foreach ($jobs_x as $jobx)
+                                  <tr>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{{ date('F d, Y', strtotime($jobx->created_at)) }}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;color: #000"><b>{!! $jobx->title !!}</b></td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $jobx->address !!}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $jobx->time !!}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $jobx->salary !!}</td>
+                                    <td><a href="{{ URL::to('admin/jobs_edit',$jobx->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
+                                    <td><a href="{{  URL::to('admin/postulates',$jobx->id )}}" class="btn btn-success btn-sm"><i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light">3</span></a></td>
+                                </tr>
+                              @endforeach
                             </thead>
                           </table>
                    </div>

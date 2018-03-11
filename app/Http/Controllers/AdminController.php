@@ -40,11 +40,9 @@ class AdminController extends Controller
                  ->select('jobs.*','postulates.*')
                  ->get();
 
-                 dump($total);
-
         $jobs   = DB::table('jobs')->where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(10);
-        $jobs_x = DB::table('jobs')->where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(10);
-        return view('admin')->with('jobs', $jobs);
+        $jobs_x = DB::table('jobs')->where('status', '=', 'Inactivo')->orderBy('created_at', 'desc')->paginate(10);
+        return view('admin', compact('jobs_x'))->with('jobs', $jobs);
     }
 
 
