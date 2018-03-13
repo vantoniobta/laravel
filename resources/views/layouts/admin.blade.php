@@ -50,9 +50,6 @@
             font-family: 'Poppins', sans-serif; 
             }
 
-
-
-
 /*@media (min-width: 768px) {
   .navbar-nav > li > a {
     padding-top: 16.5px;
@@ -61,32 +58,15 @@
   }
 }*/
 
-
-nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color: #fff}
-.navbar-brand { padding: 0px;}
-.navbar-brand>img { padding: 7px 10px; }
- nav ul li:hover { background-color: #00CED1;}
-.dropdown-toggle:active, .open .dropdown-toggle { background:#00CED1 !important; color:#000 !important;}
-.dropdown-menu {background-color: #FFFFFF;color: #red;}
-.dropdown-menu > li > a {color: #000}
-.dropdown-menu > li > a:hover,
-.dropdown-menu > li > a:focus {text-decoration: none;color: #000 !important;}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color: #fff}
+        .navbar-brand { padding: 0px;}
+        .navbar-brand>img { padding: 7px 10px; }
+         nav ul li:hover { background-color: #00CED1;}
+        .dropdown-toggle:active, .open .dropdown-toggle { background:#00CED1 !important; color:#000 !important;}
+        .dropdown-menu {background-color: #FFFFFF;color: #red;}
+        .dropdown-menu > li > a {color: #000}
+        .dropdown-menu > li > a:hover,
+        .dropdown-menu > li > a:focus {text-decoration: none;color: #000 !important;}
 
 
         #table_general {
@@ -113,17 +93,10 @@ nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color
             font-weight: bold;
             color: #009189;
         }
-
-
-
-
-
-
-
     </style>
-<body style="background-color: #fff">
+<body style="background-color: #fafafa">
     <div id="app" >
-        <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #214c66">
+        <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #2E2E2E">
             <div class="container">
                 <div class="navbar-header">
                     <!-- Collapsed Hamburger -->
@@ -143,8 +116,8 @@ nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                          <li><a href="{{ url('/admin') }}" style="color: #fff">Vacantes</a></li>
-                          <li><a href="{{ url('/admin/users') }}" style="color: #fff">Users</a></li>
+                          <li><a href="{{ url('/admin') }}" style="color: #fff"><i class="fas fa-list-alt"></i>&nbsp;Vacantes</a></li>
+                          <li><a href="{{ url('/admin/users') }}" style="color: #fff"><i class="fas fa-user"></i>&nbsp;Users</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -155,11 +128,11 @@ nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative;padding-left: 50px; color: #fff">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative;padding-left: 50px; color: #fff"><i class="fab fa-dashcube"></i>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                  <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                                  <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-exclamation"></i>&nbsp;Logout</a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}

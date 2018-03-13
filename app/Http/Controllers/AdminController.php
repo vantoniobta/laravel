@@ -26,19 +26,21 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    { 
-        // $postulates  = DB::table('postulates')
-        //              ->select(DB::raw('count(*) as user_count'))
-        //              ->where('workId', '=', 2)
-        //              ->get();
+    public function index() { 
+      
+       // SELECT DISTINCT jobs.id, created_at,title,address,time,salary,
+       // (SELECT COUNT(*) FROM postulates
+       //          WHERE workId = jobs.id) AS postulados
+       //  FROM jobs
 
-                 
+        $data = DB::table("jobs")
+                    ->select("jobs.id", "jobs.created_at","jobs.title","jobs.address","jobs.address","jobs.salary", DB::raw("COUNT(*) as postulados"))
+                    ->join("postulates","postulates.workId","=","jobs.id")
+                    ->groupBy("jobs.id")
+                    ->get();
 
-        $total = DB::table('jobs')
-                 ->join('postulates','jobs.id', '=','postulates.workId')
-                 ->select('jobs.*','postulates.*')
-                 ->get();
+                    dump($data);
+
 
         $jobs   = DB::table('jobs')->where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(10);
         $jobs_x = DB::table('jobs')->where('status', '=', 'Inactivo')->orderBy('created_at', 'desc')->paginate(10);

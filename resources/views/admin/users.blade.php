@@ -19,7 +19,7 @@
 
                     <br><br><br>
                 <div class="table-responsive">
-                 <h1 id="title_table1"><i class="fas fa-users"></i>&nbsp;Lista de Usuarios</h1>  
+                 <h4 id="title_table1"><i class="fas fa-users"></i>&nbsp;Lista de Usuarios</h4>  
                       <table class="table" id="table_general" >
                         <thead>
                           <tr>

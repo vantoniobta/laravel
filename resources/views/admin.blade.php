@@ -9,20 +9,21 @@
 
 <div class="col-md-12">
         <main>
-            <input id="tab1" type="radio" name="tabs" checked>
-            <label for="tab1">Activos</label>
-              
-            <input id="tab2" type="radio" name="tabs">
-            <label for="tab2">Inactivos</label>
+
+           <input id="tab1" type="radio" name="tabs">
+            <label for="tab1">Vacantes postulados</label>
+
+            <input id="tab2" type="radio" name="tabs" checked>
+            <label for="tab2">Todos los activos</label>
               
             <input id="tab3" type="radio" name="tabs">
-            <label for="tab3">Tab3</label>
-              
-            <input id="tab4" type="radio" name="tabs">
-            <label for="tab4">Tab4</label>
+            <label for="tab3">Inactivos</label>
               
             <section id="content1">
-                @if (session('status'))
+            </section>
+              
+            <section id="content2">
+                    @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
@@ -36,17 +37,17 @@
 
                     <br><br><br>
                     <div class="table-responsive">
-                     <h1 id="title_table1"><i class="fas fa-users"></i>&nbsp;Vacantes Activos</h1>  
+                     <h4 id="title_table1"><i class="fas fa-users"></i>&nbsp;Vacantes Activos</h4>  
                           <table class="table" id="table_general" >
                             <thead>
                               <tr>
-                                <th style="color: #fff; background-color: #009189;">FECHA</th>
-                                <th style="color: #fff; background-color: #009189">PUESTO</th>
-                                <th style="color: #fff; background-color: #009189">LUGAR</th>
-                                <th style="color: #fff; background-color: #009189">TIEMPO</th>
-                                <th style="color: #fff; background-color: #009189">SALARIO</th>
+                                <th style="color: #fff; background-color: #009189;">Fecha</th>
+                                <th style="color: #fff; background-color: #009189">Puesto</th>
+                                <th style="color: #fff; background-color: #009189">Lugar</th>
+                                <th style="color: #fff; background-color: #009189">Tiempo</th>
+                                <th style="color: #fff; background-color: #009189">Salario</th>
                                 <th style="color: #fff; background-color: #009189">###</th>
-                                <th style="color: #fff; background-color: #009189">###</th>
+                                <th style="color: #fff; background-color: #009189">Postulados</th>
                               </tr>
                               @foreach ($jobs as $job)
                                   <tr>
@@ -67,16 +68,15 @@
                           </div>
                    </div>
             </section>
-              
-            <section id="content2">
-                    <div class="col-md-12">
 
-                      <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar Vacante " onkeyup="search_all()">
-                    </div>
 
-                    <br><br><br>
-                    <div class="table-responsive">
-                     <h1 id="title_table1" style="color: #CD5C5C"><i class="fas fa-times" style="color: #CD5C5C"></i>&nbsp;Vacantes Inactivos</h1>  
+             <section id="content3">
+                 <div class="col-md-12">
+                    <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar Vacante " onkeyup="search_all()">
+                  </div>
+                   <br><br><br>
+                  <div class="table-responsive">
+                     <h4 id="title_table1" style="color: #CD5C5C"><i class="fas fa-times" style="color: #CD5C5C"></i>&nbsp;Vacantes Inactivos</h4>  
                           <table class="table" id="table_general" >
                             <thead>
                               <tr>
@@ -85,7 +85,6 @@
                                 <th style="color: #fff; background-color: #CD5C5C">LUGAR</th>
                                 <th style="color: #fff; background-color: #CD5C5C">TIEMPO</th>
                                 <th style="color: #fff; background-color: #CD5C5C">SALARIO</th>
-                                <th style="color: #fff; background-color: #CD5C5C">###</th>
                                 <th style="color: #fff; background-color: #CD5C5C">###</th>
                               </tr>
                                @foreach ($jobs_x as $jobx)
@@ -96,27 +95,13 @@
                                     <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $jobx->time !!}</td>
                                     <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $jobx->salary !!}</td>
                                     <td><a href="{{ URL::to('admin/jobs_edit',$jobx->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
-                                    <td><a href="{{  URL::to('admin/postulates',$jobx->id )}}" class="btn btn-success btn-sm"><i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light">3</span></a></td>
                                 </tr>
                               @endforeach
                             </thead>
                           </table>
                    </div>
-            </section>
-              
-            <section id="content3">
-              <p>
-                Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
-              </p>
-            </section>
-              
-            <section id="content4">
-              <p>
-                Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock. Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank. Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami beef ribs.
-              </p>
-            </section>
-    
-</main>
+             </section>
+    </main>
 </div>
 
 
