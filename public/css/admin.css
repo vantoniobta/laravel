@@ -74,3 +74,11 @@ input:checked + label {
     padding: 15px;
   }
 }
+
+
+#table_general2{
+  font-size: 13px;
+}
+#table_general3{
+  font-size: 13px;
+}

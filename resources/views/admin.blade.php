@@ -10,16 +10,41 @@
 <div class="col-md-12">
         <main>
 
-           <input id="tab1" type="radio" name="tabs">
-            <label for="tab1">Vacantes postulados</label>
+           <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1">Actividad</label>
 
-            <input id="tab2" type="radio" name="tabs" checked>
+            <input id="tab2" type="radio" name="tabs" >
             <label for="tab2">Todos los activos</label>
               
             <input id="tab3" type="radio" name="tabs">
             <label for="tab3">Inactivos</label>
               
             <section id="content1">
+                    <div class="col-md-12">
+                    <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar Vacante " onkeyup="search_all()">
+                  </div>
+                   <br><br><br>
+                  <div class="table-responsive">
+                     <h4 id="title_table1" style="color: #9ACD32"><i class="fas fa-check-circle" style="color: #9ACD32"></i>&nbsp;Vacantes en Actividad</h4>  
+                          <table class="table" id="table_general3" >
+                            <thead>
+                              <tr>
+                                <th style="color: #000; background-color: #dee5ed;">FECHA</th>
+                                <th style="color: #000; background-color: #dee5ed">PUESTO</th>
+                                <th style="color: #000; background-color: #dee5ed">LUGAR</th>
+                                <th style="color: #000;background-color:#dee5ed;">Postulados</th>
+                              </tr>
+                               @foreach ($data as $datax)
+                                  <tr>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{{ date('F d, Y', strtotime($datax->created_at)) }}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;color: #000"><b>{!! $datax->title !!}</b></td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $datax->address !!}</td>
+                                     <td><a href="{{  URL::to('admin/postulates',$datax->id )}}" class="btn btn-success btn-sm"><i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light">{!! $datax->postulados !!}</span></a></td>
+                                </tr>
+                              @endforeach
+                            </thead>
+                          </table>
+                   </div>
             </section>
               
             <section id="content2">
@@ -28,8 +53,6 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="{{ url('admin/jobs_new') }}" class="pull-left btn btn-sm btn-success"><i class="fa fa-plus-circle fa-lg" aria-hidden="true"></i>&nbsp;Nueva Vacante</a>
-                        <br><hr>
                     <div class="col-md-12">
 
                       <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar Vacante " onkeyup="search_all()">
@@ -38,26 +61,25 @@
                     <br><br><br>
                     <div class="table-responsive">
                      <h4 id="title_table1"><i class="fas fa-users"></i>&nbsp;Vacantes Activos</h4>  
-                          <table class="table" id="table_general" >
+                          <table class="table" id="table_general2" >
                             <thead>
                               <tr>
-                                <th style="color: #fff; background-color: #009189;">Fecha</th>
-                                <th style="color: #fff; background-color: #009189">Puesto</th>
-                                <th style="color: #fff; background-color: #009189">Lugar</th>
-                                <th style="color: #fff; background-color: #009189">Tiempo</th>
-                                <th style="color: #fff; background-color: #009189">Salario</th>
-                                <th style="color: #fff; background-color: #009189">###</th>
-                                <th style="color: #fff; background-color: #009189">Postulados</th>
+                                <th style="color: #000; background-color: #dee5ed;">Fecha</th>
+                                <th style="color: #000; background-color: #dee5ed;">Puesto</th>
+                                <th style="color: #000; background-color: #dee5ed;">Lugar</th>
+                                <th style="color: #000; background-color: #dee5ed;">Tiempo</th>
+                                <th style="color: #000; background-color: #dee5ed;">Salario</th>
+                                <th style="color: #000; background-color: #dee5ed;">###</th>
                               </tr>
                               @foreach ($jobs as $job)
                                   <tr>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{{ date('F d, Y', strtotime($job->created_at)) }}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;font-size: 12px;">{{ date('F d, Y', strtotime($job->created_at)) }}</td>
                                     <td style="font-family: 'Anonymous Pro', sans-serif;color: #009189"><b>{!! $job->title !!}</b></td>
                                     <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->address !!}</td>
                                     <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->time !!}</td>
                                     <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->salary !!}</td>
                                     <td><a href="{{ URL::to('admin/jobs_edit',$job->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
-                                    <td><a href="{{  URL::to('admin/postulates',$job->id )}}" class="btn btn-success btn-sm"><i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light">3</span></a></td>
+                                   <!--  <td><a href="{{  URL::to('admin/postulates',$job->id )}}" class="btn btn-success btn-sm"><i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light">3</span></a></td> -->
                                 </tr>
                               @endforeach
                             </thead>
@@ -77,7 +99,7 @@
                    <br><br><br>
                   <div class="table-responsive">
                      <h4 id="title_table1" style="color: #CD5C5C"><i class="fas fa-times" style="color: #CD5C5C"></i>&nbsp;Vacantes Inactivos</h4>  
-                          <table class="table" id="table_general" >
+                          <table class="table" id="table_general3" >
                             <thead>
                               <tr>
                                 <th style="color: #fff; background-color: #CD5C5C;">FECHA</th>
@@ -131,7 +153,7 @@ function search_all() {
   var input, filter, table, tr, td, i;
   input = document.getElementById("search_v");
   filter = input.value.toUpperCase();
-  table = document.getElementById("table_general");
+  table = document.getElementById("table_general2");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[1];

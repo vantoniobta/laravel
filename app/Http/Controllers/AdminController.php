@@ -36,15 +36,13 @@ class AdminController extends Controller
         $data = DB::table("jobs")
                     ->select("jobs.id", "jobs.created_at","jobs.title","jobs.address","jobs.address","jobs.salary", DB::raw("COUNT(*) as postulados"))
                     ->join("postulates","postulates.workId","=","jobs.id")
+                    ->where('jobs.status', '=', 'Activo')
                     ->groupBy("jobs.id")
                     ->get();
 
-                    dump($data);
-
-
         $jobs   = DB::table('jobs')->where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(10);
         $jobs_x = DB::table('jobs')->where('status', '=', 'Inactivo')->orderBy('created_at', 'desc')->paginate(10);
-        return view('admin', compact('jobs_x'))->with('jobs', $jobs);
+        return view('admin', compact('jobs_x', 'data'))->with('jobs', $jobs);
     }
 
 
