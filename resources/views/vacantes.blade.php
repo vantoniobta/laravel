@@ -39,9 +39,10 @@
         <div class="slider">
           <div class="legend"></div>
           <div class="content">
-            <div class="content-txt" class="img-responsive">
-              <h1 align="center">Televisión</h1>
-              <h2>Búsqueda directa del talento que requieren sus proyectos</h2>
+            <div class="content-txt">
+              <h1 align="center">Multimedios Televisión</h1>
+                <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
+                <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
           </div>
           <div class="image123" style="float: none; margin: 0 auto;" >
@@ -53,11 +54,12 @@
           <div class="content">
             <div class="content-txt">
               <h1>Radio</h1>
-              <h2>Soluciones de contratación para posiciones nacionales e internacionales</h2>
+               <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
+                <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
           </div>
           <div class="image123">
-            <img src="http://iclic.mx/img/bg2.jpg">
+            <img src="https://i.pinimg.com/originals/5a/07/98/5a0798a1b5241d3ee767c6eabf48f79f.jpg">
           </div>
         </div>
         <div class="slider">
@@ -65,7 +67,8 @@
           <div class="content">
             <div class="content-txt">
               <h1>Redes Sociales</h1>
-              <h2>Impulsamos la creación de estrategias, basadas en el conocimiento del mercado</h2>
+               <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
+                <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
           </div>
           <div class="image123">
@@ -77,7 +80,8 @@
           <div class="content">
             <div class="content-txt">
               <h1>Practicas Profesionales</h1>
-              <h2>Nuevos enfoques para el desarrollo profesional de sus empleados</h2>
+               <h2 class="hidden-xs hidden-sm">Tenemos un lugar para tí para tus practicas profesionales</h2>
+                <h5 class="hidden-md hidden-lg">Tenemos un lugar para tí <br>para tus practicas profesionales</h5>
             </div>
           </div>
           <div class="image">
