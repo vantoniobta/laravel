@@ -8,6 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="icon" href="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/32x32.png" />
     <!-- Styles -->
@@ -19,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/nav.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/slider.css') }}" rel="stylesheet">
     
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
@@ -30,6 +32,10 @@
     <link href="//fonts.googleapis.com/css?family=Armata&subset=latin" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Anton&subset=latin" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Archivo&subset=latin" rel="stylesheet" type="text/css">
+
+
+
+
 
 
     <style type="text/css">
@@ -188,6 +194,8 @@
         </nav>
         @yield('content')
     </div>
+
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

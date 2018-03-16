@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "66eebae851ecb03aa7e157b7cc8d6b32",
+    "content-hash": "298050972624a102390482a4088ea5b0",
     "packages": [
         {
             "name": "5dmatweb/streamlab",
@@ -598,6 +598,60 @@
                 "url"
             ],
             "time": "2017-03-20T17:10:46+00:00"
+        },
+        {
+            "name": "hilioski/social-share-and-meta-generator",
+            "version": "5.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/djkiko20/social-share.git",
+                "reference": "bacaba7e2b731127933789b540aebe3ca8e93eb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/djkiko20/social-share/zipball/bacaba7e2b731127933789b540aebe3ca8e93eb5",
+                "reference": "bacaba7e2b731127933789b540aebe3ca8e93eb5",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": ">=5.3",
+                "mockery/mockery": "^0.9.4",
+                "orchestra/testbench": "~3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Chencha\\Share": "src/"
+                },
+                "classmap": [
+                    "tests/TestCase.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hristian Ilioski",
+                    "email": "hristian.ilioski@gmail.com"
+                }
+            ],
+            "description": "Share links with Laravel 5 and meta generator",
+            "keywords": [
+                "generator",
+                "laravel",
+                "laravel5",
+                "meta",
+                "og",
+                "share",
+                "social"
+            ],
+            "time": "2016-08-30T18:38:35+00:00"
         },
         {
             "name": "intervention/image",

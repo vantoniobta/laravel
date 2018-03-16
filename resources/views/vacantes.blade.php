@@ -6,7 +6,7 @@
 
 
 
-<div class="container" id="vacantes_div1">
+<!-- <div class="container" id="vacantes_div1">
   <div class="row"><br><br><br>
      <div class="col-lg-8 col-centered" style="float: none; margin: 0 auto;" >
           <div class="transbox" >
@@ -29,7 +29,128 @@
        </div>
    </div>
  </div>
+ -->
 
+<!-- Slider -->
+<div class="container" id="vacantes_div1">
+ <div class="row">
+    <div id="slider" >
+      <div class="slides">
+        <div class="slider">
+          <div class="legend"></div>
+          <div class="content">
+            <div class="content-txt" class="img-responsive">
+              <h1 align="center">Televisión</h1>
+              <h2>Búsqueda directa del talento que requieren sus proyectos</h2>
+            </div>
+          </div>
+          <div class="image123" style="float: none; margin: 0 auto;" >
+            <img src="https://i.pinimg.com/originals/5a/07/98/5a0798a1b5241d3ee767c6eabf48f79f.jpg">
+          </div>
+        </div>
+        <div class="slider">
+          <div class="legend"></div>
+          <div class="content">
+            <div class="content-txt">
+              <h1>Radio</h1>
+              <h2>Soluciones de contratación para posiciones nacionales e internacionales</h2>
+            </div>
+          </div>
+          <div class="image123">
+            <img src="http://iclic.mx/img/bg2.jpg">
+          </div>
+        </div>
+        <div class="slider">
+          <div class="legend"></div>
+          <div class="content">
+            <div class="content-txt">
+              <h1>Redes Sociales</h1>
+              <h2>Impulsamos la creación de estrategias, basadas en el conocimiento del mercado</h2>
+            </div>
+          </div>
+          <div class="image123">
+            <img src="https://i.pinimg.com/originals/5a/07/98/5a0798a1b5241d3ee767c6eabf48f79f.jpg">
+          </div>
+        </div>
+        <div class="slider">
+          <div class="legend"></div>
+          <div class="content">
+            <div class="content-txt">
+              <h1>Practicas Profesionales</h1>
+              <h2>Nuevos enfoques para el desarrollo profesional de sus empleados</h2>
+            </div>
+          </div>
+          <div class="image">
+            <img src="https://i.pinimg.com/originals/5a/07/98/5a0798a1b5241d3ee767c6eabf48f79f.jpg">
+          </div>
+        </div>
+      </div>
+      <div class="switch">
+        <ul>
+          <li>
+            <div class="on"></div>
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br>
  <div class="container">;
    <div class="fusion-content-boxes content-boxes columns row fusion-columns-4 fusion-columns-total-4 fusion-content-boxes-1 content-boxes-icon-on-top content-left home-servicios" data-animationoffset="100%" style="margin-top:0px;margin-bottom:60px; ">
       <div class="fusion-column content-box-column content-box-column content-box-column-1 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover  content-box-column-first-in-row">

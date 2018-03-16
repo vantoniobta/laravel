@@ -63,24 +63,15 @@
           </div>
             <div class="col-md-8">
                 <h3 style="color: #000">Compartir Vacante</h3>
-
-
-
-
                   <a href="https://twitter.com/intent/tweet?url={{ urlencode(Request::fullUrl()) }}" target="_blank" class="share-btn twitter"  data-size = "large"
                     ><i class="fa fa-twitter"></i></a>
-
-
-
                   <a href="https://www.facebook.com/sharer/sharer.php?" target="_blank" class="share-btn facebook"><i class="fab fa-facebook-square"></i></a>
                   <a href="https://www.facebook.com/sharer/sharer.php?" target="_blank" class="share-btn linkedin"><i class="fa fa-linkedin"></i></a>
-
-
             </div>
-
-            
     </div>
 <br>
+
+
 
 
    <footer class="footer-distributed">

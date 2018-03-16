@@ -10,8 +10,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h2 align="center" style="color: #214c66"><img src="http://localhost:8000/img/toolbar_logo.png"></h2>
-                        <br><hr>
+                    <br>
                     <div class="col-md-12">
 
                       <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar Usuario " onkeyup="search_all()">
@@ -20,7 +19,7 @@
                     <br><br><br>
                 <div class="table-responsive">
                  <h4 id="title_table1"><i class="fas fa-users"></i>&nbsp;Lista de Usuarios</h4>  
-                      <table class="table" id="table_general" >
+                      <table class="table" id="table_general2" >
                         <thead>
                           <tr>
                             <th style="color: #fff; background-color: #009189;">Nombre</th>
