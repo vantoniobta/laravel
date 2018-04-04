@@ -21,9 +21,12 @@ class SocialAuthController extends Controller {
             //Alert::info('Alparecer tu red social no cuenta con email o no se encuentra validada', 'Error Email!');
             Alert::success('Alparecer tu red social no cuenta con email o no se encuentra validada!')->persistent("Close");
             return redirect()->to('/login');     
+        
          }else{
+            
             auth()->login($user);
-            return redirect()->to('/home');       
+            return redirect()->to('/home');
+
          }
           
     }
