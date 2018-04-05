@@ -33,24 +33,26 @@ class UserController extends Controller {
          if($request->hasFile('avatar')){
                 if ($request->hasFile('cv')) {
                   # code...
-                   $name     = $request ->name;
-                   $lastname = $request ->lastname;
-                   $phone    = $request ->phone;
-                   $avatar   = $request->file('avatar');
-                   $pdfName  = $request->file('cv')->getClientOriginalName();
-                   $ingles   = $request ->ingles;
+                   $name         = $request ->name;
+                   $lastname     = $request ->lastname;
+                   $phone        = $request ->phone;
+                   $description  = $request ->description;
+                   $avatar       = $request->file('avatar');
+                   $pdfName      = $request->file('cv')->getClientOriginalName();
+                   $ingles       = $request ->ingles;
 
                   $filename = time(). '.' . $avatar->getClientOriginalExtension();
                   Image::make($avatar)->resize(300,300)->save(public_path('uploads/avatars/' . $filename));
 
                       DB::table('users')
                            ->where('id', $id)
-                           ->update(['name'     => $name,
-                                    'lastname' => $lastname,
-                                    'phone'    => $phone,
-                                    'avatar'   => $filename,
-                                    'cv'       => $pdfName,
-                                    'ingles'   => $ingles]);
+                           ->update(['name'       => $name,
+                                    'lastname'    => $lastname,
+                                    'phone'       => $phone,
+                                    'description' => $description,
+                                    'avatar'      => $filename,
+                                    'cv'          => $pdfName,
+                                    'ingles'      => $ingles]);
 
                                     if (!file_exists('uploads/cv/'.$id.'/')) {
                                               mkdir('uploads/cv/'.$id, 0777, true);
@@ -61,40 +63,44 @@ class UserController extends Controller {
                                                base_path() . '/public/uploads/cv/'.$id.'/', $pdfName);
                                           }
                                       }else{
-                                             $name     = $request ->name;
-                                             $lastname = $request ->lastname;
-                                             $phone    = $request ->phone;
-                                             $avatar   = $request->file('avatar');
-                                             $ingles   = $request ->ingles;
+                                             $name        = $request ->name;
+                                             $lastname    = $request ->lastname;
+                                             $phone       = $request ->phone;
+                                             $description = $request ->description;
+                                             $avatar      = $request->file('avatar');
+                                             $ingles      = $request ->ingles;
 
                                             $filename = time(). '.' . $avatar->getClientOriginalExtension();
                                             Image::make($avatar)->resize(300,300)->save(public_path('uploads/avatars/' . $filename));
 
                                                 DB::table('users')
                                                               ->where('id', $id)
-                                                              ->update(['name'     => $name,
-                                                                       'lastname' => $lastname,
-                                                                       'phone'    => $phone,
-                                                                       'avatar'   => $filename,
-                                                                       'ingles'   => $ingles]);
+                                                              ->update(['name'       => $name,
+                                                                       'lastname'    => $lastname,
+                                                                       'phone'       => $phone,
+                                                                       'description' => $description,
+                                                                       'avatar'      => $filename,
+                                                                       'ingles'      => $ingles]);
                                            }
                                               }else{
 
                                                     if ($request->hasFile('cv')) {
-                                                       $name     = $request ->name;
-                                                       $lastname = $request ->lastname;
-                                                       $phone    = $request ->phone;
-                                                       $avatar   = $request->file('avatar');
-                                                       $ingles   = $request ->ingles;
-                                                       $pdfName  = $request->file('cv')->getClientOriginalName();
+                                                       $name        = $request ->name;
+                                                       $lastname    = $request ->lastname;
+                                                       $phone       = $request ->phone;
+                                                       $description = $request ->description;
+                                                       $avatar      = $request->file('avatar');
+                                                       $ingles      = $request ->ingles;
+                                                       $pdfName     = $request->file('cv')->getClientOriginalName();
                                                       
                                                       DB::table('users')
                                                                ->where('id', $id)
-                                                               ->update(['name'     => $name,
-                                                                        'lastname' => $lastname,
-                                                                        'phone'    => $phone,
-                                                                        'cv'       => $pdfName,
-                                                                        'ingles'   => $ingles]);
+                                                               ->update(['name'       => $name,
+                                                                        'lastname'    => $lastname,
+                                                                        'phone'       => $phone,
+                                                                        'description' => $description,
+                                                                        'cv'          => $pdfName,
+                                                                        'ingles'      => $ingles]);
 
                                                                  if (!file_exists('uploads/cv/'.$id.'/')) {
                                                                           mkdir('uploads/cv/'.$id, 0777, true);
@@ -106,18 +112,20 @@ class UserController extends Controller {
                                                                           }
 
                                                                       }else{
-                                                                               $name     = $request ->name;
-                                                                               $lastname = $request ->lastname;
-                                                                               $phone    = $request ->phone;
-                                                                               $avatar   = $request->file('avatar');
-                                                                               $ingles   = $request ->ingles;
+                                                                               $name         = $request ->name;
+                                                                               $lastname     = $request ->lastname;
+                                                                               $phone        = $request ->phone;
+                                                                               $description  = $request ->description;
+                                                                               $avatar       = $request->file('avatar');
+                                                                               $ingles       = $request ->ingles;
                                                                               
                                                                               DB::table('users')
                                                                                        ->where('id', $id)
-                                                                                       ->update(['name'     => $name,
-                                                                                                'lastname' => $lastname,
-                                                                                                'phone'    => $phone,
-                                                                                                'ingles'   => $ingles]);
+                                                                                       ->update(['name'       => $name,
+                                                                                                'lastname'    => $lastname,
+                                                                                                'phone'       => $phone,
+                                                                                                'description' => $description,
+                                                                                                'ingles'      => $ingles]);
                                                                       }
 
                                               }

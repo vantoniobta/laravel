@@ -48,7 +48,7 @@
     <div class="row">
       <div class="col-md-6">
            <label style="color: #000; font-family: 'Armata', sans-serif;">Descripción(opcional)</label>
-           <textarea  class="form-control"></textarea>
+           <textarea name="description" class="form-control">{{ $user->description }}</textarea>
       </div><br>
 
 

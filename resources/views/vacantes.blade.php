@@ -229,13 +229,17 @@
   </div>
  </div> -->
 
-<div class="container" style="background-color: #f1c108; ">
-   <div class="row">
-     <div class="col-md-12">
-     <h1 id="title_vacantes" align="center">ÚLTIMAS OFERTAS DE TRABAJO</h1>
-     </div>
-   </div>
- </div>
+  <div class="container" style="background-color: #f1c108; ">
+       <div class="row">
+         <div class="col-md-12">
+         <h1 id="title_vacantes" align="center">ÚLTIMAS OFERTAS DE TRABAJO</h1>
+         </div>
+       </div>
+  </div>
+
+ 
+
+
    @forelse ($works as $work)
           <div class="container" id="div_vacantes">
               <div class="row">
@@ -247,15 +251,14 @@
                 						</div>
           							
               						   <div class="col-md-6">
-                                <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">REQUISITOS</span></h6>
-                                <ul style="list-style:none;" >
-                                <li style="color: #000" ><p style=" font-size: 16px">{{ $work->abilities }}</p></li>
-                                </ul>
+                               <p style=" font-size: 16px"><span style="color: #696969;">Requisitos</span></p>
+                                <p style=" font-size: 16px">{{ $work->abilities }}</p>
+                                <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address }}</span></h6>
               						   </div>
 
                             <div class="col-md-2 ">
                                <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">fecha</span></h6>
-                               <p style=" font-size: 18px;color:#000;">{{ date('F d, Y', strtotime($work->created_at)) }}</p>
+                               <p style=" font-size: 16px;color:#000;">{{ date('F d, Y', strtotime($work->created_at)) }}</p>
                             </div>
           	               </div>
           	        </div>
@@ -264,6 +267,27 @@
           @empty
          <p>No existen Vacantes</p>
 @endforelse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       <div class="container"> 
