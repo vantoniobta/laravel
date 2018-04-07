@@ -266,27 +266,7 @@
           </div>
           @empty
          <p>No existen Vacantes</p>
-@endforelse
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @endforelse
 
 
 
