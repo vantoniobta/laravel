@@ -37,7 +37,11 @@
                   <div class="form-group">
                     <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Lugar</label>
                     <div class="col-md-9">
-                      <input id="Lugar" name="lugar" type="text" placeholder="Lugar" class="form-control" required="">
+                      <!-- <input id="Lugar" name="lugar" type="text" placeholder="Lugar" class="form-control" required=""> -->
+                         <select class="form-control" id="lugar" name="lugar">
+                         <option value="Monterrey">Monterrey, Nuevo León</option>
+                         <option value="Ciudad Mexico">Ciudad Mexico</option>
+                      </select>
                     </div>
                   </div>
 

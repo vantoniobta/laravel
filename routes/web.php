@@ -74,8 +74,9 @@ Route::get('/vacantes', function(){
 	return view('vacantes', compact('works'));
 });
 
+
 Route::get('/vacantes_mty', function(){
-    $works = App\Job::where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(5);
+    $works = App\Job::where('status', '=', 'Activo')->orWhere('address', '=', 'Monterrey')->orderBy('created_at', 'desc')->paginate(5);
 	return view('vacantes_mty', compact('works'));
 });
 

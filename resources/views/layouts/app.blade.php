@@ -158,7 +158,18 @@
                             <li><a href="{{ route('register') }}" style="color: #fff"><i class="fa fa-user-plus"  aria-hidden="true"></i>&nbsp;Registro</a></li>
                             <li><a href="{{ route('login') }}" style="color: #fff"><i class="fas fa-sign-in-alt" ></i>&nbsp;Login</a></li>
                         @else
-                        <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes&nbsp;<i class="fas fa-list-ul" ></i></a></li>
+                          <li class="dropdown">
+                             <a href="#" class="dropdown-toggle" style="color: #fff" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                               <i class="fas fa-users"></i>
+                                &nbsp;Vacantes
+                             </a>
+                             <ul class="dropdown-menu" style="background-color: #98FB98;border-color: #98FB98">
+                                 <li><a href="/vacantes_mty">Monterrey</a>
+                                 <li><a href="/vacantes_cdmx">Ciudad de Mexico</a>
+                                 </li>
+                             </ul>
+
+                          </li>
                          <li class="dropdown">
                              <a href="#" class="dropdown-toggle" style="color: #fff" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                 <i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light" style="background-color: red">
