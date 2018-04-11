@@ -76,14 +76,21 @@ Route::get('/vacantes', function(){
 
 
 Route::get('/vacantes_mty', function(){
-    $works = App\Job::where('status', '=', 'Activo')->orWhere('address', '=', 'Monterrey')->orderBy('created_at', 'desc')->paginate(5);
+    $works = App\Job::where([
+    	['status', '=', 'Activo'],
+    	['address', '=', 'Monterrey']
+    	])->orderBy('created_at', 'desc')->paginate(5);
 	return view('vacantes_mty', compact('works'));
 });
 
 Route::get('/vacantes_cdmx', function(){
-    $works = App\Job::where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(5);
+    $works = App\Job::where([
+    	['status', '=', 'Activo'],
+    	['address', '=', 'Ciudad México']
+    	])->orderBy('created_at', 'desc')->paginate(5);
 	return view('vacantes_cdmx', compact('works'));
 });
+
 
 
 // Route::get('admin/jobs_new', function(){

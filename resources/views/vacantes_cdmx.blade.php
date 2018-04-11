@@ -4,33 +4,6 @@
 
 @section('content')
 
-
-
-<!-- <div class="container" id="vacantes_div1">
-  <div class="row"><br><br><br>
-     <div class="col-lg-8 col-centered" style="float: none; margin: 0 auto;" >
-          <div class="transbox" >
-                <h1 style="color:#ff7f50;font-family: 'Open Sans', sans-serif; font-size: 3.1em;font-weight: 900;text-align: center;" align="center"><b>ÚNETE al Grupo Multimedios</b></h1>
-                 <p style="color: #fff" align="center">Buscamos gente con mucho talento</p>
-                 <a class="semi-transparent-button is-blue" href="/register">Registrarse</a>
-                 <br>
-          </div>
-           <div class="col-lg-6 col-centered" style="float: none; margin: 0 auto;" >
-              <h2 align="center">Palabras claves</h2>
-                <div class="input-group col-md-12">
-                      <input type="text" class="form-control input-lg" placeholder="Buscar" style="color: #fff;background-color:transparent; "/>
-                      <span class="input-group-btn">
-                          <button class="btn btn-info btn-lg" type="button" style=";background-color:#f1c108; border-color: #f1c108">
-                              <i class="fas fa-search"></i>
-                          </button>
-                      </span>
-                  </div><br><br><br>
-           </div>
-       </div>
-   </div>
- </div>
- -->
-
 <!-- Slider -->
 <div class="container" id="vacantes_div1">
  <div class="row">
@@ -104,9 +77,6 @@
 </div>
 
 
-
-
-
 <br><br><br><br><br>
  <div class="container">;
    <div class="fusion-content-boxes content-boxes columns row fusion-columns-4 fusion-columns-total-4 fusion-content-boxes-1 content-boxes-icon-on-top content-left home-servicios" data-animationoffset="100%" style="margin-top:0px;margin-bottom:60px; ">
@@ -166,26 +136,10 @@
    </div>
 </div>
 
-
-
-
-
-
-<!--  <div class="container">
-  <div class="col-md-6"> 
-    <h1 class="title_va" style="color:#000;" align="center">Multimedios Radio</h1>
-    <p style="color: #000" align="center">Encuentra cientos de ofertas de trabajo de tecnología</p>
-  </div>
-   <div class="col-md-6"> 
-    <h1 class="title_va" style="color:#000;" align="center">Multimedios Televisión</h1>
-    <p style="color: #000" align="center">Encuentra cientos de ofertas de trabajo de tecnología</p>
-  </div>
- </div> -->
-
   <div class="container" style="background-color: #f1c108; ">
        <div class="row">
          <div class="col-md-12">
-         <h1 id="title_vacantes" align="center">ÚLTIMAS OFERTAS DE TRABAJO</h1>
+         <h3 id="title_vacantes" align="center">ÚLTIMAS OFERTAS DE TRABAJO CIUDAD DE MEXICO</h3>
          </div>
        </div>
   </div>

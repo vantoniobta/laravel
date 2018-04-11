@@ -141,7 +141,10 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                          <li class="dropdown">
+                             <li><a href="/vacantes_mty" style="color: #fff"><i class="fas fa-map-marker"></i>&nbsp;Monterrey</a></li>
+                             <li><a href="/vacantes_cdmx" style="color: #fff"><i class="fas fa-map-marker"></i>&nbsp;CDMX</a></li>
+                             <li><a href="/vacantes_mty" style="color: #fff"><i class="fas fa-map-marker"></i>&nbsp;Saltillo</a></li>
+                        <!--   <li class="dropdown">
                              <a href="#" class="dropdown-toggle" style="color: #fff" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                                <i class="fas fa-users"></i>
                                 &nbsp;Vacantes
@@ -152,7 +155,7 @@
                                  </li>
                              </ul>
 
-                          </li>
+                          </li> -->
 
                            <!--  <li><a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes&nbsp;<i class="fas fa-list-ul" ></i></a></li> -->
                             <li><a href="{{ route('register') }}" style="color: #fff"><i class="fa fa-user-plus"  aria-hidden="true"></i>&nbsp;Registro</a></li>
@@ -214,7 +217,13 @@
         @yield('content')
     </div>
 
-
+<script type="text/javascript">
+  $('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+</script>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
