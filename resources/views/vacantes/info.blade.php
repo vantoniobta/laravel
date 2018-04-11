@@ -16,28 +16,28 @@
              </div>
 
              <div class="col-md-2">
-                <h5><b>Sueldo</b></h5>
-                <p style="font-size: 16px; font-family: 'Anonymous Pro', sans-serif;"><i class="fas fa-money-bill-alt"></i>&nbsp;{{ $work->salary}}</p>
+                <h4><b>Sueldo</b></h4>
+                <p style="font-size: 18px; font-family: 'Anonymous Pro', sans-serif;">{{ $work->salary}}</p>
              </div>
 
              <div class="col-md-4">
-               <h5><b>Lugar</b></h5>
-               <p style="font-size: 16px; font-family: 'Anonymous Pro', sans-serif;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address}}</p>
+               <h4><b>Lugar</b></h4>
+               <p style="font-size: 18px; font-family: 'Anonymous Pro', sans-serif;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address}}</p>
              </div>
             
              <div class="col-md-6">
-               <h5><b>Requerimientos</b></h5>
-               <p style="font-size: 16px; font-family: 'Anonymous Pro', sans-serif;"><i class="fas fa-file-alt"></i>&nbsp;{{ $work->abilities}}</p>
+               <h4><b>Requerimientos</b></h4>
+               <p style="font-size: 18px; font-family: 'Anonymous Pro', sans-serif;">{{ $work->abilities}}</p>
              </div>
              
              <div class="col-md-6">
-                <h5><b>Prestaciones</b></h5>
-                <p style="font-size: 16px; font-family: 'Anonymous Pro', sans-serif;"><i class="fas fa-file-alt"></i>&nbsp;{{ $work->benefits}}</b></p>
+                <h4><b>Prestaciones</b></h4>
+                <p style="font-size: 18px; font-family: 'Anonymous Pro', sans-serif;">{{ $work->benefits}}</b></p>
              </div>
              
              <div class="col-md-4">
-                <h5><b>Fecha Publicada</b></h5>
-                <p style="font-size: 16px; font-family: 'Anonymous Pro', sans-serif;"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
+                <h4><b>Fecha Publicada</b></h4>
+                <p style="font-size: 18px; font-family: 'Anonymous Pro', sans-serif;"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
 
              </div>
 

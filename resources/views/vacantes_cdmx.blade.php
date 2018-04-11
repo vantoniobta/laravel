@@ -13,20 +13,21 @@
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <h1 align="center">Multimedios Televisión</h1>
+              <h1 align="center" style="font-family: 'Averia Sans Libre', sans-serif;">Multimedios Televisión</h1>
                 <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
                 <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
           </div>
           <div class="image123" style="float: none; margin: 0 auto;" >
-            <img src="https://i.pinimg.com/originals/5a/07/98/5a0798a1b5241d3ee767c6eabf48f79f.jpg">
+            <img src="https://img00.deviantart.net/e9ce/i/2014/013/4/2/digital_background___plexus_by_gentaro_de_averial-d721rui.png">
+            <!-- http://redtreeasia.com/lib/img/bg-home.jpg -->
           </div>
         </div>
         <div class="slider">
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <h1>Radio</h1>
+              <h1 style="font-family: 'Averia Sans Libre', sans-serif;">Multimedios Radio</h1>
                <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
                 <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
@@ -39,26 +40,26 @@
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <h1>Redes Sociales</h1>
+              <h1 style="font-family: 'Averia Sans Libre', sans-serif;">Redes Sociales</h1>
                <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
                 <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
           </div>
           <div class="image123">
-            <img src="https://i.pinimg.com/originals/5a/07/98/5a0798a1b5241d3ee767c6eabf48f79f.jpg">
+            <img src="https://abbakin.com/wp-content/uploads/2018/02/digital-marketing-agency-in-Nigeria.jpg">
           </div>
         </div>
         <div class="slider">
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <h1>Practicas Profesionales</h1>
+              <h1 style="font-family: 'Averia Sans Libre', sans-serif;">Multimedios Digital</h1>
                <h2 class="hidden-xs hidden-sm">Tenemos un lugar para tí para tus practicas profesionales</h2>
                 <h5 class="hidden-md hidden-lg">Tenemos un lugar para tí <br>para tus practicas profesionales</h5>
             </div>
           </div>
           <div class="image">
-            <img src="https://i.pinimg.com/originals/5a/07/98/5a0798a1b5241d3ee767c6eabf48f79f.jpg">
+            <img src="https://digitalhipsterinc.com/wp-content/uploads/2017/01/Digital-Marketing-DigitalHipster.jpeg">
           </div>
         </div>
       </div>
@@ -75,6 +76,7 @@
     </div>
   </div>
 </div>
+
 
 
 <br><br><br><br><br>
@@ -153,19 +155,18 @@
           	        <div class="col-md-12">
           	                <div class="panel-body" >
                 						<div class="col-md-4" style="">
-                                <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">PUESTO</span></h6>
+                                <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">Puesto</span></h6>
                 						    <p style=" font-size: 18px;"><a href="{{ URL::to('vacantes/info', $work->url)}}" style="color:#008B8B"><i class="fas fa-check-circle"></i>&nbsp;{{ $work->title }}</a></p>
                 						</div>
           							
               						   <div class="col-md-6">
-                               <p style=" font-size: 16px"><span style="color: #696969;">Requisitos</span></p>
+                               <p style=" font-size: 12px"><span style="color: #696969;">Requisitos</span></p>
                                 <p style=" font-size: 16px">{{ $work->abilities }}</p>
-                                <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address }}</span></h6>
+                                <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address }} | {{ date('F d, Y', strtotime($work->created_at)) }}</span></h6>
               						   </div>
 
                             <div class="col-md-2 ">
-                               <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">fecha</span></h6>
-                               <p style=" font-size: 16px;color:#000;"><i class="fas fa-calendar-alt"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
+                               <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">Sueldo</span></h6>
                                 <p style=" font-size: 16px;color:#000;">{{ $work->salary }}</p>
                             </div>
           	               </div>

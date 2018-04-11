@@ -89,7 +89,6 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a>
                         <a href="{{ url('/home') }}" style="color: #fff">Postularse</a>
                     @else
                         <!-- <a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a> -->
@@ -117,14 +116,4 @@
                         <script src="{{ asset('js/main.js') }}"></script>
                         <script src="{{ asset('js/vendor/modernizr-2.6.2.min.js') }}"></script>
     </body>
-    <script type="text/javascript">
-        $(document).ready(function() {
-    
-    setTimeout(function(){
-        $('body').addClass('loaded');
-        $('h1').css('color','#222222');
-    }, 3000);
-    
-});
-    </script>
 </html>
