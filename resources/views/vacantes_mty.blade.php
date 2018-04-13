@@ -13,7 +13,7 @@
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <h1 align="center" style="font-family: 'Averia Sans Libre', sans-serif;">Multimedios Televisión</h1>
+              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">MULTIMEDIOS TV</p>
                 <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
                 <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
@@ -27,12 +27,12 @@
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <h1 style="font-family: 'Averia Sans Libre', sans-serif;">Multimedios Radio</h1>
+              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">MULTIMEDIOS RADIO</p>
                <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
                 <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
           </div>
-          <div class="image123">
+          <div class="image123" style="float: none; margin: 0 auto;">
             <img src="https://i.pinimg.com/originals/5a/07/98/5a0798a1b5241d3ee767c6eabf48f79f.jpg">
           </div>
         </div>
@@ -40,12 +40,12 @@
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <h1 style="font-family: 'Averia Sans Libre', sans-serif;">Redes Sociales</h1>
+              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">PRACTICAS PROFESIONALES</p>
                <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
                 <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
           </div>
-          <div class="image123">
+          <div class="image123" style="float: none; margin: 0 auto;">
             <img src="https://abbakin.com/wp-content/uploads/2018/02/digital-marketing-agency-in-Nigeria.jpg">
           </div>
         </div>
@@ -53,12 +53,12 @@
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <h1 style="font-family: 'Averia Sans Libre', sans-serif;">Multimedios Digital</h1>
+              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">MULTIMEDIOS DIGITAL</p>
                <h2 class="hidden-xs hidden-sm">Tenemos un lugar para tí para tus practicas profesionales</h2>
                 <h5 class="hidden-md hidden-lg">Tenemos un lugar para tí <br>para tus practicas profesionales</h5>
             </div>
           </div>
-          <div class="image">
+          <div class="image123" style="float: none; margin: 0 auto;">
             <img src="https://digitalhipsterinc.com/wp-content/uploads/2017/01/Digital-Marketing-DigitalHipster.jpeg">
           </div>
         </div>
@@ -160,7 +160,7 @@
           							
               						   <div class="col-md-6">
                                <p style=" font-size: 12px"><span style="color: #696969;">Requisitos</span></p>
-                                <p style=" font-size: 16px">{{ $work->abilities }}</p>
+                                <p style=" font-size: 16px;color: #000">{{ $work->abilities }}</p>
                                 <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address }} | {{ date('F d, Y', strtotime($work->created_at)) }}</span></h6>
               						   </div>
 

@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-8" >
             <div class="panel panel-default" id="div_home">
-                <div class="panel-heading" style="background-color: #008b8b; color: #fff"><h4><b>Admin - {{ Auth::user()->name }}</b></h4></div>
+                <div class="panel-heading" style="background-color: #ADD8E6; color: #000"><h4><b>Admin - {{ Auth::user()->name }}</b></h4></div>
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
@@ -24,7 +24,7 @@
         </div>
         <div class="col-md-4">
            <div class="panel panel-default" id="div_home">
-              <div class="panel-heading" style="background-color: #008b8b; color: #fff">
+              <div class="panel-heading" style="background-color: #ADD8E6; color: #000">
               <i class="fas fa-th-list"></i>&nbsp;Vacantes Nuevos!</div>
               <div class="panel-body">
                  @forelse ($all_jobs as $all_job)

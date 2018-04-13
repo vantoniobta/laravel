@@ -26,7 +26,7 @@
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link href="//fonts.googleapis.com/css?family=Poppins&subset=latin" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Averia Sans Libre&subset=latin" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
     
 
     <link href="//fonts.googleapis.com/css?family=Armata&subset=latin" rel="stylesheet" type="text/css">

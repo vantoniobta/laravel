@@ -1,5 +1,7 @@
+
 /*menu*/
 nav.navbar {
+
             margin: 0; 
             padding: 5px; 
             list-style-type: none; 
@@ -11,9 +13,6 @@ nav.navbar {
             padding:0;
             font-family: 'Poppins', sans-serif; 
             }
-
-
-
 
 /*@media (min-width: 768px) {
   .navbar-nav > li > a {
@@ -40,7 +39,6 @@ nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color
 div vacantes principal
 */
 #vacantes_div1{
-   background-image: url('https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/header_123.jpg');
     height: 500px;
     width: 100%;
     margin: auto;
@@ -395,6 +393,8 @@ input[type='file']{
     border-color: #f1c108;
     color: #000;
 }
+
+
 
 
 
