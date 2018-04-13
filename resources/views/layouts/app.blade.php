@@ -177,6 +177,8 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
      <script src="{{ asset('js/loader.js') }}"></script>
+         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="{{ asset('js/share.js') }}"></script>
      </div>
 </body>
 </html>

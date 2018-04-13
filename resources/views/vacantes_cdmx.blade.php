@@ -13,7 +13,7 @@
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <h1 align="center" style="font-family: 'Averia Sans Libre', sans-serif;">Multimedios Televisión</h1>
+              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">MULTIMEDIOS TV</p>
                 <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
                 <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
@@ -27,12 +27,12 @@
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <h1 style="font-family: 'Averia Sans Libre', sans-serif;">Multimedios Radio</h1>
+              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">MULTIMEDIOS RADIO</p>
                <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
                 <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
           </div>
-          <div class="image123">
+          <div class="image123" style="float: none; margin: 0 auto;">
             <img src="https://i.pinimg.com/originals/5a/07/98/5a0798a1b5241d3ee767c6eabf48f79f.jpg">
           </div>
         </div>
@@ -40,12 +40,12 @@
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <h1 style="font-family: 'Averia Sans Libre', sans-serif;">Redes Sociales</h1>
+              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">PRACTICAS PROFESIONALES</p>
                <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
                 <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
           </div>
-          <div class="image123">
+          <div class="image123" style="float: none; margin: 0 auto;">
             <img src="https://abbakin.com/wp-content/uploads/2018/02/digital-marketing-agency-in-Nigeria.jpg">
           </div>
         </div>
@@ -53,12 +53,12 @@
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <h1 style="font-family: 'Averia Sans Libre', sans-serif;">Multimedios Digital</h1>
+              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">MULTIMEDIOS DIGITAL</p>
                <h2 class="hidden-xs hidden-sm">Tenemos un lugar para tí para tus practicas profesionales</h2>
                 <h5 class="hidden-md hidden-lg">Tenemos un lugar para tí <br>para tus practicas profesionales</h5>
             </div>
           </div>
-          <div class="image">
+          <div class="image123" style="float: none; margin: 0 auto;">
             <img src="https://digitalhipsterinc.com/wp-content/uploads/2017/01/Digital-Marketing-DigitalHipster.jpeg">
           </div>
         </div>
@@ -78,14 +78,13 @@
 </div>
 
 
-
 <br><br><br><br><br>
  <div class="container">;
    <div class="fusion-content-boxes content-boxes columns row fusion-columns-4 fusion-columns-total-4 fusion-content-boxes-1 content-boxes-icon-on-top content-left home-servicios" data-animationoffset="100%" style="margin-top:0px;margin-bottom:60px; ">
       <div class="fusion-column content-box-column content-box-column content-box-column-1 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover  content-box-column-first-in-row">
         <center><div class="col content-wrapper-background link-area-link-icon link-type-text content-icon-wrapper-yes icon-hover-animation-none"  data-animationoffset="100%">
           <div class="heading heading-with-icon icon-left">
-            <a class="heading-link" href="#" target="_self"><div class="image"><img src="http://localhost:8000/img/iMacicon.png" width="100" height="100" alt="Lupa_Icon"></div></a>
+            <a class="heading-link" href="#" target="_self"><div class="image"><img src="../img/iMacicon.png" width="100" height="100" alt="Lupa_Icon"></div></a>
           </div>
            <div class="fusion-clearfix"></div>
              <div class="content-container" style="color:#333333;">
@@ -98,7 +97,7 @@
       <div class="fusion-column content-box-column content-box-column content-box-column-2 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover ">
         <center><div class="col content-wrapper-background link-area-link-icon link-type-text content-icon-wrapper-yes icon-hover-animation-none"  data-animationoffset="100%">
           <div class="heading heading-with-icon icon-left">
-            <a class="heading-link" href="#" target="_self"><div class="image"><img src="http://localhost:8000/img/voz.png" width="100" height="100" alt="Meeting_Icon"></div></a>
+            <a class="heading-link" href="#" target="_self"><div class="image"><img src="../img/voz.png" width="100" height="100" alt="Meeting_Icon"></div></a>
           </div>
            <div class="fusion-clearfix"></div>
             <div class="content-container" style="color:#333333;">
@@ -112,11 +111,11 @@
       <div class="fusion-column content-box-column content-box-column content-box-column-3 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover ">
         <center><div class="col content-wrapper-background link-area-link-icon link-type-text content-icon-wrapper-yes icon-hover-animation-none" data-animationoffset="100%">
           <div class="heading heading-with-icon icon-left"><a class="heading-link" href="#" target="_self">
-            <div class="image"><img src="http://localhost:8000/img/Social_Media_Marketing-512.png" width="100" height="100" alt="Servicios_mercado_icon"></div></a>
+            <div class="image"><img src="../img/Social_Media_Marketing-512.png" width="100" height="100" alt="Servicios_mercado_icon"></div></a>
           </div>
           <div class="fusion-clearfix"></div>
             <div class="content-container" style="color:#333333;">
-                <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Redes Sociales</span></h3>
+                <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Digital</span></h3>
                 <p>Impulsamos la creación de estrategias, basadas en el conocimiento del mercado</p>
             </div>
         </div></center>
@@ -128,13 +127,11 @@
           </div>
             <div class="fusion-clearfix"></div>
               <div class="content-container" style="color:#333333;">
-                <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Practicas Profesionales</span></h3>
+                <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Desarrollo</span></h3>
                 <p>Nuevos enfoques para el desarrollo profesional de sus empleados</p>
               </div>
         </div></center>
       </div>
-
-
    </div>
 </div>
 
@@ -161,7 +158,7 @@
           							
               						   <div class="col-md-6">
                                <p style=" font-size: 12px"><span style="color: #696969;">Requisitos</span></p>
-                                <p style=" font-size: 16px">{{ $work->abilities }}</p>
+                                <p style=" font-size: 16px;color: #000">{{ $work->abilities }}</p>
                                 <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address }} | {{ date('F d, Y', strtotime($work->created_at)) }}</span></h6>
               						   </div>
 
