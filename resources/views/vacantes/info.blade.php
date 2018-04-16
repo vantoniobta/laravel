@@ -16,8 +16,7 @@
       <div class="container" style=" background-image: url('https://www.socialtools.me/img/n/bg/crossedlines1-1.png');background-size: cover;">
          <div class="row">
             <div class="col-md-12">
-               <h1 style="Montserrat, Helvetica, Arial, sans-serif; color: #000" align="center">{{ $work->title}}</h1>
-               <hr>
+               <h1 style="Montserrat, Helvetica, Arial, sans-serif; color: #000" align="center">{{ $work->title}}</h1><hr>
              </div>
 
              <div class="col-md-2">
@@ -68,16 +67,25 @@
           </div>
             <div class="col-md-12">
                   <div id="social-links">
-                        <ul class="socials">
-                          <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
-                          <li><a href="https://twitter.com/intent/tweet?text=my share text&amp;url=http://localhost:5000" class="social-button " id=""><span class="fa fa-twitter"></span></a></li>
-                          <li><a href="https://plus.google.com/share?url=http://localhost:5000" class="social-button " id=""><span class="fa fa-google-plus"></span></a></li>
-                          <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:5000&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li>
-                        </ul>
+                     <ul class="social">
+                        <h4>Compartir en redes Sociales</h4>
+                        <li class="item">
+                          <a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button"><i class="fa fa-facebook" class="social-button "></i><span>Facebook</span></a>
+                        </li>
+                        <li class="item">
+                          <a href="https://twitter.com/intent/tweet?text=my share text&amp;url=http://localhost:5000" class="social-button"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+                         </li>
+                         <li class="item">
+                          <a href="https://plus.google.com/share?url=http://localhost:5000" class="social-button"><i class="fa fa-google-plus"></i><span>Google Plus</span></a>
+                         </li>
+                        <li class="item">
+                          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:5000&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+                        </li>
+                     </ul>
                   </div>
+                  <h4><a href="/vacantes_mty"><i class="fas fa-undo-alt"></i>&nbsp;Volver</a></h4>
             </div>
     </div>
-<br>
 
 
 
@@ -119,8 +127,7 @@
         <div class="footer-icons">
           <a href="#"><i class="fa fa-facebook"></i></a>
           <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#"><i class="fa fa-github"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
         </div>
       </div>
     </footer>

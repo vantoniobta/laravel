@@ -6,26 +6,41 @@
     <div class="row">
         <div class="col-md-8" >
             <div class="panel panel-default" id="div_home">
-                <div class="panel-heading" style="background-color: #ADD8E6; color: #000"><h4><b>Admin - {{ Auth::user()->name }}</b></h4></div>
+                <div class="panel-heading" style="background-color:#8AD4DF; color: #fff"><b><h5 id="title_vacantes">Historial</h5></b></div>
                 <div class="panel-body">
-                    @if (session('status'))
+                        <section id="content1">
+                  <div class="table-responsive">
+                     <h4 id="title_table1" style="color: #9ACD32"><i class="fas fa-check-circle" style="color: #9ACD32"></i>&nbsp;Tu ultima postulación</h4>
+                          @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
                     @endif
-                    <h6 id="title_vacantes">Tu ultima postulación</h6>
+                     @if ($jobs == '0')
+                       <h6 style="color: red" id="title_vacantes"><b>Aun no te haz postulado en ninguna vacantes</h6>
+                        @else
+                          <h4 id="title_vacantes" >{{ $jobs->title }}</h4>
+                    @endif
+                   </div>
+            </section>
+              
+                  <!--   @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                      @if ($jobs == '0')
                        <h6 style="color: red" id="title_vacantes"><b>Aun no te haz postulado en ninguna vacantes</h6>
                         @else
                           <h3 id="title_vacantes" >{{ $jobs->title }}</h3>
-                    @endif
+                    @endif -->
                 </div>
             </div>
         </div>
         <div class="col-md-4">
            <div class="panel panel-default" id="div_home">
-              <div class="panel-heading" style="background-color: #ADD8E6; color: #000">
-              <i class="fas fa-th-list"></i>&nbsp;Vacantes Nuevos!</div>
+              <div class="panel-heading" style="background-color: #8AD4DF; color: #000">
+              <i class="fas fa-database"></i>&nbsp;Vacantes Nuevos!</div>
               <div class="panel-body">
                  @forelse ($all_jobs as $all_job)
                     <ul>

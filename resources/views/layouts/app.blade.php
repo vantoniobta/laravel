@@ -35,8 +35,6 @@
 </head>
 <!-- menu responsivo -->
 <body style="background-color: #fafafa">
-
-
     <div id="app" style="background-color: #f4f4f4:">
         <nav class="navbar navbar-default navbar-static-top" style="box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);transition: all 0.3s cubic-bezier(.25,.8,.25,1);">
             <div class="container">

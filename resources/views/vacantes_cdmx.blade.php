@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="image123" style="float: none; margin: 0 auto;">
-            <img src="https://abbakin.com/wp-content/uploads/2018/02/digital-marketing-agency-in-Nigeria.jpg">
+            <img src="../img/96ce48b9d.jpg">
           </div>
         </div>
         <div class="slider">

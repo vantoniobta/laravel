@@ -13,9 +13,9 @@
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">MULTIMEDIOS TV</p>
-                <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
-                <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
+              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">Buscamos Talento</p>
+                <h2 class="hidden-xs hidden-sm">Somos una empresa consolidada a nivel nacional e internacional,<br> siendo considerada como uno de los mejores lugares para trabajar</h2>
+                <h5 class="hidden-md hidden-lg">Unete a la familia <br>multimedios</h5>
             </div>
           </div>
           <div class="image123" style="float: none; margin: 0 auto;" >
@@ -46,7 +46,7 @@
             </div>
           </div>
           <div class="image123" style="float: none; margin: 0 auto;">
-            <img src="https://abbakin.com/wp-content/uploads/2018/02/digital-marketing-agency-in-Nigeria.jpg">
+            <img src="../img/96ce48b9d.jpg">
           </div>
         </div>
         <div class="slider">
@@ -89,7 +89,7 @@
            <div class="fusion-clearfix"></div>
              <div class="content-container" style="color:#333333;">
               <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Televisión</span></h3>
-              <p>Búsqueda directa del talento que requieren sus proyectos</p>
+              <p>Contamos con diferentes areas en IT con las mas alta en tecnologia </p>
             </div>
         </div></center>
       </div>
@@ -227,8 +227,7 @@
         <div class="footer-icons">
           <a href="#"><i class="fa fa-facebook"></i></a>
           <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-linkedin"></i></a>
-          <a href="#"><i class="fa fa-github"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
         </div>
       </div>
     </footer>

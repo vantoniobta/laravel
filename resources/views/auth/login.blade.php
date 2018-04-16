@@ -36,10 +36,10 @@
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
-                                 <button type="submit" class="social-button" style="background-color: #1cbacc;border-color: #fff">iniciar sesión</button>
+                                 <button type="submit" class="social-button_x2" style="background-color: #1cbacc;border-color: #fff">iniciar sesión</button>
                                 <center>Conectar con </center>
-                                     <a href="{{url('redirect/facebook')}}" class="social-button" id="facebook-connect" > <span>Facebook</span></a>
-                                     <a href="{{url('redirect/twitter')}}" class="social-button" id="twitter-connect" > <span>Twitter</span></a>
+                                     <a href="{{url('redirect/facebook')}}" class="social-button_x2" id="facebook-connect" > <span>Facebook</span></a>
+                                     <a href="{{url('redirect/twitter')}}" class="social-button_x2" id="twitter-connect" > <span>Twitter</span></a>
 
                             </div>
                         </div>
