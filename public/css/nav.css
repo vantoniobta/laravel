@@ -46,83 +46,22 @@ div vacantes principal
     background-position: center;
 }
 
-
-
 /*
-input text search
+social shared
 */
-
-
-
-
-
-
-
-.share-btn {
-        display: inline-block;
-        color: #ffffff;
-        border: none;
-        padding: 0.5em;
-        width: 4em;
-        box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
-        outline: none;
-        text-align: center;
-    }
-/*button shared*/
-.share-btn:hover {color: #eeeeee;}
-.share-btn:active {
-        position: relative;
-        top: 2px;
-        box-shadow: none;
-        color: #e2e2e2;
-        outline: none;
-        }
-.share-btn.twitter     { background: #55acee; }
-.share-btn.facebook    { background: #3B5998; }
-.share-btn.linkedin    { background: #4875B4; }
-/* button opacidad */
-.semi-transparent-button {
-    display: block;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 8px;
-    width: 40%;
-    max-width: 200px;
-    background: #fff; /* fallback color for old browsers */
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    color: #fff;
-    text-align: center;
-     font-size: 15px;
-    text-decoration: none;
-    letter-spacing: 1px;
-    transition: all 0.3s ease-out;
+ul.socials {
+ margin-top: 10px;
+ float: right;
 }
-.semi-transparent-button:hover,
-.semi-transparent-button:focus,
-.semi-transparent-button:active {
-    background: #1cbacc;
-    color: #000;
-    transition: all 0.5s ease-in;
-}
-.semi-transparent:focus {
-    outline: none;
-}
-.is-white {
-    background: #1cbacc; /* fallback color for old browsers */
-    background: rgba(30, 52, 142, 0.5);
-}
-.is-blue:hover,
-.is-blue:focus,
-.is-blue:active {
-    background: #1cbacc; /* fallback color for old browsers */
-    background: rgb(28, 186, 204)
-    color: #fff;
-}
-.with-border {border: 1px solid #fff;}
 
+ul.socials li {
+ display: inline-block;
+}
 
-
+ul.socials li span {
+ font-size: 30px;
+ margin-right: 10px;
+}
 
 
 

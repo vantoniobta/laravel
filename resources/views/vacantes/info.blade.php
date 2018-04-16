@@ -2,6 +2,11 @@
 
 @section('title', 'Page Child')
 
+@section('title'){!! $work->title !!} @stop
+@section('og-title'){!! $work->title !!} @stop
+
+@section('meta-description'){!! $work->abilities !!}  @stop 
+
 @section('content')
 
 @include('sweet::alert')
@@ -61,14 +66,13 @@
                   </div>
                 @endif
           </div>
-            <div class="col-md-8">
-                <h3 style="color: #000">Compartir Vacante</h3>
+            <div class="col-md-12">
                   <div id="social-links">
-                        <ul>
+                        <ul class="socials">
                           <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-facebook-official"></span></a></li>
-                          <li><a href="https://twitter.com/intent/tweet?text=my share text&amp;url=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-twitter"></span></a></li>
-                          <li><a href="https://plus.google.com/share?url=http://jorenvanhocht.be" class="social-button " id=""><span class="fa fa-google-plus"></span></a></li>
-                          <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://jorenvanhocht.be&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li>
+                          <li><a href="https://twitter.com/intent/tweet?text=my share text&amp;url=http://localhost:5000" class="social-button " id=""><span class="fa fa-twitter"></span></a></li>
+                          <li><a href="https://plus.google.com/share?url=http://localhost:5000" class="social-button " id=""><span class="fa fa-google-plus"></span></a></li>
+                          <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:5000&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button " id=""><span class="fa fa-linkedin"></span></a></li>
                         </ul>
                   </div>
             </div>
