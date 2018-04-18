@@ -9,7 +9,7 @@
    <div class="row">
      <div class="col-md-12"><br>
       <img src="uploads/avatars/{{$user->avatar}}" class="img-circle center-block" alt="Cinque Terre" width="10%">
-      <h3 style=" font-family: 'Armata', sans-serif; color: #fff" align="center">@_{{ $user->name }}</h3>
+      <h3 style=" font-family: 'Armata', sans-serif; color: #fff" align="center">{{ $user->name }}</h3>
       <p align="center" style="color: #fff; font-family: 'Armata', sans-serif;">{{ $user->email }}</p>
      </div>
    </div>

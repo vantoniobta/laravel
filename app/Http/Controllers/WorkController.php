@@ -36,38 +36,39 @@ class WorkController extends Controller
                                           ['userId', '=', $userId],
                                           ['workId', '=', $workId],
                                           ])->get();
-                        
                    $test=count($users);
-                   if ($test == '0') {
+                      if ($test == '0') {
+                            $check_cv = DB::table('users')->where('id',$userId)->first();
+                            //dd($check_cv->cv);
+                                if ($check_cv->cv == 'vacio.pdf') {
+                                     $alert = 'Para poder postularte debes subir tu CV en tu perfil';
+                                     Alert::success($alert)->persistent("Close");
+                                      return back();
+                                }else{
+                                      $alert = 'ok';
+                                       Alert::success($alert)->persistent("Close");
+                                        return back();
+                                  }
+                        }else{
 
-                       $postulate = New Postulate;
-                       $postulate ->userId = $request->userId;
-                       $postulate ->workId = $request->workId;
-                       $postulate ->save();
+                        }
 
-                       // $data = ['userId' => $request->userId,
-                       //          'workId' => $request->workId];
-
-
-                      //DB::table('postulates')->insert($data);
-                      $key = 'Te postulaste para-'.$work->title.'-Revisaremos tu CV!';
-                         Alert::success($key)->persistent("Close");
-                           //return view('vacantes/save',compact('key'));
-                              return back();
-                          }else{
-                              $key = 'Ya te encuentras postulado en la vacante';
-                              Alert::success($key)->persistent("Close");
-                                //return view('vacantes/save', compact('key'));
-                              return back();
-
-                   }          
-
-
-              //$data = ['userId' => $request->userId,
-              //      'workId'=>$request->workId];
-              //DB::table('postulates')->insert($data);
-              //dump($data);
-              
+                   // if ($test == '0') {
+                   //               $postulate = New Postulate;
+                   //               $postulate ->userId = $request->userId;
+                   //               $postulate ->workId = $request->workId;
+                   //               $postulate ->save();
+                   //               //DB::table('postulates')->insert($data);
+                   //               $key = 'Te postulaste para-'.$work->title.'-Revisaremos tu CV!';
+                   //                 Alert::success($key)->persistent("Close");
+                   //                   //return view('vacantes/save',compact('key'));
+                   //                      return back();
+                   //        }else{
+                   //              $key = 'Ya te encuentras postulado en la vacante';
+                   //              Alert::success($key)->persistent("Close");
+                   //                //return view('vacantes/save', compact('key'));
+                   //              return back();
+                   // }          
 	    }
 
 }

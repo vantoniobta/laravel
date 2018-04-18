@@ -6,11 +6,11 @@
     <div class="row">
         <div class="col-md-8" >
             <div class="panel panel-default" id="div_home">
-                <div class="panel-heading" style="background-color:#8AD4DF; color: #fff"><b><h5 id="title_vacantes">Historial</h5></b></div>
+                <div class="panel-heading" style="background-color:#8AD4DF; color: #fff"><b><h3 id="title_vacantes"><i class="fas fa-chart-line"></i>&nbsp;Historial</h3></b></div>
                 <div class="panel-body">
                         <section id="content1">
                   <div class="table-responsive">
-                     <h4 id="title_table1" style="color: #9ACD32"><i class="fas fa-check-circle" style="color: #9ACD32"></i>&nbsp;Tu ultima postulación</h4>
+                     <h4 id="title_table1" style="color: #9ACD32"><i class="fas fa-check-circle" style="color: #9ACD32"></i>Tu ultima postulación</h4>
                           @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
