@@ -8,7 +8,7 @@
     <div class="row"><br>
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background-color: #1cbacc;color: #fff">Hola!</div>
+                <div class="panel-heading" style="background-color: #1cbacc;color: #fff">Login</div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
