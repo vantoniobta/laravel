@@ -27,11 +27,22 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link href="//fonts.googleapis.com/css?family=Poppins&subset=latin" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
     
 
     <link href="//fonts.googleapis.com/css?family=Armata&subset=latin" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Anton&subset=latin" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Archivo&subset=latin" rel="stylesheet" type="text/css">
+
+
+    <style type="text/css">
+  .swal-overlay {
+  background-color: rgba(43, 165, 137, 0.45);
+}
+</style>
+
+
 </head>
 <!-- menu responsivo -->
 <body style="background-color: #fafafa">

@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-8" >
             <div class="panel panel-default" id="div_home">
-                <div class="panel-heading" style="background-color:#8AD4DF; color: #fff"><b><h3 id="title_vacantes"><i class="fas fa-chart-line"></i>&nbsp;Historial</h3></b></div>
+                <div class="panel-heading" style="background-color:#5dbfe3; color: #fff"><b><h3 id="title_vacantes"><i class="fas fa-chart-line"></i>&nbsp;Historial</h3></b></div>
                 <div class="panel-body">
                         <section id="content1">
                   <div class="table-responsive">
@@ -39,7 +39,7 @@
         </div>
         <div class="col-md-4">
            <div class="panel panel-default" id="div_home">
-              <div class="panel-heading" style="background-color: #8AD4DF; color: #000">
+              <div class="panel-heading" style="background-color: #5dbfe3; color: #000">
               <i class="fas fa-database"></i>&nbsp;Vacantes Nuevos!</div>
               <div class="panel-body">
                  @forelse ($all_jobs as $all_job)

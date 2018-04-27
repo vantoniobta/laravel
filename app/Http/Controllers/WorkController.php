@@ -8,7 +8,6 @@ use Storage;
 use Auth;
 use Image;
 use DB;
-use Alert;
 
 class WorkController extends Controller
 {
@@ -41,13 +40,13 @@ class WorkController extends Controller
                             $check_cv = DB::table('users')->where('id',$userId)->first();
                             //dd($check_cv->cv);
                                 if ($check_cv->cv == 'vacio.pdf') {
-                                     $alert = 'Para poder postularte debes subir tu CV en tu perfil';
-                                     Alert::success($alert)->persistent("Close");
+                                     $alert = 'Para poder Postularte necesitas subir tu CV en tu perfil';
+                                    // Alert::success($alert)->persistent("Close");
                                       return back();
                                 }else{
-                                      $alert = 'ok';
-                                       Alert::success($alert)->persistent("Close");
-                                        return back();
+                                      $alert = 'Datos enviados con éxito.';
+                                      // Alert::success($alert)->persistent("Close");
+                                        return redirect()->back()->withInput();
                                   }
                         }else{
 

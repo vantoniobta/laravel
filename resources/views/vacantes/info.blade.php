@@ -9,9 +9,12 @@
 
 @section('content')
 
-@include('sweet::alert')
 
-
+<script type="text/javascript">
+  swal("Hello world!", {
+    className: "red-bg",
+  });
+</script>
 
       <div class="container" style=" background-image: url('https://www.socialtools.me/img/n/bg/crossedlines1-1.png');background-size: cover;">
          <div class="row">
@@ -70,16 +73,16 @@
                      <ul class="social">
                         <h4>Compartir en redes Sociales</h4>
                         <li class="item">
-                          <a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button"><i class="fa fa-facebook" class="social-button "></i><span>Facebook</span></a>
+                          <a href="https://www.facebook.com/sharer/sharer.php?u=http://jorenvanhocht.be" class="social-button"><i class="fa fa-facebook" class="social-button "></i></a>
                         </li>
                         <li class="item">
-                          <a href="https://twitter.com/intent/tweet?text=my share text&amp;url=http://localhost:5000" class="social-button"><i class="fa fa-twitter"></i><span>Twitter</span></a>
+                          <a href="https://twitter.com/intent/tweet?text=my share text&amp;url=http://localhost:5000" class="social-button"><i class="fa fa-twitter"></i></a>
                          </li>
                          <li class="item">
-                          <a href="https://plus.google.com/share?url=http://localhost:5000" class="social-button"><i class="fa fa-google-plus"></i><span>Google Plus</span></a>
+                          <a href="https://plus.google.com/share?url=http://localhost:5000" class="social-button"><i class="fa fa-google-plus"></i></a>
                          </li>
                         <li class="item">
-                          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:5000&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
+                          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:5000&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button"><i class="fa fa-linkedin"></i></a>
                         </li>
                      </ul>
                   </div>
