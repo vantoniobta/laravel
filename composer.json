@@ -16,6 +16,7 @@
         "laravel/socialite": "^3.0",
         "laravel/tinker": "~1.0",
         "setkyar/laravel-customize-shares": "^1.0",
+        "uxweb/sweet-alert": "^1.4",
         "yajra/laravel-datatables-oracle": "^8.3"
     },
     "require-dev": {

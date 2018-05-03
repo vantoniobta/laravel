@@ -9,7 +9,7 @@
          <form enctype="multipart/form-data" action="profile/{{$user->id}}" method="POST">
                <div class="col-md-8" >
                   <div class="panel panel-default">
-                      <div class="panel-heading" style="background-color:#5DBFE3; color: #fff"><b><h5 id="title_vacantes"><i class="fas fa-user"></i>&nbsp;Informacion Personal</h5></b></div>
+                      <div class="panel-heading" style="background-color:#5DBFE3; color: #fff"><b><h5 id="title_vacantes" style="color: #fff"><i class="fas fa-user" style="color: #fff"></i>&nbsp;Informacion Personal</h5></b></div>
                       <div class="panel-body">
                           <div class="col-md-6">
                               <label style="color: #000; font-family: 'Armata', sans-serif;">Nombre</label>
@@ -33,7 +33,7 @@
               </div>
                <div class="col-md-4" >
                     <div class="panel panel-default">
-                        <div class="panel-heading" style="background-color:#5DBFE3; color: #fff"><b><h5 id="title_vacantes"><i class="fas fa-image"></i>&nbsp;Imagen Profile</h5></b></div>
+                        <div class="panel-heading" style="background-color:#5DBFE3; color: #fff"><b><h5 id="title_vacantes" style="color: #fff"><i class="fas fa-image" style="color: #fff"></i>&nbsp;Imagen Profile</h5></b></div>
                         <div class="panel-body">
                             <img src="uploads/avatars/{{$user->avatar}}" class="img-circle center-block" width="20%">
                             <h4 style=" font-family: 'Armata', sans-serif; color: #000" align="center">{{ $user->name }}</h4>
@@ -48,7 +48,7 @@
                     </div>
                   <div class="col-md-8">
                       <div class="panel panel-default">
-                          <div class="panel-heading" style="background-color:#5DBFE3; color: #fff"><b><h5 id="title_vacantes"><i class="fas fa-file-pdf"></i>&nbsp;Curriculum(.pdf, .docx)</h5></b></div>
+                          <div class="panel-heading" style="background-color:#5DBFE3; color: #fff"><b><h5 id="title_vacantes" style="color: #fff"><i class="fas fa-file-pdf" style="color: #fff"></i>&nbsp;Curriculum(.pdf, .docx)</h5></b></div>
                           <div class="panel-body">
                              <div class="col-md-6">
                                  <label style="color: #000; font-family: 'Armata', sans-serif;">Descripción Personal(opcional)</label>

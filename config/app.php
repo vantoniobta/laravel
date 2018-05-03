@@ -166,8 +166,8 @@ return [
         Yajra\Datatables\DatatablesServiceProvider::class,
         SetKyar\CustomShares\CustomSharesProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
-        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         Jorenvh\Share\Providers\ShareServiceProvider::class,
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
 
 
         /*
@@ -235,8 +235,8 @@ return [
         'Image' => Intervention\Image\Facades\Image::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
-        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         'Share' => Jorenvh\Share\ShareFacade::class,
+        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
 
     ],
 

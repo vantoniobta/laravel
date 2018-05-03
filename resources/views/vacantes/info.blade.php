@@ -1,20 +1,12 @@
+
+
 @extends('layouts.app')
 
 @section('title', 'Page Child')
 
-@section('title'){!! $work->title !!} @stop
-@section('og-title'){!! $work->title !!} @stop
-
-@section('meta-description'){!! $work->abilities !!}  @stop 
-
 @section('content')
 
-
-<script type="text/javascript">
-  swal("Hello world!", {
-    className: "red-bg",
-  });
-</script>
+@include('sweet::alert')
 
       <div class="container" style=" background-image: url('https://www.socialtools.me/img/n/bg/crossedlines1-1.png');background-size: cover;">
          <div class="row">

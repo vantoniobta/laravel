@@ -8,6 +8,7 @@ use Storage;
 use Auth;
 use Image;
 use DB;
+use Alert;
 
 class WorkController extends Controller
 {
@@ -40,12 +41,12 @@ class WorkController extends Controller
                             $check_cv = DB::table('users')->where('id',$userId)->first();
                             //dd($check_cv->cv);
                                 if ($check_cv->cv == 'vacio.pdf') {
-                                     $alert = 'Para poder Postularte necesitas subir tu CV en tu perfil';
-                                    // Alert::success($alert)->persistent("Close");
+                                    
+                                      Alert::success('Alparecer tu red social no cuenta con email o no se encuentra validada!')->persistent("Close");
                                       return back();
                                 }else{
-                                      $alert = 'Datos enviados con éxito.';
-                                      // Alert::success($alert)->persistent("Close");
+                                      
+                                       Alert::success('Alparecer tu red social no cuenta con email o no se encuentra validada!')->persistent("Close");
                                         return redirect()->back()->withInput();
                                   }
                         }else{
