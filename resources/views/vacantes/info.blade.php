@@ -8,6 +8,7 @@
 
 @include('sweet::alert')
 
+
       <div class="container" style=" background-image: url('https://www.socialtools.me/img/n/bg/crossedlines1-1.png');background-size: cover;">
          <div class="row">
             <div class="col-md-12">

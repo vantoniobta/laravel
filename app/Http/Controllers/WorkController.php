@@ -41,12 +41,11 @@ class WorkController extends Controller
                             $check_cv = DB::table('users')->where('id',$userId)->first();
                             //dd($check_cv->cv);
                                 if ($check_cv->cv == 'vacio.pdf') {
-                                    
-                                      Alert::success('Alparecer tu red social no cuenta con email o no se encuentra validada!')->persistent("Close");
+                                      // Alert::success('Necesitas adjuntar tu CV para postularte')->persistent("Close");
+                                      Alert::error('Necesitas adjuntar tu CV para postularte')->persistent("Close");
                                       return back();
                                 }else{
-                                      
-                                       Alert::success('Alparecer tu red social no cuenta con email o no se encuentra validada!')->persistent("Close");
+                                      Alert::success('Gracias por postularte')->persistent("Close");
                                         return redirect()->back()->withInput();
                                   }
                         }else{
