@@ -104,8 +104,8 @@
                   <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #fff">Bolsa de Trabajo</p>
              </div>
                 <div class="links">
-                    <a href="/vacantes_mty" style="color: #fff">Monterrey</a>
-                    <a href="/vacantes_cdmx" style="color: #fff">CDMX</a>
+                    <a href="/mty" style="color: #fff">Monterrey</a>
+                    <a href="/cdmx" style="color: #fff">CDMX</a>
                     <a href="#" style="color: #fff">Torreón</a>
                     <a href="#" style="color: #fff">Saltillo</a>
                     <a href="#" style="color: #fff">León</a>

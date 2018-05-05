@@ -5,41 +5,32 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8" >
-            <div class="panel panel-default" id="div_home">
-                <div class="panel-heading" style="background-color:#5dbfe3; color: #fff"><b><h3 id="title_vacantes"><i class="fas fa-chart-line"></i>&nbsp;Historial</h3></b></div>
+                <div class="panel-heading" style="background-color:#e40079"><b><h5 style="color: #fff"><i class="fas fa-chart-line"></i>&nbsp;Historial</h5></b></div>
                 <div class="panel-body">
                         <section id="content1">
-                  <div class="table-responsive">
-                     <h4 id="title_table1" style="color: #9ACD32"><i class="fas fa-check-circle" style="color: #9ACD32"></i>Tu ultima postulación</h4>
-                          @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                     @if ($jobs == '0')
-                       <h6 style="color: red" id="title_vacantes"><b>Aun no te haz postulado en ninguna vacantes</h6>
-                        @else
-                          <h4 id="title_vacantes" >{{ $jobs->title }}</h4>
-                    @endif
-                   </div>
-            </section>
-              
-                  <!--   @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                     @if ($jobs == '0')
-                       <h6 style="color: red" id="title_vacantes"><b>Aun no te haz postulado en ninguna vacantes</h6>
-                        @else
-                          <h3 id="title_vacantes" >{{ $jobs->title }}</h3>
-                    @endif -->
+                             <h4 id="title_table1" style="color: #9ACD32"><i class="fas fa-check-circle" style="color: #9ACD32"></i>Tu ultima postulación</h4>
+                                  @if (session('status'))
+                                <div class="alert alert-success">
+                                    {{ session('status') }}
+                                </div>
+                            @endif
+                             @if ($jobs == '0')
+                               <h6 style="color: red" id="title_vacantes"><b>Aun no te haz postulado en ninguna vacantes</h6>
+                                @else
+                                  <h4 id="title_vacantes" >{{ $jobs->title }}</h4>
+                            @endif
+                    </section>
                 </div>
-            </div>
         </div>
         <div class="col-md-4">
-           <div class="panel panel-default" id="div_home">
-              <div class="panel-heading" style="background-color: #5dbfe3; color: #000">
+        <!-- /7246/MMDigital/Home/Bigbox_1 -->
+<div id='div-gpt-ad-1525411909506-0' style='height:250px; width:300px;'>
+<script>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1525411909506-0'); });
+</script>
+</div>
+         <!--   <div class="panel panel-default" id="div_home">
+              <div class="panel-heading" style="background-color: #D3D3D3; color: #000">
               <i class="fas fa-database"></i>&nbsp;Vacantes Nuevos!</div>
               <div class="panel-body">
                  @forelse ($all_jobs as $all_job)
@@ -52,7 +43,7 @@
                   
               </div>
               
-           </div>
+           </div> -->
         </div>
     </div>
 </div>

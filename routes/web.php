@@ -17,22 +17,15 @@ Route::get('profile', 'UserController@profile');
 Route::post('profile/{id}', 'UserController@update_avatar');
 
 
-
-//info works
-//Route::get('vacantes/info/{id}', 'WorkController@info');
-
-
-// Route::get('info/{id}', [
-//     'as'   => 'vacantes/info/{id}',
-//     'uses' => 'WorkController@info'
-// ]);
-
-
-Route::prefix('vacantes')->group(function(){
-	Route::get('/info/{id}', 'WorkController@info');
+Route::prefix('cdmx')->group(function(){
+	Route::get('/job/{id}', 'WorkController@info');
 	Route::post('/send', 'WorkController@save');
 });
 
+Route::prefix('mty')->group(function(){
+	Route::get('/job/{id}', 'WorkController@info');
+	Route::post('/send', 'WorkController@save');
+});
 
 
 
@@ -51,9 +44,9 @@ Route::get('/callback/{provider}', 'SocialAuthController@callback');
 
 
 // Route::post('vacantes/insert', 'WorkController@save');
-Route::get('vacantes/save', function () {
-    return view('vacantes/save');
-});
+// Route::get('vacantes/save', function () {
+//     return view('vacantes/save');
+// });
 Route::get('vacantes/error', function () {
     return view('vacantes/error');
 });
@@ -69,34 +62,27 @@ Route::get('/', function () {
 
 //new tabs for menu 
 
-Route::get('/vacantes', function(){
-    $works = App\Job::where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(5);
-	return view('vacantes', compact('works'));
-});
+// Route::get('/vacantes', function(){
+//     $works = App\Job::where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(5);
+// 	return view('vacantes', compact('works'));
+// });
 
 
-Route::get('/vacantes_mty', function(){
+Route::get('/mty', function(){
     $works = App\Job::where([
     	['status', '=', 'Activo'],
     	['address', '=', 'Monterrey']
     	])->orderBy('created_at', 'desc')->paginate(5);
-	return view('vacantes_mty', compact('works'));
+	return view('mty', compact('works'));
 });
 
-Route::get('/vacantes_cdmx', function(){
+Route::get('/cdmx', function(){
     $works = App\Job::where([
     	['status', '=', 'Activo'],
     	['address', '=', 'Ciudad México']
     	])->orderBy('created_at', 'desc')->paginate(5);
-	return view('vacantes_cdmx', compact('works'));
+	return view('cdmx', compact('works'));
 });
-
-
-
-// Route::get('admin/jobs_new', function(){
-// 	return view('admin/jobs_new');
-// });
-
 
 
 Route::get('/login', function(){
@@ -114,10 +100,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::resource('post', 'PostController');
-
-// 	   Route::get('admin/jobs_new', function(){
-// 	return view('admin/jobs_new');
-// });
 
 //dashboard ->admin
 Route::prefix('admin')->group(function(){

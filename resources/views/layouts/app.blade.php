@@ -8,6 +8,20 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+    </script>
+
+    <script>
+      googletag.cmd.push(function() {
+        googletag.defineSlot('/7246/MMDigital/Home/Bigbox_1', [300, 250], 'div-gpt-ad-1525411909506-0').addService(googletag.pubads());
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+      });
+    </script>
+
 
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="icon" href="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/32x32.png" />
@@ -48,7 +62,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" style="background-color: #EFD44D;">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar" style="background-color: #FFFFFF;"></span>
                         <span class="icon-bar" style="background-color: #FFFFFF;"></span>
@@ -68,13 +82,13 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                             <li><a href="/vacantes_mty" style="color: #fff">Monterrey</a></li>
-                             <li><a href="/vacantes_cdmx" style="color: #fff">CDMX</a></li>
+                             <li><a href="/mty" style="color: #fff">Monterrey</a></li>
+                             <li><a href="/cdmx" style="color: #fff">CDMX</a></li>
                             <li><a href="{{ route('register') }}" style="color: #fff"><i class="fa fa-user-plus"  aria-hidden="true"></i>&nbsp;Registro</a></li>
                             <li><a href="{{ route('login') }}" style="color: #fff"><i class="fas fa-sign-in-alt" ></i>&nbsp;Login</a></li>
                         @else
-                             <li><a href="/vacantes_mty" style="color: #fff">Monterrey</a></li>
-                             <li><a href="/vacantes_cdmx" style="color: #fff">CDMX</a></li>
+                             <li><a href="/mty" style="color: #fff">Monterrey</a></li>
+                             <li><a href="/cdmx" style="color: #fff">CDMX</a></li>
                        
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative;padding-left: 50px;color: #fff">

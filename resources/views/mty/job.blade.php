@@ -44,7 +44,7 @@
 
            @if (Auth::check())
                <div class="col-md-8">
-                  <form action="{{ URL::to('vacantes/send') }}" method="POST">
+                  <form action="{{ URL::to('mty/send') }}" method="POST">
                       {{ csrf_field() }}
                       <input type="text" name="userId" value="{{ Auth::user()->id }}" style="visibility:hidden;">
                       <input type="text" name="workId" value="{{ $work->id}}" style="visibility:hidden;">
@@ -79,7 +79,7 @@
                         </li>
                      </ul>
                   </div>
-                  <h4><a href="/vacantes_mty"><i class="fas fa-undo-alt"></i>&nbsp;Volver</a></h4>
+                  <h4><a href="/mty"><i class="fas fa-undo-alt"></i>&nbsp;Volver</a></h4>
             </div>
     </div>
 

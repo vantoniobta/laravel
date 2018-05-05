@@ -20,12 +20,14 @@ class WorkController extends Controller
     public function info($id){
     	$work = DB::table('jobs')->where('url',$id)->first();
       if ($work == null) {
-        //echo  '<h1>NOTHING :( </h1>';;
         return view('vacantes/error');
       }else{
-        return view('vacantes/info',array('user' => Auth::user()), ['work' => $work])->with('id', $id);
+          if ($work->address == 'Monterrey') {
+              return view('mty/job',array('user' => Auth::user()), ['work' => $work])->with('id', $id);
+          }else{
+              return view('cdmx/job',array('user' => Auth::user()), ['work' => $work])->with('id', $id);
+          }
       }
-    	//return view('vacantes/info', ['work' => $work])->with('id', $id);
     }
 
 	 public function save(Request $request) {
@@ -36,38 +38,32 @@ class WorkController extends Controller
                                           ['userId', '=', $userId],
                                           ['workId', '=', $workId],
                                           ])->get();
-                   $test=count($users);
-                      if ($test == '0') {
+
+                           
                             $check_cv = DB::table('users')->where('id',$userId)->first();
-                            //dd($check_cv->cv);
-                                if ($check_cv->cv == 'vacio.pdf') {
-                                      // Alert::success('Necesitas adjuntar tu CV para postularte')->persistent("Close");
+                                if ($check_cv->cv == 'vacio.pdf') {  //verificamos si NO existe el cv
                                       Alert::error('Necesitas adjuntar tu CV para postularte')->persistent("Close");
                                       return back();
                                 }else{
-                                      Alert::success('Gracias por postularte')->persistent("Close");
-                                        return redirect()->back()->withInput();
-                                  }
-                        }else{
+                                      //Alert::success('Gracias por postularte')->persistent("Close");
+                                       $test=count($users);
+                                         if ($test == '0') {
+                                               $postulate = New Postulate;
+                                               $postulate ->userId = $request->userId;
+                                               $postulate ->workId = $request->workId;
+                                               $postulate ->save();
+                                               $key = 'Te postulaste para-'.$work->title.'';
+                                                 Alert::success($key)->persistent("Close");
+                                                   //return view('vacantes/save',compact('key'));
+                                                      return back();
+                                         }else{
+                                                $key = 'Ya te encuentras postulado en la vacante';
+                                                     Alert::error($key)->persistent("Close");
+                                                         //return view('vacantes/save', compact('key'));
+                                                       return back();
 
-                        }
-
-                   // if ($test == '0') {
-                   //               $postulate = New Postulate;
-                   //               $postulate ->userId = $request->userId;
-                   //               $postulate ->workId = $request->workId;
-                   //               $postulate ->save();
-                   //               //DB::table('postulates')->insert($data);
-                   //               $key = 'Te postulaste para-'.$work->title.'-Revisaremos tu CV!';
-                   //                 Alert::success($key)->persistent("Close");
-                   //                   //return view('vacantes/save',compact('key'));
-                   //                      return back();
-                   //        }else{
-                   //              $key = 'Ya te encuentras postulado en la vacante';
-                   //              Alert::success($key)->persistent("Close");
-                   //                //return view('vacantes/save', compact('key'));
-                   //              return back();
-                   // }          
+                                         }
+                                  }         
 	    }
 
 }

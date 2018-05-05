@@ -13,9 +13,9 @@
           <div class="legend"></div>
           <div class="content">
             <div class="content-txt">
-              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">Buscamos Talento</p>
-                <h2 class="hidden-xs hidden-sm">Somos una empresa consolidada a nivel nacional e internacional,<br> siendo considerada como uno de los mejores lugares para trabajar</h2>
-                <h5 class="hidden-md hidden-lg">Unete a la familia <br>multimedios</h5>
+              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">MULTIMEDIOS TV</p>
+                <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
+                <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
           </div>
           <div class="image123" style="float: none; margin: 0 auto;" >
@@ -89,7 +89,7 @@
            <div class="fusion-clearfix"></div>
              <div class="content-container" style="color:#333333;">
               <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Televisión</span></h3>
-              <p>Contamos con diferentes areas en IT con las mas alta en tecnologia </p>
+              <p>Búsqueda directa del talento que requieren sus proyectos</p>
             </div>
         </div></center>
       </div>
@@ -135,17 +135,16 @@
    </div>
 </div>
 
-
-
   <div class="container" style="background-color: #f1c108; ">
        <div class="row">
          <div class="col-md-12">
-         <h3 id="title_vacantes" align="center">ÚLTIMAS OFERTAS DE TRABAJO MONTERREY , N.L</h3>
+         <h3 id="title_vacantes" align="center">ÚLTIMAS OFERTAS DE TRABAJO CIUDAD DE MEXICO</h3>
          </div>
        </div>
   </div>
 
  
+
 
 
    @forelse ($works as $work)
@@ -155,7 +154,7 @@
           	                <div class="panel-body" >
                 						<div class="col-md-4" style="">
                                 <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">Puesto</span></h6>
-                						    <p style=" font-size: 18px;"><a href="{{ URL::to('vacantes/info', $work->url)}}" style="color:#008B8B"><i class="fas fa-check-circle"></i>&nbsp;{{ $work->title }}</a></p>
+                						    <p style=" font-size: 18px;"><a href="{{ URL::to('cdmx/job', $work->url)}}" style="color:#008B8B"><i class="fas fa-check-circle"></i>&nbsp;{{ $work->title }}</a></p>
                 						</div>
           							
               						   <div class="col-md-6">
@@ -165,8 +164,8 @@
               						   </div>
 
                             <div class="col-md-2 ">
-                               <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">sueldo</span></h6>
-                               <p style=" font-size: 16px;color:#000;">{{ $work->salary }}</p>
+                               <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">Sueldo</span></h6>
+                                <p style=" font-size: 16px;color:#000;">{{ $work->salary }}</p>
                             </div>
           	               </div>
           	        </div>
