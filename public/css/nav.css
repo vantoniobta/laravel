@@ -23,6 +23,22 @@ nav.navbar {
     .dropdown-menu > li > a:focus {text-decoration: none;color: #000 !important;}
 
 
+    /*
+    info title
+    */
+    .inf_jobs{
+        font-size: 18px; 
+        font-family: 'Anonymous Pro', sans-serif;
+    }
+    .inf_jobs_title{
+        family:'Montserrat', Helvetica, Arial, sans-serif; 
+        color: #000;
+    }
+
+
+
+
+
 
   /*  .nav>li>a:focus,
     .nav>li>a:hover {

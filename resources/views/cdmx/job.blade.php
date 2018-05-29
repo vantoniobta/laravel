@@ -12,27 +12,27 @@
       <div class="container" style=" background-image: url('https://www.socialtools.me/img/n/bg/crossedlines1-1.png');background-size: cover;">
          <div class="row">
             <div class="col-md-12">
-               <h1 style="Montserrat, Helvetica, Arial, sans-serif; color: #000" align="center">{{ $work->title}}</h1><hr>
+               <h1 align="center" class="inf_jobs_title">{{ $work->title}}</h1><hr>
              </div>
 
              <div class="col-md-2">
                 <h4><b>Sueldo</b></h4>
-                <p style="font-size: 18px; font-family: 'Anonymous Pro', sans-serif;">{{ $work->salary}}</p>
+                <p class="inf_jobs">{{ $work->salary}}</p>
              </div>
 
              <div class="col-md-4">
                <h4><b>Lugar</b></h4>
-               <p style="font-size: 18px; font-family: 'Anonymous Pro', sans-serif;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address}}</p>
+               <p class="inf_jobs"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address}}</p>
              </div>
             
              <div class="col-md-6">
                <h4><b>Requerimientos</b></h4>
-               <p style="font-size: 18px; font-family: 'Anonymous Pro', sans-serif;">{{ $work->abilities}}</p>
+               <p class="inf_jobs">{{ $work->abilities}}</p>
              </div>
              
              <div class="col-md-6">
                 <h4><b>Prestaciones</b></h4>
-                <p style="font-size: 18px; font-family: 'Anonymous Pro', sans-serif;">{{ $work->benefits}}</b></p>
+                <p class="inf_jobs">{{ $work->benefits}}</b></p>
              </div>
              
              <div class="col-md-4">
