@@ -9,42 +9,46 @@
 @include('sweet::alert')
 
 
-      <div class="container" style=" background-image: url('https://www.socialtools.me/img/n/bg/crossedlines1-1.png');background-size: cover;">
-         <div class="row">
+    <div class="container" style=" background-image: url('https://www.socialtools.me/img/n/bg/crossedlines1-1.png');background-size: cover;">
+          <div class="row"><!--romw-->
+
             <div class="col-md-12">
                <h1 align="center" class="inf_jobs_title">{{ $work->title}}</h1><hr>
              </div>
 
-             <div class="col-md-2">
-                <h4><b>Sueldo</b></h4>
-                <p class="inf_jobs">{{ $work->salary}}</p>
-             </div>
+              <div class="col-sm-6">
+                 <h5><b>Requerimientos</b></h5>
+                 <p class="inf_jobs">{{ $work->abilities}}</p>
+              </div>
 
-             <div class="col-md-4">
-               <h4><b>Lugar</b></h4>
+              <div class="col-sm-6">
+                 <h5><b>Prestaciones</b></h5>
+                 <p class="inf_jobs">{{ $work->benefits}}</b></p>
+              </div>
+
+              <div class="col-sm-6">
+                 <h5><b>Fecha Publicada</b></h5>
+                 <p class="inf_jobs"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
+              </div>
+
+              <div class="col-sm-2">
+                  <h5><b>Sueldo</b></h5>
+                  <p class="inf_jobs">{{ $work->salary}}</p>
+              </div>
+
+              <div class="col-sm-2" >
+                <h5><b>Lugar</b></h5>
                <p class="inf_jobs"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address}}</p>
-             </div>
-            
-             <div class="col-md-6">
-               <h4><b>Requerimientos</b></h4>
-               <p class="inf_jobs">{{ $work->abilities}}</p>
-             </div>
-             
-             <div class="col-md-6">
-                <h4><b>Prestaciones</b></h4>
-                <p class="inf_jobs">{{ $work->benefits}}</b></p>
-             </div>
-             
-             <div class="col-md-4">
-                <h4><b>Fecha Publicada</b></h4>
-                <p style="font-size: 18px; font-family: 'Anonymous Pro', sans-serif;"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
+              </div>
 
-             </div>
+              <div class="col-sm-2">
+                <h5><b>Sexo</b></h5>
+                <p class="inf_jobs">Indistinto</p>
+              </div>
 
-
-           @if (Auth::check())
+                 @if (Auth::check())
                <div class="col-md-8">
-                  <form action="{{ URL::to('cdmx/send') }}" method="POST">
+                  <form action="{{ URL::to('/cdmx') }}" method="POST">
                       {{ csrf_field() }}
                       <input type="text" name="userId" value="{{ Auth::user()->id }}" style="visibility:hidden;">
                       <input type="text" name="workId" value="{{ $work->id}}" style="visibility:hidden;">
@@ -60,8 +64,11 @@
                       </div>
                   </div>
                 @endif
-          </div>
-            <div class="col-md-12">
+
+
+          </div><!--romw-->
+
+                <div class="col-md-12">
                   <div id="social-links">
                      <ul class="social">
                         <h4>Compartir en redes Sociales</h4>
@@ -79,9 +86,11 @@
                         </li>
                      </ul>
                   </div>
-                  <h4><a href="/cdmx"><i class="fas fa-undo-alt"></i>&nbsp;Volver</a></h4>
             </div>
-    </div>
+            <h4><a href="/cdmx"><i class="fas fa-undo-alt"></i>&nbsp;Volver</a></h4>
+      </div>
+
+
 
 
 
