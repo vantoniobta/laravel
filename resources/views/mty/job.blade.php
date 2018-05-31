@@ -15,36 +15,29 @@
                <h1 align="center" class="inf_jobs_title">{{ $work->title}}</h1><hr>
              </div>
 
-              <div class="col-sm-6">
-                 <h5><b>Requerimientos</b></h5>
-                 <p class="inf_jobs">{{ $work->abilities}}</p>
-              </div>
+               <div class="col-sm-6">
+                  <h5><b>Requerimientos</b></h5>
+                   <p class="inf_jobs">{{ $work->abilities}}</p>
+                   <h5><b>Prestaciones</b></h5>
+                  <p class="inf_jobs">{{ $work->benefits}}</b></p>
+               </div>
 
-              <div class="col-sm-6">
-                 <h5><b>Prestaciones</b></h5>
-                 <p class="inf_jobs">{{ $work->benefits}}</b></p>
-              </div>
+                <div class="col-sm-2" >
+                   <h5><b>Fecha Publicada</b></h5>
+                   <p class="inf_jobs"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
+                   <h5><b>Sueldo</b></h5>
+                    <p class="inf_jobs">{{ $work->salary}}</p>
+                 </div>
 
-              <div class="col-sm-6">
-                 <h5><b>Fecha Publicada</b></h5>
-                 <p class="inf_jobs"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
-              </div>
-
-              <div class="col-sm-2">
-                  <h5><b>Sueldo</b></h5>
-                  <p class="inf_jobs">{{ $work->salary}}</p>
-              </div>
-              <div class="col-sm-2" >
-                <h5><b>Lugar</b></h5>
-               <p class="inf_jobs"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address}}</p>
-              </div>
-              <div class="col-sm-4">
-                <h5><b>Sexo</b></h5>
-                <p class="inf_jobs">Indistinto</p>
-              </div>
+                  <div class="col-sm-4" >
+                    <h5><b>Lugar</b></h5>
+                     <p class="inf_jobs"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address}}</p>
+                    <h5><b>Sexo</b></h5>
+                     <p class="inf_jobs">Indistinto</p>
+                  </div>
 
                  @if (Auth::check())
-               <div class="col-md-8">
+               <div class="col-md-12">
                   <form action="{{ URL::to('mty/send') }}" method="POST">
                       {{ csrf_field() }}
                       <input type="text" name="userId" value="{{ Auth::user()->id }}" style="visibility:hidden;">
