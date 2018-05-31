@@ -15,7 +15,7 @@
                <h1 align="center" class="inf_jobs_title">{{ $work->title}}</h1><hr>
              </div>
 
-               <div class="col-sm-6">
+               <div class="col-sm-8">
                   <h5><b>Requerimientos</b></h5>
                    <p class="inf_jobs">{{ $work->abilities}}</p>
                    <h5><b>Prestaciones</b></h5>
@@ -29,7 +29,7 @@
                     <p class="inf_jobs">{{ $work->salary}}</p>
                  </div>
 
-                  <div class="col-sm-4" >
+                  <div class="col-sm-2" >
                     <h5><b>Lugar</b></h5>
                      <p class="inf_jobs"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address}}</p>
                     <h5><b>Sexo</b></h5>

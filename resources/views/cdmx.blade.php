@@ -79,17 +79,17 @@
 
 
 <br><br><br><br><br>
- <div class="container">;
+  <div class="container">;
    <div class="fusion-content-boxes content-boxes columns row fusion-columns-4 fusion-columns-total-4 fusion-content-boxes-1 content-boxes-icon-on-top content-left home-servicios" data-animationoffset="100%" style="margin-top:0px;margin-bottom:60px; ">
       <div class="fusion-column content-box-column content-box-column content-box-column-1 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover  content-box-column-first-in-row">
         <center><div class="col content-wrapper-background link-area-link-icon link-type-text content-icon-wrapper-yes icon-hover-animation-none"  data-animationoffset="100%">
           <div class="heading heading-with-icon icon-left">
-            <a class="heading-link" href="#" target="_self"><div class="image"><img src="../img/iMacicon.png" width="100" height="100" alt="Lupa_Icon"></div></a>
+            <a class="heading-link" href="#" target="_self"><div class="image"><img src="http://illa.org.pe/wp-content/uploads/2017/09/trabajoenequipo.png" width="100" height="100" alt="Lupa_Icon"></div></a>
           </div>
            <div class="fusion-clearfix"></div>
              <div class="content-container" style="color:#333333;">
-              <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Televisión</span></h3>
-              <p>Búsqueda directa del talento que requieren sus proyectos</p>
+              <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Formación</span></h3>
+              <p>Contamos con diferentes areas en IT con las mas alta en tecnologia </p>
             </div>
         </div></center>
       </div>
@@ -97,11 +97,11 @@
       <div class="fusion-column content-box-column content-box-column content-box-column-2 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover ">
         <center><div class="col content-wrapper-background link-area-link-icon link-type-text content-icon-wrapper-yes icon-hover-animation-none"  data-animationoffset="100%">
           <div class="heading heading-with-icon icon-left">
-            <a class="heading-link" href="#" target="_self"><div class="image"><img src="../img/voz.png" width="100" height="100" alt="Meeting_Icon"></div></a>
+            <a class="heading-link" href="#" target="_self"><div class="image"><img src="http://www.argia.es/images/INFORMAMOS.png" width="100" height="100" alt="Meeting_Icon"></div></a>
           </div>
            <div class="fusion-clearfix"></div>
             <div class="content-container" style="color:#333333;">
-               <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Radio</span></h3>
+               <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Nuevas Idea</span></h3>
                 <p>Soluciones de contratación para posiciones nacionales e internacionales</p>
             </div>
         </div></center>
@@ -111,7 +111,7 @@
       <div class="fusion-column content-box-column content-box-column content-box-column-3 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover ">
         <center><div class="col content-wrapper-background link-area-link-icon link-type-text content-icon-wrapper-yes icon-hover-animation-none" data-animationoffset="100%">
           <div class="heading heading-with-icon icon-left"><a class="heading-link" href="#" target="_self">
-            <div class="image"><img src="../img/Social_Media_Marketing-512.png" width="100" height="100" alt="Servicios_mercado_icon"></div></a>
+            <div class="image"><img src="http://www.rh-plus.com/coaching2017/sections/section_4/img/image4.png" width="100" height="100" alt="Servicios_mercado_icon"></div></a>
           </div>
           <div class="fusion-clearfix"></div>
             <div class="content-container" style="color:#333333;">
@@ -123,11 +123,11 @@
 
       <div class="fusion-column content-box-column content-box-column content-box-column-4 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover  content-box-column-last content-box-column-last-in-row" >
         <center><div class="col content-wrapper-background link-area-link-icon link-type-text content-icon-wrapper-yes icon-hover-animation-none"  data-animationoffset="100%">
-          <div class="heading heading-with-icon icon-left"><a class="heading-link" href="#" target="_self"><div class="image"><img src="http://myooou.com/wp-content/uploads/2015/12/design-build-icon-lg.png" width="100" height="" alt="servicios_outplacement_icon"></div></a>
+          <div class="heading heading-with-icon icon-left"><a class="heading-link" href="#" target="_self"><div class="image"><img src="http://el-clarin.com/wp-content/uploads/2017/07/icono-trabajo-equipo.png" width="100" height="" alt="servicios_outplacement_icon"></div></a>
           </div>
             <div class="fusion-clearfix"></div>
               <div class="content-container" style="color:#333333;">
-                <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Desarrollo</span></h3>
+                <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Trabajo en equipo</span></h3>
                 <p>Nuevos enfoques para el desarrollo profesional de sus empleados</p>
               </div>
         </div></center>
