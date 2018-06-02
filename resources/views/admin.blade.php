@@ -29,10 +29,10 @@
                           <table class="table" id="table_general3" >
                             <thead>
                               <tr>
-                                <th style="color: #fff; background-color: #10CA7E;">FECHA</th>
-                                <th style="color: #fff; background-color: #10CA7E">PUESTO</th>
-                                <th style="color: #fff; background-color: #10CA7E">LUGAR</th>
-                                <th style="color: #fff;background-color:#10CA7E;">Postulados</th>
+                                <th class="activity_table">FECHA</th>
+                                <th class="activity_table">PUESTO</th>
+                                <th class="activity_table">LUGAR</th>
+                                <th class="activity_table">Postulados</th>
                               </tr>
                                @foreach ($data as $datax)
                                   <tr>
@@ -64,12 +64,12 @@
                           <table class="table" id="table_general2" >
                             <thead>
                               <tr>
-                                <th style="color: #000; background-color: #FB1;">Fecha</th>
-                                <th style="color: #000; background-color: #FB1;">Puesto</th>
-                                <th style="color: #000; background-color: #FB1;">Lugar</th>
-                                <th style="color: #000; background-color: #FB1;">Tiempo</th>
-                                <th style="color: #000; background-color: #FB1;">Salario</th>
-                                <th style="color: #000; background-color: #FB1;">###</th>
+                                <th class="ready_table">Fecha</th>
+                                <th class="ready_table">Puesto</th>
+                                <th class="ready_table">Lugar</th>
+                                <th class="ready_table">Tiempo</th>
+                                <th class="ready_table">Salario</th>
+                                <th class="ready_table">###</th>
                               </tr>
                               @foreach ($jobs as $job)
                                   <tr>
@@ -102,12 +102,12 @@
                           <table class="table" id="table_general3" >
                             <thead>
                               <tr>
-                                <th style="color: #fff; background-color: #F00B42;">FECHA</th>
-                                <th style="color: #fff; background-color: #F00B42">PUESTO</th>
-                                <th style="color: #fff; background-color: #F00B42">LUGAR</th>
-                                <th style="color: #fff; background-color: #F00B42">TIEMPO</th>
-                                <th style="color: #fff; background-color: #F00B42">SALARIO</th>
-                                <th style="color: #fff; background-color: #F00B42">###</th>
+                                <th class="stop_table">FECHA</th>
+                                <th class="stop_table">PUESTO</th>
+                                <th class="stop_table">LUGAR</th>
+                                <th class="stop_table">TIEMPO</th>
+                                <th class="stop_table">SALARIO</th>
+                                <th class="stop_table">###</th>
                               </tr>
                                @foreach ($jobs_x as $jobx)
                                   <tr>

@@ -7,7 +7,7 @@
 <!-- Slider -->
 <div class="container" id="vacantes_div1">
  <div class="row">
-    <div id="slider" >
+    <div id="slider" style="background-image: url(../img/sliders_home.jpg);margin: auto;">
       <div class="slides">
         <div class="slider">
           <div class="legend"></div>
@@ -18,10 +18,7 @@
                 <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
           </div>
-          <div class="image123" style="float: none; margin: 0 auto;" >
-            <img src="https://img00.deviantart.net/e9ce/i/2014/013/4/2/digital_background___plexus_by_gentaro_de_averial-d721rui.png">
-            <!-- http://redtreeasia.com/lib/img/bg-home.jpg -->
-          </div>
+        
         </div>
         <div class="slider">
           <div class="legend"></div>
@@ -32,9 +29,7 @@
                 <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
           </div>
-          <div class="image123" style="float: none; margin: 0 auto;">
-            <img src="https://i.pinimg.com/originals/5a/07/98/5a0798a1b5241d3ee767c6eabf48f79f.jpg">
-          </div>
+         
         </div>
         <div class="slider">
           <div class="legend"></div>
@@ -45,9 +40,7 @@
                 <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
             </div>
           </div>
-          <div class="image123" style="float: none; margin: 0 auto;">
-            <img src="../img/96ce48b9d.jpg">
-          </div>
+          
         </div>
         <div class="slider">
           <div class="legend"></div>
@@ -58,9 +51,7 @@
                 <h5 class="hidden-md hidden-lg">Tenemos un lugar para tí <br>para tus practicas profesionales</h5>
             </div>
           </div>
-          <div class="image123" style="float: none; margin: 0 auto;">
-            <img src="https://digitalhipsterinc.com/wp-content/uploads/2017/01/Digital-Marketing-DigitalHipster.jpeg">
-          </div>
+          
         </div>
       </div>
       <div class="switch">

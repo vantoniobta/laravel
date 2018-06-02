@@ -82,3 +82,16 @@ input:checked + label {
 #table_general3{
   font-size: 13px;
 }
+
+.activity_table{
+  color: #fff; 
+  background-color: #10CA7E;
+}
+.ready_table{
+  color: #000; 
+  background-color: #FB1;
+}
+.stop_table{
+ color: #fff; 
+ background-color: #F00B42;
+}
