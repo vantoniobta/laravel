@@ -35,6 +35,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/nav.css') }}" rel="stylesheet">
     <link href="{{ asset('css/slider.css') }}" rel="stylesheet">
+
     
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
@@ -53,7 +54,6 @@
     <link href="//fonts.googleapis.com/css?family=Armata&subset=latin" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Anton&subset=latin" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Archivo&subset=latin" rel="stylesheet" type="text/css">
-
 </head>
 <!-- menu responsivo -->
 <body style="background-color: #fafafa">

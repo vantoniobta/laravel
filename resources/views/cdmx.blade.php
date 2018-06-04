@@ -3,73 +3,15 @@
 @section('title', 'Page Child')
 
 @section('content')
-
 <!-- Slider -->
-<div class="container" id="vacantes_div1">
- <div class="row">
-    <div id="slider" style="background-image: url(../img/sliders_home.jpg);margin: auto;">
-      <div class="slides">
-        <div class="slider">
-          <div class="legend"></div>
-          <div class="content">
-            <div class="content-txt">
-              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">MULTIMEDIOS TV</p>
-                <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
-                <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
-            </div>
-          </div>
-        
-        </div>
-        <div class="slider">
-          <div class="legend"></div>
-          <div class="content">
-            <div class="content-txt">
-              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">MULTIMEDIOS RADIO</p>
-               <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
-                <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
-            </div>
-          </div>
-         
-        </div>
-        <div class="slider">
-          <div class="legend"></div>
-          <div class="content">
-            <div class="content-txt">
-              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">PRACTICAS PROFESIONALES</p>
-               <h2 class="hidden-xs hidden-sm">Búsqueda directa del talento que requieren sus proyectos</h2>
-                <h5 class="hidden-md hidden-lg">Búsqueda directa del talento <br>que requieren sus proyectos</h5>
-            </div>
-          </div>
-          
-        </div>
-        <div class="slider">
-          <div class="legend"></div>
-          <div class="content">
-            <div class="content-txt">
-              <p align="center" style="font-family: 'Black Han Sans', sans-serif;font-size: 30px;color: #fff">MULTIMEDIOS DIGITAL</p>
-               <h2 class="hidden-xs hidden-sm">Tenemos un lugar para tí para tus practicas profesionales</h2>
-                <h5 class="hidden-md hidden-lg">Tenemos un lugar para tí <br>para tus practicas profesionales</h5>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-      <div class="switch">
-        <ul>
-          <li>
-            <div class="on"></div>
-          </li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<br><br><br><br><br>
+  <header>
+  <section class="header-content">
+    <img class="rocky-dashed animate-pop-in" src="https://cssanimation.rocks/levelup/public/images/rocky-dashed.svg">
+    <h1 class="header-title animate-pop-in">Your awesome landing page</h1>
+    <h3 class="header-subtitle animate-pop-in">A useful start for your projects</h3>
+    <p class="header-button animate-pop-in"><a href="http://courses.cssanimation.rocks/p/level-up" class="button">Registrarse</a></p>
+  </section>
+</header>
   <div class="container">;
    <div class="fusion-content-boxes content-boxes columns row fusion-columns-4 fusion-columns-total-4 fusion-content-boxes-1 content-boxes-icon-on-top content-left home-servicios" data-animationoffset="100%" style="margin-top:0px;margin-bottom:60px; ">
       <div class="fusion-column content-box-column content-box-column content-box-column-1 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover  content-box-column-first-in-row">

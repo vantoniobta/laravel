@@ -9,7 +9,6 @@
   height:600px;
   position:relative;
   overflow:hidden;
-  
 }
 @keyframes load{
   from{left:-100%;}
@@ -99,8 +98,8 @@
   margin-left:8px;
 }
 .content-txt h5{
-   font-family:arial;
-     text-align:center;
+  font-family:arial;
+  text-align:center;
   font-weight:normal;
   font-size:14px;
   color: #fff;
@@ -136,9 +135,9 @@
   border-radius:50%;
   background:#f39c12;
   position:relative;
-  -webkit-animation:on 30s infinite;
-  -moz-animation:on 30s infinite;
-  animation:on 30s infinite;
+  -webkit-animation:on 10s infinite;
+  -moz-animation:on 10s infinite;
+  animation:on 10s infinite;
 }
 
 /* Animation */
