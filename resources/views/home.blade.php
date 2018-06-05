@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8" >
-                <div class="panel-heading" style="background-color:#e40079"><b><h5 style="color: #fff"><i class="fas fa-chart-line"></i>&nbsp;Historial</h5></b></div>
+                <div class="panel-heading" style="background-color:#BADA55"><b><h5 style="color: #fff"><i class="fas fa-chart-line"></i>&nbsp;Historial</h5></b></div>
                 <div class="panel-body">
                         <section id="content1">
                              <h4 id="title_table1" style="color: #9ACD32"><i class="fas fa-check-circle" style="color: #9ACD32"></i>Tu ultima postulación</h4>

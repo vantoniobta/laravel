@@ -7,11 +7,12 @@
   <header>
   <section class="header-content">
     <img class="rocky-dashed animate-pop-in" src="https://cssanimation.rocks/levelup/public/images/rocky-dashed.svg">
-    <h1 class="header-title animate-pop-in">Your awesome landing page</h1>
+    <h1 class="header-title animate-pop-in">header vantonio</h1>
     <h3 class="header-subtitle animate-pop-in">A useful start for your projects</h3>
-    <p class="header-button animate-pop-in"><a href="http://courses.cssanimation.rocks/p/level-up" class="button">Registrarse</a></p>
   </section>
 </header>
+
+
   <div class="container">;
    <div class="fusion-content-boxes content-boxes columns row fusion-columns-4 fusion-columns-total-4 fusion-content-boxes-1 content-boxes-icon-on-top content-left home-servicios" data-animationoffset="100%" style="margin-top:0px;margin-bottom:60px; ">
       <div class="fusion-column content-box-column content-box-column content-box-column-1 col-lg-3 col-md-3 col-sm-3 fusion-content-box-hover  content-box-column-first-in-row">
@@ -48,7 +49,7 @@
           </div>
           <div class="fusion-clearfix"></div>
             <div class="content-container" style="color:#333333;">
-                <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Digital</span></h3>
+                <h3 data-fontsize="17" data-lineheight="23"><span style="color: #000;">Clientes</span></h3>
                 <p>Impulsamos la creación de estrategias, basadas en el conocimiento del mercado</p>
             </div>
         </div></center>

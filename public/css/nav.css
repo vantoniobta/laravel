@@ -472,7 +472,8 @@ social shared
 /* ----button profile------ */
 
     .btn_send {
-      background-color: #5eb98f; /* Green */
+      background-color: #BADA55; /* Green */
+      border-color:#BADA55;
       border: none;
       color: #fff;  
       padding: 20px;
@@ -751,7 +752,7 @@ header:before {
 
 header:after {
   animation: rotate-up .5s .5s cubic-bezier(0, 0.5, 0, 1) forwards;
-  background: #F9FCFF;
+  background: #FAFAFA;
   content: "";
   height: 40rem;
   left: -5%;

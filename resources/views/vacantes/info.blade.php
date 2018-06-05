@@ -49,7 +49,7 @@
                       <input type="text" name="userId" value="{{ Auth::user()->id }}" style="visibility:hidden;">
                       <input type="text" name="workId" value="{{ $work->id}}" style="visibility:hidden;">
                       <div class="col-md-12">
-                      <input type="submit" value="APLICAR A LA VACANTE" class="btn_send" style="border-color:#DAA520 " >
+                      <input type="submit" value="APLICAR A LA VACANTE" class="btn_send">
                     </div>
                  </form>
                 </div>

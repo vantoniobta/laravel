@@ -15,16 +15,17 @@
                               <label style="color: #000; font-family: 'Armata', sans-serif;">Nombre</label>
                                <input type="text" name="name" value="{{ $user->name }}" class="form-control"><br>
                                <label style="color: #000; font-family: 'Armata', sans-serif;">Apellidos</label>
-                              <input type="text" name="lastname" value="{{ $user->lastname }}" class="form-control">
+                              <input type="text" name="lastname" value="{{ $user->lastname }}" class="form-control"><br>
                           </div>
-                          <div class="col-md-4">
+                          <div class="col-md-6">
                                 <label style="color: #000; font-family: 'Armata', sans-serif;">Nivel de Inglés</label>
-                                  <select class="form-control" name="ingles" id="sel1">
+                                 <input type="text" name="ingles" value="{{ $user->ingles }}" class="form-control" placeholder="Básico-Intermedio-Avanzado"><br>
+                                 <!--  <select class="form-control" name="ingles" id="sel1">
                                  <option value="">---</option>
                                  <option value="Nivel Básico">Nivel Básico</option>
                                  <option value="Nivel Intermedio">Nivel Intermedio</option>
                                  <option value="Nivel Avanzado">Nivel Avanzado</option>
-                                </select><br>
+                                </select><br> -->
                                 <label style="color: #000;  font-family: 'Armata', sans-serif;">Teléfono de Contacto</label>
                              <input type="text" name="phone" value="{{ $user->phone }}" class="form-control">
                           </div>
@@ -66,9 +67,12 @@
                           </div>
                       </div>
                </div>
-              <div class="col-md-2" >
-                    <input type="submit" class="btn_send_profile btn-lg center-block" value="Guardar Datos" style="float: right; font-family: 'Anton', sans-serif;">
+
+              <div class="col-md-2">
+                   <input type="submit" class="btn_send_profile btn-lg center-block" value="Guardar Datos" style="float: right; font-family: 'Anton', sans-serif;">
               </div>
+
+
           </form>
         </div>
  </div>  
