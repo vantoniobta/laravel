@@ -76,15 +76,6 @@
         </style>
     </head>
     <body style="background-image: url(https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/891.jpg); background-position: center center;background-repeat: no-repeat;background-attachment: fixed;  background-size: cover;">
-
-  
-<!--             <div id="loader-wrapper">
-                <div id="loader"></div>
-
-                <div class="loader-section section-left"></div>
-                <div class="loader-section section-right"></div>
-            </div> -->
-
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -112,8 +103,8 @@
                 </div>
             </div>
         </div>
-                         <script src="{{ asset('js/loader.js') }}"></script>
-                        <script src="{{ asset('js/main.js') }}"></script>
-                        <script src="{{ asset('js/vendor/modernizr-2.6.2.min.js') }}"></script>
+        <script src="{{ asset('js/loader.js') }}"></script>
+        <script src="{{ asset('js/main.js') }}"></script>
+        <script src="{{ asset('js/vendor/modernizr-2.6.2.min.js') }}"></script>
     </body>
 </html>

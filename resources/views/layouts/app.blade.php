@@ -7,52 +7,29 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
-    <script>
-      var googletag = googletag || {};
-      googletag.cmd = googletag.cmd || [];
-    </script>
-
-    <script>
-      googletag.cmd.push(function() {
-        googletag.defineSlot('/7246/MMDigital/Home/Bigbox_1', [300, 250], 'div-gpt-ad-1525411909506-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-      });
-    </script>
-
-
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <link rel="icon" href="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/32x32.png" />
     <!-- Styles -->
+    <link rel="icon" href="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/32x32.png" />
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:600" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700'>
     <link href='https://fonts.googleapis.com/css?family=Croissant+One' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/nav.css') }}" rel="stylesheet">
-
-    
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-    <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
-
-
-    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.3/sweetalert2.all.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.3/sweetalert2.css">
-
     <link href="//fonts.googleapis.com/css?family=Poppins&subset=latin" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
-    
-
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/nav.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Armata&subset=latin" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Anton&subset=latin" rel="stylesheet" type="text/css">
     <link href="//fonts.googleapis.com/css?family=Archivo&subset=latin" rel="stylesheet" type="text/css">
+
+    <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.3/sweetalert2.all.js"></script>
+
 </head>
 <!-- menu responsivo -->
 <body style="background-color: #fafafa">
@@ -83,8 +60,8 @@
                         @guest
                              <li><a href="/mty" style="color: #fff">Monterrey</a></li>
                              <li><a href="/cdmx" style="color: #fff">CDMX</a></li>
-                            <li><a href="{{ route('register') }}" style="color: #fff"><i class="fa fa-user-plus"  aria-hidden="true"></i>&nbsp;Registro</a></li>
-                            <li><a href="{{ route('login') }}" style="color: #fff"><i class="fas fa-sign-in-alt" ></i>&nbsp;Login</a></li>
+                            <!-- <li><a href="{{ route('register') }}" style="color: #fff"><i class="fa fa-user-plus"  aria-hidden="true"></i>&nbsp;Registro</a></li> -->
+                            <li><a href="{{ route('login') }}" style="color: #fff"><span class="label label-success">&nbsp;Login</span></a></li>
                         @else
                              <li><a href="/mty" style="color: #fff">Monterrey</a></li>
                              <li><a href="/cdmx" style="color: #fff">CDMX</a></li>
@@ -116,9 +93,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-     <script src="{{ asset('js/loader.js') }}"></script>
-         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="{{ asset('js/share.js') }}"></script>
-     </div>
-</body>
+    <script src="{{ asset('js/loader.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="{{ asset('js/share.js') }}"></script>
+  </div>
+ </body>
 </html>

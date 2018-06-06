@@ -35,46 +35,6 @@ nav.navbar {
         color: #000;
     }
 
-
-
-
-
-
-  /*  .nav>li>a:focus,
-    .nav>li>a:hover {
-      background-color: transparent;
-    }
-
-
-
-    .nav>li>a::after {
-        content: '';
-        display: block;
-        width: 0;
-        height: 3px;
-        background: #f1c208;
-        transition: width .3s;
-    }
-
-    .nav>li>a:hover::after {
-        width: 100%;
-    }
-
-*/
-
-
-
-/*
-div vacantes principal
-*/
-    #vacantes_div1{
-        height: 500px;
-        width: 100%;
-        margin: auto;
-        background-size: cover;
-        background-position: center;
-    }
-
 /*
 social shared
 */

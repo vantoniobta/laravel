@@ -22,39 +22,12 @@
                     </section>
                 </div>
         </div>
-        <div class="col-md-4">
-        <!-- /7246/MMDigital/Home/Bigbox_1 -->
-<div id='div-gpt-ad-1525411909506-0' style='height:250px; width:300px;'>
-<script>
-googletag.cmd.push(function() { googletag.display('div-gpt-ad-1525411909506-0'); });
-</script>
-</div>
-         <!--   <div class="panel panel-default" id="div_home">
-              <div class="panel-heading" style="background-color: #D3D3D3; color: #000">
-              <i class="fas fa-database"></i>&nbsp;Vacantes Nuevos!</div>
-              <div class="panel-body">
-                 @forelse ($all_jobs as $all_job)
-                    <ul>
-                      <li><a href="http://localhost:8000/vacantes/info/{{ $all_job->url }}">{{ $all_job->title }}</a></li>
-                  </ul>
-                    @empty
-                         <p>No existen Vacantes Nuevos</p>
-                @endforelse
-                  
-              </div>
-              
-           </div> -->
-        </div>
     </div>
 </div>
-
-
-
 
    <footer class="footer-distributed">
       <div class="footer-left">
         <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png" class="img-responsive">
-
         <p class="footer-links">
           <a href="#">Home</a>
           ·
@@ -80,16 +53,16 @@ googletag.cmd.push(function() { googletag.display('div-gpt-ad-1525411909506-0');
           <p><a href="mailto:support@company.com">info@multimedios.com</a></p>
         </div>
       </div>
-      <div class="footer-right">
-        <p class="footer-company-about">
-          <span>Nosotros</span>
-          Somos una empresa lider en cada uno de los negocios, estamos comprometidos con la mejora continua para satisfacer a nuestros clientes.
-        </p>
-        <div class="footer-icons">
-          <a href="#"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-instagram"></i></a>
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>Nosotros</span>
+            Somos una empresa lider en cada uno de los negocios, estamos comprometidos con la mejora continua para satisfacer a nuestros clientes.
+          </p>
+          <div class="footer-icons">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </div>
         </div>
-      </div>
     </footer>
 @endsection

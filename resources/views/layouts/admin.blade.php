@@ -25,75 +25,7 @@
 
     <link href="//fonts.googleapis.com/css?family=Anonymous Pro&subset=latin" rel="stylesheet" type="text/css">
 
-
-
-
-    
-
-
 </head>
-<!-- menu responsivo -->
-    <style>
-
-
-
-    nav.navbar {
-            margin: 0; 
-            padding: 5px; 
-            list-style-type: none; 
-            text-align: center; 
-            background-color: #24363e; 
-            border:0px solid #24363e;
-            padding: .5em 2px;
-            margin:0;
-            padding:0;
-            font-family: 'Poppins', sans-serif; 
-            }
-
-/*@media (min-width: 768px) {
-  .navbar-nav > li > a {
-    padding-top: 16.5px;
-    padding-bottom: 16.5px;
-    line-height: 17px;
-  }
-}*/
-
-        nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color: #fff}
-        .navbar-brand { padding: 0px;}
-        .navbar-brand>img { padding: 7px 10px; }
-         nav ul li:hover { background-color: #00CED1;}
-        .dropdown-toggle:active, .open .dropdown-toggle { background:#00CED1 !important; color:#000 !important;}
-        .dropdown-menu {background-color: #FFFFFF;color: #red;}
-        .dropdown-menu > li > a {color: #000}
-        .dropdown-menu > li > a:hover,
-        .dropdown-menu > li > a:focus {text-decoration: none;color: #000 !important;}
-
-
-        #table_general {
-            font-family: Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
-        #table_general td, #table_general th {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        #table_general tr:nth-child(even){background-color: #f2f2f2;}
-        #table_general tr:hover {background-color: #ddd;}
-        #table_general th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        #title_table1 {
-            font-family: 'Lato', sans-serif;
-            font-weight: bold;
-            color: #009189;
-        }
-    </style>
 <body style="background-color: #fafafa">
     <div id="app" >
         <nav class="navbar navbar-default navbar-static-top" style="margin:0;padding:0; background-color: #2E2E2E">

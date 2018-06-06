@@ -107,7 +107,13 @@
               </div>
           </div>
           @empty
-         <p>No existen Vacantes</p>
+           <div class="container" id="div_vacantes">
+              <div class="row">
+                    <div class="col-md-12">
+                               <h3 align="center">No tenemos Vacantes</h3>
+                    </div>
+                </div>
+            </div>
     @endforelse
 
 
