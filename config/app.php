@@ -183,6 +183,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         StreamLab\StreamLabProvider\StreamLabServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
 
@@ -237,6 +238,7 @@ return [
         'Datatables' => Yajra\Datatables\Facades\Datatables::class,
         'Share' => Jorenvh\Share\ShareFacade::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
 

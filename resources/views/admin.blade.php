@@ -25,7 +25,7 @@
                    <br><br><br>
                   <div class="table-responsive">
                      <h4 id="title_table1" style="color: #9ACD32;"><i class="fas fa-check-circle" style="color: #9ACD32"></i>&nbsp;Vacantes en Actividad</h4>
-                     <h4 style="display: inline-block;">&nbsp;&nbsp;<a href="#"><i class="fas fa-download" onclick="tableToExcel('table_general1', 'W3C Example Table')"></i></a></h4>
+                     <h4 style="display: inline-block;">&nbsp;&nbsp;<a href="{{ URL::to('admin/xlsx') }}"><i class="fas fa-download"></i></a></h4>
                           <table class="table" id="table_general1" >
                             <thead>
                               <tr>
@@ -60,7 +60,7 @@
                     <br><br><br>
                     <div class="table-responsive">
                      <h4 id="title_table1"><i class="fas fa-users"></i>&nbsp;Vacantes Activos</h4>
-                     <h4 style="display: inline-block;">&nbsp;&nbsp;<a href="#"><i class="fas fa-download" onclick="tableToExcel('table_general2', 'W3C Example Table')"></i></a></h4>
+                     <h4 style="display: inline-block;">&nbsp;&nbsp;<a href="{{ URL::to('admin/xlsx') }}"><i class="fas fa-download"></i></a></h4>
                           <table class="table" id="table_general2" >
                             <thead>
                               <tr>
@@ -128,27 +128,6 @@
   </div>
  </div>
 </div>
-<script>
-function search_all() {
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("search_v");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("table_general2");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[1];
-    if (td) {
-      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
-}
-</script>
-
-
 
 <div style="background-color: #444444"><br>
  <footer>
@@ -175,20 +154,24 @@ function search_all() {
   </div>
 </div>
 </div>
-
-<script type="text/javascript">
-  var tableToExcel = (function() {
-  var uri          = 'data:application/vnd.ms-excel;base64,'
-      , template   = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
-      , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
-      , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
-                  return function(table, name) {
-                    if (!table.nodeType) table = document.getElementById(table)
-                    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
-                    window.location.href = uri + base64(format(template, ctx))
-    }
-  })()
+<script>
+// function search_all() {
+//   var input, filter, table, tr, td, i;
+//   input = document.getElementById("search_v");
+//   filter = input.value.toUpperCase();
+//   table = document.getElementById("table_general2");
+//   tr = table.getElementsByTagName("tr");
+//   for (i = 0; i < tr.length; i++) {
+//     td = tr[i].getElementsByTagName("td")[1];
+//     if (td) {
+//       if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+//         tr[i].style.display = "";
+//       } else {
+//         tr[i].style.display = "none";
+//       }
+//     }       
+//   }
+// }
 </script>
-
 
 @endsection
