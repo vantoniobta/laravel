@@ -12,7 +12,7 @@
               <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                   <div class="col-md-6 col-md-offset-3" >
                       <h4 align="center"><b>Email</b></h4>
-                        <p>Usuario</p>
+                        <p><b>Usuario</b></p>
                         <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
                           @if ($errors->has('email'))
                              <span class="help-block">
@@ -24,7 +24,7 @@
 
                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                     <div class="col-md-6 col-md-offset-3">
-                        <p>Password</p>
+                        <p><b>Password</b></p>
                            <input id="password" type="password" class="form-control" name="password" required>
                                @if ($errors->has('password'))
                                 <span class="help-block">
@@ -41,7 +41,7 @@
               <h4 align="center"><b>Con tus redes sociales</b></h4>
                   <a href="{{url('redirect/facebook')}}" class="social-button_x2" id="facebook-connect" > <span>Facebook</span></a>
                   <a href="{{url('redirect/twitter')}}" class="social-button_x2" id="twitter-connect" > <span>Twitter</span></a>
-                   <h4><a class="btn btn-link" href="{{ route('register') }}"><b>Registrarse</b></a></h4>
+                   <h4 align="center"><a class="btn btn-link" href="{{ route('register') }}"><b>Registrarse</b></a></h4>
             </div>
         </div>
      </form>

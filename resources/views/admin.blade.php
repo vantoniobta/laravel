@@ -8,16 +8,15 @@
  -->
 
 <div class="col-md-12">
-        <main>
-
+    <main>
            <input id="tab1" type="radio" name="tabs" checked>
-            <label for="tab1">Actividad</label>
+            <label for="tab1" style="color:#10ca7e">Actividad</label>
 
             <input id="tab2" type="radio" name="tabs" >
-            <label for="tab2">Todos los activos</label>
+            <label for="tab2" style="color: #ffbb11">Todos los activos</label>
               
             <input id="tab3" type="radio" name="tabs">
-            <label for="tab3">Inactivos</label>
+            <label for="tab3" style="color: #f00b42">Inactivos</label>
               
             <section id="content1">
                     <div class="col-md-12">
@@ -25,8 +24,9 @@
                   </div>
                    <br><br><br>
                   <div class="table-responsive">
-                     <h4 id="title_table1" style="color: #9ACD32"><i class="fas fa-check-circle" style="color: #9ACD32"></i>&nbsp;Vacantes en Actividad</h4>  
-                          <table class="table" id="table_general3" >
+                     <h4 id="title_table1" style="color: #9ACD32;"><i class="fas fa-check-circle" style="color: #9ACD32"></i>&nbsp;Vacantes en Actividad</h4>
+                     <h4 style="display: inline-block;">&nbsp;&nbsp;<a href="#"><i class="fas fa-download" onclick="tableToExcel('table_general1', 'W3C Example Table')"></i></a></h4>
+                          <table class="table" id="table_general1" >
                             <thead>
                               <tr>
                                 <th class="activity_table">FECHA</th>
@@ -54,13 +54,13 @@
                         </div>
                     @endif
                     <div class="col-md-12">
-
                       <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar Vacante " onkeyup="search_all()">
                     </div>
 
                     <br><br><br>
                     <div class="table-responsive">
-                     <h4 id="title_table1"><i class="fas fa-users"></i>&nbsp;Vacantes Activos</h4>  
+                     <h4 id="title_table1"><i class="fas fa-users"></i>&nbsp;Vacantes Activos</h4>
+                     <h4 style="display: inline-block;">&nbsp;&nbsp;<a href="#"><i class="fas fa-download" onclick="tableToExcel('table_general2', 'W3C Example Table')"></i></a></h4>
                           <table class="table" id="table_general2" >
                             <thead>
                               <tr>
@@ -98,7 +98,8 @@
                   </div>
                    <br><br><br>
                   <div class="table-responsive">
-                     <h4 id="title_table1" style="color: #CD5C5C"><i class="fas fa-times" style="color: #CD5C5C"></i>&nbsp;Vacantes Inactivos</h4>  
+                     <h4 id="title_table1" style="color: #CD5C5C"><i class="fas fa-times" style="color: #CD5C5C"></i>&nbsp;Vacantes Inactivos</h4>
+                     <h4 style="display: inline-block;">&nbsp;&nbsp;<a href="#"><i class="fas fa-download" onclick="tableToExcel('table_general3', 'W3C Example Table')"></i></a></h4>
                           <table class="table" id="table_general3" >
                             <thead>
                               <tr>
@@ -124,29 +125,8 @@
                    </div>
              </section>
     </main>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </div>
+  </div>
+ </div>
 </div>
 <script>
 function search_all() {
@@ -196,7 +176,19 @@ function search_all() {
 </div>
 </div>
 
-
+<script type="text/javascript">
+  var tableToExcel = (function() {
+  var uri          = 'data:application/vnd.ms-excel;base64,'
+      , template   = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"><head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]--></head><body><table>{table}</table></body></html>'
+      , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+      , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+                  return function(table, name) {
+                    if (!table.nodeType) table = document.getElementById(table)
+                    var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+                    window.location.href = uri + base64(format(template, ctx))
+    }
+  })()
+</script>
 
 
 @endsection

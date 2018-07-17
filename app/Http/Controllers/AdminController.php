@@ -114,9 +114,11 @@ class AdminController extends Controller
        }
 
 
-    public function notifications() {
+    public function activity_xlsx() {
         
     }
+
+
 
 
 }

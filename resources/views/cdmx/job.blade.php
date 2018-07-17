@@ -78,7 +78,7 @@
                      </ul>
                   </div>
             </div>
-            <h4><a href="/cdmx"><i class="fas fa-undo-alt"></i>&nbsp;Volver</a></h4>
+            <h4><a href="/cdmx"><i class="fas fa-caret-square-left"></i>&nbsp;Volver</a></h4>
       </div>
 
 

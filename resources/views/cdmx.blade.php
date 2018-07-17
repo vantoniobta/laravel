@@ -6,7 +6,7 @@
 <!-- Slider -->
   <header>
   <section class="header-content">
-    <img class="rocky-dashed animate-pop-in" src="https://cssanimation.rocks/levelup/public/images/rocky-dashed.svg">
+   <!--  <img class="rocky-dashed animate-pop-in" src="https://cssanimation.rocks/levelup/public/images/rocky-dashed.svg"> -->
     <h1 class="header-title animate-pop-in">header vantonio</h1>
     <h3 class="header-subtitle animate-pop-in">A useful start for your projects</h3>
   </section>
