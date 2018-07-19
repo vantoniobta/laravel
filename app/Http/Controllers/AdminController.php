@@ -8,7 +8,9 @@ use App\Job;
 use App\Work;
 use App\Postulate;
 use Auth;
-use Maatwebsite\Excel\Facades\Excel;
+use Excel;
+use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\Exportable;
 
 class AdminController extends Controller
 {
@@ -114,33 +116,16 @@ class AdminController extends Controller
           return view('admin/users')->with('users', $users);
        }
 
-
     public function activity_xlsx() {
-                // $data = DB::table('userinformations')
-                //             ->join('users', 'userinformations.user_id', '=', 'users.id')
-                //             ->join('careers','careers.user_id','=','users.id')
-                //             ->select('userinformations.*','users.*','careers.org_name','careers.post')
-                //             ->where('userinformations.payment_status',1)
-                //             ->groupBy('careers.user_id')
-                //             ->get();
-
-                $data   = DB::table('jobs')->where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(10);
-
-                $items=array();
-                foreach ($data as $key=>$d) {
-                         $items[$key]['#']=++$key;
-                         $items[$key]['title']=$d->title;
-                         $items[$key]['time']=$d->time;
-                         $items[$key]['salary']=$d->salary;
-                         $items[$key]['url']=$d->url;
-                }
-
-              Excel::create('Member Paid List', function($excel) use($items) {
-                     $excel->sheet('Paid List', function($sheet) use($items){
-                     $sheet->fromArray($items);
-                 });
-               })->download('xls');
-
+            $jobs = Job::select('id', 'title', 'address', 'time','abilities','benefits','salary','url','status','created_at')
+                        ->where('status', '=', 'Activo')
+                        ->orderBy('created_at', 'desc')
+                        ->get();
+                        Excel::create('jobs_activity', function($excel) use($jobs) {
+                           $excel->sheet('Sheet 1', function($sheet) use($jobs) {
+                           $sheet->fromArray($jobs);
+                          });
+                        })->export('xls');
     }
 
 
