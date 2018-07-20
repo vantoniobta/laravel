@@ -21,11 +21,10 @@
             <section id="content1">
                     <div class="col-md-12">
                     <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar Vacante " onkeyup="search_all()">
-                  </div>
-                   <br><br><br>
+                  </div><br><br>
                   <div class="table-responsive">
-                     <h4 id="title_table1" style="color: #9ACD32;"><i class="fas fa-check-circle" style="color: #9ACD32"></i>&nbsp;Vacantes en Actividad</h4>
-                     <h4 style="display: inline-block;">&nbsp;&nbsp;<a href="{{ URL::to('admin/xlsx') }}"><i class="fas fa-download"></i></a></h4>
+                      <h4 id="title_table1" style="color: #9ACD32;float: left;"><i class="fas fa-check-circle" style="color: #9ACD32"></i>&nbsp;Vacantes en Actividad</h4>
+                     <h4 style="display: inline-block; float: right;">Download&nbsp;&nbsp;<a href="{{ URL::to('admin/xlsx') }}"><i class="fas fa-download"></i></a></h4>
                           <table class="table" id="table_general1" >
                             <thead>
                               <tr>
@@ -55,12 +54,10 @@
                     @endif
                     <div class="col-md-12">
                       <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar Vacante " onkeyup="search_all()">
-                    </div>
-
-                    <br><br><br>
+                    </div><br><br>
                     <div class="table-responsive">
                      <h4 id="title_table1"><i class="fas fa-users"></i>&nbsp;Vacantes Activos</h4>
-                     <h4 style="display: inline-block;">&nbsp;&nbsp;<a href="{{ URL::to('admin/xlsx') }}"><i class="fas fa-download"></i></a></h4>
+                     <h4 style="display: inline-block; float: right;">Download&nbsp;&nbsp;<a href="{{ URL::to('admin/xlsx') }}"><i class="fas fa-download"></i></a></h4>
                           <table class="table" id="table_general2" >
                             <thead>
                               <tr>
@@ -95,11 +92,10 @@
              <section id="content3">
                  <div class="col-md-12">
                     <input type="text" name="search_v" id="search_v" ng-model="search" class="form-control" placeholder="Buscar Vacante " onkeyup="search_all()">
-                  </div>
-                   <br><br><br>
+                  </div><br><br>
                   <div class="table-responsive">
                      <h4 id="title_table1" style="color: #CD5C5C"><i class="fas fa-times" style="color: #CD5C5C"></i>&nbsp;Vacantes Inactivos</h4>
-                     <h4 style="display: inline-block;">&nbsp;&nbsp;<a href="#"><i class="fas fa-download" onclick="tableToExcel('table_general3', 'W3C Example Table')"></i></a></h4>
+                     <h4 style="display: inline-block; float: right;">Download&nbsp;&nbsp;<a href="{{ URL::to('admin/xlsx') }}"><i class="fas fa-download"></i></a></h4>
                           <table class="table" id="table_general3" >
                             <thead>
                               <tr>

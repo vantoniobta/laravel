@@ -118,7 +118,7 @@ class AdminController extends Controller
 
     public function activity_xlsx() {
             $jobs = Job::select('id', 'title', 'address', 'time','abilities','benefits','salary','url','status','created_at')
-                        ->where('status', '=', 'Activo')
+                        // ->where('status', '=', 'Activo')
                         ->orderBy('created_at', 'desc')
                         ->get();
                         Excel::create('jobs_activity', function($excel) use($jobs) {
@@ -129,6 +129,5 @@ class AdminController extends Controller
     }
 
 
-
-
+    
 }
