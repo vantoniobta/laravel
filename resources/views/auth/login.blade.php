@@ -41,7 +41,7 @@
               <h4 align="center"><b>Con tus redes sociales</b></h4>
                   <a href="{{url('redirect/facebook')}}" class="social-button_x2" id="facebook-connect" > <span>Facebook</span></a>
                   <a href="{{url('redirect/twitter')}}" class="social-button_x2" id="twitter-connect" > <span>Twitter</span></a>
-                   <h4 align="center"><a class="btn btn-link" href="{{ route('register') }}"><b>Registrarse</b></a></h4>
+                   <h4 align="center"><a class="btn btn-link" href="{{ route('register') }}">Registrarse</a></h4>
             </div>
         </div>
      </form>

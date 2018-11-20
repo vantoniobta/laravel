@@ -182,7 +182,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        StreamLab\StreamLabProvider\StreamLabServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
