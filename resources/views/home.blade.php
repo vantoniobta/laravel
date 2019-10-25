@@ -27,7 +27,8 @@
 
    <footer class="footer-distributed">
       <div class="footer-left">
-        <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png" class="img-responsive">
+        <!-- <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png" class="img-responsive"> -->
+        vantonio
         <p class="footer-links">
           <a href="#">Home</a>
           ·

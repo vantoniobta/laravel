@@ -12,7 +12,8 @@
       <div class="container">
           <div class="row"><!--romw-->
             <div class="col-md-12">
-               <h1 align="center" class="inf_jobs_title">{{ $work->title}}</h1><hr>
+               <h1 class="inf_jobs_title">{{ $work->title}}</h1>
+                <p class="inf_jobs"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
              </div>
 
                <div class="col-sm-8">
@@ -24,7 +25,7 @@
 
                 <div class="col-sm-2" >
                    <h5><b>Fecha Publicada</b></h5>
-                   <p class="inf_jobs"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
+                  
                    <h5><b>Sueldo</b></h5>
                     <p class="inf_jobs">{{ $work->salary}}</p>
                  </div>
@@ -58,26 +59,6 @@
 
           </div><!--romw-->
 
-                <div class="col-md-12">
-                  <div id="social-links">
-                     <ul class="social">
-                        <h4>Compartir en redes Sociales</h4>
-                        <li class="item">
-                          <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.multimedios.com/" class="social-button"><i class="fa fa-facebook" class="social-button "></i></a>
-                        </li>
-                        <li class="item">
-                          <a href="https://twitter.com/intent/tweet?text=my share text&amp;url=http://www.multimedios.com/" class="social-button"><i class="fa fa-twitter"></i></a>
-                         </li>
-                         <li class="item">
-                          <a href="https://plus.google.com/share?url=http://www.multimedios.com/" class="social-button"><i class="fa fa-google-plus"></i></a>
-                         </li>
-                        <li class="item">
-                          <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.multimedios.com/&amp;title=my share text&amp;summary=dit is de linkedin summary" class="social-button"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                     </ul>
-                  </div>
-                  <h4><a href="/mty"><i class="fas fa-caret-square-left"></i>&nbsp;Volver</a></h4>
-            </div>
       </div>
 
 

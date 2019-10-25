@@ -29,7 +29,7 @@
             }
 
             body{
-                background: url(background-photo.jpg) center center cover no-repeat fixed;
+               /* background: url(background-photo.jpg) center center cover no-repeat fixed;*/
             }
 
             .full-height {
@@ -75,7 +75,7 @@
             }
         </style>
     </head>
-    <body style="background-image: url(https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/891.jpg); background-position: center center;background-repeat: no-repeat;background-attachment: fixed;  background-size: cover;">
+    <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -91,15 +91,11 @@
 
             <div class="content">
              <div class="col-md-6"> 
-                   <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png">
-                  <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #fff">Bolsa de Trabajo</p>
+                  <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #000">Diarios las huastecas</p>
              </div>
                 <div class="links">
-                    <a href="/mty" style="color: #fff">Monterrey</a>
-                    <a href="/cdmx" style="color: #fff">CDMX</a>
-                    <a href="#" style="color: #fff">Torreón</a>
-                    <a href="#" style="color: #fff">Saltillo</a>
-                    <a href="#" style="color: #fff">León</a>
+                    <a href="/mty">Potosina</a>
+                    <a href="/cdmx">Hidalguense</a>
                 </div>
             </div>
         </div>
