@@ -27,13 +27,37 @@ nav.navbar {
     info title
     */
     .inf_jobs{
-        font-size: 16px; 
+        font-size: 18px; 
         font-family: 'Anonymous Pro', sans-serif;
-    }
-    .inf_jobs_title{
-        family:'Montserrat', Helvetica, Arial, sans-serif; 
         color: #000;
     }
+    .inf_jobs_title{
+       font-family: 'Fjalla One', sans-serif;
+
+        color: #4c4e4d;
+        font-size: 50px;
+    }
+
+    .container_title_view{
+        background: #f1c108;
+        color: #fff;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 social shared

@@ -9,12 +9,8 @@
 
 
 
-  <div class="container" style="background-color: #f1c108; ">
-       <div class="row">
-         <div class="col-md-12">
-         <h3 id="title_vacantes" align="center">ÚLTIMAS OFERTAS DE TRABAJO MONTERREY , N.L</h3>
-         </div>
-       </div>
+  <div class="container_title_view">
+       ÚLTIMAS OFERTAS DE TRABAJO MONTERREY , N.L
   </div>
 
  

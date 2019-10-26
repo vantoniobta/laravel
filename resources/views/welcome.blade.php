@@ -12,6 +12,12 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Oswald&display=swap" rel="stylesheet">
+
+
+
         <link href="{{ asset('css/main.css') }}" rel="stylesheet">
         <link href="{{ asset('css/normalize.css') }}" rel="stylesheet">
 
