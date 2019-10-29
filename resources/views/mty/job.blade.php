@@ -9,46 +9,25 @@
 @include('sweet::alert')
 
 
-      <div class="container">
-          <div class="row"><!--romw-->
-
-            <div class="col-md-12">
-               <h1 class="inf_jobs_title">{{ $work->title}}</h1>
-                <p class="inf_jobs"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
-             </div>
-
-               <div class="col-sm-8" >
-                   <p class="inf_jobs">{{ $work->abilities}}</p>
-                   <h5><b>Prestaciones</b></h5>
-                  <p class="inf_jobs">{{ $work->benefits}}</b></p>
-                  <p class="inf_jobs"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address}}</p>
-
-               </div>
-
-
-
-                 @if (Auth::check())
-               <div class="col-md-12">
-                  <form action="{{ URL::to('mty/send') }}" method="POST">
-                      {{ csrf_field() }}
-                      <input type="text" name="userId" value="{{ Auth::user()->id }}" style="visibility:hidden;">
-                      <input type="text" name="workId" value="{{ $work->id}}" style="visibility:hidden;">
-                      <div class="col-md-12">
-                      <input type="submit" value="APLICAR A LA VACANTE" class="btn_send" style="border-color:#DAA520 " >
-                    </div>
-                 </form>
-                </div>
-                @else
-                  <div class="col-md-4" >
-                    <img src="../../img/big_box.png">
-                  </div>
-                @endif
-
-
-          </div><!--romw-->
-
+    <div class="article_page_view_">
+      <div class="item_article_page_view_">
+        <h1 class="inf_jobs_title">{{ $work->title}}</h1>
+        <p class="inf_jobs"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
+      
+        <p class="p_article_origin">{{ $work->abilities}}</p>
+        
+        <p class="p_article_origin">{{ $work->benefits}}</b></p>
+        <p class="p_article_origin"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address}}</p>
       </div>
 
+       <div class="item_article_page_view_2">
+        articles banners
+       </div>
+
+    </div>
+
+
+  
 
 
 

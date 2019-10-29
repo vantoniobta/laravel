@@ -48,6 +48,7 @@
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                          <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png" width="160px">
+                       
                     </a>
                 </div>
 
@@ -58,13 +59,13 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                             <li><a href="/mty" style="color: #fff">Monterrey</a></li>
-                             <li><a href="/cdmx" style="color: #fff">CDMX</a></li>
+                             <li><a href="/mty" style="color: #fff">POTOSINA</a></li>
+                             <li><a href="/cdmx" style="color: #fff">HIDALGUENSE</a></li>
                             <!-- <li><a href="{{ route('register') }}" style="color: #fff"><i class="fa fa-user-plus"  aria-hidden="true"></i>&nbsp;Registro</a></li> -->
-                            <li><a href="{{ route('login') }}" style="color: #fff"><span class="label label-success">&nbsp;Login</span></a></li>
+                           <!--  <li><a href="{{ route('login') }}" style="color: #fff"><span class="label label-success">&nbsp;Login</span></a></li> -->
                         @else
-                             <li><a href="/mty" style="color: #fff">Monterrey</a></li>
-                             <li><a href="/cdmx" style="color: #fff">CDMX</a></li>
+                             <li><a href="/mty" style="color: #fff">POTOSINA</a></li>
+                             <li><a href="/cdmx" style="color: #fff">HIDALGUENSE</a></li>
                        
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative;padding-left: 50px;color: #fff">

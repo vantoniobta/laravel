@@ -26,16 +26,11 @@ nav.navbar {
     /*
     info title
     */
-    .inf_jobs{
-        font-size: 18px; 
-        font-family: 'Anonymous Pro', sans-serif;
-        color: #000;
-    }
+    
     .inf_jobs_title{
        font-family: 'Fjalla One', sans-serif;
-
         color: #4c4e4d;
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .container_title_view{
@@ -553,7 +548,7 @@ social shared
     }
 
     #div_vacantes{
-     font-family: 'Archivo', sans-serif;background-color: #fff; border-color: #fff; box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+     font-family: 'Archivo', sans-serif;
     }
 
 
@@ -626,40 +621,54 @@ social shared
         padding: 0.625rem 1.25rem;
     }
 
+    /*css view page_view_section*/
+    .page_view_section{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content:center;
+    }
+    .item_page_view_section{
+       color:#4d665f;
+      width: 350px;
+      margin:20px; 
+      text-align: center; 
+      border: 1px solid #677290;
+    }
 
 
+    /*article view page_view_section*/
+    .article_page_view_{
+       width: 100%;
+       display: flex;
+       flex-wrap: wrap;
+       align-content: center;
+       justify-content:center;
+    }
+    .item_article_page_view_{
+      color:#4d665f;
+      width: 650px;
+      margin:20px; 
+      text-align: center; 
+      /*border: 1px solid #677290;*/
+    }
+    .item_article_page_view_2{
+      color:#4d665f;
+      width: 300px;
+      margin:20px; 
+      text-align: center; 
+      border: 1px solid #677290;
+    }
+
+    .p_article_origin{
+        font-size: 18px; 
+        font-family: 'Arial',  sans-serif;
+        text-align: justify;
+        color: #000;
+    }
 
 
-
-/* Animations */
-
-@keyframes fade-slide-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-4rem);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes pop-in {
-  0% {
-    opacity: 0;
-    transform: translateY(-4rem) scale(.8);
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes rotate-up {
-  100% {
-    transform: rotateZ(-4deg);
-  }
-}
 
 
 

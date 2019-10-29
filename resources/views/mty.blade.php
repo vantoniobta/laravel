@@ -9,38 +9,24 @@
 
 
 
-  <div class="container_title_view">
+<!--   <div class="container_title_view">
        ÚLTIMAS OFERTAS DE TRABAJO MONTERREY , N.L
-  </div>
+  </div> -->
 
- 
+  <div class="page_view_section">
+
+    @forelse ($works as $work)
+
+    <div class="item_page_view_section">
+      <p style=" font-size: 18px;"><a href="{{ URL::to('mty/job', $work->url)}}" style="color:#008B8B"><i class="fas fa-check-circle"></i>&nbsp;{{ $work->title }}</a></p>
+       <img src="../../img/big_box.png">
+      <p style=" font-size: 12px"><span style="color: #696969;">Imagen: vantonio</span></p>
+      <p style=" font-size: 14px;color: #000;"><a href="{{ URL::to('mty/job', $work->url)}}" style="color:#000">{{ $work->abilities }}</a></p>
+      <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address }} | {{ date('F d, Y', strtotime($work->created_at)) }}</span></h6>
+    </div>
 
 
-   @forelse ($works as $work)
-          <div class="container" id="div_vacantes">
-              <div class="row">
-          	        <div class="col-md-12">
-          	                <div class="panel-body" >
-                						<div class="col-md-4" style="">
-                                <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">Puesto</span></h6>
-                						    <p style=" font-size: 18px;"><a href="{{ URL::to('mty/job', $work->url)}}" style="color:#008B8B"><i class="fas fa-check-circle"></i>&nbsp;{{ $work->title }}</a></p>
-                						</div>
-          							
-              						   <div class="col-md-6">
-                               <p style=" font-size: 12px"><span style="color: #696969;">Requisitos</span></p>
-                                <p style=" font-size: 16px;color: #000">{{ $work->abilities }}</p>
-                                <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address }} | {{ date('F d, Y', strtotime($work->created_at)) }}</span></h6>
-              						   </div>
-
-                            <div class="col-md-2 ">
-                               <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;">sueldo</span></h6>
-                               <p style=" font-size: 16px;color:#000;">{{ $work->salary }}</p>
-                            </div>
-          	               </div>
-          	        </div>
-              </div>
-          </div>
-          @empty
+    @empty
            <div class="container" id="div_vacantes">
               <div class="row">
                     <div class="col-md-12">
@@ -48,7 +34,15 @@
                     </div>
                 </div>
             </div>
-    @endforelse
+
+     @endforelse
+  
+
+  </div>
+
+ 
+
+
 
 
 

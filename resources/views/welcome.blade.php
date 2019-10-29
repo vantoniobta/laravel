@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/32x32.png" />
 
-        <title>Bolsa de Trabajo</title>
+        <title>Las tres huastecas</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -97,7 +97,7 @@
 
             <div class="content">
              <div class="col-md-6"> 
-                  <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #000">Diarios las huastecas</p>
+                  <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #000">Las tres huastecas</p>
              </div>
                 <div class="links">
                     <a href="/mty">Potosina</a>
