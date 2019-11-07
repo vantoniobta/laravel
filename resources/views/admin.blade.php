@@ -24,7 +24,7 @@
                   </div><br><br>
                   <div class="table-responsive">
                       <h4 id="title_table1" style="color: #9ACD32;float: left;"><i class="fas fa-check-circle" style="color: #9ACD32"></i>&nbsp;Vacantes en Actividad</h4>
-                     <h5 style="display: inline-block; float: right;">Download&nbsp;&nbsp;<a href="{{ URL::to('admin/xlsx') }}"><i class="fas fa-download"></i></a></h5>
+                     <!-- <h5 style="display: inline-block; float: right;">Download&nbsp;&nbsp;<a href="{{ URL::to('admin/xlsx') }}"><i class="fas fa-download"></i></a></h5> -->
                           <table class="table" id="table_general1" >
                             <thead>
                               <tr>
@@ -57,7 +57,7 @@
                     </div><br><br>
                     <div class="table-responsive">
                      <h4 id="title_table1"><i class="fas fa-users"></i>&nbsp;Vacantes Activos</h4>
-                     <h5 style="display: inline-block; float: right;">Download&nbsp;&nbsp;<a href="{{ URL::to('admin/xlsx') }}"><i class="fas fa-download"></i></a></h5>
+                     <!-- <h5 style="display: inline-block; float: right;">Download&nbsp;&nbsp;<a href="{{ URL::to('admin/xlsx') }}"><i class="fas fa-download"></i></a></h5> -->
                           <table class="table" id="table_general2" >
                             <thead>
                               <tr>
@@ -96,7 +96,7 @@
                   </div><br><br>
                   <div class="table-responsive">
                      <h4 id="title_table1" style="color: #CD5C5C"><i class="fas fa-times" style="color: #CD5C5C"></i>&nbsp;Vacantes Inactivos</h4>
-                     <h5 style="display: inline-block; float: right;">Download&nbsp;&nbsp;<a href="{{ URL::to('admin/xlsx') }}"><i class="fas fa-download"></i></a></h5>
+                     <!-- <h5 style="display: inline-block; float: right;">Download&nbsp;&nbsp;<a href="{{ URL::to('admin/xlsx') }}"><i class="fas fa-download"></i></a></h5> -->
                           <table class="table" id="table_general3" >
                             <thead>
                               <tr>

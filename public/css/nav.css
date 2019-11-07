@@ -30,7 +30,7 @@ nav.navbar {
     .inf_jobs_title{
        font-family: 'Fjalla One', sans-serif;
         color: #4c4e4d;
-        font-size: 45px;
+        font-size: 32px;
     }
 
     .container_title_view{
@@ -631,10 +631,10 @@ social shared
     }
     .item_page_view_section{
        color:#4d665f;
-      width: 350px;
+      width: 400px;
       margin:20px; 
       text-align: center; 
-      border: 1px solid #677290;
+      /*border: 1px solid #677290;*/
     }
 
 
@@ -648,7 +648,7 @@ social shared
     }
     .item_article_page_view_{
       color:#4d665f;
-      width: 650px;
+      width: 700px;
       margin:20px; 
       text-align: center; 
       /*border: 1px solid #677290;*/

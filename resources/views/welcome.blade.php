@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:700&display=swap" rel="stylesheet">
 
         <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Oswald&display=swap" rel="stylesheet">
-
+        
 
 
         <link href="{{ asset('css/main.css') }}" rel="stylesheet">

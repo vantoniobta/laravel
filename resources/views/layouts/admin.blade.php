@@ -48,9 +48,9 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                          <li><a href="{{ url('/admin') }}" style="color: #fff"><i class="fas fa-list-alt"></i>&nbsp;Vacantes</a></li>
-                          <li><a href="{{ url('admin/jobs_new') }}" style="color: #fff"><i class="fas fa-user-plus"></i>&nbsp;Nueva Vacante</a></li>
-                          <li><a href="{{ url('/admin/users') }}" style="color: #fff"><i class="fas fa-users"></i>&nbsp;Users</a></li>
+                          <li><a href="{{ url('/admin') }}" style="color: #fff"><i class="fas fa-list-alt"></i>&nbsp;Articulos</a></li>
+                          <li><a href="{{ url('admin/jobs_new') }}" style="color: #fff"><i class="fas fa-user-plus"></i>&nbsp;Articulo Nuevo</a></li>
+                          <li><a href="{{ url('/admin/users') }}" style="color: #fff"><i class="fas fa-users"></i>&nbsp;Usuarios</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
