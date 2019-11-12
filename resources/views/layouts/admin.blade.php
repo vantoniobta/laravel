@@ -41,7 +41,8 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/admin') }}" style="color: #ffffff">
-                        <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png" width="160px">
+                        <img src="https://laravel.com/img/logotype.min.svg" width="160px">
+                        <i class="fab fa-dashcube "></i>
                     </a>
                 </div>
 

@@ -6,7 +6,7 @@
 
 <div class="container"><br>
     <div class="row" style=" margin:top;border: 1px solid #D3D3D3;">
-     <div class="panel-heading" style="background-color: #009189;color: #fff;"><h4 align="center"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;NUEVA VACANTE</h4></div><br>
+     <div class="panel-heading" style="background-color: #009189;color: #fff;"><h4 align="center"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;NUEVA ARTICULO</h4></div><br>
         <div class="col-md-10" >
               <form id="contact-form" class="form-horizontal" action="{{ URL::to('admin/jobs_save') }}" method="POST">
                    {{ csrf_field() }}
@@ -20,22 +20,22 @@
 
                   <!-- Name input-->
                   <div class="form-group">
-                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Puesto</label>
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Titulo</label>
                     <div class="col-md-9">
-                      <input id="puesto" name="puesto" type="text" placeholder="Puesto Principal" class="form-control" onkeyup="miFuncion()" autocomplete="off" onpaste="return false" required="">
+                      <input id="puesto" name="puesto" type="text" class="form-control" onkeyup="miFuncion()" autocomplete="off" onpaste="return false" required="">
                     </div>
                   </div>
 
                    <div class="form-group" style="display:none;">
                     <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">URL</label>
                     <div class="col-md-9">
-                      <input id="url" name="url" type="text" placeholder="Puesto Principal" class="form-control">
+                      <input id="url" name="url" type="text"  class="form-control">
                     </div>
                   </div>
 
                   <!-- Email input-->
                   <div class="form-group">
-                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Lugar</label>
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Seccion</label>
                     <div class="col-md-9">
                       <!-- <input id="Lugar" name="lugar" type="text" placeholder="Lugar" class="form-control" required=""> -->
                          <select class="form-control" id="lugar" name="lugar">
@@ -49,28 +49,28 @@
                   <div class="form-group">
                     <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Tiempo</label>
                     <div class="col-md-9">
-                       <input id="tiempo" name="tiempo" type="text" placeholder="Tiempo" class="form-control" required="">
+                       <input id="tiempo" name="tiempo" type="text"  class="form-control" required="">
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Habilidades</label>
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Abstract</label>
                     <div class="col-md-9">
-                      <textarea class="form-control" id="habilidades" name="habilidades" placeholder="Habilidades" rows="5" required=""></textarea>
+                      <textarea class="form-control" id="habilidades"  rows="5" required=""></textarea>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Prestaciones</label>
+                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Artículo</label>
                     <div class="col-md-9">
-                      <textarea class="form-control" id="prestaciones" name="prestaciones" placeholder="Prestaciones" rows="5" required=""></textarea>
+                      <textarea class="form-control" id="prestaciones"  rows="5" required=""></textarea>
                     </div>
                   </div>
 
                    <div class="form-group">
                     <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Sueldo</label>
                     <div class="col-md-9">
-                       <input id="Sueldo" name="sueldo" type="text" placeholder="Sueldo" class="form-control" required="">
+                       <input id="Sueldo" name="sueldo" type="text"  class="form-control" required="">
                     </div>
                   </div>
 

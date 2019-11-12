@@ -6,13 +6,12 @@
 
 @section('content')
 
-@include('sweet::alert')
 
 
     <div class="article_page_view_">
       <div class="item_article_page_view_">
         <h1 class="inf_jobs_title">{{ $work->title}}</h1>
-         <img src="../../img/article_img_test.jpg">
+         
         
         <p class="inf_jobs"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
       
