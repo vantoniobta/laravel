@@ -23,7 +23,7 @@ class WorkController extends Controller
         return view('vacantes/error');
       }else{
           if ($work->address == 'Monterrey') {
-              return view('mty/job',array('user' => Auth::user()), ['work' => $work])->with('id', $id);
+              return view('articulo/articulo',array('user' => Auth::user()), ['work' => $work])->with('id', $id);
           }else{
               return view('cdmx/job',array('user' => Auth::user()), ['work' => $work])->with('id', $id);
           }

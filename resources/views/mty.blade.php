@@ -19,11 +19,11 @@
 
     <div class="item_page_view_section">
 
-      <p style=" font-size: 16px;font-weight: bold;"><a href="{{ URL::to('mty/job', $work->url)}}" style="color:#000">{{ $work->title }}</a></p>
+      <p style=" font-size: 16px;font-weight: bold;"><a href="{{ URL::to('articulo/articulo', $work->url)}}" style="color:#000">{{ $work->title }}</a></p>
        <img src="../../img/big_box.png">
       <!-- <p style=" font-size: 12px"><span style="color: #696969;">Imagen: vantonio</span></p> -->
-      <p style=" font-size: 14px;color: #000;"><a href="{{ URL::to('mty/job', $work->url)}}" style="color:#000">{{ $work->abilities }}</a></p>
-      <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address }} | {{ date('F d, Y', strtotime($work->created_at)) }}</span></h6>
+      <p style=" font-size: 14px;color: #000;"><a href="{{ URL::to('articulo/articulo', $work->url)}}" style="color:#000">{{ $work->abilities }}</a></p>
+      <!-- <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address }} | {{ date('F d, Y', strtotime($work->created_at)) }}</span></h6> -->
       <hr>
     </div>
 
@@ -61,8 +61,8 @@
 
 
     <footer class="footer-distributed" >
-      <div class="footer-left">
-       <!--  <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png" class="img-responsive"> -->
+    <!--   <div class="footer-left">
+        <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png" class="img-responsive">
         <p class="footer-company-name">Diarios las huastecas &copy; 2019</p>
       </div>
       <div class="footer-center">
@@ -78,7 +78,7 @@
           <i class="fa fa-envelope"></i>
           <p><a href="mailto:support@company.com">info@multimedios.com</a></p>
         </div>
-      </div>
+      </div> -->
       <div class="footer-right">
         <p class="footer-company-about">
           <span>Nosotros</span>

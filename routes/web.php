@@ -16,6 +16,11 @@ use Illuminate\Support\Facades\View;
 Route::get('profile', 'UserController@profile');
 Route::post('profile/{id}', 'UserController@update_avatar');
 
+
+Route::prefix('articulo')->group(function(){
+	Route::get('/articulo/{id}', 'WorkController@info');
+});
+
 Route::prefix('cdmx')->group(function(){
 	Route::get('/job/{id}', 'WorkController@info');
 	Route::post('/send', 'WorkController@save');
@@ -52,7 +57,7 @@ Route::get('/mty', function(){
     $works = App\Job::where([
     	['status', '=', 'Activo'],
     	['address', '=', 'Monterrey']
-    	])->orderBy('created_at', 'desc')->paginate(5);
+    	])->orderBy('created_at', 'desc')->paginate(6);
 	return view('mty', compact('works'));
 });
 
@@ -60,7 +65,7 @@ Route::get('/cdmx', function(){
     $works = App\Job::where([
     	['status', '=', 'Activo'],
     	['address', '=', 'Ciudad México']
-    	])->orderBy('created_at', 'desc')->paginate(5);
+    	])->orderBy('created_at', 'desc')->paginate(6);
 	return view('cdmx', compact('works'));
 });
 

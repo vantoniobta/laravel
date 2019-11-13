@@ -68,7 +68,7 @@
 
 
    <footer class="footer-distributed">
-      <div class="footer-left">
+      <!-- <div class="footer-left">
         <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png" class="img-responsive">
 
         <p class="footer-links">
@@ -95,7 +95,7 @@
           <i class="fa fa-envelope"></i>
           <p><a href="mailto:support@company.com">info@multimedios.com</a></p>
         </div>
-      </div>
+      </div> -->
       <div class="footer-right">
         <p class="footer-company-about">
           <span>Nosotros</span>
