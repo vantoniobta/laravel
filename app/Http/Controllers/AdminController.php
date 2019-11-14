@@ -91,9 +91,10 @@ class AdminController extends Controller
         $article ->author        = $request->author;
         $article ->status        = $request->status;
         $article ->save();
-        $articles = DB::table('article')->paginate(10);
-        return redirect('admin') ->with('article', $articles);
-
+         //dd($article ->abstract);
+        $article ->save();
+        $articles = DB::table('articles')->paginate(10);
+        return redirect('admin') ->with('articles', $articles);
     }
 
     public function save_edit(Request $request,$id) {

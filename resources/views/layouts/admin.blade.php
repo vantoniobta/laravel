@@ -50,7 +50,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                           <li><a href="{{ url('/admin') }}" style="color: #fff"><i class="fas fa-list-alt"></i>&nbsp;Articulos</a></li>
-                          <li><a href="{{ url('admin/jobs_new') }}" style="color: #fff"><i class="fas fa-user-plus"></i>&nbsp;Articulo Nuevo</a></li>
+                          <li><a href="{{ url('admin/article_new') }}" style="color: #fff"><i class="fas fa-user-plus"></i>&nbsp;Articulo Nuevo</a></li>
                           <li><a href="{{ url('/admin/users') }}" style="color: #fff"><i class="fas fa-users"></i>&nbsp;Usuarios</a></li>
                     </ul>
 
