@@ -97,6 +97,11 @@ Route::prefix('admin')->group(function(){
 	   Route::get('/postulates/{id}', 'AdminController@postulates_get')->name('admin.dashboard');
 	   Route::get('/postulates/notifications', 'AdminController@notifications')->name('admin.dashboard');
        Route::post('/jobs_save', 'AdminController@save')->name('admin.dashboard');
+
+       Route::get('/article_new', 'AdminController@redirect_new_article')->name('admin.dashboard');
+       Route::post('/save_article', 'AdminController@save_article')->name('admin.dashboard');
+
+
        Route::get('/', 'AdminController@index')->name('admin.dashboard');
 
 });

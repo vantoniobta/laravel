@@ -6,9 +6,9 @@
 
 <div class="container"><br>
     <div class="row" style=" margin:top;border: 1px solid #D3D3D3;">
-     <div class="panel-heading" style="background-color: #009189;color: #fff;"><h4 align="center"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;NUEVA ARTICULO</h4></div><br>
+     <div class="panel-heading" style="background-color: #C0FFEE;color: #4d665f;"><h4 align="center"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;NUEVO ARTICULO</h4></div><br>
         <div class="col-md-10" >
-              <form id="contact-form" class="form-horizontal" action="{{ URL::to('admin/jobs_save') }}" method="POST">
+              <form id="contact-form" class="form-horizontal" action="{{ URL::to('admin/save_article') }}" method="POST">
                    {{ csrf_field() }}
               <fieldset>
                 <div id="success-container" class="text-center" style="display:none;">
@@ -22,11 +22,11 @@
                   <div class="form-group">
                     <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Titulo</label>
                     <div class="col-md-9">
-                      <input id="puesto" name="puesto" type="text" class="form-control" onkeyup="miFuncion()" autocomplete="off" onpaste="return false" required="">
+                      <input id="title" name="title" type="text" class="form-control" onkeyup="miFuncion()" autocomplete="off" onpaste="return false" required="">
                     </div>
                   </div>
 
-                   <div class="form-group" style="display:none;">
+                   <div class="form-group">
                     <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">URL</label>
                     <div class="col-md-9">
                       <input id="url" name="url" type="text"  class="form-control">
@@ -35,49 +35,50 @@
 
                   <!-- Email input-->
                   <div class="form-group">
-                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Seccion</label>
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Sección</label>
                     <div class="col-md-9">
                       <!-- <input id="Lugar" name="lugar" type="text" placeholder="Lugar" class="form-control" required=""> -->
-                         <select class="form-control" id="lugar" name="lugar">
+                         <select class="form-control" id="seccion" name="seccion">
                          <option value="Monterrey">Monterrey, Nuevo León</option>
                          <option value="Ciudad Mexico">Ciudad Mexico</option>
                       </select>
                     </div>
                   </div>
 
-                  <!-- Message body -->
-                  <div class="form-group">
-                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Tiempo</label>
-                    <div class="col-md-9">
-                       <input id="tiempo" name="tiempo" type="text"  class="form-control" required="">
-                    </div>
-                  </div>
+                
 
                   <div class="form-group">
                     <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Abstract</label>
                     <div class="col-md-9">
-                      <textarea class="form-control" id="habilidades" name="habilidades"  rows="2" required=""></textarea>
+                      <textarea class="form-control" id="abstract" name="abstract"  rows="2" required=""></textarea>
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Artículo</label>
+                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Text</label>
                     <div class="col-md-9">
-                      <textarea class="form-control" id="prestaciones" name="prestaciones"  rows="10" required=""></textarea>
+                      <textarea class="form-control" id="text" name="text"  rows="10" required=""></textarea>
                     </div>
                   </div>
 
                    <div class="form-group">
-                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">imagen</label>
+                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Imagen</label>
                     <div class="col-md-9">
                       <input type="file" name="image_article" id="image_article" required="">
                     </div>
                   </div>
 
                    <div class="form-group">
-                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Sueldo</label>
+                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Address</label>
                     <div class="col-md-9">
-                       <input id="Sueldo" name="sueldo" type="text"  class="form-control" required="">
+                       <input id="address" name="address" type="text"  class="form-control" required="">
+                    </div>
+                  </div>
+
+                    <div class="form-group">
+                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Autor</label>
+                    <div class="col-md-9">
+                       <input id="author" name="author" type="text"  class="form-control" required="">
                     </div>
                   </div>
 

@@ -7,6 +7,7 @@ use DB;
 use App\Job;
 use App\Work;
 use App\Postulate;
+use App\Article;
 use Auth;
 use Excel;
 use Maatwebsite\Excel\Concerns\FromCollection;
@@ -71,6 +72,28 @@ class AdminController extends Controller
                     $job ->save();
                     $jobs = DB::table('jobs')->paginate(10);
                     return redirect('admin') ->with('jobs', $jobs);
+    }
+
+     public function redirect_new_article() {
+        return view('admin/article_new');
+    }
+
+    //function for save information
+    public function save_article(Request $request) {
+        $article = New Article;
+        $article ->title         = $request->title;
+        $article ->seccion       = $request->seccion;
+        $article ->abstract      = $request->abstract;
+        $article ->text          = $request->text;
+        $article ->image_article = $request->image_article;
+        $article ->address       = $request->address;
+        $article ->url           = $request->url;
+        $article ->author        = $request->author;
+        $article ->status        = $request->status;
+        $article ->save();
+        $articles = DB::table('article')->paginate(10);
+        return redirect('admin') ->with('article', $articles);
+
     }
 
     public function save_edit(Request $request,$id) {
