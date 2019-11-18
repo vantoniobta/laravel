@@ -91,6 +91,11 @@
           var v2 = v1.replace(/ /g, "-");
              document.getElementById("url").value = v2;
         }
+        function url_article() {
+          var v1 = document.getElementById("title").value;
+          var v2 = v1.replace(/ /g, "-");
+             document.getElementById("url").value = v2;
+        }
     </script>
     </script>
 </body>

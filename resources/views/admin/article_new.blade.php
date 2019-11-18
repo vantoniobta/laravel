@@ -8,7 +8,7 @@
     <div class="row" style=" margin:top;border: 1px solid #D3D3D3;">
      <div class="panel-heading" style="background-color: #C0FFEE;color: #4d665f;"><h4 align="center"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;NUEVO ARTICULO</h4></div><br>
         <div class="col-md-10" >
-              <form id="contact-form" class="form-horizontal" action="{{ URL::to('admin/save_article') }}" method="POST">
+              <form enctype="multipart/form-data" id="contact-form" class="form-horizontal" action="{{ URL::to('admin/save_article') }}" method="POST">
                    {{ csrf_field() }}
               <fieldset>
                 <div id="success-container" class="text-center" style="display:none;">
@@ -22,7 +22,7 @@
                   <div class="form-group">
                     <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Titulo</label>
                     <div class="col-md-9">
-                      <input id="title" name="title" type="text" class="form-control" onkeyup="miFuncion()" autocomplete="off" onpaste="return false" required="">
+                      <input id="title" name="title" type="text" class="form-control" onkeyup="url_article()" autocomplete="off" onpaste="return false" required="">
                     </div>
                   </div>
 

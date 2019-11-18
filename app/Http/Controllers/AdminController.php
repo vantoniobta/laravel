@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use DB;
+use Image;
+use Storage;
 use App\Job;
 use App\Work;
 use App\Postulate;
@@ -80,21 +81,54 @@ class AdminController extends Controller
 
     //function for save information
     public function save_article(Request $request) {
-        $article = New Article;
+           $article = New Article;
+        if ($request->hasFile('image_article')) {
+           $file = $request->file('image_article');
+           $name = time().$file->getClientOriginalName();
+           $file->move(public_path().'/uploads/img_art/', $name);
+
         $article ->title         = $request->title;
         $article ->seccion       = $request->seccion;
         $article ->abstract      = $request->abstract;
         $article ->text          = $request->text;
-        $article ->image_article = $request->image_article;
+        $article ->image_article = $name;
         $article ->address       = $request->address;
         $article ->url           = $request->url;
         $article ->author        = $request->author;
         $article ->status        = $request->status;
-        $article ->save();
+
+          $article ->save();
          //dd($article ->abstract);
         $article ->save();
         $articles = DB::table('articles')->paginate(10);
         return redirect('admin') ->with('articles', $articles);
+
+
+        }
+
+
+
+         
+         
+
+
+
+
+        // $article = New Article;
+        // $article ->title         = $request->title;
+        // $article ->seccion       = $request->seccion;
+        // $article ->abstract      = $request->abstract;
+        // $article ->text          = $request->text;
+        // $article ->image_article = $request->image_article;
+        // $article ->address       = $request->address;
+        // $article ->url           = $request->url;
+        // $article ->author        = $request->author;
+        // $article ->status        = $request->status;
+        // $article ->save();
+        //  //dd($article ->abstract);
+        // $article ->save();
+        // $articles = DB::table('articles')->paginate(10);
+        // return redirect('admin') ->with('articles', $articles);
     }
 
     public function save_edit(Request $request,$id) {
