@@ -62,20 +62,20 @@
                             <thead>
                               <tr>
                                 <th class="ready_table">Fecha</th>
-                                <th class="ready_table">Puesto</th>
-                                <th class="ready_table">Lugar</th>
-                                <th class="ready_table">Tiempo</th>
-                                <th class="ready_table">Salario</th>
+                                <th class="ready_table">Titulo</th>
+                                <th class="ready_table">Seccion</th>
+                                <th class="ready_table">URL</th>
+                                <th class="ready_table">Autor</th>
                                 <th class="ready_table">###</th>
                               </tr>
                               @foreach ($jobs as $job)
                                   <tr>
                                     <td style="font-family: 'Anonymous Pro', sans-serif;font-size: 12px;">{{ date('F d, Y', strtotime($job->created_at)) }}</td>
                                     <td style="font-family: 'Anonymous Pro', sans-serif;color: #009189"><b>{!! $job->title !!}</b></td>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->address !!}</td>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->time !!}</td>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->salary !!}</td>
-                                    <td><a href="{{ URL::to('admin/jobs_edit',$job->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->seccion !!}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->url !!}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->author !!}</td>
+                                    <td><a href="{{ URL::to('admin/articles_edit',$job->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
                                    <!--  <td><a href="{{  URL::to('admin/postulates',$job->id )}}" class="btn btn-success btn-sm"><i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light">3</span></a></td> -->
                                 </tr>
                               @endforeach

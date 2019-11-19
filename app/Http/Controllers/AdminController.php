@@ -45,8 +45,8 @@ class AdminController extends Controller
                     ->groupBy("jobs.id")
                     ->get();
 
-        $jobs   = DB::table('jobs')->where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(10);
-        $jobs_x = DB::table('jobs')->where('status', '=', 'Inactivo')->orderBy('created_at', 'desc')->paginate(10);
+        $jobs   = DB::table('articles')->where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(10);
+        $jobs_x = DB::table('articles')->where('status', '=', 'Inactivo')->orderBy('created_at', 'desc')->paginate(10);
         return view('admin', compact('jobs_x', 'data'))->with('jobs', $jobs);
     }
 
@@ -54,6 +54,11 @@ class AdminController extends Controller
     public function redirect_jobs_edit($id) {
          $jobs = DB::table('jobs')->where('id',$id)->first();
         return view('admin/jobs_edit',['jobs' => $jobs]);
+    }
+
+    public function redirect_articles_edit($id) {
+         $jobs = DB::table('articles')->where('id',$id)->first();
+        return view('admin/articles_edit',['jobs' => $jobs]);
     }
 
 
@@ -83,52 +88,22 @@ class AdminController extends Controller
     public function save_article(Request $request) {
            $article = New Article;
         if ($request->hasFile('image_article')) {
-           $file = $request->file('image_article');
-           $name = time().$file->getClientOriginalName();
-           $file->move(public_path().'/uploads/img_art/', $name);
-
-        $article ->title         = $request->title;
-        $article ->seccion       = $request->seccion;
-        $article ->abstract      = $request->abstract;
-        $article ->text          = $request->text;
-        $article ->image_article = $name;
-        $article ->address       = $request->address;
-        $article ->url           = $request->url;
-        $article ->author        = $request->author;
-        $article ->status        = $request->status;
-
-          $article ->save();
-         //dd($article ->abstract);
-        $article ->save();
-        $articles = DB::table('articles')->paginate(10);
-        return redirect('admin') ->with('articles', $articles);
-
-
+            $file = $request->file('image_article');
+            $name = time().$file->getClientOriginalName();
+            $file->move(public_path().'/uploads/img_art/', $name);
+            $article ->title         = $request->title;
+            $article ->seccion       = $request->seccion;
+            $article ->abstract      = $request->abstract;
+            $article ->text          = $request->text;
+            $article ->image_article = $name;
+            $article ->address       = $request->address;
+            $article ->url           = $request->url;
+            $article ->author        = $request->author;
+            $article ->status        = $request->status;
+            $article ->save();
+            $articles = DB::table('articles')->paginate(10);
+            return redirect('admin') ->with('articles', $articles);
         }
-
-
-
-         
-         
-
-
-
-
-        // $article = New Article;
-        // $article ->title         = $request->title;
-        // $article ->seccion       = $request->seccion;
-        // $article ->abstract      = $request->abstract;
-        // $article ->text          = $request->text;
-        // $article ->image_article = $request->image_article;
-        // $article ->address       = $request->address;
-        // $article ->url           = $request->url;
-        // $article ->author        = $request->author;
-        // $article ->status        = $request->status;
-        // $article ->save();
-        //  //dd($article ->abstract);
-        // $article ->save();
-        // $articles = DB::table('articles')->paginate(10);
-        // return redirect('admin') ->with('articles', $articles);
     }
 
     public function save_edit(Request $request,$id) {
@@ -152,6 +127,28 @@ class AdminController extends Controller
                     return redirect('admin') ->with('jobs', $jobs);
 
     }
+
+    public function save_edit_article(Request $request,$id){
+         $title       = $request ->title;
+         $abstract     = $request ->abstract;
+         $text        = $request ->text;
+         $address   = $request ->address;
+         $status      = $request ->status;
+         DB::table('articles')
+                    ->where('id', $id)
+                    ->update(['title'      => $title,
+                              'abstract'     => $abstract,
+                              'text'       => $text,
+                              'address'  => $address,
+                              'status'   => $status]);
+                    $jobs = DB::table('articles')->paginate(10);
+                    return redirect('admin') ->with('articles', $jobs);
+    }
+
+
+
+
+
 
     public function postulates_get($id) {
        $jobs = DB::table('jobs')->where('id',$id)->first();
