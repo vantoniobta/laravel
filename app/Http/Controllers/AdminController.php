@@ -45,9 +45,9 @@ class AdminController extends Controller
                     ->groupBy("jobs.id")
                     ->get();
 
-        $jobs   = DB::table('articles')->where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(10);
-        $jobs_x = DB::table('articles')->where('status', '=', 'Inactivo')->orderBy('created_at', 'desc')->paginate(10);
-        return view('admin', compact('jobs_x', 'data'))->with('jobs', $jobs);
+        $articles_1   = DB::table('articles')->where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(10);
+        $articles_0 = DB::table('articles')->where('status', '=', 'Inactivo')->orderBy('created_at', 'desc')->paginate(10);
+        return view('admin', compact('articles_0', 'data'))->with('articles_1', $articles_1);
     }
 
 

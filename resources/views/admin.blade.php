@@ -63,27 +63,28 @@
                               <tr>
                                 <th class="ready_table">Fecha</th>
                                 <th class="ready_table">Titulo</th>
-                                <th class="ready_table">Seccion</th>
+                                <th class="ready_table">Abstract</th>
                                 <th class="ready_table">URL</th>
-                                <th class="ready_table">Autor</th>
+                                <th class="ready_table">Imagen</th>
                                 <th class="ready_table">###</th>
                               </tr>
-                              @foreach ($jobs as $job)
+                              @foreach ($articles_1 as $article)
                                   <tr>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;font-size: 12px;">{{ date('F d, Y', strtotime($job->created_at)) }}</td>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;color: #009189"><b>{!! $job->title !!}</b></td>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->seccion !!}</td>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->url !!}</td>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $job->author !!}</td>
-                                    <td><a href="{{ URL::to('admin/articles_edit',$job->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
-                                   <!--  <td><a href="{{  URL::to('admin/postulates',$job->id )}}" class="btn btn-success btn-sm"><i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light">3</span></a></td> -->
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;font-size: 12px;">{{ date('F d, Y', strtotime($article->created_at)) }}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;color: #009189"><b>{!! $article->title !!}</b></td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $article->abstract !!}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $article->url !!}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $article->image_article !!}</td>
+                                    <td><a href="{{ URL::to('admin/articles_edit',$article->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
+                                   <!--  <td><a href="{{  URL::to('admin/postulates',$article->id )}}" class="btn btn-success btn-sm"><i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light">3</span></a></td> -->
                                 </tr>
                               @endforeach
                             </thead>
+
                           </table>
 
                           <div class="text-center">
-                              {!! $jobs->links() !!}
+                              {!! $articles_1->links() !!}
                           </div>
                    </div>
             </section>
@@ -100,21 +101,21 @@
                           <table class="table" id="table_general3" >
                             <thead>
                               <tr>
-                                <th class="stop_table">FECHA</th>
-                                <th class="stop_table">PUESTO</th>
-                                <th class="stop_table">LUGAR</th>
-                                <th class="stop_table">TIEMPO</th>
-                                <th class="stop_table">SALARIO</th>
+                                <th class="stop_table">Fecha</th>
+                                <th class="stop_table">Titulo</th>
+                                <th class="stop_table">Abstract</th>
+                                <th class="stop_table">URL</th>
+                                <th class="stop_table">Imagen</th>
                                 <th class="stop_table">###</th>
                               </tr>
-                               @foreach ($jobs_x as $jobx)
+                               @foreach ($articles_0 as $articleX)
                                   <tr>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{{ date('F d, Y', strtotime($jobx->created_at)) }}</td>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;color: #000"><b>{!! $jobx->title !!}</b></td>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $jobx->address !!}</td>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $jobx->time !!}</td>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $jobx->salary !!}</td>
-                                    <td><a href="{{ URL::to('admin/jobs_edit',$jobx->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{{ date('F d, Y', strtotime($articleX->created_at)) }}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;color: #000"><b>{!! $articleX->title !!}</b></td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $articleX->abstract !!}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $articleX->url !!}</td>
+                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $articleX->image_article !!}</td>
+                                    <td><a href="{{ URL::to('admin/articles_edit',$articleX->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
                                 </tr>
                               @endforeach
                             </thead>

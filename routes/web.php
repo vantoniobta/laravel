@@ -54,11 +54,11 @@ Route::get('/', function () {
 // });
 
 Route::get('/mty', function(){
-    $works = App\Job::where([
-    	['status', '=', 'Activo'],
-    	['address', '=', 'Monterrey']
+    $articles = App\Article::where([
+    	['status', '=', 'Activo']
+    	// ['address', '=', 'Monterrey']
     	])->orderBy('created_at', 'desc')->paginate(6);
-	return view('mty', compact('works'));
+	return view('mty', compact('articles'));
 });
 
 Route::get('/cdmx', function(){

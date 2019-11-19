@@ -36,7 +36,7 @@
 
                   <!-- Message body -->
                   <div class="form-group">
-                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Tiempo</label>
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Texto</label>
                     <div class="col-md-9">
                       <textarea id="text" name="text" type="text" class="form-control" rows="10" required="">{{ $jobs->text}}</textarea>
                     </div>

@@ -15,10 +15,10 @@
         
         <p class="inf_jobs"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
       
-        <p class="p_article_origin">{{ $work->abilities}}</p>
+        <p class="p_article_origin">{{ $work->abstract}}</p>
         
-        <p class="p_article_origin">{{ $work->benefits}}</b></p>
-        <p class="p_article_origin"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address}}</p>
+        <p class="p_article_origin">{{ $work->text}}</b></p>
+        <p class="p_article_origin"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->author}}</p>
       </div>
 
        <div class="item_article_page_view_2">

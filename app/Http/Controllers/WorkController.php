@@ -18,15 +18,15 @@ class WorkController extends Controller
     }
 
     public function info($id){
-    	$work = DB::table('jobs')->where('url',$id)->first();
+    	$work = DB::table('articles')->where('url',$id)->first();
       if ($work == null) {
         return view('vacantes/error');
       }else{
-          if ($work->address == 'Monterrey') {
+          // if ($work->address == 'Monterrey') {
               return view('articulo/articulo',array('user' => Auth::user()), ['work' => $work])->with('id', $id);
-          }else{
-              return view('cdmx/job',array('user' => Auth::user()), ['work' => $work])->with('id', $id);
-          }
+          // }else{
+          //     return view('cdmx/job',array('user' => Auth::user()), ['work' => $work])->with('id', $id);
+          // }
       }
     }
 

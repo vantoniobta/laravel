@@ -15,7 +15,7 @@
 
   <div class="page_view_section">
 
-    @forelse ($works as $work)
+    @forelse ($articles as $work)
 
     <div class="item_page_view_section">
 
@@ -51,7 +51,7 @@
       <div class="container"> 
           <div class="row">  
             <div class="col-md-12 text-center" id="test">  
-              {{ $works->links()}} 
+              {{ $articles->links()}} 
             </div> 
           </div> 
       </div>
