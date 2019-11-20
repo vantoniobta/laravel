@@ -18,7 +18,7 @@ Route::post('profile/{id}', 'UserController@update_avatar');
 
 
 Route::prefix('articulo')->group(function(){
-	Route::get('/articulo/{id}', 'WorkController@info');
+	Route::get('/{id}', 'WorkController@info');
 });
 
 Route::prefix('cdmx')->group(function(){
