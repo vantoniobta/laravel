@@ -95,6 +95,8 @@ class AdminController extends Controller
             $article ->seccion       = $request->seccion;
             $article ->abstract      = $request->abstract;
             $article ->text          = $request->text;
+            $article ->text2          = $request->text2;
+            $article ->text3          = $request->text3;
             $article ->image_article = $name;
             $article ->address       = $request->address;
             $article ->url           = $request->url;
@@ -132,6 +134,8 @@ class AdminController extends Controller
          $title       = $request ->title;
          $abstract     = $request ->abstract;
          $text        = $request ->text;
+         $text2        = $request ->text2;
+         $text3        = $request ->text3;
          $address   = $request ->address;
          $status      = $request ->status;
          DB::table('articles')
@@ -139,6 +143,8 @@ class AdminController extends Controller
                     ->update(['title'      => $title,
                               'abstract'     => $abstract,
                               'text'       => $text,
+                              'text2'       => $text2,
+                              'text3'       => $text3,
                               'address'  => $address,
                               'status'   => $status]);
                     $jobs = DB::table('articles')->paginate(10);

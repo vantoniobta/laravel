@@ -16,7 +16,7 @@
         <p class="inf_jobs"><i class="far fa-calendar"></i>&nbsp;{{ date('F d, Y', strtotime($work->created_at)) }}</p>
       
         <p class="p_article_origin">{{ $work->abilities}}</p>
-        
+         <img src="../../uploads/img_art/{{ $work->image_article }}" width="700">
         <p class="p_article_origin">{{ $work->benefits}}</b></p>
         <p class="p_article_origin"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address}}</p>
       </div>
@@ -35,29 +35,6 @@
 
 
    <footer class="footer-distributed">
-   <!--    <div class="footer-left">
-
-        <p class="footer-links">
-          <a href="#">Home</a>
-          ·
-          <a href="#">Vacantes</a>
-          ·
-          <a href="#">Login</a>
-          ·
-          <a href="#">Registro</a>
-        </p>
-        <p class="footer-company-name">Multimedios Televisión &copy; 2018</p>
-      </div>
-      <div class="footer-center">
-        <div>
-          <i class="fa fa-map-marker"></i>
-          <p><span>Calle Paricutín 312, Roma, 64700 </span> Monterrey, N.L.</p>
-        </div>
-        <div>
-          <i class="fa fa-phone"></i>
-          <p>+52 (81) 8880 4400</p>
-        </div>
-      </div> -->
       <div class="footer-right">
         <p class="footer-company-about">
           <span>Nosotros</span>

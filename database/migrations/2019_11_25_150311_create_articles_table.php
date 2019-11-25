@@ -19,6 +19,8 @@ class CreateArticlesTable extends Migration
             $table->string('seccion');
             $table->string('abstract');
             $table->string('text');
+            $table->string('text2');
+            $table->string('text3');
             $table->string('image_article');
             $table->string('address');
             $table->string('url');

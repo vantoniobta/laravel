@@ -17,14 +17,19 @@
 
     @forelse ($articles as $work)
 
-    <div class="item_page_view_section">
-
-      <p style=" font-size: 16px;font-weight: bold;"><a href="{{ URL::to('/articulo', $work->url)}}" style="color:#000">{{ $work->title }}</a></p>
-       <img src="../../img/big_box.png">
+    <div class="item_page_view_section" style="background-color: #C0FFEE;">
+     
+      <div>
+        <img src="../../uploads/img_art/{{ $work->image_article }}" width="300" height="200px">
+      </div>
+       <div>
+        <p style=" font-size: 24px; font-family: 'Lalezar', cursive;"><a href="{{ URL::to('/articulo', $work->url)}}" style="color:#4d665f">{{ $work->title }}</a></p>
+      </div>
+      
+       
       <!-- <p style=" font-size: 12px"><span style="color: #696969;">Imagen: vantonio</span></p> -->
-      <p style=" font-size: 14px;color: #000;"><a href="{{ URL::to('/articulo', $work->url)}}" style="color:#000">{{ $work->abilities }}</a></p>
+      <!-- <p style=" font-size: 14px;color: #000;"><a href="{{ URL::to('/articulo', $work->url)}}" style="color:#000">{{ $work->abilities }}</a></p> -->
       <!-- <h6 data-fontsize="10" data-lineheight="23"><span style="color: #696969;"><i class="fas fa-map-marker-alt"></i>&nbsp;{{ $work->address }} | {{ date('F d, Y', strtotime($work->created_at)) }}</span></h6> -->
-      <hr>
     </div>
 
 
@@ -61,24 +66,6 @@
 
 
     <footer class="footer-distributed" >
-    <!--   <div class="footer-left">
-        <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png" class="img-responsive">
-        <p class="footer-company-name">Diarios las huastecas &copy; 2019</p>
-      </div>
-      <div class="footer-center">
-        <div>
-          <i class="fa fa-map-marker"></i>
-          <p><span>Calle Paricutín 312, Roma, 64700 </span> Monterrey, N.L.</p>
-        </div>
-        <div>
-          <i class="fa fa-phone"></i>
-          <p>+52 (81) 8880 4400</p>
-        </div>
-        <div>
-          <i class="fa fa-envelope"></i>
-          <p><a href="mailto:support@company.com">info@multimedios.com</a></p>
-        </div>
-      </div> -->
       <div class="footer-right">
         <p class="footer-company-about">
           <span>Nosotros</span>

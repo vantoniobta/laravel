@@ -36,9 +36,23 @@
 
                   <!-- Message body -->
                   <div class="form-group">
-                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Texto</label>
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Parrafo 1</label>
                     <div class="col-md-9">
                       <textarea id="text" name="text" type="text" class="form-control" rows="10" required="">{{ $jobs->text}}</textarea>
+                    </div>
+                  </div>
+
+                   <div class="form-group">
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Parrafo 2</label>
+                    <div class="col-md-9">
+                      <textarea id="text" name="text2" type="text2" class="form-control" rows="10" required="">{{ $jobs->text2}}</textarea>
+                    </div>
+                  </div>
+
+                   <div class="form-group">
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Parrafo 3</label>
+                    <div class="col-md-9">
+                      <textarea id="text" name="text3" type="text3" class="form-control" rows="10" required="">{{ $jobs->text3}}</textarea>
                     </div>
                   </div>
 

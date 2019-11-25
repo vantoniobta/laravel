@@ -55,9 +55,23 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Text</label>
+                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Parrafo 1</label>
                     <div class="col-md-9">
                       <textarea class="form-control" id="text" name="text"  rows="10" required=""></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Parrafo 2</label>
+                    <div class="col-md-9">
+                      <textarea class="form-control" id="text2" name="text2"  rows="10" required=""></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Parrafo 3</label>
+                    <div class="col-md-9">
+                      <textarea class="form-control" id="text3" name="text3"  rows="10" required=""></textarea>
                     </div>
                   </div>
 

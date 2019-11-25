@@ -26,8 +26,8 @@
         
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #C0FFEE;
+                color: #fff;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -89,7 +89,7 @@
                         <a href="{{ url('/home') }}" style="color: #fff">Home</a>
                     @else
                         <!-- <a href="{{ url('/vacantes') }}" style="color: #fff">Vacantes</a> -->
-                        <a href="{{ route('login') }}" style="color: #fff">Login</a>
+                       <!--  <a href="{{ route('login') }}" style="color: #fff">Login</a> -->
                        <!--  <a href="{{ route('register') }}" style="color: #fff">Register</a> -->
                     @endauth
                 </div>
@@ -97,11 +97,12 @@
 
             <div class="content">
              <div class="col-md-6"> 
-                  <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #000">Las tres huastecas</p>
+                  <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #4d665f">Huasteco Digital</p>
              </div>
                 <div class="links">
-                    <a href="/mty">Potosina</a>
-                    <a href="/cdmx">Hidalguense</a>
+                    <a href="/mty" style="color: #4d665f">Potosina</a>
+                    <a href="/cdmx" style="color: #4d665f">Hidalguense</a>
+                    <a href="/cdmx" style="color: #4d665f">Veracruzana</a>
                 </div>
             </div>
         </div>
