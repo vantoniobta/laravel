@@ -6,8 +6,10 @@
 
     <div class="article_page_view_">
       <div class="item_article_page_view_">
-        <h1 class="inf_jobs_title" style="font-family: 'Lalezar', cursive;font-size: 42px;">{{ $work->title}}</h1>
+        <h1 class="inf_jobs_title" >{{ $work->title}}</h1>
         <p class="inf_jobs">By {{ $work->author}} | {{ date('F d, Y', strtotime($work->created_at)) }} <i class="far fa-calendar"></i> </p>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_inline_share_toolbox"></div>
         <p class="p_article_origin">{{ $work->abstract}}</p>
         <img src="../../uploads/img_art/{{ $work->image_article }}" class="img_article_view">
         <hr>

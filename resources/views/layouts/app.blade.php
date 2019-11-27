@@ -31,6 +31,10 @@
     <link href="https://fonts.googleapis.com/css?family=Lalezar&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ce4190347ddeec7"></script>
+
+
 
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.3/sweetalert2.all.js"></script>
@@ -64,13 +68,13 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                             <li><a href="/mty" style="color: #fff">POTOSINA</a></li>
-                             <li><a href="/cdmx" style="color: #fff">HIDALGUENSE</a></li>
+                             <li><a href="/mty" style="color: #fff">LA HUASTECA</a></li>
+                             <li><a href="/cdmx" style="color: #fff">NACIONAL</a></li>
                             <!-- <li><a href="{{ route('register') }}" style="color: #fff"><i class="fa fa-user-plus"  aria-hidden="true"></i>&nbsp;Registro</a></li> -->
                            <!--  <li><a href="{{ route('login') }}" style="color: #fff"><span class="label label-success">&nbsp;Login</span></a></li> -->
                         @else
-                             <li><a href="/mty" style="color: #fff">POTOSINA</a></li>
-                             <li><a href="/cdmx" style="color: #fff">HIDALGUENSE</a></li>
+                             <li><a href="/mty" style="color: #fff">LA HUASTECA</a></li>
+                             <li><a href="/cdmx" style="color: #fff">NACIONAL</a></li>
                        
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative;padding-left: 50px;color: #fff">

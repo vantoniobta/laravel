@@ -28,9 +28,9 @@ nav.navbar {
     */
     
     .inf_jobs_title{
-       font-family: 'Fjalla One', sans-serif;
         color: #4c4e4d;
-        font-size: 32px;
+        font-family: 'Lalezar', cursive;
+        font-size: 40px;
     }
 
     .container_title_view{
@@ -650,7 +650,7 @@ social shared
       color:#4d665f;
       width: 700px;
       margin:20px; 
-      text-align: center; 
+       
       /*border: 1px solid #677290;*/
     }
     .item_article_page_view_2{
