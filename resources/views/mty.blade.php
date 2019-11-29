@@ -16,15 +16,18 @@
   <div class="page_view_section">
 
     @forelse ($articles as $work)
-
-    <div class="item_page_view_section" style="background-color: #C0FFEE;">
-     
-      <div>
-        <img src="../../uploads/img_art/{{ $work->image_article }}" width="300" height="200px">
-      </div>
+    <a href="{{ URL::to('/articulo', $work->url)}}" style="color:#4d665f">
+      <div class="item_page_view_section">
+        <div>
+          <img src="../../uploads/img_art/{{ $work->image_article }}" width="300" height="200px">
+        </div>
        <div>
-        <p style=" font-size: 24px; font-family: 'Lalezar', cursive;"><a href="{{ URL::to('/articulo', $work->url)}}" style="color:#4d665f">{{ $work->title }}</a></p>
-      </div>
+        <div style="background-color: yellow; display: flex; ">
+          <p style=" font-size: 24px; font-family: 'Lalezar', cursive;color: #333232">{{ $work->title }}</p>
+        </div>
+        
+    </a>
+  </div>
       
        
       <!-- <p style=" font-size: 12px"><span style="color: #696969;">Imagen: vantonio</span></p> -->

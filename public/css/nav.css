@@ -648,17 +648,18 @@ social shared
     }
     .item_article_page_view_{
       color:#4d665f;
-      width: 700px;
+      width: 800px;
       margin:20px; 
        
       /*border: 1px solid #677290;*/
     }
     .item_article_page_view_2{
+      background-color: #D3F3C8;
       color:#4d665f;
       width: 300px;
-      margin:20px; 
+      margin:10px; 
       text-align: center; 
-      border: 1px solid #677290;
+      border: 1px solid #D3F3C8;
     }
 
     .p_article_origin{

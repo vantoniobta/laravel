@@ -18,7 +18,7 @@
         <p class="p_article_origin_2">{{ $work->text3}}</b></p>
       </div>
        <div class="item_article_page_view_2">
-        articles banners
+        <h1 style="color: #4d665f">ÚLTIMAS NOTICIAS</h1>
        </div>
     </div>
 

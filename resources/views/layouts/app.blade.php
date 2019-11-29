@@ -68,13 +68,11 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                             <li><a href="/mty" style="color: #fff">LA HUASTECA</a></li>
-                             <li><a href="/cdmx" style="color: #fff">NACIONAL</a></li>
-                            <!-- <li><a href="{{ route('register') }}" style="color: #fff"><i class="fa fa-user-plus"  aria-hidden="true"></i>&nbsp;Registro</a></li> -->
-                           <!--  <li><a href="{{ route('login') }}" style="color: #fff"><span class="label label-success">&nbsp;Login</span></a></li> -->
+                             <li><a href="/nacional" style="color: #fff">NACIONAL</a></li>
+                             <li><a href="/cdmx" style="color: #fff">LA HUASTECA</a></li>
                         @else
-                             <li><a href="/mty" style="color: #fff">LA HUASTECA</a></li>
-                             <li><a href="/cdmx" style="color: #fff">NACIONAL</a></li>
+                             <li><a href="/nacional" style="color: #fff">NACIONAL</a></li>
+                             <li><a href="/cdmx" style="color: #fff">LA HUASTECA</a></li>
                        
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position: relative;padding-left: 50px;color: #fff">

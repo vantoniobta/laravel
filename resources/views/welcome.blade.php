@@ -100,7 +100,7 @@
                   <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #4d665f">Huasteco Digital</p>
              </div>
                 <div class="links">
-                    <a href="/mty" style="color: #4d665f">Potosina</a>
+                    <a href="/nacional" style="color: #4d665f">Potosina</a>
                     <a href="/cdmx" style="color: #4d665f">Hidalguense</a>
                     <a href="/cdmx" style="color: #4d665f">Veracruzana</a>
                 </div>

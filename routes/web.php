@@ -53,11 +53,11 @@ Route::get('/', function () {
 // 	return view('vacantes', compact('works'));
 // });
 
-Route::get('/mty', function(){
+Route::get('/nacional', function(){
     $articles = App\Article::where([
     	['status', '=', 'Activo']
     	// ['address', '=', 'Monterrey']
-    	])->orderBy('created_at', 'desc')->paginate(6);
+    	])->orderBy('created_at', 'desc')->paginate(8);
 	return view('mty', compact('articles'));
 });
 
@@ -70,7 +70,8 @@ Route::get('/cdmx', function(){
 });
 
 Route::get('/login', function(){
-	return view('login');
+	//return view('login');
+	return view('vacantes/error');
 });
 
 Route::get('/users/register', function(){
