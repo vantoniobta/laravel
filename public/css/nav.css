@@ -638,6 +638,7 @@ social shared
     }
 
 
+
     /*article view page_view_section*/
     .article_page_view_{
        width: 100%;
@@ -676,10 +677,15 @@ social shared
         line-height: 32px; margin: 0 0 35px;
     }
 
-   .img_article_view{
-    max-width: 100%;height: auto;
-   /* padding: 5px;*/
-   }
+     .img_article_view{
+      max-width: 100%;height: auto;
+     /* padding: 5px;*/
+     }
+
+     a.a_hyper{
+      text-decoration:none;
+     }
+
 
 
 
