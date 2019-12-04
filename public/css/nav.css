@@ -630,10 +630,11 @@ social shared
         justify-content:center;
     }
     .item_page_view_section{
-       color:#4d665f;
       width: 300px;
       margin:10px; 
       text-align: center; 
+      background-color: #fff;
+      border: 0px solid #fff;
       /*border: 1px solid #677290;*/
     }
 
@@ -682,11 +683,9 @@ social shared
      /* padding: 5px;*/
      }
 
-     a.a_hyper{
-      text-decoration:none;
-     }
-
-
+     a:link {text-decoration:none}
+    .img_section:hover {filter: sepia(60%);}
+    .title_view:hover{color: #000;background-color: yellow}
 
 
 

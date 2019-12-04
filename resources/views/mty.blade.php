@@ -5,22 +5,19 @@
 @section('content')
 
 <!-- Slider -->
-
   <div class="page_view_section">
-
 
     @forelse ($articles as $work)
     
 
 
     <div class="item_page_view_section">
-      <a href="{{ URL::to('/articulo', $work->url)}}" style="color:#4d665f;">
+      <a href="{{ URL::to('/articulo', $work->url)}}">
       <div>
         <img src="../../uploads/img_art/{{ $work->image_article }}" width="300" height="200px" class="img_section">
       </div>
-
-        <div style="background-color: yellow; ">
-          <p style=" font-size: 20px; font-family: 'Lalezar', cursive;color: #333232">{{ $work->title }}</p>
+        <div>
+          <p style=" font-size: 20px; font-family: 'Lalezar', cursive;" class="title_view">{{ $work->title }}</p>
         </div>
       </a>
     </div>

@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Styles -->
-   <!--  <link rel="icon" href="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/32x32.png" /> -->
+   <!--  <link rel="icon" href="https://amazonaws.com/2018/RH_IMG/32x32.png" /> -->
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:600" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
@@ -82,7 +82,6 @@
                                 <ul class="dropdown-menu" role="menu" style="background-color: #eeeeee;">
                                  <li><a href="/home" style="color: #000"><i class="fas fa-home" style="color: #000"></i>&nbsp;Inicio</a>
                                  <li><a href="{{ url('/profile') }}" style="color: #000"><i class="fas fa-user-circle" style="color: #000"></i>&nbsp;Mi perfil</a>
-                                 <!-- <li><a href="home">Postulaciones</a> -->
                                   <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" style="color: #000"><i class="fas fa-sign-out-alt" style="color: #000"></i>&nbsp;Logout</a>
 
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
