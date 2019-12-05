@@ -634,8 +634,7 @@ social shared
       margin:10px; 
       text-align: center; 
       background-color: #fff;
-      border: 0px solid #fff;
-      /*border: 1px solid #677290;*/
+      border: 5px solid #fff;
     }
 
 
@@ -685,7 +684,8 @@ social shared
 
      a:link {text-decoration:none}
     .img_section:hover {filter: sepia(60%);}
-    .title_view:hover{color: #000;background-color: yellow}
+    .title_view{color: #4d4b4b;font-size: 20px; font-family: 'Lalezar', cursive;}
+    .title_view:hover{color: #10aded;}
 
 
 

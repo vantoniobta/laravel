@@ -14,10 +14,10 @@
     <div class="item_page_view_section">
       <a href="{{ URL::to('/articulo', $work->url)}}">
       <div>
-        <img src="../../uploads/img_art/{{ $work->image_article }}" width="300" height="200px" class="img_section">
+        <img src="../../uploads/img_art/{{ $work->image_article }}" width="290" height="200px" class="img_section">
       </div>
         <div>
-          <p style=" font-size: 20px; font-family: 'Lalezar', cursive;" class="title_view">{{ $work->title }}</p>
+          <p class="title_view">{{ $work->title }}</p>
         </div>
       </a>
     </div>
