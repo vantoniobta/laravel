@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div class="container"><br>
+<div class="container" style="background-color: white"><br>
     <div class="row" style=" margin:top;border: 1px solid #D3D3D3;">
      <div class="panel-heading" style="background-color: #C0FFEE;color: #4d665f;"><h4 align="center"><i class="fa fa-user-plus fa-lg" aria-hidden="true"></i>&nbsp;&nbsp;NUEVO ARTICULO</h4></div><br>
         <div class="col-md-10" >
@@ -39,8 +39,10 @@
                     <div class="col-md-9">
                       <!-- <input id="Lugar" name="lugar" type="text" placeholder="Lugar" class="form-control" required=""> -->
                          <select class="form-control" id="seccion" name="seccion">
-                         <option value="Monterrey">Monterrey, Nuevo León</option>
-                         <option value="Ciudad Mexico">Ciudad Mexico</option>
+                         <option value="nacional">Nacional</option>
+                         <option value="tendencia">Tendencia</option>
+                          <option value="deportes">Deportes</option>
+                           <option value="internacional">Internacional</option>
                       </select>
                     </div>
                   </div>
@@ -74,6 +76,7 @@
                       <textarea class="form-control" id="text3" name="text3"  rows="10" required=""></textarea>
                     </div>
                   </div>
+
 
                    <div class="form-group">
                     <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Imagen</label>

@@ -1,17 +1,17 @@
 
-/*menu*/
-nav.navbar {
-    margin: 0; 
-    padding: 5px; 
-    list-style-type: none; 
-    text-align: center; 
-    background-color: #24363e; 
-    border:0px solid #24363e;
-    padding: .5em 2px;
-    margin:0;
-    padding:0;
-    font-family: 'Poppins', sans-serif; 
-}
+    /*menu*/
+    nav.navbar {
+        margin: 0; 
+        padding: 5px; 
+        list-style-type: none; 
+        text-align: center; 
+        background-color: #24363e; 
+        border:0px solid #24363e;
+        padding: .5em 2px;
+        margin:0;
+        padding:0;
+        font-family: 'Poppins', sans-serif; 
+    }
 
     nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color: #fff}
     .navbar-brand { padding: 0px;}
@@ -21,6 +21,9 @@ nav.navbar {
     .dropdown-menu > li > a {color: #000}
     .dropdown-menu > li > a:hover,
     .dropdown-menu > li > a:focus {text-decoration: none;color: #000 !important;}
+
+
+    
 
 
     /*
@@ -37,22 +40,6 @@ nav.navbar {
         background: #f1c108;
         color: #fff;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
 social shared
@@ -634,9 +621,19 @@ social shared
       margin:10px; 
       text-align: center; 
       background-color: #fff;
-      border: 5px solid #fff;
+      /*border: 5px solid #fff;*/
+
+      border-bottom: 2px solid #C0FFEE;
     }
 
+    .twitter_insertado{
+      width: 100%;
+       display: flex;
+       flex-wrap: wrap;
+       align-content: center;
+       justify-content:center;
+    }
+   
 
 
     /*article view page_view_section*/
@@ -650,17 +647,16 @@ social shared
     .item_article_page_view_{
       color:#4d665f;
       width: 800px;
-      margin:20px; 
-       
+      margin:20px;
       /*border: 1px solid #677290;*/
     }
     .item_article_page_view_2{
-      background-color: #D3F3C8;
+      /*background-color: #D3F3C8;*/
       color:#4d665f;
       width: 300px;
       margin:10px; 
       text-align: center; 
-      border: 1px solid #D3F3C8;
+      /*border: 1px solid #D3F3C8;*/
     }
 
     .p_article_origin{

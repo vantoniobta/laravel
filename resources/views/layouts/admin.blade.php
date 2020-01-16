@@ -49,9 +49,10 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                          <li><a href="{{ url('/admin') }}" style="color: #fff"><i class="fas fa-list-alt"></i>&nbsp;Articulos</a></li>
-                          <li><a href="{{ url('admin/article_new') }}" style="color: #fff"><i class="fas fa-user-plus"></i>&nbsp;Articulo Nuevo</a></li>
-                          <li><a href="{{ url('/admin/users') }}" style="color: #fff"><i class="fas fa-users"></i>&nbsp;Usuarios</a></li>
+                          <li><a href="{{ url('/admin') }}" style="color: #fff"><i class="fas fa-list-alt"></i> Articulos</a></li>
+                          <li><a href="{{ url('admin/article_new') }}" style="color: #fff"><i class="fa fa-book" aria-hidden="true"></i> Articulo Nuevo</a></li>
+                          <li><a href="" style="color: #fff"><i class="fa fa-puzzle-piece" aria-hidden="true"></i> Secciones</a></li>
+                          <li><a href="{{ url('/admin/users') }}" style="color: #fff"><i class="fas fa-users"></i> Usuarios</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -86,16 +87,48 @@
 
     <script src="{{ asset('js/app.js') }}"></script>
     <script type="text/javascript">
-        function miFuncion() {
-          var v1 = document.getElementById("puesto").value;
-          var v2 = v1.replace(/ /g, "-");
-             document.getElementById("url").value = v2;
-        }
+       
         function url_article() {
           var v1 = document.getElementById("title").value;
-          var v2 = v1.replace(/ /g, "-");
+          var v2 = normalize(v1);
+         // var v2 = v1.replace(/ /g, "-");
+
              document.getElementById("url").value = v2;
         }
+
+
+        var normalize = (function() {
+              var from = "ÃÀÁÄÂÈÉËÊÌÍÏÎÒÓÖÔÙÚÜÛãàáäâèéëêìíïîòóöôùúüûÑñÇç", 
+                  to   = "AAAAAEEEEIIIIOOOOUUUUaaaaaeeeeiiiioooouuuunncc",
+                  mapping = {};
+             
+              for(var i = 0, j = from.length; i < j; i++ )
+                  mapping[ from.charAt( i ) ] = to.charAt( i );
+             
+              return function( str ) {
+                  var ret = [];
+                  for( var i = 0, j = str.length; i < j; i++ ) {
+                      var c = str.charAt( i );
+                      if( mapping.hasOwnProperty( str.charAt( i ) ) )
+                          ret.push( mapping[ c ] );
+                      else
+                          ret.push( c );
+                  }      
+                  return ret.join( '' ).replace( /[^-A-Za-z0-9]+/g, '-' ).toLowerCase();
+              }
+         
+        })();
+
+
+
+
+
+
+
+
+
+
+
     </script>
     </script>
 </body>

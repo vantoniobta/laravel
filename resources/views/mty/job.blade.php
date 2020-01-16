@@ -37,8 +37,8 @@
    <footer class="footer-distributed">
       <div class="footer-right">
         <p class="footer-company-about">
-          <span>Nosotros</span>
-          Somos una empresa lider en cada uno de los negocios, estamos comprometidos con la mejora continua para satisfacer a nuestros clientes.
+          <span>Lorem Ipsum</span>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
         </p>
         <div class="footer-icons">
           <a href="#"><i class="fa fa-facebook"></i></a>

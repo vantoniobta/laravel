@@ -55,18 +55,18 @@ Route::get('/', function () {
 
 Route::get('/nacional', function(){
     $articles = App\Article::where([
-    	['status', '=', 'Activo']
-    	// ['address', '=', 'Monterrey']
+    	['status', '=', 'Activo'],
+    	['seccion', '=', 'Nacional']
     	])->orderBy('created_at', 'desc')->paginate(8);
 	return view('mty', compact('articles'));
 });
 
-Route::get('/cdmx', function(){
-    $works = App\Job::where([
+Route::get('/tendencia', function(){
+    $tendencias = App\Article::where([
     	['status', '=', 'Activo'],
-    	['address', '=', 'Ciudad México']
-    	])->orderBy('created_at', 'desc')->paginate(6);
-	return view('cdmx', compact('works'));
+    	['seccion', '=', 'tendencia']
+    	])->orderBy('created_at', 'desc')->paginate(8);
+	return view('tendencia', compact('tendencias'));
 });
 
 Route::get('/login', function(){

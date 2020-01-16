@@ -7,7 +7,7 @@
 <!-- Slider -->
   <div class="page_view_section">
 
-    @forelse ($articles as $work)
+    @forelse ($tendencias as $work)
     
 
 
@@ -46,7 +46,7 @@
       <div class="container"> 
           <div class="row">  
             <div class="col-md-12 text-center" id="test">  
-              {{ $articles->links()}} 
+              {{ $tendencias->links()}} 
             </div> 
           </div> 
       </div>

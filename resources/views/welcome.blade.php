@@ -26,7 +26,7 @@
         
         <style>
             html, body {
-                background-color: #C0FFEE;
+                background-color: #000;
                 color: #fff;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -97,12 +97,11 @@
 
             <div class="content">
              <div class="col-md-6"> 
-                  <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #4d665f">Huasteco Digital</p>
+                  <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #4d665f">_vantonio</p>
              </div>
                 <div class="links">
-                    <a href="/nacional" style="color: #4d665f">Potosina</a>
-                    <a href="/cdmx" style="color: #4d665f">Hidalguense</a>
-                    <a href="/cdmx" style="color: #4d665f">Veracruzana</a>
+                    <a href="/nacional" style="color: #4d665f">Nacional</a>
+                    <a href="/cdmx" style="color: #4d665f">Tendencia</a>
                 </div>
             </div>
         </div>
