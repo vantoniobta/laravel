@@ -38,18 +38,6 @@
 
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <script src="https://use.fontawesome.com/9b694f38b1.js"></script>
-
-
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-    <script>
-      window.googletag = window.googletag || {cmd: []};
-      googletag.cmd.push(function() {
-        googletag.defineSlot('/7246/MMDigital/TV/Articulo/Bigbox_1', [[300, 600], [300, 250]], 'div-gpt-ad-1576091235051-0').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.enableServices();
-      });
-    </script>
-    
 </head>
 <body style="background-color: #fff;">
     <div id="app">
@@ -63,10 +51,8 @@
                         <span class="icon-bar" style="background-color: #FFFFFF;"></span>
                     </button>
 
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        
-                         <img src="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/test.png" width="160px">
-                    </a>
+                    <a class="navbar-brand" href="/"><img src="https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png" alt="Dispute Bills">
+        </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">

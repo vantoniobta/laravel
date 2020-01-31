@@ -13,7 +13,7 @@
         font-family: 'Poppins', sans-serif; 
     }
 
-    nav div > ul > li > a {  font-size: 16px;line-height: 32px;padding: 0 16px;color: #fff}
+    nav div > ul > li > a {  font-size: 14px;line-height: 32px;padding: 0 16px;color: #fff}
     .navbar-brand { padding: 0px;}
     .navbar-brand>img { padding: 7px 10px; }
     .dropdown-toggle:active, .open .dropdown-toggle { background:#f5f5f5 !important; color:#000 !important;}
@@ -23,7 +23,16 @@
     .dropdown-menu > li > a:focus {text-decoration: none;color: #000 !important;}
 
 
-    
+  .navbar-brand {
+    padding: 0px;
+    }
+  .navbar-brand>img {
+      height: 100%;
+      padding: 15px;
+      width: auto;
+  }
+
+          
 
 
     /*
@@ -682,7 +691,6 @@ social shared
     .img_section:hover {filter: sepia(60%);}
     .title_view{color: #4d4b4b;font-size: 20px; font-family: 'Lalezar', cursive;}
     .title_view:hover{color: #10aded;}
-
 
 
 
