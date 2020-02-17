@@ -631,8 +631,6 @@ social shared
       text-align: center; 
       background-color: #fff;
       /*border: 5px solid #fff;*/
-
-      border-bottom: 2px solid #C0FFEE;
     }
 
     .twitter_insertado{
@@ -691,6 +689,13 @@ social shared
     .img_section:hover {filter: sepia(60%);}
     .title_view{color: #4d4b4b;font-size: 20px; font-family: 'Lalezar', cursive;}
     .title_view:hover{color: #10aded;}
+
+    .titulo_seccion{
+      color: #f62318;
+      font-size: 40px;  
+      font-family: 'Lalezar', cursive; 
+      margin-bottom: 0px;
+    }
 
 
 

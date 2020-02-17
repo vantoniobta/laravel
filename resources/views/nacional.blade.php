@@ -5,11 +5,17 @@
 @section('content')
 
 <!-- Slider -->
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"> <h1 class="titulo_seccion">#Nacional</h1></div>
+    </div>
+  </div>
+
   <div class="page_view_section">
 
     @forelse ($articles as $work)
-    
-
+  
 
     <div class="item_page_view_section">
       <a href="{{ URL::to('/articulo', $work->url)}}">
@@ -22,37 +28,18 @@
       </a>
     </div>
 
-
     @empty
            <div class="container" id="div_vacantes">
               <div class="row">
                     <div class="col-md-12">
-                               <h3 align="center">No tenemos notas</h3>
+                               <h3 align="center">No tenemos Articulos</h3>
                     </div>
                 </div>
             </div>
 
      @endforelse
-  
 
   </div>
-
- 
-
-
-
-
-
-      <div class="container"> 
-          <div class="row">  
-            <div class="col-md-12 text-center" id="test">  
-              {{ $articles->links()}} 
-            </div> 
-          </div> 
-      </div>
-
-
-
 
 
     <footer class="footer-distributed" >
@@ -69,7 +56,5 @@
       </div>
     </footer>
 
-
+ 
 @endsection
-
-

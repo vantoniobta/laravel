@@ -21,15 +21,15 @@ Route::prefix('articulo')->group(function(){
 	Route::get('/{id}', 'WorkController@info');
 });
 
-Route::prefix('cdmx')->group(function(){
-	Route::get('/job/{id}', 'WorkController@info');
-	Route::post('/send', 'WorkController@save');
-});
+// Route::prefix('cdmx')->group(function(){
+// 	Route::get('/job/{id}', 'WorkController@info');
+// 	Route::post('/send', 'WorkController@save');
+// });
 
-Route::prefix('mty')->group(function(){
-	Route::get('/job/{id}', 'WorkController@info');
-	Route::post('/send', 'WorkController@save');
-});
+// Route::prefix('mty')->group(function(){
+// 	Route::get('/job/{id}', 'WorkController@info');
+// 	Route::post('/send', 'WorkController@save');
+// });
 
 //Route::get('/redirect', 'SocialAuthController@redirect');
 //Route::get('/callback', 'SocialAuthController@callback');
@@ -58,7 +58,7 @@ Route::get('/nacional', function(){
     	['status', '=', 'Activo'],
     	['seccion', '=', 'Nacional']
     	])->orderBy('created_at', 'desc')->paginate(8);
-	return view('mty', compact('articles'));
+	return view('nacional', compact('articles'));
 });
 
 Route::get('/tendencia', function(){

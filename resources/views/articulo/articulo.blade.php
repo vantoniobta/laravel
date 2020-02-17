@@ -23,7 +23,10 @@
       
 
         <p class="p_article_origin_2">{{ $work->text2}}</b></p>
-        <p class="p_article_origin_2">{{ $work->text3}}</b></p>
+
+
+
+        <p class="p_article_origin_2">{!! $work->text3 !!}</b></p>
 
       </div>
 

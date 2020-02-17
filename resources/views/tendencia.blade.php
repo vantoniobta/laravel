@@ -5,6 +5,11 @@
 @section('content')
 
 <!-- Slider -->
+ <div class="container">
+    <div class="row"><h1 class="titulo_seccion">#Tendecia</h1></div>
+  </div>
+
+
   <div class="page_view_section">
 
     @forelse ($tendencias as $work)
@@ -27,7 +32,7 @@
            <div class="container" id="div_vacantes">
               <div class="row">
                     <div class="col-md-12">
-                               <h3 align="center">No tenemos notas</h3>
+                               <h3 align="center">No tenemos Articulos</h3>
                     </div>
                 </div>
             </div>

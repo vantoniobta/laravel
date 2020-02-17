@@ -51,8 +51,7 @@
                         <span class="icon-bar" style="background-color: #FFFFFF;"></span>
                     </button>
 
-                    <a class="navbar-brand" href="/"><img src="https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png" alt="Dispute Bills">
-        </a>
+                    <a class="navbar-brand" href="/"><img src="https://res.cloudinary.com/candidbusiness/image/upload/v1455406304/dispute-bills-chicago.png" alt="Dispute Bills"></a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
