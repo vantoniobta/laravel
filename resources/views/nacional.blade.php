@@ -6,9 +6,9 @@
 
 <!-- Slider -->
   
-  <div class="container">
+  <div class="container" >
     <div class="row">
-      <div class="col-md-6"> <h1 class="titulo_seccion">#Nacional</h1></div>
+      <div class="col-md-12"> <h1 class="titulo_seccion">#Nacional</h1></div>
     </div>
   </div>
 
@@ -39,6 +39,18 @@
 
      @endforelse
 
+  </div>
+
+
+
+  
+
+  <div class="container"> 
+          <div class="row">  
+            <div class="col-md-12 text-center" id="test">  
+              {{ $articles->links()}} 
+            </div> 
+          </div> 
   </div>
 
 

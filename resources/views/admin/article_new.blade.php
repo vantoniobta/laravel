@@ -74,7 +74,7 @@
                   </div>
 
                   <div class="form-group">
-                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Parrafo 3</label>
+                    <label class="col-md-3 control-label" for="message" style="font-family: 'Anonymous Pro', sans-serif;">Embed Twitter </label>
                     <div class="col-md-9">
                       <textarea class="form-control" id="text3" name="text3"  rows="10" required=""></textarea>
                     </div>

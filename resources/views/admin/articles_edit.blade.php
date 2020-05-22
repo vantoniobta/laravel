@@ -16,6 +16,15 @@
 
                 <div id="form-container">
 
+                   <!--URL-->
+                  <div class="form-group">
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">URL</label>
+                    <div class="col-md-9">
+                      <input id="url" name="url" type="text" value="{{ $jobs->url}}" class="form-control" required="">
+                    </div>
+                  </div>
+
+
                   <!-- Name input-->
                   <div class="form-group">
                     <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Titulo</label>
@@ -50,7 +59,7 @@
                   </div>
 
                    <div class="form-group">
-                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Parrafo 3</label>
+                    <label class="col-md-3 control-label" style="font-family: 'Anonymous Pro', sans-serif;">Embed Twitter </label>
                     <div class="col-md-9">
                       <textarea id="text" name="text3" type="text3" class="form-control" rows="10" required="">{{ $jobs->text3}}</textarea>
                     </div>

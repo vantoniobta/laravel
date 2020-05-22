@@ -64,8 +64,6 @@
                                 <th class="ready_table">Fecha</th>
                                 <th class="ready_table">Titulo</th>
                                 <th class="ready_table">Abstract</th>
-                                <th class="ready_table">URL</th>
-                                <th class="ready_table">Imagen</th>
                                 <th class="ready_table">###</th>
                               </tr>
                               @foreach ($articles_1 as $article)
@@ -73,8 +71,7 @@
                                     <td style="font-family: 'Anonymous Pro', sans-serif;font-size: 12px;">{{ date('F d, Y', strtotime($article->created_at)) }}</td>
                                     <td style="font-family: 'Anonymous Pro', sans-serif;color: #009189"><b>{!! $article->title !!}</b></td>
                                     <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $article->abstract !!}</td>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $article->url !!}</td>
-                                    <td style="font-family: 'Anonymous Pro', sans-serif;">{!! $article->image_article !!}</td>
+                                   
                                     <td><a href="{{ URL::to('admin/articles_edit',$article->id) }}" class="btn btn-default btn-sm"><i class="fa fa-edit" aria-hidden="true"></i>Editar</a></td>
                                    <!--  <td><a href="{{  URL::to('admin/postulates',$article->id )}}" class="btn btn-success btn-sm"><i class="fa fa-bell" aria-hidden="true"></i><span class="badge badge-light">3</span></a></td> -->
                                 </tr>

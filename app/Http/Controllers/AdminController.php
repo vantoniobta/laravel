@@ -131,24 +131,47 @@ class AdminController extends Controller
     }
 
     public function save_edit_article(Request $request,$id){
-         $title       = $request ->title;
-         $abstract     = $request ->abstract;
-         $text        = $request ->text;
-         $text2        = $request ->text2;
-         $text3        = $request ->text3;
+         $url       = $request ->url;
+         $title     = $request ->title;
+         $abstract  = $request ->abstract;
+         $text      = $request ->text;
+         $text2     = $request ->text2;
+         $text3     = $request ->text3;
          $address   = $request ->address;
-         $status      = $request ->status;
-         DB::table('articles')
-                    ->where('id', $id)
-                    ->update(['title'      => $title,
-                              'abstract'     => $abstract,
-                              'text'       => $text,
-                              'text2'       => $text2,
-                              'text3'       => $text3,
+         $status    = $request ->status;
+
+         $url_404 = '';
+
+         if ($status == 'Inactivo') {
+             # code...clone url articulo
+             DB::table('articles')
+                           ->where('id', $id)
+                           ->update(['url_clone'=> $url,
+                              'url'      => $url_404,
+                              'title'    => $title,
+                              'abstract' => $abstract,
+                              'text'     => $text,
+                              'text2'    => $text2,
+                              'text3'    => $text3,
                               'address'  => $address,
                               'status'   => $status]);
-                    $jobs = DB::table('articles')->paginate(10);
-                    return redirect('admin') ->with('articles', $jobs);
+                            $jobs = DB::table('articles')->paginate(10);
+                    return redirect('admin') ->with('articles', $jobs); 
+                }
+                else{
+                    DB::table('articles')
+                        ->where('id', $id)
+                        ->update(['title'     => $title,
+                                  'abstract'  => $abstract,
+                                  'text'      => $text,
+                                  'text2'     => $text2,
+                                  'text3'     => $text3,
+                                  'address'   => $address,
+                                  'status'    => $status]);
+                        $jobs = DB::table('articles')->paginate(10);
+                        return redirect('admin') ->with('articles', $jobs);
+
+         }
     }
 
 

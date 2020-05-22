@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <link rel="icon" href="https://agencias-multimedios.s3.amazonaws.com/2018/RH_IMG/32x32.png" /> -->
 
-        <title>Las tres huastecas</title>
+        <title>Golpe al Sistema</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -26,7 +26,7 @@
         
         <style>
             html, body {
-                background-color: #000;
+                background-color: #fff;
                 color: #fff;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -97,7 +97,7 @@
 
             <div class="content">
              <div class="col-md-6"> 
-                  <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #4d665f">_vantonio</p>
+                  <p style="font-family: 'Titan One', cursive; font-size: 57px;color: #4d665f">GOLPE AL SISTEMA</p>
              </div>
                 <div class="links">
                     <a href="/nacional" style="color: #4d665f">Nacional</a>

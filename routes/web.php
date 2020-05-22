@@ -48,6 +48,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
+
+
+
 // Route::get('/vacantes', function(){
 //     $works = App\Job::where('status', '=', 'Activo')->orderBy('created_at', 'desc')->paginate(5);
 // 	return view('vacantes', compact('works'));

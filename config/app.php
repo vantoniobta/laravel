@@ -168,6 +168,7 @@ return [
         Laravel\Socialite\SocialiteServiceProvider::class,
         Jorenvh\Share\Providers\ShareServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        shweshi\OpenGraph\Providers\OpenGraphProvider::class,
 
 
         /*
@@ -238,6 +239,7 @@ return [
         'Share' => Jorenvh\Share\ShareFacade::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'OpenGraph' => shweshi\OpenGraph\Facades\OpenGraphFacade::class,
 
     ],
 

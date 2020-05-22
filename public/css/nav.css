@@ -643,28 +643,6 @@ social shared
    
 
 
-    /*article view page_view_section*/
-    .article_page_view_{
-       width: 100%;
-       display: flex;
-       flex-wrap: wrap;
-       align-content: center;
-       justify-content:center;
-    }
-    .item_article_page_view_{
-      color:#4d665f;
-      width: 800px;
-      margin:20px;
-      /*border: 1px solid #677290;*/
-    }
-    .item_article_page_view_2{
-      /*background-color: #D3F3C8;*/
-      color:#4d665f;
-      width: 300px;
-      margin:10px; 
-      text-align: center; 
-      /*border: 1px solid #D3F3C8;*/
-    }
 
     .p_article_origin{
         font-size: 19px; 
@@ -692,10 +670,12 @@ social shared
 
     .titulo_seccion{
       color: #f62318;
-      font-size: 40px;  
+      font-size: 36px;  
       font-family: 'Lalezar', cursive; 
       margin-bottom: 0px;
     }
+
+
 
 
 

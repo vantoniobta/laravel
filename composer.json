@@ -17,6 +17,7 @@
         "laravel/tinker": "~1.0",
         "maatwebsite/excel": "~2.1.0",
         "setkyar/laravel-customize-shares": "^1.0",
+        "shweshi/opengraph": "^1.0",
         "uxweb/sweet-alert": "^1.4",
         "yajra/laravel-datatables-oracle": "^8.3"
     },
