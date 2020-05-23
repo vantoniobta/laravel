@@ -139,9 +139,8 @@ class AdminController extends Controller
          $text3     = $request ->text3;
          $address   = $request ->address;
          $status    = $request ->status;
-
-         $url_404 = '';
-
+         $url_404   = '';
+         
          if ($status == 'Inactivo') {
              # code...clone url articulo
              DB::table('articles')
